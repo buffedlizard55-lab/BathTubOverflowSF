@@ -1,0 +1,3105 @@
+{
+ "wave": 2,
+ "note": "Second research pass, September 10, 2026. 50 new discovery entries. Every entry below was checked line by line against the cited source the same day. Verified fields only; everything not established is listed under gaps. Verified license records are direct CSLB page reads. SF DBI registry rows come from the city's official permit-firm open dataset (k6kv-9kix), which records firm name, license number, address and phone as submitted on permits; rows are historical and are not dated inside the dataset.",
+ "sources": [
+  {
+   "id": 48,
+   "title": "SF DBI · permit firm registry (open dataset k6kv-9kix)",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10",
+   "note": "Official SF open-data API queried directly by firm name and by firm ZIP (94122/94116). Rows are historical permit records; they establish a recorded Outer Sunset business address and CSLB number, not present operation."
+  },
+  {
+   "id": 49,
+   "title": "CSLB · 977638 Expert Plumbing Solutions",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=977638",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 50,
+   "title": "CSLB · 966458 Red Wrench Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=966458",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 51,
+   "title": "CSLB · 1036915 Deals On Wheels Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1036915",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 52,
+   "title": "CSLB · 1095298 Gomez Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1095298",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 53,
+   "title": "CSLB · 1028932 Everlast Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1028932",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 54,
+   "title": "CSLB · 1016070 SDP Plumbing Inc dba Mr Rooter Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1016070",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 55,
+   "title": "CSLB · 996627 5 Star Plumbing & Rooter",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=996627",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 56,
+   "title": "CSLB · 970605 All Rooter & Plumbing Service Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=970605",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 57,
+   "title": "CSLB · 980701 Smart Plumbers Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=980701",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 58,
+   "title": "CSLB · 582534 O'Donovan Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=582534",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 59,
+   "title": "CSLB · 499286 Fong's Cons & Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=499286",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 60,
+   "title": "CSLB · 723992 Joe Watterson Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=723992",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 61,
+   "title": "CSLB · 608924 Di Maggio Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=608924",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 62,
+   "title": "CSLB · 727485 Scott's Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=727485",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 63,
+   "title": "CSLB · 713990 A Aero Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=713990",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 64,
+   "title": "CSLB · 694958 Gantley Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=694958",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 65,
+   "title": "CSLB · 684197 K C Plumbing Co",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=684197",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 66,
+   "title": "CSLB · 675183 Jeff Tom Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=675183",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 67,
+   "title": "CSLB · 657471 Sunset Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=657471",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 68,
+   "title": "CSLB · 493818 Rodney Conklin Plumbing & Heating",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=493818",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-10"
+  },
+  {
+   "id": 69,
+   "title": "Yelp · Sunset District plumbing search (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Sunset+District%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked (HTTP 403). Data below is from search-indexed page text, which may be stale."
+  },
+  {
+   "id": 70,
+   "title": "Yelp · Outer Sunset plumbing search, start=80 (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA&start=80",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked. Indexed text dated July 2026 by the index; names, badges and quotes only."
+  },
+  {
+   "id": 71,
+   "title": "Yelp · Outer Sunset plumbing search (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked. Sponsored placement is not qualification; star counts not copied into rankings."
+  },
+  {
+   "id": 72,
+   "title": "Yellow Pages · Outer Sunset plumbers (page read)",
+   "url": "https://www.yellowpages.com/outer-sunset-san-francisco-ca/plumbers",
+   "kind": "directory",
+   "access": "page",
+   "checkedAt": "2026-09-10",
+   "note": "Full directory page read. Listings are discovery evidence, not proof of present operation."
+  },
+  {
+   "id": 73,
+   "title": "Yellow Pages · Outer Sunset plumbers (indexed extract)",
+   "url": "https://www.yellowpages.com/outer-sunset-san-francisco-ca/plumbers",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Same URL as [72]; this role is the search-indexed JSON-LD listing block. Repeated URL is a different evidence role, not independent corroboration."
+  },
+  {
+   "id": 74,
+   "title": "Yelp · Master Rooter Plumbing business profile (indexed extract)",
+   "url": "https://www.yelp.com/biz/master-rooter-plumbing-san-francisco",
+   "kind": "platform",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct access blocked; indexed profile text. Star counts are not blended into any ranking."
+  },
+  {
+   "id": 75,
+   "title": "BBB · Master Rooter Plumbing profile",
+   "url": "https://www.bbb.org/us/ca/san-francisco/profile/plumber/master-rooter-plumbing-1116-52740",
+   "kind": "platform",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "BBB file opened 2003; sole proprietorship; owner listed as Branimir Simovich."
+  },
+  {
+   "id": 76,
+   "title": "Birdeye · Master Rooter Plumbing listing",
+   "url": "https://reviews.birdeye.com/master-rooter-plumbing-159229656168964",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Lists 1208 38th Ave #33 and masterrootercompany.com; zero reviews on that panel."
+  },
+  {
+   "id": 77,
+   "title": "BuildZoom · Master Rooter & Plumbing Inc",
+   "url": "https://www.buildzoom.com/contractor/master-rooter-plumbing-inc",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Third-party license aggregation; reports 448788 inactive/cancelled. Not a CSLB page read."
+  },
+  {
+   "id": 78,
+   "title": "Mr. Rooter Plumbing of San Francisco · official site (indexed extract)",
+   "url": "https://www.mrrooter.com/san-francisco/",
+   "kind": "testimonial",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Company-hosted testimonials and on-site rating counter. Not independent platform reviews."
+  },
+  {
+   "id": 79,
+   "title": "Thumbtack · Sunset District water-heater category (2020, indexed extract)",
+   "url": "https://www.thumbtack.com/ca/sunset-district/water-heater-repair/",
+   "kind": "platform",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Category page indexed from 2020. Ratings and hire counts are dated; partial sample only."
+  },
+  {
+   "id": 80,
+   "title": "Reddit · r/AskSF “Can you recommend a plumber?” (Oct 2020)",
+   "url": "https://www.reddit.com/r/AskSF/comments/jcy9dl/can_you_recommend_a_plumber/",
+   "kind": "community",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed thread extract; direct thread not read in this pass."
+  },
+  {
+   "id": 81,
+   "title": "Reddit · r/AskSF “Plumber recs?” (Mar 2026)",
+   "url": "https://www.reddit.com/r/AskSF/comments/1s24rve/plumber_recs/",
+   "kind": "community",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed thread extract; usernames are pseudonymous."
+  },
+  {
+   "id": 82,
+   "title": "Reddit · r/SouthSanFrancisco “Plumber recommendations for SSF” (Jun 2024)",
+   "url": "https://www.reddit.com/r/SouthSanFrancisco/comments/1df11w7/plumber_recommendations_for_ssf/",
+   "kind": "community",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed thread extract; recommendations target South SF and nearby peninsula, SF dispatch unconfirmed for most names."
+  },
+  {
+   "id": 83,
+   "title": "Angi · Sunset Plumbing reviews",
+   "url": "https://www.angi.com/companylist/us/ca/san-francisco/sunset-plumbing-reviews-209930.htm",
+   "kind": "platform",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Two reviews, dated 2005 and 2009. Stale sample retained only with explicit dates."
+  },
+  {
+   "id": 84,
+   "title": "Yelp · Friendly Plumbing business profile (indexed extract)",
+   "url": "https://www.yelp.com/biz/friendly-plumbing-san-francisco-4",
+   "kind": "platform",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed profile: 945 Taraval St Ste 345, verified-license badge, friendlyplumbingsf.com."
+  },
+  {
+   "id": 85,
+   "title": "Yelp · Expert San Francisco Plumber business profile (indexed extract)",
+   "url": "https://www.yelp.com/biz/expert-san-francisco-plumber-san-francisco",
+   "kind": "platform",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed profile: 945 Taraval St Ste 821, established 2008, bathroom/tub specialties."
+  },
+  {
+   "id": 86,
+   "title": "Rudy's Handyman Services · drywall repair page",
+   "url": "https://rudyhandymanca.com/drywall-repair/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Business marketing page; neighborhood list includes Sunset District. Marketing claims are not verified work history."
+  },
+  {
+   "id": 87,
+   "title": "Yelp · Dry Wall Repair near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Dry+Wall+Repair&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked; indexed search page names, badges and quote fragments."
+  },
+  {
+   "id": 88,
+   "title": "Yelp · Drywall Installation near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked; indexed search page."
+  },
+  {
+   "id": 89,
+   "title": "Manta · Pro Plumbing & Fire Sprinkler",
+   "url": "https://www.manta.com/c/mtb97mf/pro-plumbing-fire-sprinkler",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Self-claimed listing: founded 2009, owner listed as Ken Lg."
+  },
+  {
+   "id": 90,
+   "title": "Yelp · San Francisco plumber search (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Plumber&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked; indexed search page."
+  }
+ ],
+ "businesses": [
+  {
+   "id": "odonovan",
+   "name": "O'Donovan Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "License and registry records place the business at 1825 15th Avenue and 2162 25th Avenue, San Francisco 94122 (Outer Sunset).",
+   "license": {
+    "number": "582534",
+    "status": "active",
+    "entity": "O'DONOVAN PLUMBING INC",
+    "expires": "2028-07-31",
+    "classes": [
+     "C16",
+     "C36"
+    ],
+    "source": 58,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-425-7322",
+   "phoneSource": 58,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Corporation founded 1989 per license issue date; reissued to the current entity in 2010. Direct CSLB record check.",
+     "source": 58,
+     "excerpt": "O'DONOVAN PLUMBING INC · 1825 15TH AVENUE · SAN FRANCISCO, CA 94122 · Issue Date 12/08/1989 · Reissue Date 07/21/2010"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 Plumbing plus C16 Fire Protection at check; workers compensation policy on file through Sep 2027.",
+     "source": 58,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Coverage",
+     "text": "SF DBI permit registry records the firm at 2162 25th Avenue, 94122 with multiple contact numbers across many permit rows.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"O'donovan Plumbing\",\"license_number\":\"582534\",\"address\":\"2162 25th Av\",\"zipcode\":\"94116\""
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": 4,
+   "rationale": "Strongest wave-2 credential profile found: active C36 corporation whose own license record shows a 94122 Outer Sunset business address, plus a long SF DBI permit history recorded at a second 94122 address.",
+   "nextStep": "Call and confirm they dispatch to your block, describe the stuck overflow, and ask for a repair-first diagnostic visit with a written scope before any wall opening.",
+   "platformLinks": [
+    {
+     "label": "CSLB license record",
+     "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=582534",
+     "source": 58
+    }
+   ],
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No review sample retained in this pass; customer feedback not yet collected.",
+    "On-site feasibility and written repair scope not established."
+   ]
+  },
+  {
+   "id": "expert-plumbing-solutions",
+   "name": "Expert Plumbing Solutions",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "CSLB license record lists 1465 44th Avenue, San Francisco 94122 (Outer Sunset).",
+   "license": {
+    "number": "977638",
+    "status": "active",
+    "entity": "EXPERT PLUMBING SOLUTIONS",
+    "expires": "2026-10-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 49,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-531-5340",
+   "phoneSource": 49,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yelp-indexed profile shows 4.8 stars across about 81 reviews with the business serving San Francisco; direct Yelp page blocked.",
+     "source": 69,
+     "excerpt": "Expert Plumbing Solutions 4.8 (81 reviews) Serving San Francisco and the Surrounding Area"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 Plumbing at check; corporation; qualifying individual Pavel Bresker; workers compensation active to Jul 2027. License expires 10/31/2026 — recheck before hiring.",
+     "source": 49,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Coverage",
+     "text": "License record places the company at 1465 44th Avenue, 94122 (Outer Sunset).",
+     "source": 49,
+     "excerpt": "1465 44TH AVENUE, SAN FRANCISCO, CA 94122"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R14"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": 5,
+   "rationale": "Active C36 corporation with a license-record address inside Outer Sunset and a sizable indexed Yelp sample (4.8/≈81). Good fifth call: verify current license expiration and dispatch coverage by phone.",
+   "nextStep": "Confirm license renewal status (expires 10/31/2026) and request a diagnostic visit quote with repair-first scope.",
+   "platformLinks": [
+    {
+     "label": "CSLB license record",
+     "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=977638",
+     "source": 49
+    }
+   ],
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Indexed Yelp data may be stale; individual reviews not fully read.",
+    "License expires within eight weeks of the research date; recheck CSLB before contracting."
+   ]
+  },
+  {
+   "id": "joe-watterson",
+   "name": "Joe Watterson Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "SF DBI registry records this license at 2186 46th Avenue, 94122 (Outer Sunset) under the former firm name Slemish Plumbing; current CSLB address is Folsom Street (Mission). Confirm dispatch area.",
+   "license": {
+    "number": "723992",
+    "status": "active",
+    "entity": "JOE WATTERSON PLUMBING",
+    "expires": "2028-06-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 60,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-525-0132",
+   "phoneSource": 60,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Active C36 sole ownership since 1996; license valid to 2028.",
+     "source": 60,
+     "excerpt": "JOE WATTERSON PLUMBING · 3653 FOLSOM STREET · SAN FRANCISCO, CA 94110 · This license is current and active."
+    },
+    {
+     "field": "Coverage",
+     "text": "The same license number 723992 appears in the SF DBI registry at 2186 46th Avenue (94122) under the firm name Slemish Plumbing, with several recorded phone numbers.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Slemish Plumbing\",\"license_number\":\"723992\",\"address\":\"2186  46th Av\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Name history: SF DBI registry rows link license 723992 to both 'Slemish Plumbing' and 'Joe Watterson Plumbing'. Likely a rename, but identity continuity was not independently confirmed.",
+     "sources": [
+      48,
+      60
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Current dispatch coverage for Outer Sunset not confirmed; current registered address is outside the neighborhood.",
+    "No review sample retained in this pass."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "red-wrench",
+   "name": "Red Wrench Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco corporation (Precita Avenue, Mission); indexed Yelp profile says it serves San Francisco and surrounding area. Outer Sunset dispatch not separately confirmed.",
+   "license": {
+    "number": "966458",
+    "status": "active",
+    "entity": "RED WRENCH PLUMBING INC",
+    "expires": "2027-10-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 50,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-424-0799",
+   "phoneSource": 50,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp profile shows 4.9 stars across about 182 reviews; appears in the Outer Sunset results page.",
+     "source": 70,
+     "excerpt": "Red Wrench Plumbing 4.9 (182 reviews) Serving San Francisco and the Surrounding Area"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 corporation since 2011; workers compensation active to Mar 2027.",
+     "source": 50,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Review",
+     "text": "Indexed customer quote praises long-term service; it does not describe overflow mechanism work.",
+     "source": 70,
+     "excerpt": "\"One of the best plumbing service that I have ever dealt with through the years.\""
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R15"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Outer Sunset dispatch not directly confirmed.",
+    "Indexed Yelp data may be stale; individual reviews not fully read."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "deals-on-wheels",
+   "name": "Deals On Wheels Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "Thumbtack category page (2020) lists the business as serving Sunset District; base is South San Francisco per Thumbtack and San Bruno per CSLB.",
+   "license": {
+    "number": "1036915",
+    "status": "active",
+    "entity": "DEALS ON WHEELS PLUMBING",
+    "expires": "2028-06-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 51,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "650-271-0184",
+   "phoneSource": 51,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Thumbtack category page shows Top Pro status, 4.9 from 158 reviews, 175 hires, serving Sunset District (dated 2020).",
+     "source": 79,
+     "excerpt": "Deals on Wheels Plumbing Top Pro 4.9 from 158 reviews · 175 hires on Thumbtack · Serves Sunset District, CA"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 sole ownership since 2018; no employees at last certification.",
+     "source": 51,
+     "excerpt": "This license is current and active."
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "The Thumbtack sample is from a 2020 indexed category page; current rating and coverage could differ.",
+     "sources": [
+      79
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "2020 Thumbtack snapshot; current ratings not retrieved.",
+    "Solo operator — confirm availability for multi-trade coordination (drywall/access hatch)."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "gomez",
+   "name": "Gomez Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Registered with SF DBI (license 1095298, SF business license 1141324); base is South San Francisco per CSLB. Outer Sunset dispatch not confirmed.",
+   "license": {
+    "number": "1095298",
+    "status": "active",
+    "entity": "GOMEZ PLUMBING",
+    "expires": "2028-08-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 52,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "650-296-7252",
+   "phoneSource": 52,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Recommended by name in a June 2024 Reddit thread about plumber recommendations near northern San Mateo County.",
+     "source": 82,
+     "excerpt": "Gomez Plumbing"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 sole ownership since 2022; bond effective Aug 2026.",
+     "source": 52,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry lists Gomez Plumbing with SF business license 1141324.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Gomez Plumbing\",\"license_number\":\"1095298\",\"sf_business_license_number\":\"1141324\""
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R21"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "The Reddit evidence is an unelaborated name-drop, not a work account.",
+    "Outer Sunset dispatch not confirmed."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "everlast",
+   "name": "Everlast Plumbing",
+   "website": "https://www.everlastplumbing.net/",
+   "websiteSource": 82,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco sole ownership (PO Box 94188); recommended in a peninsula-adjacent Reddit thread. Outer Sunset dispatch not confirmed.",
+   "license": {
+    "number": "1028932",
+    "status": "active",
+    "entity": "EVERLAST PLUMBING",
+    "expires": "2027-07-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 53,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-739-7009",
+   "phoneSource": 53,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Recommended with website link in a June 2024 Reddit thread; commenter reports on-time work.",
+     "source": 82,
+     "excerpt": "Did some stuff for me. Well done, on time, great experience. Good reviews. https://www.everlastplumbing.net/"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 sole ownership since 2017; workers compensation policy active to Jul 2027.",
+     "source": 53,
+     "excerpt": "This license is current and active."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R24"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Website content not separately audited in this pass.",
+    "Outer Sunset dispatch not confirmed."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "five-star",
+   "name": "5 Star Plumbing & Rooter",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco corporation (San Jose Avenue, 94110); citywide dispatch claimed by name in community threads. Outer Sunset dispatch not confirmed.",
+   "license": {
+    "number": "996627",
+    "status": "active",
+    "entity": "5 STAR PLUMBING & ROOTER",
+    "expires": "2027-11-30",
+    "classes": [
+     "A",
+     "B",
+     "C36"
+    ],
+    "source": 55,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-410-4420",
+   "phoneSource": 55,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Recommended in a March 2026 Reddit thread with a technician name.",
+     "source": 81,
+     "excerpt": "Five star plumbing. Ask for Santiago"
+    },
+    {
+     "field": "License",
+     "text": "Active license with A (General Engineering), B (General Building) and C36 (Plumbing); reissued to another entity on 11/17/2025.",
+     "source": 55,
+     "excerpt": "11/17/2025 - LICENSE REISSUED TO ANOTHER ENTITY"
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "CSLB notes the license was reissued to another entity on 11/17/2025, and the SF DBI registry also shows similarly named firms (Five Star Rooter And Plumbing Inc, Five Stars Plumbing Inc). Confirm the exact legal entity before contracting.",
+     "sources": [
+      55,
+      48
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R20"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Entity reissue and name-alikes require identity confirmation on the phone.",
+    "Outer Sunset dispatch not confirmed."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "all-rooter",
+   "name": "All Rooter & Plumbing Service Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco corporation (Ocean Avenue, 94112); citywide rooter/plumbing scope implied by name and registry. Outer Sunset dispatch not confirmed.",
+   "license": {
+    "number": "970605",
+    "status": "active",
+    "entity": "ALL ROOTER & PLUMBING SERVICE INC",
+    "expires": "2028-03-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 56,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-282-8289",
+   "phoneSource": 56,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Active C36 corporation since 2012; qualifying individual Minh Gia Luc; workers compensation active to Mar 2027.",
+     "source": 56,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry shows an All Rooter & Plumbing family of firm names sharing SF business license 0946005, with the current entity under 0467447.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"All Rooter & Plumbing Service, Inc\",\"license_number\":\"970605\",\"sf_business_license_number\":\"0467447\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry shows several prior All Rooter firm names (797680, 855762, 959029) under one SF business license — normal succession, but confirm you are booking the current corporation.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No review sample retained in this pass.",
+    "Outer Sunset dispatch not confirmed."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "smart-plumbers",
+   "name": "Smart Plumbers & Rooters",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Bay Area company headquartered in Santa Clara; a Yellow Pages listing places 'Smart Plumbers & Rooters' at 1524 Irving St, 94122. Treat the Outer Sunset address as a directory footprint until confirmed.",
+   "license": {
+    "number": "980701",
+    "status": "active",
+    "entity": "SMART PLUMBERS INC.",
+    "expires": "2027-01-31",
+    "classes": [
+     "C36",
+     "C42"
+    ],
+    "source": 57,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "408-261-2400",
+   "phoneSource": 57,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages Outer Sunset page lists Smart Plumbers & Rooters at 1524 Irving St with phone (415) 664-2288.",
+     "source": 73,
+     "excerpt": "{\"name\":\"Smart Plumbers & Rooters\",\"address\":{\"streetAddress\":\"1524 Irving St\",...\"postalCode\":\"94122\"},\"telephone\":\"(415) 664-2288\"}"
+    },
+    {
+     "field": "License",
+     "text": "Active C36 + C42 corporation since 2013; workers compensation active to Sep 2026.",
+     "source": 57,
+     "excerpt": "This license is current and active."
+    },
+    {
+     "field": "Coverage",
+     "text": "CSLB record places the corporation in Santa Clara; the Irving Street listing conflicts with that headquarters and must be confirmed.",
+     "source": 57,
+     "excerpt": "SMART PLUMBERS INC. · 2175 RONALD STREET · SANTA CLARA, CA 95050"
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "Address and phone conflict: CSLB says Santa Clara / (408) 261-2400; the Yellow Pages listing says 1524 Irving St SF / (415) 664-2288. Satellite-office or stale listing unresolved.",
+     "sources": [
+      57,
+      73
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Outer Sunset presence is directory-level only.",
+    "No review sample retained in this pass."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "fongs",
+   "name": "Fong's Construction (Fong's Cons & Plumbing)",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "SF DBI registry records Fong's at 1346 47th Avenue, 94122 (Outer Sunset); CSLB lists 767 27th Avenue, 94121.",
+   "license": {
+    "number": "499286",
+    "status": "active",
+    "entity": "FONG'S CONS & PLUMBING",
+    "expires": "2026-10-31",
+    "classes": [
+     "B",
+     "C16",
+     "C36"
+    ],
+    "source": 59,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-564-3888",
+   "phoneSource": 48,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages Outer Sunset listing: Fong's Construction, 1346 47th Ave, (415) 564-3888.",
+     "source": 73,
+     "excerpt": "{\"name\":\"Fong's Construction\",\"address\":{\"streetAddress\":\"1346 47th Ave\",...\"postalCode\":\"94122\"},\"telephone\":\"(415) 564-3888\"}"
+    },
+    {
+     "field": "License",
+     "text": "Active B + C16 + C36 sole ownership since 1986; workers compensation on file (State Fund) — both license and policy expire 10/31/2026.",
+     "source": 59,
+     "excerpt": "FONG'S CONS & PLUMBING · B GENERAL BUILDING · C36 PLUMBING · C16 FIRE PROTECTION · This license is current and active."
+    },
+    {
+     "field": "Coverage",
+     "text": "SF DBI permit registry records 'Fong's Const & Plumbing' license 499286 at 1346 47th Avenue with phone 415-564-3888 across many rows.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Fong's Const & Plumbing\",\"license_number\":\"499286\",\"address\":\"1346 47th Avenue\",\"phone\":\"415-564-3888\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "License and workers-compensation policy both expire 10/31/2026, eight weeks after this research date; recheck before scheduling. Registry also shows an older 'Fong's Plumbing' license 479286 at the same address.",
+     "sources": [
+      59,
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Combined B/C36 scope could suit tub work plus access hatch, but no specific comparable project verified.",
+    "No review sample retained in this pass."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "mr-rooter-sf",
+   "name": "Mr. Rooter Plumbing of San Francisco",
+   "website": "https://www.mrrooter.com/san-francisco/",
+   "websiteSource": 78,
+   "status": "hold",
+   "area": "sf",
+   "areaText": "National franchise page for San Francisco; dispatch area not broken out by neighborhood.",
+   "license": {
+    "number": "1016070",
+    "status": "expired",
+    "entity": "SDP PLUMBING INC dba MR ROOTER PLUMBING",
+    "expires": "2024-07-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 54,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-730-0937",
+   "phoneSource": 54,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Official franchise site advertises 266 customer reviews at 4.8/5 and publishes customer testimonials.",
+     "source": 78,
+     "excerpt": "266 Customer Reviews · 4.8/5 Rating"
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: SDP Plumbing Inc dba Mr Rooter Plumbing license EXPIRED 07/31/2024 and not able to contract; renewal blocked on bond and workers compensation requirements.",
+     "source": 54,
+     "excerpt": "This license is expired and not able to contract at this time."
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry lists 'Sdp Plumbing Inc Dba Mr. Rooter Plumbing' license 1016070 (SF business license 1030464) and an older 'Mr. Rooter Plumbing' license 652992.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Sdp Plumbing Inc Dba Mr. Rooter Plumbing\",\"license_number\":\"1016070\""
+    },
+    {
+     "field": "Platform",
+     "text": "Thumbtack (2020) showed 4.2 from 53 reviews with 98 hires, serving Sunset District.",
+     "source": 79,
+     "excerpt": "Mr. Rooter Plumbing of San Francisco 4.2 from 53 reviews · 98 hires on Thumbtack · Serves Sunset District, CA"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Irregularity: the franchise site and testimonial counter are live, but the local franchisee's C36 license (SDP Plumbing Inc) expired 07/31/2024 per direct CSLB check. A brand site is not a license. Do not book until an active license for the actual contracting entity is shown.",
+     "sources": [
+      54,
+      78
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R17",
+    "R18"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No active license established for the advertising entity at check date.",
+    "No exact seized-overflow extraction case verified.",
+    "Testimonials are company-hosted, not independent platform reviews."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "master-rooter",
+   "name": "Master Rooter Plumbing (Outer Sunset)",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "Outer Sunset addresses recorded: 1208 38th Ave (Yelp/Birdeye) and 1526 Irving St (SF DBI registry, as Metro Rooter/Simovich Plumbing).",
+   "license": null,
+   "phone": "415-504-6675",
+   "phoneSource": 74,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yelp-indexed profile: 1.6 stars across 26 reviews, unclaimed, established 1978, 1208 38th Ave, Outer Sunset.",
+     "source": 74,
+     "excerpt": "MASTER ROOTER PLUMBING - 1208 38th Ave, San Francisco, CA 94122 · 1.6 (26 reviews) · Unclaimed · Established in 1978"
+    },
+    {
+     "field": "Status",
+     "text": "BBB: 'Believed to be out of business' — no BBB rating because BBB has information indicating the business is no longer in business; sole proprietorship, owner Branimir Simovich, file opened 2003.",
+     "source": 75,
+     "excerpt": "According to information in BBB files, it appears that this business is no longer in business"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry records license 448788 at 1526 Irving St under both 'Metro Rooter Plumbing' and 'Simovich Plumbing', phone 415-661-1947.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Metro Rooter Plumbing\",\"license_number\":\"448788\",\"address\":\"1526 Irving St.\""
+    },
+    {
+     "field": "License",
+     "text": "BuildZoom reports license 448788 inactive/cancelled; a different, unrelated 'Master Rooter & Plumbing Inc' (1044408, active) also exists — do not conflate the two.",
+     "source": 77,
+     "excerpt": "License # · 448788 · Status · Inactive · According to the California Contractors State License Board, the status of this license was at one point cancelled."
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Multiple independent sources conflict with continued operation: BBB 'believed out of business', low unclaimed Yelp sample (1.6/26), registry name chain (Simovich → Metro Rooter → Master Rooter) and a reported-inactive license. Treated as likely defunct; not a booking candidate.",
+     "sources": [
+      74,
+      75,
+      48,
+      77
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Birdeye shows a different suite (1208 38th Ave #33) and zero reviews while Yelp shows 26 reviews — panel disagreement retained, not merged.",
+     "sources": [
+      74,
+      76
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Believed out of business; retained as a documented irregularity, not a candidate.",
+    "No exact seized-overflow extraction case verified.",
+    "A separate active 'Master Rooter & Plumbing Inc' (1044408) exists in California — identity confusion risk."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "di-maggio",
+   "name": "Di Maggio Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "2594 32nd Avenue, 94116 (Parkside/Outer Sunset border) per CSLB and SF DBI registry.",
+   "license": {
+    "number": "608924",
+    "status": "expired",
+    "entity": "DI MAGGIO PLUMBING",
+    "expires": "2023-01-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 61,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-566-6377",
+   "phoneSource": 61,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages Outer Sunset listing: Di Maggio Saverio, 2594 32nd Ave, 29 years in business.",
+     "source": 72,
+     "excerpt": "Di Maggio Saverio · 29 Years in Business · (415) 566-6377 · 2594 32nd Ave · San Francisco, CA 94116"
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: license expired 01/31/2023, not able to contract; renewal requires a contractors bond.",
+     "source": 61,
+     "excerpt": "This license is expired and not able to contract at this time."
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: many permit rows for Di Maggio Plumbing, license 608924, 2594 32nd Av, 94116, SF business license 0202454.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Di Maggio Plumbing\",\"license_number\":\"608924\",\"sf_business_license_number\":\"0202454\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Long-established neighborhood firm whose C36 license expired 01/31/2023 per direct CSLB check. Cannot be booked for permitted plumbing work as-is.",
+     "sources": [
+      61
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Expired license — fails the booking gate regardless of reputation.",
+    "No exact seized-overflow extraction case verified.",
+    "No review sample retained in this pass."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "a-aero",
+   "name": "A Aero Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "Registry address 1272 45th Avenue, 94122; CSLB lists 2491 24th Avenue, 94116.",
+   "license": {
+    "number": "713990",
+    "status": "expired",
+    "entity": "A AERO PLUMBING",
+    "expires": "2023-10-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 63,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-244-7391",
+   "phoneSource": 63,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: A Aero Plumbing, license 713990, 1272 45th Av, 94122, with several phone variants.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"A Aero Plumbing\",\"license_number\":\"713990\",\"address\":\"1272 45th Av\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: expired 10/31/2023; renewal requires a contractors bond.",
+     "source": 63,
+     "excerpt": "This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "C36 license expired 10/31/2023 per direct CSLB check.",
+     "sources": [
+      63
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Expired license.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "gantley",
+   "name": "Gantley Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "Registry address 4238 Pacheco Street, 94116; CSLB lists 261 B Chenery Street, 94131.",
+   "license": {
+    "number": "694958",
+    "status": "expired",
+    "entity": "GANTLEY PLUMBING",
+    "expires": "1996-08-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 64,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-648-4557",
+   "phoneSource": 64,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Gantley Plumbing, license 694958, 4238 Pacheco Street, phone 415-564-6678.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Gantley Plumbing\",\"license_number\":\"694958\",\"phone\":\"415-564-6678\",\"address\":\"4238 Pacheco Street\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: license expired 08/31/1996.",
+     "source": 64,
+     "excerpt": "This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "License expired in 1996 per direct CSLB check; registry rows are decades old.",
+     "sources": [
+      64
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License expired ~30 years; historical record only.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "kc-plumbing",
+   "name": "K.C. Plumbing Co",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "Registry address 2285 46th Avenue, 94122; CSLB lists 3821 Folsom St, 94110.",
+   "license": {
+    "number": "684197",
+    "status": "expired",
+    "entity": "K C PLUMBING CO",
+    "expires": "2018-02-28",
+    "classes": [
+     "C36"
+    ],
+    "source": 65,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-710-8126",
+   "phoneSource": 65,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: K.C. Plumbing, license 684197, 2285 46th Avenue, 94122, with many phone variants.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"K.C. Plumbing\",\"license_number\":\"684197\",\"address\":\"2285 46th Avenue\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: expired 02/28/2018.",
+     "source": 65,
+     "excerpt": "This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "C36 license expired 2018 per direct CSLB check.",
+     "sources": [
+      65
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Expired license.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "jeff-tom",
+   "name": "Jeff Tom Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "1618 34th Avenue, 94122 per registry and CSLB.",
+   "license": {
+    "number": "675183",
+    "status": "expired",
+    "entity": "JEFF TOM PLUMBING",
+    "expires": "2001-08-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 66,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-242-0783",
+   "phoneSource": 66,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Jeff Tom Plumbing, license 675183, 1618 34th Avenue, 94122.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Jeff Tom Plumbing\",\"license_number\":\"675183\",\"address\":\"1618 -34th Avenue\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: expired 08/31/2001.",
+     "source": 66,
+     "excerpt": "This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "License expired 2001 per direct CSLB check; historical record only.",
+     "sources": [
+      66
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License expired ~25 years.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sunset-plumbing",
+   "name": "Sunset Plumbing (45th Ave)",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "CSLB: 1858 45th Avenue, 94122; registry also records 1870 35th Avenue and 1488 La Playa.",
+   "license": {
+    "number": "657471",
+    "status": "expired",
+    "entity": "SUNSET PLUMBING",
+    "expires": "2024-10-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 67,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-661-3660",
+   "phoneSource": 67,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Angi profile for a Sunset Plumbing (2 reviews, both dated 2005-2009); matched to the SF DBI registry license 657471 at 1858 45th Ave.",
+     "source": 83,
+     "excerpt": "SUNSET PLUMBING 5.0 · 2 Reviews · Showing 1-2 of 2 reviews"
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check: expired 10/31/2024; WC exemption cancelled and license inactivated 10/16/2023; renewal blocked on bond and workers compensation.",
+     "source": 67,
+     "excerpt": "This license is expired and not able to contract at this time. · 10/16/2023 - WC EXEMPT CANCELLED-LIC INACTIVATED"
+    },
+    {
+     "field": "Review",
+     "text": "Angi shows 5.0 from 2 reviews, both dated (2005, 2009) — stale sample retained with dates.",
+     "source": 83,
+     "excerpt": "Mike N. · Aug 2009 · 5.0 · Plumbing · Yes, I recommend this pro"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "License expired 10/31/2024 and previously inactivated; the favorable Angi sample is 17-21 years old.",
+     "sources": [
+      67,
+      83
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R23"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Expired/inactivated license.",
+    "Review sample is two decades old.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "purcell",
+   "name": "Purcell Bros Plumbing & Heating (historic Judah St shop)",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "2255 Judah St / 2255 28th Ave, 94122 per SF DBI registry.",
+   "license": {
+    "number": "493818",
+    "status": "expired",
+    "entity": "RODNEY CONKLIN PLUMBING & HEATING (current holder of record)",
+    "expires": "2014-06-30",
+    "classes": [
+     "C20",
+     "C36"
+    ],
+    "source": 68,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-564-0525",
+   "phoneSource": 48,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Purcell Bros Plumb & Heat, license 493818, 2255 Judah St, with multiple phone variants.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Purcell Bros Plumb & Heat\",\"license_number\":\"493818\",\"address\":\"2255 Judah St *\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check on 493818: the record now reads Rodney Conklin Plumbing & Heating (El Dorado Hills), C20+C36, expired 06/30/2014 — the qualifying individual relocated and the license lapsed.",
+     "source": 68,
+     "excerpt": "RODNEY CONKLIN PLUMBING & HEATING · 702 ANNA PLACE AY · EL DORADO HILLS, CA 95762 · This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "Firm name in the SF registry (Purcell Bros) no longer matches the CSLB holder of record (Conklin, expired 2014, moved out of the area). Likely defunct under this license.",
+     "sources": [
+      48,
+      68
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License expired 2014 under a different owner.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "scott-fisher",
+   "name": "Scott Fisher Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "hold",
+   "area": "outer",
+   "areaText": "2050 32nd Avenue, 94122 per SF DBI registry.",
+   "license": {
+    "number": "727485",
+    "status": "expired",
+    "entity": "SCOTT'S PLUMBING (license of record for 727485)",
+    "expires": "2012-10-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 62,
+    "checkedAt": "2026-09-10"
+   },
+   "phone": "415-682-3830",
+   "phoneSource": 48,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Scott Fisher Plumbing, license 727485, 2050 32nd Avenue, 94122, phones 415-682-3830/415-220-3991.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Scott Fisher Plumbing\",\"license_number\":\"727485\",\"address\":\"2050 - 32nd Avenue\""
+    },
+    {
+     "field": "License",
+     "text": "Direct CSLB check on 727485: record reads SCOTT'S PLUMBING (Geary Blvd), expired 10/31/2012.",
+     "source": 62,
+     "excerpt": "SCOTT'S PLUMBING · 3145 GEARY BLVD #336 · SAN FRANCISCO, CA 94118 · This license is expired and not able to contract at this time."
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "Registry firm name (Scott Fisher Plumbing, 32nd Ave) does not match the CSLB holder of record (Scott's Plumbing, Geary Blvd); license expired 2012.",
+     "sources": [
+      48,
+      62
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License expired 2012.",
+    "No review sample retained.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "crusader",
+   "name": "Crusader Plumbing Co",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Recommended for an 'old house' in South San Francisco (June 2024 thread); SF dispatch not confirmed.",
+   "license": null,
+   "phone": "415-760-2733",
+   "phoneSource": 82,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Reddit commenter describes repeated use for an older home and names a technician.",
+     "source": 82,
+     "excerpt": "Crusader Plumbing Co.ask for Carey he's amazing! We've been using him for all our plumbing needs which our old house has its fair share!"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB identity not established in this pass — the Reddit post gives a phone but no license number; verify license and entity before any contact.",
+     "sources": [
+      82
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R22"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License unchecked.",
+    "No exact seized-overflow extraction case verified.",
+    "Service area edge: recommendation is from South SF."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "amx",
+   "name": "AMX Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco firm per SF DBI registry (Amx Plumbing, 822482).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Thumbtack category page (2020): 4.88 from 42 reviews.",
+     "source": 79,
+     "excerpt": "{\"name\":\"AMX Plumbing\",\"aggregateRating\":{\"ratingValue\":4.880952380952381,\"reviewCount\":42}}"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Amx Plumbing, license 822482, SF business license 0367739.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Amx  Plumbing\",\"license_number\":\"822482\",\"sf_business_license_number\":\"0367739\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status for 822482 not directly checked in this pass.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "2020 rating snapshot.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sugar-bear",
+   "name": "Sugar Bear Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "South San Francisco base per Thumbtack; registered with SF DBI under two license numbers (876480; 946657 as Inc).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Thumbtack category page (2020): 4.67 from 12 reviews, South San Francisco.",
+     "source": 79,
+     "excerpt": "{\"name\":\"Sugar Bear Plumbing, Inc.\",\"aggregateRating\":{\"ratingValue\":4.666666666666667,\"reviewCount\":12},\"address\":{...\"addressLocality\":\"South San Francisco\"}}"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry shows both 'Sugar Bear Plumbing' (876480) and 'Sugar Bear Plumbing Inc' (946657).",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Sugar Bear Plumbing Inc\",\"license_number\":\"946657\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Two registry identities (sole owner vs Inc); confirm the contracting entity and current license before booking.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "Entity duplication unresolved.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "nigel-mulgrew",
+   "name": "Nigel Mulgrew Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco firm per SF DBI registry (746000; Inc. variant, SF business license 0489866).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Named as a recommendation in a March 2026 Reddit thread.",
+     "source": 81,
+     "excerpt": "Nigel Mulgrew Plumbing"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Nigel Mulgrew Plumbing / Nigel Mulgrew Plumbing Inc., license 746000.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Nigel Mulgrew Plumbing\",\"license_number\":\"746000\",\"sf_business_license_number\":\"0489866\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status for 746000 not directly checked in this pass.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R25"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "Name-drop only; no work account.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "a1-plumbing",
+   "name": "A-1 Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco firm per SF DBI registry (454201). Registry address history is citywide; exact base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Recommended by name and technician in an October 2020 Reddit thread.",
+     "source": 80,
+     "excerpt": "A-1 Plumbing. Ali is the best!"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: A-1 Plumbing, license 454201, SF business license 0454201. (A separate 'A-1 Sprinklers & Plumbing' exists at 2014 34th Ave, 94122, license 326284 — different firm.)",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"A-1 Plumbing\",\"license_number\":\"454201\",\"sf_business_license_number\":\"0454201\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Name-collision risk: 'A-1 Plumbing' (454201) vs 'A-1 Sprinklers & Plumbing' (326284, 2014 34th Ave). Confirm which firm a phone number belongs to before booking.",
+     "sources": [
+      48,
+      80
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R19"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "2020 recommendation; currency unknown.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "answer-plumbing",
+   "name": "Answer Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "San Francisco firm per SF DBI registry (944315, SF business license 1017456); indexed Yelp sample says it serves San Francisco and surrounding area.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.9 stars, about 57 reviews, serving San Francisco and the Surrounding Area.",
+     "source": 90,
+     "excerpt": "Answer Plumbing 4.9 (57 reviews) Serving San Francisco and the Surrounding Area"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Answer Plumbing, license 944315.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Answer Plumbing\",\"license_number\":\"944315\",\"sf_business_license_number\":\"1017456\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status for 944315 not directly checked in this pass.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "Indexed Yelp sample may be stale.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "expert-sf-plumber",
+   "name": "Expert San Francisco Plumber",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "945 Taraval St Ste 821, 94116 (Parkside, adjacent to Outer Sunset) per indexed Yelp profile.",
+   "license": null,
+   "phone": "415-682-6055",
+   "phoneSource": 85,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp profile: established 2008; specialties include bathroom remodeling, tubs, showers, sinks and fixtures, clogged drains.",
+     "source": 85,
+     "excerpt": "Our firm specializes in Bathroom Remodeling, Tubs, Showers, Sinks & Fixtures, Clogged Drains ... Established in 2008"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "945 Taraval Street hosts multiple suite-numbered businesses (this firm at Ste 821; Friendly Plumbing at Ste 345) — consistent with mailbox-suite listings; confirm a real dispatch base.",
+     "sources": [
+      85,
+      84
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "CSLB identity not established in this pass.",
+     "sources": [
+      85
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License unchecked; suite-style address needs confirmation.",
+    "No exact seized-overflow extraction case verified.",
+    "Tub-adjacent scope is remodel-oriented, not seized-mechanism extraction."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "friendly-plumbing",
+   "name": "Friendly Plumbing (Taraval)",
+   "website": "https://friendlyplumbingsf.com/",
+   "websiteSource": 84,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "945 Taraval St Ste 345, 94116 (Parkside, adjacent to Outer Sunset) per indexed Yelp profile; 'Serving San Francisco Area'.",
+   "license": null,
+   "phone": "628-282-1991",
+   "phoneSource": 84,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp profile: 'Fully licensed, bonded, and insured plumbing company based out of San Francisco… San Francisco native owned and operated'; Yelp shows a verified-license badge.",
+     "source": 84,
+     "excerpt": "Fully licensed, bonded, and insured plumbing company based out of San Francisco, California. San Francisco native owned and operated."
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "A similarly named wave-1 directory lead ('Friendly Plumber', no contact data) exists in this dataset. Kept separate; do not merge without identity proof.",
+     "sources": [
+      84,
+      2
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "Suite-style address shared with other businesses; CSLB number not captured in this pass despite the verified-license badge.",
+     "sources": [
+      84
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License number unchecked.",
+    "No exact seized-overflow extraction case verified.",
+    "No review sample retained."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "usa-rooter",
+   "name": "USA Rooter & Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset Yelp results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.6 stars, about 90 reviews, free consultations.",
+     "source": 71,
+     "excerpt": "USA Rooter & Plumbing 4.6 (90 reviews) Free consultations"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity, license or address verified in this pass.",
+    "No exact seized-overflow extraction case verified.",
+    "Indexed sample may be stale."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "general-drain",
+   "name": "General Drain Experts & Leak Detection INC",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset Yelp results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.9 stars, about 139 reviews, responds in about 20 minutes.",
+     "source": 71,
+     "excerpt": "General Drain Experts & Leak Detection INC 4.9 (139 reviews) Responds in about 20 mins"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity, license or address verified in this pass.",
+    "Drain/leak focus is adjacent, not overflow-mechanism work.",
+    "Indexed sample may be stale."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "drain-busters",
+   "name": "Drain Busters Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset Yelp results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 5.0 stars, 5 reviews, verified-license badge, free estimates.",
+     "source": 70,
+     "excerpt": "Drain Busters Plumbing 5.0 (5 reviews) Verified License"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "Very small review sample.",
+    "No identity, license number or address captured in this pass.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "ep-plumbing",
+   "name": "EP Plumbing Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset Yelp results page as a new business; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 'New on Yelp', verified-license badge, responds in about 3 hours, free estimates.",
+     "source": 70,
+     "excerpt": "EP Plumbing Services New on Yelp Verified License Responds in about 3 hrs"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "New business with no track record sample in this pass.",
+     "sources": [
+      70
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No review history.",
+    "No identity, license number or address captured.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "mr-plumbing-drain",
+   "name": "Mr Plumbing Drain Cleaning",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset Yelp results page lists bathtub installation, bathtub repair and drain repair services; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page lists this business with bathtub installation, bathtub repair and drain repair service tags.",
+     "source": 70,
+     "excerpt": "Mr Plumbing Drain Cleaning Serving San Francisco and the Surrounding Area · Bathtub installation Bathtub repair Drain repair"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Service tags show bathtub repair, which is task-adjacent, but no verified identity or license in this pass.",
+     "sources": [
+      70
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity or license captured.",
+    "Service tags do not prove seized-mechanism experience.",
+    "Indexed sample may be stale."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "on-shore",
+   "name": "On-Shore Plumbing And Boilers (Mark J Linar)",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset Yelp results page; SF DBI registry records the firm (license 449998).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 1 review; plumbing and heating categories.",
+     "source": 70,
+     "excerpt": "On-Shore Plumbing And Boilers · Discover 1 reviews of On-Shore Plumbing And Boilers, a nearby business for Plumbing, Heating & Air Conditioning/HVAC"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: On-Shore Plumbing & Heating/Mark J Linar, license 449998, SF business license 0369298.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"On-Shore Plumbing & Heating/Mark J Linar\",\"license_number\":\"449998\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Old license number (449998); status not checked in this pass.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "One indexed review only.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "mr-rescue",
+   "name": "Mr. Rescue Plumbing & Drain Cleaning",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "1728 Ocean Ave #243, 94112 (Balboa Park / Oceanside edge); Ocean Avenue corridor is east of Outer Sunset. Coverage not confirmed.",
+   "license": null,
+   "phone": "650-240-1269",
+   "phoneSource": 72,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages listing: 8 years in business, one posted review about a backed-up kitchen drain.",
+     "source": 72,
+     "excerpt": "Mr. Rescue Plumbing & Drain Cleaning · 8 Years in Business · (650) 240-1269 · 1728 Ocean Ave # 243, San Francisco, CA 94112"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R26"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License unchecked.",
+    "Drain-cleaning focus; overflow-mechanism work unproven.",
+    "Address is outside Outer Sunset proper."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sf-residential-plumbing",
+   "name": "San Francisco Residential Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "1518 Noriega St, 94122 (Outer Sunset) per Yellow Pages listing.",
+   "license": null,
+   "phone": "415-570-7095",
+   "phoneSource": 72,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages Outer Sunset organic listing #16 with address and phone; website field points to a template 'localsearch' placeholder.",
+     "source": 72,
+     "excerpt": "San Francisco Residential Plumbing · (415) 570-7095 · 1518 Noriega St · San Francisco, CA 94122"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Only directory presence found; the linked website is a directory-template placeholder, and no CSLB identity was located in this pass.",
+     "sources": [
+      72
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No license or identity verification.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sf-find-a-plumbing",
+   "name": "San Francisco Find A Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "2340 Irving St, 94122 (Outer Sunset) per Yellow Pages indexed listing.",
+   "license": null,
+   "phone": "415-569-2537",
+   "phoneSource": 73,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages indexed JSON-LD listing block.",
+     "source": 73,
+     "excerpt": "{\"name\":\"San Francisco Find A Plumbing\",\"address\":{\"streetAddress\":\"2340 Irving St\",...\"postalCode\":\"94122\"},\"telephone\":\"(415) 569-2537\"}"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Directory-only lead; name pattern suggests a lead-generation style listing. Verify a real operator exists at this number before use.",
+     "sources": [
+      73
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No license or identity verification.",
+    "Possible lead-gen listing.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "pro-plumbing-fire",
+   "name": "Pro Plumbing & Fire Sprinkler",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "1814 40th Ave, 94122; Yellow Pages categorizes the neighborhood as 'Southwest San Francisco, Outer Sunset'.",
+   "license": null,
+   "phone": "415-994-3468",
+   "phoneSource": 72,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages listing with neighborhood label 'Southwest San Francisco, Outer Sunset'.",
+     "source": 72,
+     "excerpt": "Neighborhoods: Southwest San Francisco, Outer Sunset · (415) 994-3468 · 1814 40th Ave, San Francisco, CA 94122"
+    },
+    {
+     "field": "Registry",
+     "text": "Manta self-claimed listing: founded 2009, owner listed as Ken Lg.",
+     "source": 89,
+     "excerpt": "\"description\":\"Pro Plumbing & Fire Sprinkler\",\"foundingDate\":\"2009\",\"telephone\":\"4159943468\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No CSLB identity located in this pass despite the plumbing/fire-sprinkler trade name.",
+     "sources": [
+      72,
+      89
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License unchecked.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "kaplan",
+   "name": "Kaplan Plumbing & Heating",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "2311 39th Avenue, 94116 (Parkside, adjacent to Outer Sunset) per registry and Yellow Pages; home-based sole shop, 47 years listed.",
+   "license": null,
+   "phone": "415-566-7192",
+   "phoneSource": 72,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages listing #9: 'Kaplan Jos.', 47 years in business, 2311 39th Ave.",
+     "source": 72,
+     "excerpt": "Kaplan Jos. · 47 Years in Business · (415) 566-7192 · 2311 39th Ave · San Francisco, CA 94116"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Kaplan Plumbing / Kaplan Plumbing & Heating, license 375339, 2311 39th Avenue, phones 415-566-7192 / 415-566-2319.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Kaplan Plumbing & Heating\",\"license_number\":\"375339\",\"address\":\"2311 39th Ave\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Old license number (375339); CSLB status not checked in this pass — a 47-year-old shop may be retired.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked; may be retired.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "kk-plumbing",
+   "name": "K & K Plumbing & Fire Protection",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "21 Cutler Ave, 94116 per Yellow Pages indexed listing (Parkside/West Portal edge).",
+   "license": null,
+   "phone": "415-713-3186",
+   "phoneSource": 73,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages indexed listing: K & K Plumbing & Fire Protctn, plumbers + general contractors, 21 Cutler Ave.",
+     "source": 73,
+     "excerpt": "{\"name\":\"K & K Plumbing & Fire Protctn\",\"address\":{\"streetAddress\":\"21 Cutler Ave\",...\"postalCode\":\"94116\"},\"telephone\":\"(415) 713-3186\"}"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Do not confuse with the SF DBI registry firm 'K K Plumbing' (license 682270) at 2127 34th Ave — different address; identity of the Cutler Ave listing unresolved in this pass.",
+     "sources": [
+      73,
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License unchecked; two similarly named firms exist.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sberlo",
+   "name": "Sberlo Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "1663 12th Avenue, 94122 (Inner Sunset edge of the 94122 ZIP) per SF DBI registry.",
+   "license": null,
+   "phone": "415-664-9282",
+   "phoneSource": 48,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Sberlo Plumbing / Sberlo Plumbing Inc., license 487017, 1663 12th Av, 94122, with many phone variants.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Sberlo Plumbing Inc.\",\"license_number\":\"487017\",\"address\":\"1663  12th Av\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status for 487017 not directly checked in this pass; registry rows are historical.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "sunny-plumbing",
+   "name": "Sunny's Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "1786 35th Avenue, 94122 (Outer Sunset) per SF DBI registry.",
+   "license": null,
+   "phone": "415-665-1029",
+   "phoneSource": 48,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF DBI registry: Sunny's Plumbing Inc, license 536715, 1786 35th Ave, phones 415-665-1029 / 415-882-9199.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Sunny's Plumbing Inc\",\"license_number\":\"536715\",\"address\":\"1786 35th Ave\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status for 536715 not directly checked in this pass; registry rows are historical.",
+     "sources": [
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License status unchecked.",
+    "No reviews found.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "ben-handy",
+   "name": "Ben Handy",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset Yelp results page (plumbing, handyman, electrician categories); base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 5.0 stars, 11 reviews; quote fragment describes prep/patch/paint work.",
+     "source": 70,
+     "excerpt": "Ben Handy 5.0 (11 reviews) Serving San Francisco and the Surrounding Area"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Handyman — only appropriate for non-plumbing phases (hatch carpentry/drywall) if licensed and insured; plumbing code work requires a C36/C42 contractor.",
+     "sources": [
+      70
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R27"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity or license captured.",
+    "Small review sample.",
+    "Not a plumbing-code contractor per available evidence."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "humboldt-team",
+   "name": "Humboldt Team",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset Yelp results page: plumbing, drywall installation & repair, damage restoration categories; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.6 stars, 93 reviews, 2-day response time; categories include drywall installation & repair and damage restoration — relevant to the ceiling-opening/access-hatch phase.",
+     "source": 70,
+     "excerpt": "Humboldt Team 4.6 (93 reviews) ... Plumbing, Drywall Installation & Repair, Damage Restoration"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No CSLB identity captured; multi-trade scope must be verified license by license (C36 plumbing vs drywall) before booking.",
+     "sources": [
+      70
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R16"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity or license captured.",
+    "Which trade class the reviews refer to is unverified.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "meticulous",
+   "name": "The Meticulous Handyman",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset drywall search page; 'Serving San Francisco and the Surrounding Area'.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.9 stars, 115 reviews, verified-license badge, locally owned.",
+     "source": 87,
+     "excerpt": "The Meticulous Handyman 4.9 (115 reviews) Verified License Locally owned & operated Certified professionals"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "License badge noted but license number not captured in this pass.",
+     "sources": [
+      87
+     ]
+    }
+   ],
+   "reviewIds": [
+    "R28"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License number not captured.",
+    "Handyman scope — drywall/hatch phase only.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "jose-handyman",
+   "name": "Jose HandyMan Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset drywall search page; 'Serving San Francisco and the Surrounding Area'.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.6 stars, 88 reviews, free estimates, 2-hour response.",
+     "source": 87,
+     "excerpt": "Jose HandyMan Services 4.6 (88 reviews) Workmanship commitment Free estimates"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R29"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "No identity or license captured.",
+    "Handyman scope — drywall/hatch phase only.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "rudy-handyman",
+   "name": "Rudy's Handyman Services",
+   "website": "https://rudyhandymanca.com/",
+   "websiteSource": 86,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Business drywall page lists Sunset District among served neighborhoods.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Business drywall-repair page lists frequent service areas including Sunset District; describes licensed handyman professionals and free inspections.",
+     "source": 86,
+     "excerpt": "We frequently provide drywall repair services in areas such as: • Mission District • Sunset District • Richmond District ..."
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Business marketing page; license number not displayed in the indexed extract.",
+     "sources": [
+      86
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License number not captured.",
+    "Marketing claims are not work history.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "bernal-hill",
+   "name": "Bernal Hill Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset drywall search pages; 'Serving San Francisco and the Surrounding Area'.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 4.9 stars, 38 reviews; sponsored result on the drywall search.",
+     "source": 87,
+     "excerpt": "Bernal Hill Drywall 4.9 (38 reviews) Serving San Francisco and the Surrounding Area Verified License"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Bernal Hill Drywall, license 995163, SF business license 0490674.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Bernal Hill Drywall\",\"license_number\":\"995163\",\"sf_business_license_number\":\"0490674\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB status/class for 995163 not checked in this pass (drywall trade class expected, not C36).",
+     "sources": [
+      48,
+      87
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License class/status unchecked.",
+    "Drywall scope — patch/hatch phase only.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  },
+  {
+   "id": "camex",
+   "name": "Camex Electric & Builders",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Outer Sunset Yelp results page (plumbing, electricians, roofing categories); base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp search page: 70 reviews across plumbing/electricians/roofing categories.",
+     "source": 70,
+     "excerpt": "Camex Electric & Builders · Discover 70 reviews of Camex Electric & Builders, a nearby business for Plumbing, Electricians, Roofing"
+    },
+    {
+     "field": "Registry",
+     "text": "SF DBI registry: Camex Electric & Builders, license 934247, SF business license 1106315.",
+     "source": 48,
+     "excerpt": "\"firm_name\":\"Camex Electric & Builders\",\"license_number\":\"934247\",\"sf_business_license_number\":\"1106315\""
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Multi-trade firm (electrical-led); plumbing capability must be proven by an in-house C36 before any plumbing scope.",
+     "sources": [
+      70,
+      48
+     ]
+    }
+   ],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "priority": null,
+   "gaps": [
+    "License class/status unchecked.",
+    "Primary trade appears electrical.",
+    "No exact seized-overflow extraction case verified."
+   ],
+   "platformLinks": []
+  }
+ ],
+ "reviews": [
+  {
+   "id": "R14",
+   "business": "expert-plumbing-solutions",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "I will highly recommend this company for all kind of plumbing issues. They are very responsible",
+   "analysis": "Indexed praise for responsiveness and professionalism. Does not mention bathtub overflow mechanisms, older piping, or access work; supports general competence only.",
+   "theme": "Communication",
+   "source": 69,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R15",
+   "business": "red-wrench",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "One of the best plumbing service that I have ever dealt with through the years.",
+   "analysis": "Indexed loyalty statement. General satisfaction only; no task detail relevant to seized overflow extraction.",
+   "theme": "General quality",
+   "source": 70,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R16",
+   "business": "humboldt-team",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "Roman did a fantastic plumbing job in my home today. His service cost is very reasonable and did it",
+   "analysis": "Indexed quote describing an in-home plumbing job by a named technician at fair cost. Supports that the firm takes plumbing service calls; no overflow or drywall task detail.",
+   "theme": "Tub-adjacent service",
+   "source": 70,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R17",
+   "business": "mr-rooter-sf",
+   "platform": "Business site",
+   "author": "Bennett W.",
+   "published": "Not displayed",
+   "quote": "Jasiyah at the office was very patient listening to me explain my situation. Pablo explained in detail what the job entailed and has a very pleasant disposition.",
+   "analysis": "Company-hosted testimonial, not an independent platform review. Describes communication quality only; published next to an expired-license record for the local franchisee.",
+   "theme": "Communication",
+   "source": 78,
+   "access": "search-extract",
+   "identity": "company-published",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R18",
+   "business": "mr-rooter-sf",
+   "platform": "Business site",
+   "author": "Ivan H.",
+   "published": "Not displayed",
+   "quote": "They showed up on time and took care of everything in timely manner. In addition, they took great care with protective equipment for the interior space of the home.",
+   "analysis": "Company-hosted testimonial about punctuality and interior protection. Interior-care practices are relevant to occupied-unit work, but provenance is the company itself and the local license record is expired.",
+   "theme": "Clean work",
+   "source": 78,
+   "access": "search-extract",
+   "identity": "company-published",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R19",
+   "business": "a1-plumbing",
+   "platform": "Reddit",
+   "author": "johnnitt",
+   "published": "October 2020 thread",
+   "quote": "A-1 Plumbing. Ali is the best!",
+   "analysis": "Pseudonymous community endorsement naming a technician. No task detail; thread is from 2020 and the firm identity (A-1 Plumbing vs A-1 Sprinklers & Plumbing) is unresolved.",
+   "theme": "Community recommendation",
+   "source": 80,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R20",
+   "business": "five-star",
+   "platform": "Reddit",
+   "author": "HustlaofCulture",
+   "published": "March 2026 thread",
+   "quote": "Five star plumbing. Ask for Santiago",
+   "analysis": "Recent community name-drop with a technician name. No work description; entity reissue on the license requires identity confirmation.",
+   "theme": "Community recommendation",
+   "source": 81,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R21",
+   "business": "gomez",
+   "platform": "Reddit",
+   "author": "No_Mood_4936",
+   "published": "June 2024 thread",
+   "quote": "Gomez Plumbing",
+   "analysis": "Bare name-drop in a recommendation thread — the weakest evidence class retained. Shows the name circulates locally; nothing about work quality or task fit.",
+   "theme": "Community recommendation",
+   "source": 82,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R22",
+   "business": "crusader",
+   "platform": "Reddit",
+   "author": "Exotic_Rip_6007",
+   "published": "June 2024 thread",
+   "quote": "ask for Carey he's amazing! We've been using him for all our plumbing needs which our old house has its fair share!",
+   "analysis": "Describes repeat plumbing work on an older house — the same housing stock as the target building — but no overflow-specific detail and the license identity is not yet established.",
+   "theme": "Older-home experience",
+   "source": 82,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R23",
+   "business": "sunset-plumbing",
+   "platform": "Angi",
+   "author": "Mike N.",
+   "published": "August 2009",
+   "quote": "They were very honest. If you ask him to do something, he does it. If he says he will do something by a certain time, he will. There was excellent performance on their part.",
+   "analysis": "Positive but 17 years old, and the firm's license has since expired (2024). Retained only as dated history.",
+   "theme": "Reliability (dated)",
+   "source": 83,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R24",
+   "business": "everlast",
+   "platform": "Reddit",
+   "author": "knightro25",
+   "published": "June 2024 thread",
+   "quote": "Did some stuff for me. Well done, on time, great experience. Good reviews.",
+   "analysis": "General positive account with a website link. Vague on task type; useful only as a corroborating signal alongside the active license.",
+   "theme": "General quality",
+   "source": 82,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R25",
+   "business": "nigel-mulgrew",
+   "platform": "Reddit",
+   "author": "NewspaperBackground",
+   "published": "March 2026 thread",
+   "quote": "Nigel Mulgrew Plumbing",
+   "analysis": "Bare name-drop, March 2026. Signals current local circulation of the name only.",
+   "theme": "Community recommendation",
+   "source": 81,
+   "access": "search-extract",
+   "identity": "unverified-username",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R26",
+   "business": "mr-rescue",
+   "platform": "Yellow Pages",
+   "author": "Not shown on listing",
+   "published": "Not displayed",
+   "quote": "Called Mr. Rescue Plumbing & Drain Cleaning after we Kitchen Drain backed up and we couldn't relieve the problem by snaking/taking apart the piping under the sink.",
+   "analysis": "Review text posted on the Yellow Pages listing describing a drain blockage diagnosis. Adjacent drain competence; not overflow-mechanism work.",
+   "theme": "Drain service",
+   "source": 72,
+   "access": "page",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R27",
+   "business": "ben-handy",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "I was working on disconnecting my old broken thermostat to prepare, patch and paint the area for a new thermostat being installed the next day",
+   "analysis": "Indexed quote fragment describing careful prep/patch/paint work. Relevant to finish quality for a hatch/drywall phase; no plumbing content.",
+   "theme": "Finish work",
+   "source": 70,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R28",
+   "business": "meticulous",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "Jasper is awesome! I had some door frames and drywall that needed patching, sanding, and painting.",
+   "analysis": "Indexed praise for drywall patching and finishing by a named technician — the exact skill family needed to close an access hatch neatly. Does not verify license or plumbing scope.",
+   "theme": "Drywall finishing",
+   "source": 87,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R29",
+   "business": "jose-handyman",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "He's completed drywall projects that others said were impossible. Nice guy and a great professional!",
+   "analysis": "Indexed praise for difficult drywall projects. Supports finish-phase capability only.",
+   "theme": "Drywall finishing",
+   "source": 87,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  }
+ ]
+}

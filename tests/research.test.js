@@ -14,12 +14,13 @@ const data = JSON.parse(
 );
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 
-test("exactly 50 unique discovery entries, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 50);
+test("exactly 100 unique discovery entries across two waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 100);
+  assert.equal(data.schemaVersion, 2);
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].toLowerCase())).size,
-      50,
+      100,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
@@ -103,15 +104,16 @@ test("review identities, source dates, quotes and provenance stay separate", () 
 });
 test("shortlist requires current C36, but never claims exact qualification", () => {
   const short = data.businesses.filter((b) => b.priority);
-  assert.equal(short.length, 3);
-  assert.deepEqual(short.map((b) => b.priority).sort(), [1, 2, 3]);
+  assert.equal(short.length, 5);
+  assert.deepEqual(short.map((b) => b.priority).sort(), [1, 2, 3, 4, 5]);
   short.forEach((b) => {
     assert.equal(b.license.status, "active");
+    assert.ok(b.license.classes.includes("C36"));
     assert.equal(b.master, false);
     assert.ok(b.rationale);
     assert.ok(b.nextStep);
   });
-  assert.equal(evidenceCounts(data).active, 10);
+  assert.equal(evidenceCounts(data).active, 21);
 });
 test("case-insensitive search, status, area and active-license filters combine", () => {
   assert.equal(
@@ -120,13 +122,13 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(
     filterBusinesses(data.businesses, { status: "shortlist" }).length,
-    3,
+    5,
   );
   assert.equal(
     filterBusinesses(data.businesses, { status: "master" }).length,
     0,
   );
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 10);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 21);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
