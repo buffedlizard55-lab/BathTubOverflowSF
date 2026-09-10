@@ -6,10 +6,10 @@ A static, source-linked research workspace for repair-first bathtub plumbing in 
 
 **Publication status:** implementation is on the session branch and available in the Arena live preview. The public site has not been updated: repository Pages is configured for `main`, and the integration returned HTTP 403 when asked to change Pages settings. No credentials were requested or changed.
 
-## Research snapshot — September 10, 2026 (waves 1 + 2 + 3 + 4)
+## Research snapshot — September 10, 2026 (waves 1 + 2 + 3 + 4 + 5)
 
-- **201 distinct discovery records**, not 201 approved contractors. Wave 1 = 50, Wave 2 = 50, Wave 3 = 51, Wave 4 = 50 (this session).
-- **36 distinct direct CSLB record reads**: 31 across waves 1–2 (20 by wave 2 alone — 11 active C-36, 9 expired) and **5 more in wave 4**, all read live on `cslb.ca.gov` this session — three now attached to existing entries (Magic Plumbing #698806, 24-7 Rooter & Plumbing #954813, AB Plumbing #876212), one attached to a new entry (Integrity First Plumbing #1006178), and one marketing-page number (#1057927, Repipe Champions) that **failed verification** and is flagged. Waves 3 and 4 are otherwise discovery-level: their remaining leads await CSLB checks (see `data/wave3-discovery-log.md`, `data/wave4-discovery-log.md`).
+- **251 distinct discovery records**, not 251 approved contractors. Wave 1 = 50, Wave 2 = 50, Wave 3 = 51, Wave 4 = 50, Wave 5 = 50 (this session).
+- **36 distinct direct CSLB record reads**: 31 across waves 1–2 (20 by wave 2 alone — 11 active C-36, 9 expired) and **5 more in wave 4**, all read live on `cslb.ca.gov` this session — three now attached to existing entries (Magic Plumbing #698806, 24-7 Rooter & Plumbing #954813, AB Plumbing #876212), one attached to a new entry (Integrity First Plumbing #1006178), and one marketing-page number (#1057927, Repipe Champions) that **failed verification** and is flagged. Waves 3–5 are otherwise discovery-level: their remaining leads await CSLB checks (see `data/wave3-discovery-log.md`, `data/wave4-discovery-log.md`).
 - **Official SF DBI permit-firm registry** (data.sf.gov open dataset `k6kv-9kix`) queried by firm name and by Outer Sunset ZIPs (94122/94116) — an independent, government side channel that confirmed license numbers, recorded business addresses and permit-linked phone numbers for wave-2 entries.
 - **59 short review excerpts** with provenance labels (Yelp/Thumbtack/Reddit/Angi/Nextdoor indexed extracts, one Yellow Pages page review, and explicitly labeled company-hosted testimonials and check-ins).
 - **140 evidence references** with source URL, retrieval mode and checked date; repeated URLs have separate roles, not independent corroboration.
@@ -104,7 +104,7 @@ npm run test:browser
 
 For an already-installed compatible Chromium, set `CHROMIUM_PATH` to its executable. The sandbox browser smoke tests used a separately obtained headless Chromium binary because the standard Playwright browser CDN was inaccessible; no browser binaries are committed.
 
-Tests cover unique entities (201 across four waves), all citation references, license provenance, review assignment, evidence dates, private-field exclusions, master admission, safe CSV/HTML escaping, search/filter combinations, source-monitor barriers and parsing, comparison limits, exports, dialogs, navigation and mobile overflow. Browser-spec row and card counts derive from the dataset so waves cannot silently desync the UI.
+Tests cover unique entities (251 across five waves), all citation references, license provenance, review assignment, evidence dates, private-field exclusions, master admission, safe CSV/HTML escaping, search/filter combinations, source-monitor barriers and parsing, comparison limits, exports, dialogs, navigation and mobile overflow. Browser-spec row and card counts derive from the dataset so waves cannot silently desync the UI.
 
 ## Wave files and merging
 
@@ -134,7 +134,7 @@ The `Public source audit` workflow runs on relevant pushes and supports dispatch
 
 `Test and deploy Pages` validates the dataset and UI, stages only `index.html`, `styles.css`, `app.js`, `lib.js`, `assets/mark.svg` and `data/research.json`, then optionally deploys through GitHub Pages Actions on `main` when the repository uses the Actions build type. The current legacy Pages configuration publishes the repository root from `main` independently after the changes are merged. The workflow deliberately skips deployment on the session branch rather than failing against the known branch restriction. If repository integration permissions prevent changing those settings, the workflow and local live preview still work but the public deployment is not complete.
 
-The session branch is `arena/01a08d6c-bathtuboverflowsf`. No changes are pushed to other branches.
+The session branch is `arena/01a08da4-bathtuboverflowsf`. No changes are pushed to other branches.
 
 ## Structure
 
@@ -142,13 +142,16 @@ The session branch is `arena/01a08d6c-bathtuboverflowsf`. No changes are pushed 
 index.html, styles.css, app.js   Static UI
 lib.js                          Pure filtering/export/admission rules
 assets/mark.svg                  Original local vector mark
-data/research.json              Merged, source-linked dataset (waves 1–4, schema v2)
+data/research.json              Merged, source-linked dataset (waves 1–5, schema v2)
 data/wave2.json                 Raw wave-2 research record
 data/wave2-discovery-log.md     Discovery trail incl. rejected candidates
 data/wave3.json                 Raw wave-3 research record
 data/wave3-discovery-log.md     Wave-3 sources, categories, spot-checks
 data/wave4.json                 Raw wave-4 research record (50 new entries)
 data/wave4-discovery-log.md     Wave-4 sources, CSLB read outcomes, rejected candidates
+data/wave5.json                 Raw wave-5 research record (50 new entries)
+data/wave5-discovery-log.md     Wave-5 sources, limitations and irregularities
+scripts/gen_wave5.py            Reproducible wave-5 dataset builder
 scripts/merge_wave.py           Fail-closed wave merge
 scripts/gen_wave4.py            Reproducible wave-4 dataset builder
 scripts/patch_wave4_licenses.py Wave-4 CSLB attaches for pre-existing entries

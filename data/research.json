@@ -8169,6 +8169,1556 @@
     "License unchecked.",
     "Outer Sunset coverage unconfirmed."
    ]
+  },
+  {
+   "id": "w5-walker-s-plumbing-services",
+   "name": "Walker's Plumbing Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "5.0 (18 reviews); Richmond-area listing; family-owned; free estimates.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Walker's Plumbing Services appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 141,
+     "excerpt": "5.0 (18 reviews); Richmond-area listing; family-owned; free estimates."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-castillo-general-remodel",
+   "name": "Castillo General Remodel",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed as serving San Francisco; bathroom remodeling and plumbing work for a new ADU shown.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Castillo General Remodel appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 141,
+     "excerpt": "Indexed as serving San Francisco; bathroom remodeling and plumbing work for a new ADU shown."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-mr-unger-s-kitchen-bathroom-remodeling",
+   "name": "Mr Unger's Kitchen & Bathroom Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "4.8 (59 reviews); South San Francisco area; profile says general and plumbing contractor.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Mr Unger's Kitchen & Bathroom Remodeling appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 141,
+     "excerpt": "4.8 (59 reviews); South San Francisco area; profile says general and plumbing contractor."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-mason-plumbing",
+   "name": "Mason Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "4.6 (87 reviews); San Anselmo-area listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Mason Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 141,
+     "excerpt": "4.6 (87 reviews); San Anselmo-area listing."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-san-francisco-plumbing-experts",
+   "name": "San Francisco Plumbing Experts",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (1 review); indexed as serving San Francisco; family-owned.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "San Francisco Plumbing Experts appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 141,
+     "excerpt": "5.0 (1 review); indexed as serving San Francisco; family-owned."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-sovereignty-plumbing",
+   "name": "Sovereignty Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "4.6 (46 reviews); indexed at 102 Mountain Rd with a Verified License badge.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Sovereignty Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "4.6 (46 reviews); indexed at 102 Mountain Rd with a Verified License badge."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-vrg-plumbing",
+   "name": "VRG Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "4.9 (128 reviews); Temescal listing offering remodels, tub installation and drain cleaning.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "VRG Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "4.9 (128 reviews); Temescal listing offering remodels, tub installation and drain cleaning."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-sjs-plumbing-construction-design-services",
+   "name": "SJS Plumbing Construction & Design Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed as serving San Francisco; no rating shown in extract.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SJS Plumbing Construction & Design Services appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "Indexed as serving San Francisco; no rating shown in extract."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-abf-construction",
+   "name": "ABF Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (2 reviews); serves San Francisco; excerpt references tricky plumbing and a solution.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "ABF Construction appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "5.0 (2 reviews); serves San Francisco; excerpt references tricky plumbing and a solution."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-baypro-plumbing",
+   "name": "BayPro Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "5.0 (3 reviews); Pacifica-area listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "BayPro Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "5.0 (3 reviews); Pacifica-area listing."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-young-s-plumbing",
+   "name": "Young's Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "1.0 (1 review); indexed at 483 19th Ave, Outer Richmond.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Young's Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "1.0 (1 review); indexed at 483 19th Ave, Outer Richmond."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-stan-plumbing",
+   "name": "Stan Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "Indexed in Inner Sunset; no rating shown.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Stan Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "Indexed in Inner Sunset; no rating shown."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-415-backflow-testing",
+   "name": "415 Backflow Testing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed as serving San Francisco; specialty appears to be backflow testing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "415 Backflow Testing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 142,
+     "excerpt": "Indexed as serving San Francisco; specialty appears to be backflow testing."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-alphabet-plumbing",
+   "name": "Alphabet Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "5.0 (10 reviews); 950 S McGlincy Ln; Verified License badge in Yelp extract.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Alphabet Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 143,
+     "excerpt": "5.0 (10 reviews); 950 S McGlincy Ln; Verified License badge in Yelp extract."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-selvin-plumbing-and-rooter",
+   "name": "Selvin Plumbing And Rooter",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (85 reviews); Verified License badge; excerpt discusses old galvanized drain pipe.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Selvin Plumbing And Rooter appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 143,
+     "excerpt": "5.0 (85 reviews); Verified License badge; excerpt discusses old galvanized drain pipe."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-maga-a-time-handyman",
+   "name": "Magaña Time Handyman",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Thumbtack lists drywall repair/texturing; 4.8 across 68 reviews in page JSON-LD.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Magaña Time Handyman appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Thumbtack lists drywall repair/texturing; 4.8 across 68 reviews in page JSON-LD."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-jap-drywall-comp-corp",
+   "name": "JAP Drywall Comp. Corp.",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (2 reviews); serves San Francisco; reviewer says provider advised fixing a leak before patching.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "JAP Drywall Comp. Corp. appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "5.0 (2 reviews); serves San Francisco; reviewer says provider advised fixing a leak before patching."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-artur-astanov",
+   "name": "Artur Astanov",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (9 reviews); 14 hires; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Artur Astanov appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "5.0 (9 reviews); 14 hires; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-monkey-s-remodeling",
+   "name": "Monkey's Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (1 review); serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Monkey's Remodeling appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "5.0 (1 review); serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-tim-s-handyman-services",
+   "name": "Tim's Handyman Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Review excerpt says Mike repaired and patched drywall and identified a sink issue.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Tim's Handyman Services appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Review excerpt says Mike repaired and patched drywall and identified a sink issue."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-water-s-fault-restoration",
+   "name": "WATER'S FAULT Restoration",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed review says bathroom-ceiling drywall hole was patched and texture matched; painting excluded.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "WATER'S FAULT Restoration appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Indexed review says bathroom-ceiling drywall hole was patched and texture matched; painting excluded."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-new-age-drywall-inc",
+   "name": "New Age Drywall Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.9 (144 reviews); 260 hires; serves San Francisco; Thumbtack labels Licensed pro.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "New Age Drywall Inc appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.9 (144 reviews); 260 hires; serves San Francisco; Thumbtack labels Licensed pro."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-walty-handy-service-pro",
+   "name": "Walty Handy Service Pro",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed review praises drywall patching/repair and communication.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Walty Handy Service Pro appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Indexed review praises drywall patching/repair and communication."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-mayorga-handyman-remodeling-services",
+   "name": "Mayorga Handyman & Remodeling Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed review describes fast apartment drywall repair.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Mayorga Handyman & Remodeling Services appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Indexed review describes fast apartment drywall repair."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-figs-drywall-repair-paint",
+   "name": "Figs Drywall Repair & Paint",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Named in Thumbtack's San Francisco drywall-review section.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Figs Drywall Repair & Paint appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Named in Thumbtack's San Francisco drywall-review section."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-atlas-construction",
+   "name": "Atlas Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed review describes repair and color-matched painting of a large drywall hole.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Atlas Construction appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Indexed review describes repair and color-matched painting of a large drywall hole."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-alpha-omega-general-construction",
+   "name": "Alpha & Omega General Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed review describes repeated visits to let layers dry and additional drywall patches.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Alpha & Omega General Construction appears in the cited drywall/finish result with the attributed details below.",
+     "source": 144,
+     "excerpt": "Indexed review describes repeated visits to let layers dry and additional drywall patches."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-c-c-painting",
+   "name": "C&C Painting",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.9 (130 reviews); drywall repair, texturing and installation; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "C&C Painting appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.9 (130 reviews); drywall repair, texturing and installation; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-bautista-drywall",
+   "name": "Bautista Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (27 reviews); 43 hires; serves San Francisco; bathroom-wall hole review.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Bautista Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "5.0 (27 reviews); 43 hires; serves San Francisco; bathroom-wall hole review."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-m-p-drywall",
+   "name": "M P Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.8 (22 reviews); drywall installation and hanging; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "M P Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.8 (22 reviews); drywall installation and hanging; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-ampier-s-drywall",
+   "name": "Ampier's Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (5 reviews); drywall repair and texturing; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ampier's Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "5.0 (5 reviews); drywall repair and texturing; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-eduardo-paz-garcia-s-painting",
+   "name": "Eduardo Paz Garcia's Painting",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.3 (113 reviews); drywall installation/repair; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Eduardo Paz Garcia's Painting appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.3 (113 reviews); drywall installation/repair; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-perez-drywall",
+   "name": "Perez Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (1 review); drywall installation/repair; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Perez Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "5.0 (1 review); drywall installation/repair; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-brush-bros-painting",
+   "name": "Brush Bros Painting",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (5 reviews); drywall installation; serves San Francisco; Licensed pro badge.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Brush Bros Painting appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "5.0 (5 reviews); drywall installation; serves San Francisco; Licensed pro badge."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-scott-snell-yeah-i-can-fix-that",
+   "name": "Scott Snell — Yeah I Can Fix That",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.1 (28 reviews); drywall repair and installation; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Scott Snell — Yeah I Can Fix That appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.1 (28 reviews); drywall repair and installation; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-spaicer-painting-repair",
+   "name": "Spaicer Painting & Repair",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.7 (9 reviews); drywall repair; serves San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Spaicer Painting & Repair appears in the cited drywall/finish result with the attributed details below.",
+     "source": 145,
+     "excerpt": "4.7 (9 reviews); drywall repair; serves San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-chito-s-drywall-stucco-repair",
+   "name": "Chito's Drywall Stucco Repair",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Family-owned; 11 years in business; drywall installation/repair listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Chito's Drywall Stucco Repair appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "Family-owned; 11 years in business; drywall installation/repair listing."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-e-custom-design",
+   "name": "E Custom Design",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.9 (73 reviews); Verified License badge in Yelp indexed results.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "E Custom Design appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "4.9 (73 reviews); Verified License badge in Yelp indexed results."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-estrada-design-build",
+   "name": "Estrada Design Build",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "New Yelp listing with Verified License badge; no review count shown.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Estrada Design Build appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "New Yelp listing with Verified License badge; no review count shown."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-landers-drywall",
+   "name": "Landers Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (27 reviews); drywall installation/replacement listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Landers Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "5.0 (27 reviews); drywall installation/replacement listing."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-pe-a-pe-a-drywall",
+   "name": "Peña & Peña Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "5.0 (10 reviews); 51 years in business; family-owned.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Peña & Peña Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "5.0 (10 reviews); 51 years in business; family-owned."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-navarro-drywall-inc",
+   "name": "Navarro Drywall Inc",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "5.0 (8 reviews); Verified License badge; ceiling drywall repair excerpt.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Navarro Drywall Inc appears in the cited drywall/finish result with the attributed details below.",
+     "source": 146,
+     "excerpt": "5.0 (8 reviews); Verified License badge; ceiling drywall repair excerpt."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-genuine-drywall-contractors",
+   "name": "Genuine Drywall Contractors",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "4.9 (286 reviews); Pleasant Hill area; website tag says ceiling repair.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Genuine Drywall Contractors appears in the cited drywall/finish result with the attributed details below.",
+     "source": 147,
+     "excerpt": "4.9 (286 reviews); Pleasant Hill area; website tag says ceiling repair."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-mckenna-plastering",
+   "name": "McKenna Plastering",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.8 (108 reviews); indexed as serving San Francisco; plaster/stucco specialty.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "McKenna Plastering appears in the cited drywall/finish result with the attributed details below.",
+     "source": 147,
+     "excerpt": "4.8 (108 reviews); indexed as serving San Francisco; plaster/stucco specialty."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-jimenez-bro",
+   "name": "Jimenez Bro",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "5.0 (1 review); review concerns replacement of a bathroom ceiling after water damage.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Jimenez Bro appears in the cited drywall/finish result with the attributed details below.",
+     "source": 147,
+     "excerpt": "5.0 (1 review); review concerns replacement of a bathroom ceiling after water damage."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-doug-demattei-drywall",
+   "name": "Doug Demattei Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outside",
+   "areaText": "5.0 (19 reviews); Pacifica-area listing; reviewer calls him a drywall-repair craftsman.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Doug Demattei Drywall appears in the cited drywall/finish result with the attributed details below.",
+     "source": 147,
+     "excerpt": "5.0 (19 reviews); Pacifica-area listing; reviewer calls him a drywall-repair craftsman."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-your-castro-handyman",
+   "name": "Your Castro Handyman",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.7 (111 reviews); indexed as serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Your Castro Handyman appears in the cited drywall/finish result with the attributed details below.",
+     "source": 148,
+     "excerpt": "4.7 (111 reviews); indexed as serving San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-bay-assembly",
+   "name": "Bay Assembly",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "4.8 (38 reviews); indexed as serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Bay Assembly appears in the cited drywall/finish result with the attributed details below.",
+     "source": 148,
+     "excerpt": "4.8 (38 reviews); indexed as serving San Francisco."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-gaxl-construction-plumbing",
+   "name": "GAXL Construction & Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Thumbtack general-contractor result; review excerpt recommends its quality and customer service.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "GAXL Construction & Plumbing appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 149,
+     "excerpt": "Thumbtack general-contractor result; review excerpt recommends its quality and customer service."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
+  },
+  {
+   "id": "w5-edri-construction",
+   "name": "Edri Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Review describes plumbing and drywall among end-to-end remodeling trades and care protecting common areas.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Edri Construction appears in the cited plumbing/multi-trade result with the attributed details below.",
+     "source": 149,
+     "excerpt": "Review describes plumbing and drywall among end-to-end remodeling trades and care protecting common areas."
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "platformLinks": [],
+   "gaps": [
+    "No exact seized bathtub-overflow extraction outcome verified.",
+    "CSLB identity and active trade classification not directly verified in this pass.",
+    "Outer Sunset dispatch and current availability require confirmation unless explicitly stated."
+   ]
   }
  ],
  "sources": [
@@ -9411,6 +10961,87 @@
    "access": "blocked-with-search-extract",
    "checkedAt": "2026-09-10",
    "note": "Indexed profile: San Francisco 94117, (628) 218-5447, Verified License badge; photo update 'waste system on a single family home in Pacifica'."
+  },
+  {
+   "id": 141,
+   "title": "Yelp · Outer Sunset plumber results (Sep 2026 index)",
+   "url": "https://www.yelp.com/search?find_desc=plumber&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed result page; direct review corpus was unavailable. New leads include Walker's Plumbing and Castillo General Remodel."
+  },
+  {
+   "id": 142,
+   "title": "Yelp · Outer Sunset plumbing, deep results",
+   "url": "https://www.yelp.com/search?find_desc=24+Hour+Plumbers&find_loc=Outer+Sunset,+San+Francisco,+CA&start=120",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Deep indexed results supplied new plumbing and construction names. Location and ratings are platform claims only."
+  },
+  {
+   "id": 143,
+   "title": "Yelp · licensed plumber San Francisco indexed results",
+   "url": "https://yelp.com/search?find_desc=Licensed+Plumber&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed result extract supplied Alphabet Plumbing and Selvin Plumbing; badges are not CSLB verification."
+  },
+  {
+   "id": 144,
+   "title": "Thumbtack · San Francisco drywall repair",
+   "url": "https://www.thumbtack.com/ca/san-francisco/drywall-repair",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed page names drywall providers and selected review excerpts; profiles and licenses remain unchecked."
+  },
+  {
+   "id": 145,
+   "title": "Thumbtack · San Francisco drywall contractors (2026)",
+   "url": "https://www.thumbtack.com/ca/san-francisco/drywall-contractors",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed top-provider page with platform rating samples, hires and stated SF service area."
+  },
+  {
+   "id": 146,
+   "title": "Yelp · San Francisco ceiling drywall installation",
+   "url": "https://www.yelp.com/search?find_desc=Ceiling+Drywall+Installation&find_loc=San+Francisco,+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed results for ceiling drywall installation; badges and reviews remain platform-provided evidence."
+  },
+  {
+   "id": 147,
+   "title": "Yelp · San Francisco ceiling repair",
+   "url": "https://www.yelp.com/search?find_desc=ceiling+repair&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed ceiling-repair results used for restoration and plaster/drywall discovery."
+  },
+  {
+   "id": 148,
+   "title": "Yelp · Outer Sunset handyman (Aug 2026 index)",
+   "url": "https://www.yelp.com/search?find_desc=Handyman&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed Outer Sunset handyman page; candidates are finish/access-hatch leads, not plumbers."
+  },
+  {
+   "id": 149,
+   "title": "Thumbtack · San Francisco general contractors",
+   "url": "https://www.thumbtack.com/ca/san-francisco/general-contractors",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed general-contractor results; used only for multi-trade discovery."
   }
  ],
  "reviews": [
