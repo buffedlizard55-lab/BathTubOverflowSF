@@ -1,0 +1,16 @@
+{
+  "name": "sunset-repair-research",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "audit:sources": "python3 scripts/check_sources.py",
+    "test:browser": "playwright test",
+    "test:monitor": "python3 -m unittest discover -s tests -p 'test_*.py'"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

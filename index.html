@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Source-linked plumbing research for San Francisco’s Outer Sunset. Compare local candidates, review evidence, and credential checks."
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>Sunset Repair · Local expertise, carefully researched</title>
+    <link rel="icon" href="./assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="#summary"
+        ><img src="./assets/mark.svg" alt="" width="38" height="38" /><span
+          >sunset<span class="brand-light">repair</span
+          ><small>LOCAL EXPERTISE. CLEAR EVIDENCE.</small></span
+        ></a
+      >
+      <div class="workspace-label">RESEARCH WORKSPACE</div>
+      <nav aria-label="Main navigation">
+        <a href="#summary" data-nav="summary"
+          ><span class="nav-icon">◫</span>Decision summary</a
+        >
+        <a href="#directory" data-nav="directory"
+          ><span class="nav-icon">▦</span>Business directory<span
+            class="nav-count"
+            >50</span
+          ></a
+        >
+        <a href="#reviews" data-nav="reviews"
+          ><span class="nav-icon">☷</span>Review evidence</a
+        >
+        <a href="#audit" data-nav="audit"
+          ><span class="nav-icon">◎</span>Verification & flags</a
+        >
+        <a href="#method" data-nav="method"
+          ><span class="nav-icon">⌘</span>Research method</a
+        >
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="location-symbol">↳</span><strong>Outer Sunset</strong>
+        <p>San Francisco, California</p>
+        <div class="local-note">
+          <span class="dot"></span>Public-source research only
+        </div>
+        <p class="small">No business contacted.<br />No appointment booked.</p>
+        <a
+          href="https://github.com/buffedlizard55-lab/BathTubOverflowSF"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View project on GitHub ↗</a
+        >
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          HOME SERVICES <span>/</span> <strong>Plumbing research</strong>
+        </div>
+        <div class="research-date">
+          <span class="dot"></span>Evidence checked
+          <time datetime="2026-09-10">Sep 10, 2026</time>
+        </div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="loading">Loading source-linked research…</div>
+      </main>
+      <footer>
+        Independent research, not a contractor endorsement.
+        <a href="#method">Understand the evidence →</a
+        ><span>Sunset Repair / Research edition 01</span>
+      </footer>
+    </div>
+    <dialog id="detail-dialog" aria-labelledby="dialog-title">
+      <div id="detail-content"></div>
+      <button class="dialog-close" aria-label="Close details">×</button>
+    </dialog>
+    <div id="compare-bar" class="compare-bar" hidden></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <noscript
+      ><p class="noscript">
+        This directory uses JavaScript. The complete source-linked dataset is
+        available in <a href="./data/research.json">research.json</a>.
+      </p></noscript
+    >
+  </body>
+</html>

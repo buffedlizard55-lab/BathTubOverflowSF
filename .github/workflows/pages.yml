@@ -1,0 +1,63 @@
+name: Test and deploy Pages
+on:
+  push:
+    branches: [main, arena/01a08d34-bathtuboverflowsf]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    outputs:
+      pages_ready: ${{ steps.readiness.outputs.ready }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
+      - name: Stage public files only
+        run: |
+          mkdir -p _site/data _site/assets
+          cp index.html styles.css app.js lib.js _site/
+          cp assets/mark.svg _site/assets/
+          cp data/research.json _site/data/
+          touch _site/.nojekyll
+      - name: Check deployment readiness without changing repository settings
+        id: readiness
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TYPE=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type' 2>/dev/null || echo unavailable)
+          if [ "$TYPE" = workflow ] && [ "$GITHUB_REF_NAME" = main ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Validation passed. Actions deployment skipped: build type=$TYPE, branch=$GITHUB_REF_NAME. Legacy Pages publishes main independently; this session branch is not public." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/configure-pages@v5
+        if: steps.readiness.outputs.ready == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: test-and-build
+    if: needs.test-and-build.outputs.pages_ready == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
