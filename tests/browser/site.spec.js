@@ -1,4 +1,23 @@
 import { test, expect } from "@playwright/test";
+import { readFileSync } from "node:fs";
+
+// Counts derive from the reviewed dataset so waves never silently desync the UI.
+const data = JSON.parse(
+  readFileSync(new URL("../../data/research.json", import.meta.url)),
+);
+const TOTAL = data.businesses.length;
+const ACTIVE = data.businesses.filter(
+  (b) => b.license?.status === "active",
+).length;
+const OUTER_ACTIVE = data.businesses.filter(
+  (b) => b.area === "outer" && b.license?.status === "active",
+).length;
+const REVIEWS = data.reviews.length;
+const THUMBTACK = data.reviews.filter((r) => r.platform === "Thumbtack").length;
+const COST_CAUTION = data.reviews.filter(
+  (r) => r.platform === "Thumbtack" && r.theme === "Cost caution",
+).length;
+const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
 test("summary renders evidence-based shortlist with no browser errors", async ({
   page,
 }) => {
@@ -9,8 +28,8 @@ test("summary renders evidence-based shortlist with no browser errors", async ({
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
   await expect(page.locator(".candidate")).toHaveCount(5);
-  await expect(page.locator(".stat-value").nth(0)).toContainText("100");
-  await expect(page.locator(".stat-value").nth(1)).toContainText("21");
+  await expect(page.locator(".stat-value").nth(0)).toContainText(String(TOTAL));
+  await expect(page.locator(".stat-value").nth(1)).toContainText(String(ACTIVE));
   await expect(page.locator(".stat-value").nth(3)).toContainText("0");
   await page.locator('[data-detail="fast-response"]').first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
@@ -28,7 +47,7 @@ test("directory searches, filters, resets and exports source-linked CSV", async 
   page,
 }) => {
   await page.goto("/#directory");
-  await expect(page.locator("tbody tr")).toHaveCount(100);
+  await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
   await page
     .getByRole("searchbox", { name: "Search businesses" })
     .fill("fast response");
@@ -48,9 +67,9 @@ test("directory searches, filters, resets and exports source-linked CSV", async 
   ).toBeVisible();
   await page.getByRole("button", { name: "Show all candidates" }).click();
   await page.getByLabel("Active C-36 checked only").check();
-  await expect(page.locator("tbody tr")).toHaveCount(21);
+  await expect(page.locator("tbody tr")).toHaveCount(ACTIVE);
   await page.getByLabel("Filter by service area").selectOption("outer");
-  await expect(page.locator("tbody tr")).toHaveCount(7);
+  await expect(page.locator("tbody tr")).toHaveCount(OUTER_ACTIVE);
 });
 test("comparison is bounded at 3 and opens a working dialog", async ({
   page,
@@ -74,13 +93,13 @@ test("comparison is bounded at 3 and opens a working dialog", async ({
 });
 test("review filters, flags and method routes work", async ({ page }) => {
   await page.goto("/#reviews");
-  await expect(page.locator(".review-card")).toHaveCount(29);
+  await expect(page.locator(".review-card")).toHaveCount(REVIEWS);
   await page.getByLabel("Filter review platform").selectOption("Thumbtack");
-  await expect(page.locator(".review-card")).toHaveCount(6);
+  await expect(page.locator(".review-card")).toHaveCount(THUMBTACK);
   await page.getByLabel("Filter review theme").selectOption("Cost caution");
-  await expect(page.locator(".review-card")).toHaveCount(2);
+  await expect(page.locator(".review-card")).toHaveCount(COST_CAUTION);
   await page.getByRole("link", { name: "Verification & flags" }).click();
-  await expect(page.locator(".flag-item")).toHaveCount(58);
+  await expect(page.locator(".flag-item")).toHaveCount(FLAGS);
   await expect(
     page.getByRole("heading", { name: "CSLB credential checks" }),
   ).toBeVisible();
@@ -106,7 +125,7 @@ test("mobile navigation, layout and accessible modal work", async ({
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("button", { name: "Close details" }).click();
   await page.getByRole("link", { name: /Business directory/ }).click();
-  await expect(page.locator("tbody tr")).toHaveCount(100);
+  await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,
@@ -135,7 +154,7 @@ test("relative assets load correctly beneath the GitHub project path", async ({
     await route.fulfill({ response });
   });
   await page.goto("/BathTubOverflowSF/#directory");
-  await expect(page.locator("tbody tr")).toHaveCount(100);
+  await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
   await page.getByRole("link", { name: "Decision summary" }).click();
   await expect(page.locator(".candidate")).toHaveCount(5);
 });

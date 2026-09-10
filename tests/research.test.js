@@ -14,13 +14,13 @@ const data = JSON.parse(
 );
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 
-test("exactly 151 unique discovery entries across three waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 151);
+test("exactly 201 unique discovery entries across four waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 201);
   assert.equal(data.schemaVersion, 2);
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].toLowerCase())).size,
-      151,
+      201,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
@@ -113,7 +113,7 @@ test("shortlist requires current C36, but never claims exact qualification", () 
     assert.ok(b.rationale);
     assert.ok(b.nextStep);
   });
-  assert.equal(evidenceCounts(data).active, 21);
+  assert.equal(evidenceCounts(data).active, 25);
 });
 test("case-insensitive search, status, area and active-license filters combine", () => {
   assert.equal(
@@ -128,7 +128,7 @@ test("case-insensitive search, status, area and active-license filters combine",
     filterBusinesses(data.businesses, { status: "master" }).length,
     0,
   );
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 21);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 25);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,

@@ -1,7 +1,7 @@
 name: Public source audit
 on:
   push:
-    branches: [main, arena/01a08d34-bathtuboverflowsf]
+    branches: [main, arena/01a08d6c-bathtuboverflowsf]
     paths:
       [
         data/research.json,
