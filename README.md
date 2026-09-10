@@ -52,7 +52,7 @@ No businesses have been contacted and no appointments booked. **Do not add prope
 
 ## Run locally
 
-Python 3.11+ and Node 22 are used for development. The site itself needs only a static HTTP server.
+Python 3.11+ and Node 22 are used for development. The site itself needs only a static HTTP server. The included preview server exposes an explicit public-file allowlist, not repository internals.
 
 ```sh
 npm start
@@ -105,6 +105,7 @@ lib.js                          Pure filtering/export/admission rules
 assets/mark.svg                  Original local vector mark
 data/research.json              Curated, source-linked research snapshot
 scripts/check_sources.py        Read-only monitoring and review quarantine
+scripts/serve.py                Public-file-only development preview
 tests/                         Dataset, monitor and browser tests
 .github/workflows/              Validation, Pages and source-audit automation
 ```

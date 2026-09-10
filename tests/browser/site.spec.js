@@ -139,3 +139,18 @@ test("relative assets load correctly beneath the GitHub project path", async ({
   await page.getByRole("link", { name: "Decision summary" }).click();
   await expect(page.locator(".candidate")).toHaveCount(3);
 });
+
+test("preview exposes public assets, not repository internals", async ({
+  request,
+}) => {
+  for (const path of [
+    "/.git/config",
+    "/README.md",
+    "/scripts/check_sources.py",
+    "/node_modules/",
+  ]) {
+    const response = await request.get(path);
+    expect(response.status()).toBe(404);
+  }
+  expect((await request.get("/data/research.json")).status()).toBe(200);
+});
