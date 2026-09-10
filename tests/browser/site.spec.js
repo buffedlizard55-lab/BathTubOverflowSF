@@ -15,7 +15,7 @@ const OUTER_ACTIVE = data.businesses.filter(
 const REVIEWS = data.reviews.length;
 const THUMBTACK = data.reviews.filter((r) => r.platform === "Thumbtack").length;
 const COST_CAUTION = data.reviews.filter(
-  (r) => r.theme === "Cost caution",
+  (r) => r.platform === "Thumbtack" && r.theme === "Cost caution",
 ).length;
 const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
 test("summary renders evidence-based shortlist with no browser errors", async ({
