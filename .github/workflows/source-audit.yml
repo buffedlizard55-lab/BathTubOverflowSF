@@ -1,0 +1,33 @@
+name: Public source audit
+on:
+  push:
+    branches: [main, arena/01a08d34-bathtuboverflowsf]
+    paths:
+      [
+        data/research.json,
+        scripts/check_sources.py,
+        .github/workflows/source-audit.yml,
+      ]
+  workflow_dispatch:
+  schedule:
+    - cron: "23 10 * * 1"
+permissions:
+  contents: read
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: python3 scripts/check_sources.py
+      - name: Publish audit summary
+        run: cat reports/source-audit.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-audit-${{ github.run_id }}
+          path: reports/
+          retention-days: 30
+# GitHub scheduled workflows run on the default branch only. Push/manual runs
+# work on the session branch immediately; weekly recurrence needs this workflow
+# on the default branch. Audits do not write to any branch or promote candidates.

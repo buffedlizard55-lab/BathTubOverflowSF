@@ -1,0 +1,2784 @@
+{
+  "schemaVersion": 1,
+  "researchedAt": "2026-09-10",
+  "scope": "Outer Sunset · repair-first bathtub plumbing research",
+  "businesses": [
+    {
+      "id": "fast-response",
+      "name": "Fast Response Plumbing & Rooter",
+      "website": "https://www.fastresponseplumbingsf.com/",
+      "websiteSource": 4,
+      "status": "research",
+      "area": "sunset",
+      "areaText": "Sunset and whole-city coverage stated by business.",
+      "license": {
+        "number": "1024971",
+        "status": "active",
+        "entity": "JOSEPH TINSLEY · dba FAST RESPONSE PLUMBING AND ROOTER",
+        "expires": "2027-03-31",
+        "classes": [
+          "C36"
+        ],
+        "source": 5,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-596-6115",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Residential plumbing repairs and fixture replacement.",
+          "source": 4,
+          "excerpt": "Fixtures, water and gas lines, shut-off valves, appliance hook-ups, and remodels."
+        },
+        {
+          "field": "Coverage",
+          "text": "Sunset and whole-city coverage stated by business.",
+          "source": 4,
+          "excerpt": "We cover the whole city, plus the northern peninsula and Marin."
+        },
+        {
+          "field": "Estimate",
+          "text": "Business advertises free in-person estimates and per-job quotes; reconfirm terms.",
+          "source": 4,
+          "excerpt": "Free in-person estimates and per-job quotes."
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36",
+          "source": 5,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [
+        "R01",
+        "R02"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": 1,
+      "phoneSource": 4,
+      "rationale": "Best adjacent task evidence in this sample: a customer describes replacing an internal bathtub-drain mechanism. Not proof of seized-linkage extraction or no-opening work.",
+      "nextStep": "Request a diagnostic visit with a technician experienced in seized tub linkage. Agree on a stop-and-review point before any destructive access.",
+      "platformLinks": [
+        {
+          "label": "Google profile",
+          "url": "https://maps.app.goo.gl/CfmqRvpPrnX3JhZc6",
+          "source": 4
+        },
+        {
+          "label": "Nextdoor sample",
+          "url": "https://nextdoor.com/pages/fast-response-plumbing-rooter-south-san-francisco-ca/",
+          "source": 43
+        }
+      ],
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee."
+      ]
+    },
+    {
+      "id": "genteel",
+      "name": "Genteel Plumbers",
+      "website": "https://www.genteelplumbers.com/",
+      "websiteSource": 7,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Outer Sunset explicitly listed by business.",
+      "license": {
+        "number": "1025814",
+        "status": "active",
+        "entity": "THE GENTEEL PLUMBERS INC",
+        "expires": "2027-04-30",
+        "classes": [
+          "C36",
+          "B"
+        ],
+        "source": 8,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "628-400-4678",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Drain cleaning, inspections and pipe repair.",
+          "source": 6,
+          "excerpt": "Pipe repair and replacement"
+        },
+        {
+          "field": "Coverage",
+          "text": "Outer Sunset explicitly listed by business.",
+          "source": 6,
+          "excerpt": "Outer Sunset"
+        },
+        {
+          "field": "Approach",
+          "text": "Business describes diagnosis before pipe repair or replacement.",
+          "source": 6,
+          "excerpt": "We find the issue first before repairing or replacing the pipes."
+        },
+        {
+          "field": "Estimate",
+          "text": "FAQ lists a $149 dispatch fee applied to service; not a project quote.",
+          "source": 7,
+          "excerpt": "Our dispatch fee is $149, which is applied to the cost of services."
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, B",
+          "source": 8,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "Several phone numbers appear on official pages; the homepage number is displayed here.",
+          "sources": [
+            6,
+            7
+          ]
+        }
+      ],
+      "reviewIds": [
+        "R03"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": 3,
+      "phoneSource": 7,
+      "rationale": "Explicit Outer Sunset coverage plus active plumbing and general-building classifications. Useful for a diagnostic-first estimate; specific overflow experience not established.",
+      "nextStep": "Compare the diagnostic fee and written repair-only scope. General-building classification does not confirm finish-work availability.",
+      "platformLinks": [
+        {
+          "label": "Google reviews",
+          "url": "https://search.google.com/local/reviews?placeid=ChIJfxb8ao-HhYARhlHKaEvyqxc",
+          "source": 7
+        }
+      ],
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee."
+      ]
+    },
+    {
+      "id": "heises",
+      "name": "Heise’s Plumbing",
+      "website": "https://www.heisesplumbing.com/",
+      "websiteSource": 9,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Outer Sunset explicitly listed on official service-area page.",
+      "license": {
+        "number": "1089561",
+        "status": "active",
+        "entity": "TARO GROUP INC · dba HEISES PLUMBING",
+        "expires": "2028-04-30",
+        "classes": [
+          "C36",
+          "C10",
+          "A",
+          "C20"
+        ],
+        "source": 11,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-333-0704",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing, leak repair and drain services.",
+          "source": 9,
+          "excerpt": "From stubborn clogs and leaky faucets to full emergency repairs and whole-home repiping"
+        },
+        {
+          "field": "Coverage",
+          "text": "Outer Sunset explicitly listed on official service-area page.",
+          "source": 10,
+          "excerpt": "We also serve nearby areas including Parkside, Inner Sunset, Outer Sunset, West Portal, and Golden Gate Heights."
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, C10, A, C20",
+          "source": 11,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "Official homepage and neighborhood page display different review totals. Neither is used as an independently verified Google rating.",
+          "sources": [
+            9,
+            10
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": 2,
+      "phoneSource": 9,
+      "rationale": "Active C-36 license and explicit Outer Sunset coverage. Official site documents fixture repairs; no verified seized-overflow case found.",
+      "nextStep": "Ask for a senior repair technician and a non-destructive assessment. Confirm who handles any finish restoration if the diagnosis changes.",
+      "platformLinks": [
+        {
+          "label": "Google profile",
+          "url": "https://share.google/b1efN7uLpRjrieP91",
+          "source": 9
+        },
+        {
+          "label": "Yelp profile",
+          "url": "https://www.yelp.com/biz/heises-plumbing-san-francisco",
+          "source": 9
+        }
+      ],
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ]
+    },
+    {
+      "id": "works",
+      "name": "Works Plumbing",
+      "website": "https://worksplumbing.com/plumbing-san-francisco/",
+      "websiteSource": 12,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Business page explicitly includes Outer Sunset.",
+      "license": {
+        "number": "982663",
+        "status": "active",
+        "entity": "WORKS PLUMBING & ROOTER INC",
+        "expires": "2027-04-30",
+        "classes": [
+          "C36"
+        ],
+        "source": 13,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-200-5546",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Residential plumbing and diagnostic services; business discusses aging galvanized supply lines.",
+          "source": 12,
+          "excerpt": "galvanized supply lines"
+        },
+        {
+          "field": "Coverage",
+          "text": "Business page explicitly includes Outer Sunset.",
+          "source": 12,
+          "excerpt": "Outer Sunset"
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36",
+          "source": 13,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [
+        "R12",
+        "R13"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 12,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "renstrom",
+      "name": "Renstrom Plumbing & Heating",
+      "website": "https://renstromplumbing.com/",
+      "websiteSource": 14,
+      "status": "research",
+      "area": "sf",
+      "areaText": "San Francisco service stated; Outer Sunset not specifically confirmed.",
+      "license": {
+        "number": "556995",
+        "status": "active",
+        "entity": "RENSTROM PLUMBING & HEATING INC",
+        "expires": "2027-03-31",
+        "classes": [
+          "C36",
+          "C20"
+        ],
+        "source": 15,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-282-9370",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Residential repair, maintenance and remodeling.",
+          "source": 14,
+          "excerpt": "Professional plumbing repairs, service, and maintenance for San Francisco homes."
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, C20",
+          "source": 15,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 14,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "larratt",
+      "name": "Larratt Bros Plumbing",
+      "website": "https://larrattbros.com/plumbing-services/",
+      "websiteSource": 16,
+      "status": "research",
+      "area": "sf",
+      "areaText": "SF service indicated; Outer Sunset not specifically established.",
+      "license": {
+        "number": "596026",
+        "status": "active",
+        "entity": "LARRATT BROS PLUMBING INC",
+        "expires": "2028-07-31",
+        "classes": [
+          "C36"
+        ],
+        "source": 18,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "650-873-5794",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing service lead with complex-work testimonials on its own site.",
+          "source": 16,
+          "excerpt": "We hard a variety of plumbing issues - from simple to quite complex."
+        },
+        {
+          "field": "Scope",
+          "text": "Yelp business-provided service list includes bathtub repair.",
+          "source": 17,
+          "excerpt": "Bathtub repair"
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36",
+          "source": 18,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "BBB indexed expiration was July 2026; direct CSLB record now shows July 2028. CSLB takes precedence.",
+          "sources": [
+            19,
+            18
+          ]
+        }
+      ],
+      "reviewIds": [
+        "R04",
+        "R05"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 17,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "plumbing-pure",
+      "name": "Plumbing Pure",
+      "website": "https://plumbingpure.com/",
+      "websiteSource": 20,
+      "status": "hold",
+      "area": "sf",
+      "areaText": "Official site states San Francisco; exact neighborhood unconfirmed.",
+      "license": {
+        "number": "1017368",
+        "status": "expired",
+        "entity": "PLUMBING PURE INC",
+        "expires": "2024-08-31",
+        "classes": [
+          "C36"
+        ],
+        "source": 21,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-715-9933",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Residential and commercial plumbing, water heaters and drain cleaning.",
+          "source": 20,
+          "excerpt": "serving San Francisco and Marin County since 2016"
+        },
+        {
+          "field": "License",
+          "text": "Expired; this listed license cannot contract · C36",
+          "source": 21,
+          "excerpt": "This license is expired and not able to contract at this time."
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Listed CSLB license 1017368 was expired at check time. A different current license was not established; do not schedule under this license.",
+          "sources": [
+            21
+          ]
+        },
+        {
+          "level": "hold",
+          "text": "Indexed Thumbtack profile redirects to Legato Plumbing. Historical review ownership is unresolved; do not merge businesses.",
+          "sources": [
+            22
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 20,
+      "platformLinks": [
+        {
+          "label": "Yelp profile",
+          "url": "https://www.yelp.com/biz/plumbing-pure-san-francisco-2",
+          "source": 20
+        },
+        {
+          "label": "Google profile",
+          "url": "https://g.co/kgs/kNoFrT1",
+          "source": 20
+        }
+      ],
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ]
+    },
+    {
+      "id": "precision-rooter",
+      "name": "Precision Rooter & Drain",
+      "website": null,
+      "websiteSource": null,
+      "status": "excluded",
+      "area": "unknown",
+      "areaText": "Listed in Outer Sunset results; coverage not independently established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Business profile says sewer/drain cleaning only; no plumbing repair.",
+          "source": 23,
+          "excerpt": "We do not do Installs or plumbing repair"
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Scope mismatch: indexed business description expressly excludes plumbing repairs. Drain snaking is not seized-linkage repair.",
+          "sources": [
+            23
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "ace",
+      "name": "Ace Plumbing & Rooter",
+      "website": "https://www.aceplumbingandrooter.com/",
+      "websiteSource": 24,
+      "status": "research",
+      "area": "sunset",
+      "areaText": "Official site names Sunset District.",
+      "license": {
+        "number": "829071",
+        "status": "active",
+        "entity": "ACE PLUMBING & ROOTER",
+        "expires": "2027-06-30",
+        "classes": [
+          "C36",
+          "A",
+          "C4",
+          "C16",
+          "B",
+          "C10"
+        ],
+        "source": 25,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-824-6444",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Residential plumbing and fixture repair; general-building classification also checked.",
+          "source": 24,
+          "excerpt": "Plumbing fixture replacement/repair"
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, A, C4, C16, B, C10",
+          "source": 25,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 24,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "bay-area",
+      "name": "Bay Area Plumbing",
+      "website": "https://www.bayareaplumbingsf.com/plumber-near-me",
+      "websiteSource": 26,
+      "status": "research",
+      "area": "sunset",
+      "areaText": "Business lists Sunset service.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing installation, repair and emergency services.",
+          "source": 26,
+          "excerpt": "Same-day response across the Sunset"
+        },
+        {
+          "field": "Coverage",
+          "text": "Business lists Sunset service.",
+          "source": 26,
+          "excerpt": "Same-day response across the Sunset"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "hydroflow",
+      "name": "Hydroflow",
+      "website": "https://hydroflow.info/san-francisco/outer-sunset/",
+      "websiteSource": 27,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Official Outer Sunset service page.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Fixture repair, plumbing, heating and water-heater services.",
+          "source": 27,
+          "excerpt": "Expert Plumbing Services in Outer Sunset"
+        },
+        {
+          "field": "Coverage",
+          "text": "Official Outer Sunset service page.",
+          "source": 27,
+          "excerpt": "Expert Plumbing Services in Outer Sunset"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "chosen",
+      "name": "Chosen Rooter & Plumbing",
+      "website": "https://chosenrooter.com/plumber-sunset/",
+      "websiteSource": 28,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Business explicitly says outer and inner Sunset.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Drain cleaning, clogged-drain repair, sewer and water-heater services.",
+          "source": 28,
+          "excerpt": "outer and inner Sunset San Francisco Districts"
+        },
+        {
+          "field": "Coverage",
+          "text": "Business explicitly says outer and inner Sunset.",
+          "source": 28,
+          "excerpt": "outer and inner Sunset San Francisco Districts"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "arch",
+      "name": "Arch Plumbing",
+      "website": "https://archplumbinginc.com/drain-cleaning-near-outer-sunset-in-san-francisco/",
+      "websiteSource": 29,
+      "status": "research",
+      "area": "outer",
+      "areaText": "Official page advertises service near Outer Sunset.",
+      "license": {
+        "number": "976019",
+        "status": "active",
+        "entity": "ARCH PLUMBING INC",
+        "expires": "2028-08-31",
+        "classes": [
+          "C36",
+          "C16",
+          "C20",
+          "C10"
+        ],
+        "source": 30,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Drain cleaning; precise bathtub mechanism repair not established.",
+          "source": 29,
+          "excerpt": "near Outer Sunset in San Francisco"
+        },
+        {
+          "field": "Coverage",
+          "text": "Official page advertises service near Outer Sunset.",
+          "source": 29,
+          "excerpt": "near Outer Sunset in San Francisco"
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, C16, C20, C10",
+          "source": 30,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "Multiple phone numbers and inconsistent availability language appear in the indexed official page; use website to confirm.",
+          "sources": [
+            29
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "benjamin-franklin",
+      "name": "Benjamin Franklin Plumbing (Bay Area)",
+      "website": "https://bfplumbingbayarea.com/san-francisco/",
+      "websiteSource": 31,
+      "status": "research",
+      "area": "sunset",
+      "areaText": "Official page lists Sunset District.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing repairs and installations.",
+          "source": 31,
+          "excerpt": "dependable plumbing repairs and installations"
+        },
+        {
+          "field": "Coverage",
+          "text": "Official page lists Sunset District.",
+          "source": 31,
+          "excerpt": "dependable plumbing repairs and installations"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "roto-rooter",
+      "name": "Roto-Rooter (San Francisco)",
+      "website": "https://www.rotorooter.com/sanfrancisco/",
+      "websiteSource": 32,
+      "status": "research",
+      "area": "sf",
+      "areaText": "Official San Francisco service page.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing, drain cleaning and shower/bathtub services.",
+          "source": 32,
+          "excerpt": "Showers & Bathtubs"
+        },
+        {
+          "field": "Coverage",
+          "text": "Official San Francisco service page.",
+          "source": 32,
+          "excerpt": "Showers & Bathtubs"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "ogrady",
+      "name": "O’Grady Plumbing",
+      "website": "https://ogradyplumbing.com/property-maintenance/",
+      "websiteSource": 33,
+      "status": "research",
+      "area": "sf",
+      "areaText": "Business says all San Francisco and San Mateo counties.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Repair, maintenance and property-management plumbing.",
+          "source": 33,
+          "excerpt": "We serve all areas of San Francisco and San Mateo counties."
+        },
+        {
+          "field": "Coverage",
+          "text": "Business says all San Francisco and San Mateo counties.",
+          "source": 33,
+          "excerpt": "We serve all areas of San Francisco and San Mateo counties."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "george-salet",
+      "name": "George Salet Plumbing",
+      "website": "https://www.plumbingpro.com/plumbing/",
+      "websiteSource": 34,
+      "status": "research",
+      "area": "sf",
+      "areaText": "Business advertises San Francisco Bay Area; neighborhood unconfirmed.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "General plumbing repairs; business describes delicate-repair experience.",
+          "source": 34,
+          "excerpt": "skillfully execute the most delicate repairs."
+        },
+        {
+          "field": "Coverage",
+          "text": "Business advertises San Francisco Bay Area; neighborhood unconfirmed.",
+          "source": 34,
+          "excerpt": "skillfully execute the most delicate repairs."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "lutz",
+      "name": "Lutz Plumbing",
+      "website": "https://lutzplumbingsf.com/",
+      "websiteSource": 35,
+      "status": "research",
+      "area": "sunset",
+      "areaText": "Official site says every SF neighborhood and names Sunset.",
+      "license": {
+        "number": "503971",
+        "status": "active",
+        "entity": "LUTZ PLUMBING INC",
+        "expires": "2027-01-31",
+        "classes": [
+          "C36",
+          "C16",
+          "C20"
+        ],
+        "source": 36,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-621-4292",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Fixture repairs, residential plumbing and remodels.",
+          "source": 35,
+          "excerpt": "From a leaking faucet to a full repipe of a century-old Victorian"
+        },
+        {
+          "field": "Coverage",
+          "text": "Official site says every SF neighborhood and names Sunset.",
+          "source": 35,
+          "excerpt": "Serving every San Francisco neighborhood."
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36, C16, C20",
+          "source": 36,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "Website says “licensed since 1929”; current CSLB entity license has a 1987 issue date. Founding history is not license tenure.",
+          "sources": [
+            35,
+            36
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 35,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "kenneth-asire",
+      "name": "Kenneth Asire Plumbing",
+      "website": "http://kennethasireplumbing.com/",
+      "websiteSource": 3,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in SFist’s 2022 San Francisco plumbing directory.",
+          "source": 3,
+          "excerpt": "Kenneth Asire Plumbing"
+        }
+      ],
+      "flags": [
+        {
+          "level": "gap",
+          "text": "Directory-linked website; current services and legal entity require primary-source checks.",
+          "sources": [
+            3
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "pipeline",
+      "name": "Pipeline Plumbing",
+      "website": "https://www.pipelineplumbingsf.net/",
+      "websiteSource": 3,
+      "status": "hold",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in SFist’s 2022 San Francisco plumbing directory.",
+          "source": 3,
+          "excerpt": "Pipeline Plumbing"
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Published website currently displays “Website Expired.” This does not by itself establish that the business has closed.",
+          "sources": [
+            37
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "dejager",
+      "name": "DeJager and Reilly Plumbing and Heating",
+      "website": "https://www.dejagerplumbingandheating.com/",
+      "websiteSource": 3,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in SFist’s 2022 San Francisco plumbing directory.",
+          "source": 3,
+          "excerpt": "DeJager and Reilly Plumbing and Heating"
+        }
+      ],
+      "flags": [
+        {
+          "level": "gap",
+          "text": "Directory-linked website; current services and legal entity require primary-source checks.",
+          "sources": [
+            3
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "magic",
+      "name": "Magic Plumbing",
+      "website": "https://www.magicplumbing.com/",
+      "websiteSource": 3,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in SFist’s 2022 San Francisco plumbing directory.",
+          "source": 3,
+          "excerpt": "Magic Plumbing"
+        }
+      ],
+      "flags": [
+        {
+          "level": "gap",
+          "text": "Directory-linked website; current services and legal entity require primary-source checks.",
+          "sources": [
+            3
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "cabrillo",
+      "name": "Cabrillo Plumbing, Heating & Air",
+      "website": "https://discovercabrillo.com/",
+      "websiteSource": 3,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in SFist’s 2022 San Francisco plumbing directory.",
+          "source": 3,
+          "excerpt": "Cabrillo Plumbing, Heating & Air"
+        }
+      ],
+      "flags": [
+        {
+          "level": "gap",
+          "text": "Directory-linked website; current services and legal entity require primary-source checks.",
+          "sources": [
+            3
+          ]
+        }
+      ],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced Plumbing & Drain",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Advanced Plumbing & Drain"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "rl",
+      "name": "R & L Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "R & L Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "eric-brand",
+      "name": "Eric Brand Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Eric Brand Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "general-sf",
+      "name": "General SF",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "General SF"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "francos",
+      "name": "Franco’s Magical Plumbing and Rooter",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Franco’s Magical Plumbing and Rooter"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "pipe-whisperer",
+      "name": "Pipe Whisperer",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Pipe Whisperer"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "whistle",
+      "name": "Whistle Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Whistle Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "urgent",
+      "name": "Urgent Rooter & Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Urgent Rooter & Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "erwyns",
+      "name": "Erwyn’s Plumbing Inc.",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Erwyn’s Plumbing Inc."
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "citywide",
+      "name": "Citywide Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Appears in indexed Outer Sunset plumbing search results; not a qualification finding.",
+          "source": 1,
+          "excerpt": "Citywide Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "discount",
+      "name": "Discount Plumbing Rooter",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Search-discovered plumbing lead; identity and coverage need confirmation.",
+          "source": 38,
+          "excerpt": "Discount Plumbing Rooter"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "atlas",
+      "name": "Atlas Plumbing & Rooter",
+      "website": "https://atlasplumbingandrooter.com/",
+      "websiteSource": 39,
+      "status": "research",
+      "area": "sf",
+      "areaText": "Profile says serving San Francisco area.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Business profile lists fixture and drain services.",
+          "source": 39,
+          "excerpt": "broken fixtures, running toilets, clogged drains"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "ab",
+      "name": "AB Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "sf",
+      "areaText": "Profile describes San Francisco Bay Area; neighborhood not confirmed.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Full-service plumbing described in provider profile.",
+          "source": 40,
+          "excerpt": "Based in the San Francisco Bay area"
+        }
+      ],
+      "flags": [
+        {
+          "level": "notice",
+          "text": "Review sample is old. The profile’s job-mismatch banner is context-dependent and is not proof that plumbing service is unavailable.",
+          "sources": [
+            40
+          ]
+        }
+      ],
+      "reviewIds": [
+        "R06",
+        "R07",
+        "R08",
+        "R09"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "cl",
+      "name": "C&L Plumbing Inc",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "C&L Plumbing Inc"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "friendly",
+      "name": "Friendly Plumber",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Friendly Plumber"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "roberts",
+      "name": "Robert’s Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Robert’s Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "plumbworks",
+      "name": "Plumbworks",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Plumbworks"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "national",
+      "name": "National Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "National Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "dc",
+      "name": "D C Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "D C Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "rooter-strong",
+      "name": "Rooter Strong Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Rooter Strong Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "tommy-tung",
+      "name": "Tommy Tung Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Tommy Tung Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "precision-piping",
+      "name": "Precision Piping/Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Precision Piping/Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "hetherington",
+      "name": "Hetherington General & Plumbing Contractors",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Hetherington General & Plumbing Contractors"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "linebarger",
+      "name": "Linebarger Construction & Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Linebarger Construction & Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "family-owned",
+      "name": "Family Owned Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Family Owned Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "pings",
+      "name": "Ping’s Plumbing",
+      "website": null,
+      "websiteSource": null,
+      "status": "research",
+      "area": "unknown",
+      "areaText": "Outer Sunset service not established.",
+      "license": null,
+      "phone": null,
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Listed in Outer Sunset plumbing directory; current operation, scope and service area unverified.",
+          "source": 2,
+          "excerpt": "Ping’s Plumbing"
+        }
+      ],
+      "flags": [],
+      "reviewIds": [],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Current CSLB identity, C-36 status and insurance not checked.",
+        "No individual review evidence retained in this research pass."
+      ],
+      "platformLinks": []
+    },
+    {
+      "id": "legato",
+      "name": "Legato Plumbing",
+      "website": "https://www.legatoplumbing.com/about-us",
+      "websiteSource": 41,
+      "status": "hold",
+      "area": "outside",
+      "areaText": "Official site focuses on Marin County / North Bay; SF service not established.",
+      "license": {
+        "number": "1127555",
+        "status": "active",
+        "entity": "LEGATO PLUMBING LLC",
+        "expires": "2026-10-31",
+        "classes": [
+          "C36"
+        ],
+        "source": 42,
+        "checkedAt": "2026-09-10"
+      },
+      "phone": "415-877-6655",
+      "claims": [
+        {
+          "field": "Discovery",
+          "text": "Plumbing repairs and diagnostics. Separate legal entity from Plumbing Pure.",
+          "source": 41,
+          "excerpt": "proudly based in Marin County"
+        },
+        {
+          "field": "License",
+          "text": "Current and active · C36",
+          "source": 42,
+          "excerpt": "This license is current and active."
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "North Bay service focus; Outer Sunset coverage unconfirmed. Former Plumbing Pure Thumbtack URL now resolves here; historical attribution is unresolved.",
+          "sources": [
+            41,
+            22
+          ]
+        }
+      ],
+      "reviewIds": [
+        "R10",
+        "R11"
+      ],
+      "exactMatch": false,
+      "master": false,
+      "checkedAt": "2026-09-10",
+      "priority": null,
+      "phoneSource": 41,
+      "gaps": [
+        "No exact seized-overflow extraction case verified.",
+        "On-site feasibility and written repair scope not established.",
+        "Exact Outer Sunset dispatch coverage not directly confirmed.",
+        "Recheck CSLB and applicable insurance before contracting; registry presence is not a workmanship guarantee."
+      ],
+      "platformLinks": []
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Yelp · Outer Sunset plumbing discovery",
+      "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Outer+Sunset,+San+Francisco,+CA",
+      "kind": "directory",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": "Indexed results, not a complete review corpus. Sponsored placement is not qualification; ratings are not copied into rankings."
+    },
+    {
+      "id": 2,
+      "title": "Yellow Pages · Outer Sunset plumbing discovery",
+      "url": "https://www.yellowpages.com/outer-sunset-san-francisco-ca/plumbers",
+      "kind": "directory",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": "Address listings are discovery evidence only, not proof of present operation or neighborhood coverage."
+    },
+    {
+      "id": 3,
+      "title": "SFist · plumbing directory (2022)",
+      "url": "https://sfist.com/plumbers-in-sf/",
+      "kind": "directory",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": "Dated, commercial directory used only for discovery and published website links. No editorial stars imported."
+    },
+    {
+      "id": 4,
+      "title": "Fast Response · official services and coverage",
+      "url": "https://www.fastresponseplumbingsf.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 5,
+      "title": "CSLB · 1024971",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1024971",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 6,
+      "title": "Genteel · official Outer Sunset coverage",
+      "url": "https://www.genteelplumbers.com/service-areas/plumbing-sunset",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 7,
+      "title": "Genteel · official home and FAQ",
+      "url": "https://www.genteelplumbers.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 8,
+      "title": "CSLB · 1025814",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1025814",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 9,
+      "title": "Heise’s · official home and services",
+      "url": "https://www.heisesplumbing.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 10,
+      "title": "Heise’s · Sunset service area",
+      "url": "https://www.heisesplumbing.com/service-areas/sunset-district-san-francisco/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 11,
+      "title": "CSLB · 1089561",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1089561",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 12,
+      "title": "Works · San Francisco services",
+      "url": "https://worksplumbing.com/plumbing-san-francisco/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 13,
+      "title": "CSLB · 982663",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=982663",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 14,
+      "title": "Renstrom · official services",
+      "url": "https://renstromplumbing.com/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 15,
+      "title": "CSLB · 556995",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=556995",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 16,
+      "title": "Larratt Bros · services",
+      "url": "https://larrattbros.com/plumbing-services/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 17,
+      "title": "Larratt Bros · Yelp profile",
+      "url": "https://www.yelp.com/biz/larratt-bros-plumbing-san-francisco-2",
+      "kind": "platform",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 18,
+      "title": "CSLB · 596026",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=596026",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 19,
+      "title": "Larratt Bros · BBB listing",
+      "url": "https://www.bbb.org/us/ca/san-francisco/profile/heating-and-air-conditioning/larratt-bros-plumbing-inc-1116-946047",
+      "kind": "directory",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 20,
+      "title": "Plumbing Pure · official site",
+      "url": "https://plumbingpure.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 21,
+      "title": "CSLB · 1017368",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1017368",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 22,
+      "title": "Plumbing Pure · former Thumbtack URL",
+      "url": "https://www.thumbtack.com/ca/san-francisco/affordable-plumbing-services/plumbing-pure/service/450755040611270661",
+      "kind": "platform",
+      "access": "redirect",
+      "checkedAt": "2026-09-10",
+      "note": "Direct fetch resolves to Legato Plumbing in Sausalito. Do not attribute that review corpus to Plumbing Pure."
+    },
+    {
+      "id": 23,
+      "title": "Precision Rooter · Yelp scope statement",
+      "url": "https://www.yelp.com/biz/precision-rooter-san-francisco",
+      "kind": "platform",
+      "access": "blocked-with-search-extract",
+      "checkedAt": "2026-09-10",
+      "note": "Direct request returned HTTP 403. Business scope text was available in indexed results; recheck before relying on it."
+    },
+    {
+      "id": 24,
+      "title": "Ace · official services and certifications",
+      "url": "https://www.aceplumbingandrooter.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 25,
+      "title": "CSLB · 829071",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=829071",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 26,
+      "title": "Bay Area Plumbing · official services",
+      "url": "https://www.bayareaplumbingsf.com/plumber-near-me",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 27,
+      "title": "Hydroflow · official services",
+      "url": "https://hydroflow.info/san-francisco/outer-sunset/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 28,
+      "title": "Chosen Rooter & Plumbing · official services",
+      "url": "https://chosenrooter.com/plumber-sunset/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 29,
+      "title": "Arch Plumbing · official services",
+      "url": "https://archplumbinginc.com/drain-cleaning-near-outer-sunset-in-san-francisco/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 30,
+      "title": "CSLB · 976019",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=976019",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 31,
+      "title": "Benjamin Franklin Plumbing (Bay Area) · official services",
+      "url": "https://bfplumbingbayarea.com/san-francisco/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 32,
+      "title": "Roto-Rooter (San Francisco) · official services",
+      "url": "https://www.rotorooter.com/sanfrancisco/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 33,
+      "title": "O’Grady Plumbing · official services",
+      "url": "https://ogradyplumbing.com/property-maintenance/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 34,
+      "title": "George Salet Plumbing · official services",
+      "url": "https://www.plumbingpro.com/plumbing/",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 35,
+      "title": "Lutz · official services",
+      "url": "https://lutzplumbingsf.com/",
+      "kind": "business",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 36,
+      "title": "CSLB · 503971",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=503971",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 37,
+      "title": "Pipeline · published website",
+      "url": "https://www.pipelineplumbingsf.net/",
+      "kind": "business",
+      "access": "expired-site",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 38,
+      "title": "Discount · Yelp search listing",
+      "url": "https://www.yelp.com/search?find_desc=cabrillo+plumbing&find_loc=San+Francisco%2C+CA",
+      "kind": "directory",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 39,
+      "title": "Atlas · Yelp profile",
+      "url": "https://www.yelp.com/biz/atlas-plumbing-and-rooter-san-francisco-2",
+      "kind": "platform",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 40,
+      "title": "AB Plumbing · Thumbtack profile",
+      "url": "https://www.thumbtack.com/ca/san-francisco/water-heater-repair/ab-plumbing/service/117930413644399850",
+      "kind": "platform",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 41,
+      "title": "Legato · official about page",
+      "url": "https://www.legatoplumbing.com/about-us",
+      "kind": "business",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 42,
+      "title": "CSLB · 1127555",
+      "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1127555",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": ""
+    },
+    {
+      "id": 43,
+      "title": "Fast Response · Nextdoor customer accounts",
+      "url": "https://nextdoor.com/pages/fast-response-plumbing-rooter-south-san-francisco-ca/",
+      "kind": "platform",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": "Visible sample only. Post year not displayed; “Verified in” is a neighbor-account label, not the job year."
+    },
+    {
+      "id": 44,
+      "title": "Genteel · Reddit emergency recommendation",
+      "url": "https://www.reddit.com/r/AskSF/comments/13bdrxe/emergency_plumber/",
+      "kind": "community",
+      "access": "blocked-with-search-extract",
+      "checkedAt": "2026-09-10",
+      "note": "Direct retrieval returned HTTP 403; the quoted comment is from indexed text. Unverified anecdote, not a verified transaction."
+    },
+    {
+      "id": 45,
+      "title": "Larratt · company-hosted testimonials",
+      "url": "https://larrattbros.com/plumbing-services/",
+      "kind": "testimonial",
+      "access": "search-extract",
+      "checkedAt": "2026-09-10",
+      "note": "Company-curated testimonials; not independently retrieved from the original review platform."
+    },
+    {
+      "id": 46,
+      "title": "Legato · current Thumbtack profile",
+      "url": "https://www.thumbtack.com/ca/sausalito/affordable-plumbing-services/legato-plumbing/service/450755040611270661",
+      "kind": "platform",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": "Only visible reviews sampled. Same platform profile ID as former Plumbing Pure URL; historical corpus not assigned across entities."
+    },
+    {
+      "id": 47,
+      "title": "Works · company-hosted Google excerpt",
+      "url": "https://worksplumbing.com/plumbing-san-francisco/",
+      "kind": "testimonial",
+      "access": "page",
+      "checkedAt": "2026-09-10",
+      "note": "Google link supplied by business; original review not independently retrieved. Do not count as a second Google review."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "R01",
+      "business": "fast-response",
+      "platform": "Nextdoor",
+      "author": "S. M.",
+      "published": "17 Mar · year not displayed",
+      "quote": "replaced the internal mechanism for a bathtub drain",
+      "analysis": "Closest adjacent task found. Does not specify a stuck plunger, original pipe material, access route or preservation of walls.",
+      "theme": "Tub mechanism",
+      "source": 43,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R02",
+      "business": "fast-response",
+      "platform": "Nextdoor",
+      "author": "J. D.",
+      "published": "10 May · year not displayed",
+      "quote": "resolved the problem (a clogged laundry drain) quickly, expertly, and efficiently.",
+      "analysis": "Supports a report of communication and drain service, not bathtub extraction expertise.",
+      "theme": "Communication",
+      "source": 43,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R03",
+      "business": "genteel",
+      "platform": "Reddit",
+      "author": "tchang",
+      "published": "Thread dated 2023-05-08 · comment date unavailable",
+      "quote": "good (albeit pricey) experiences with Genteel Plumbers",
+      "analysis": "General favorable experience with a price caveat; no tub-specific work described.",
+      "theme": "Cost caution",
+      "source": 44,
+      "access": "search-extract",
+      "identity": "matched",
+      "negative": true,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R04",
+      "business": "larratt",
+      "platform": "Business site",
+      "author": "Not reliably resolved in extract",
+      "published": null,
+      "quote": "from simple to quite complex",
+      "analysis": "Company-hosted testimonial praises complex work and explanations; exact task and independent provenance missing.",
+      "theme": "Complex repair",
+      "source": 45,
+      "access": "search-extract",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R05",
+      "business": "larratt",
+      "platform": "Business site",
+      "author": "Andrew T.",
+      "published": null,
+      "quote": "replaced all of the drain piping under my house in a single day",
+      "analysis": "Replacement-work anecdote, not evidence for preserving existing pipes.",
+      "theme": "Replacement only",
+      "source": 45,
+      "access": "search-extract",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R06",
+      "business": "ab",
+      "platform": "Thumbtack",
+      "author": "Ed K.",
+      "published": "2022-02-18",
+      "quote": "when I called later to schedule the work, the price had gone up.",
+      "analysis": "Reviewer also says completed work was exactly what was wanted. Written estimate validity is a sensible comparison point.",
+      "theme": "Cost caution",
+      "source": 40,
+      "access": "page",
+      "identity": "matched",
+      "negative": true,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R07",
+      "business": "ab",
+      "platform": "Thumbtack",
+      "author": "Murat S.",
+      "published": "2018-12-14",
+      "quote": "When we had issues with appointment time, they quickly worked to resolve it and were flexible.",
+      "analysis": "Reports a resolved scheduling issue on pipe repair; old evidence, no overflow details.",
+      "theme": "Communication",
+      "source": 40,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R08",
+      "business": "ab",
+      "platform": "Thumbtack",
+      "author": "Gagan B.",
+      "published": "2012-10-21",
+      "quote": "a thorough explanation of what happened",
+      "analysis": "Reports clear explanation of a drain repair. Too old and too general to establish current technical suitability.",
+      "theme": "Communication",
+      "source": 40,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R09",
+      "business": "ab",
+      "platform": "Thumbtack",
+      "author": "Paul G.",
+      "published": "2017-07-18",
+      "quote": "The job was completed and the work site cleaned up within 35 minutes.",
+      "analysis": "Toilet-repair cleanliness report, not an estimate of bathtub work duration.",
+      "theme": "Clean work",
+      "source": 40,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R10",
+      "business": "legato",
+      "platform": "Thumbtack",
+      "author": "Darla D.",
+      "published": "2026-03-13",
+      "quote": "They gave good advice on what my options were.",
+      "analysis": "Current Legato profile review describes water-heater work in an older house. Not bathtub mechanism experience.",
+      "theme": "Diagnostic options",
+      "source": 46,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R11",
+      "business": "legato",
+      "platform": "Thumbtack",
+      "author": "Krista D.",
+      "published": "2025-07-26",
+      "quote": "Tom was very friendly and respectful and cleaned up after the job.",
+      "analysis": "Review service details specify a leaking shower fixture in a condo/apartment; not a seized overflow.",
+      "theme": "Clean work",
+      "source": 46,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R12",
+      "business": "works",
+      "platform": "Business site",
+      "author": "Penny Meier",
+      "published": null,
+      "quote": "They were able to pull the line through so we didn’t have to dig up the driveway.",
+      "analysis": "Trenchless sewer replacement is a different procedure and does not prove non-destructive bathtub repair.",
+      "theme": "Replacement only",
+      "source": 47,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    },
+    {
+      "id": "R13",
+      "business": "works",
+      "platform": "Business site",
+      "author": "Thomas Clavel",
+      "published": null,
+      "quote": "inspecting the pipes under the house to understand the connections.",
+      "analysis": "Business-republished preventive-maintenance account, not independent confirmation of tub expertise.",
+      "theme": "Diagnostic options",
+      "source": 47,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-10",
+      "exactTask": false
+    }
+  ],
+  "master": [],
+  "methodology": {
+    "completeReviewCorpus": false,
+    "contactedBusinesses": false,
+    "ranking": "Editorial diagnostic-call order: adjacent task evidence, primary-source area coverage and active C-36 checks. Not star averages or a guarantee.",
+    "promotionGates": [
+      "Exact legal entity and active C-36 license",
+      "Outer Sunset dispatch coverage",
+      "Documented relevant seized-overflow experience",
+      "Applicable insurance and written non-destructive-first scope",
+      "No unresolved blocking identity or license issue"
+    ]
+  }
+}
