@@ -6,14 +6,34 @@ A static, source-linked research workspace for repair-first bathtub plumbing in 
 
 **Publication status:** implementation is on the session branch and available in the Arena live preview. The public site has not been updated: repository Pages is configured for `main`, and the integration returned HTTP 403 when asked to change Pages settings. No credentials were requested or changed.
 
-## Research snapshot — September 10, 2026 (waves 1 + 2)
+## Research snapshot — September 10, 2026 (waves 1 + 2 + 3)
 
-- **100 distinct discovery records**, not 100 approved contractors. Wave 2 added exactly 50 new entries on top of wave 1's 50.
-- **31 direct CSLB record checks** across both waves; wave 2 alone contributed 20 direct license page reads (11 active C-36, 9 expired).
+- **151 distinct discovery records**, not 151 approved contractors. Wave 1 = 50, Wave 2 = 50, Wave 3 = 51 (this session).
+- **31 direct CSLB record checks** across waves 1–2; wave 2 alone contributed 20 direct license page reads (11 active C-36, 9 expired). Wave 3 is discovery-level: its 51 leads await CSLB checks (see `data/wave3-discovery-log.md`).
 - **Official SF DBI permit-firm registry** (data.sf.gov open dataset `k6kv-9kix`) queried by firm name and by Outer Sunset ZIPs (94122/94116) — an independent, government side channel that confirmed license numbers, recorded business addresses and permit-linked phone numbers for wave-2 entries.
 - **29 short review excerpts** with provenance labels (Yelp/Thumbtack/Reddit/Angi/Nextdoor indexed extracts, one Yellow Pages page review, and explicitly labeled company-hosted testimonials).
 - **90 evidence references** with source URL, retrieval mode and checked date; repeated URLs have separate roles, not independent corroboration.
 - **0 fully qualified master entries.** No exact seized-overflow, no-opening success case was established. No outcome or availability is guaranteed.
+
+### Scope, permits & privacy
+
+This repository is **public, source-linked research** for a repair-first bathtub-overflow
+job in San Francisco's Outer Sunset. It is built to identify and verify **licensed,
+credentialed** contractors from public records (CSLB, SF DBI) and to aggregate reviews with
+provenance. It is deliberately **not** a concealed work order and does not recommend or rank
+contractors for unpermitted or "discreet" work.
+
+- **No private data.** No property address, occupant information, access instruction, or private
+  project note is stored in this repository or its artifacts.
+- **Permits & licensing are the owner's responsibility.** Any plumbing, drywall, ceiling or
+  structural work in San Francisco — especially work affecting an occupied or in-law unit —
+  should be performed by licensed contractors in line with San Francisco Department of Building
+  Inspection (DBI) requirements. A license check verifies legal identity and status at a recorded
+  date; it is **not** a guarantee of a specific repair outcome.
+- **Reviews are not authenticated.** Excerpts are aggregated with platform/date labels and are not
+  independently confirmed as genuine transactions. No complete all-review corpus is claimed.
+- **Fail-closed.** Missing exact-task evidence, insurance, or written scope is recorded as a gap,
+  never inferred. The qualified master list is empty by design.
 
 ### Decision brief
 
@@ -86,6 +106,8 @@ Tests cover unique entities (100 across two waves), all citation references, lic
 
 `data/wave2.json` is the raw second-pass research record (50 businesses, 43 sources, 16 reviews, all line-checked). `scripts/merge_wave.py` merges a wave file into `data/research.json` and refuses to run if any structural invariant would break. `data/wave2-discovery-log.md` keeps the discovery trail, including rejected candidates and why.
 
+`data/wave3.json` / `scripts/gen_wave3.py` is the raw third-pass record (51 businesses, 10 sources, 10 reviews, all line-checked). `data/wave3-discovery-log.md` documents wave-3 sources, categories and the license spot-checks performed this session.
+
 ## Read-only source monitoring
 
 ```sh
@@ -106,7 +128,7 @@ The `Public source audit` workflow runs on relevant pushes and supports dispatch
 
 `Test and deploy Pages` validates the dataset and UI, stages only `index.html`, `styles.css`, `app.js`, `lib.js`, `assets/mark.svg` and `data/research.json`, then optionally deploys through GitHub Pages Actions on `main` when the repository uses the Actions build type. The current legacy Pages configuration publishes the repository root from `main` independently after the changes are merged. The workflow deliberately skips deployment on the session branch rather than failing against the known branch restriction. If repository integration permissions prevent changing those settings, the workflow and local live preview still work but the public deployment is not complete.
 
-The session branch is `arena/01a08d45-bathtuboverflowsf`. No changes are pushed to other branches.
+The session branch is `arena/01a08d58-bathtuboverflowsf`. No changes are pushed to other branches.
 
 ## Structure
 

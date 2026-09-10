@@ -1,0 +1,1854 @@
+{
+ "businesses": [
+  {
+   "id": "gerber",
+   "name": "Gerber Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "Appears in the Outer Sunset plumbing index; coverage not independently confirmed.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp Outer Sunset result lists Gerber Plumbing with a verified-license badge.",
+     "source": 70,
+     "excerpt": "Gerber Plumbing 5.0 (2 reviews) Verified License"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity, license or address verified in this pass.",
+    "Very small review sample (2)."
+   ]
+  },
+  {
+   "id": "bill-callaway",
+   "name": "Bill Callaway Plumber",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "3141 Balboa St, San Francisco 94121 (Outer Richmond) per Yellow Pages listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yellow Pages Outer Sunset plumbers listing places Bill Callaway Plumber at 3141 Balboa St (Outer Richmond).",
+     "source": 2,
+     "excerpt": "{\"name\":\"Bill Callaway Plumber\",\"streetAddress\":\"3141 Balboa St\",\"postalCode\":\"94121\"}"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Outer Richmond address; Outer Sunset dispatch not confirmed.",
+    "License unchecked."
+   ]
+  },
+  {
+   "id": "master-plumbing-sfg",
+   "name": "Master Plumbing SFG",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset plumbing results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp Outer Sunset result lists Master Plumbing SFG with bathtub-repair and drain-repair service tags.",
+     "source": 70,
+     "excerpt": "Master Plumbing SFG · Bathtub repair · Drain repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured in this pass.",
+    "Service tags do not prove seized-mechanism experience.",
+    "Indexed sample may be stale."
+   ]
+  },
+  {
+   "id": "better-cost-backflow",
+   "name": "Better Cost Backflow Test & Service",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset plumbing results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp Outer Sunset result lists Better Cost Backflow Test & Service (backflow scope).",
+     "source": 70,
+     "excerpt": "Better Cost Backflow Test & Service · 19 reviews · Backflow Services"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Backflow-only scope; not a tub/overflow repair fit.",
+    "No identity or license captured.",
+    "Outer Sunset coverage not confirmed."
+   ]
+  },
+  {
+   "id": "rooter-247",
+   "name": "24-7 Rooter & Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset plumbing results page; coverage beyond that not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp Outer Sunset result lists 24-7 Rooter & Plumbing under drain-repair listings.",
+     "source": 70,
+     "excerpt": "24-7 Rooter & Plumbing · Drain repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Drain focus; overflow-mechanism work unproven.",
+    "Indexed sample may be stale."
+   ]
+  },
+  {
+   "id": "amadors-drywall",
+   "name": "Amador's Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp drywall page; base appears South San Francisco per other listings.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-installation page lists Amador's Drywall at 4.9 across about 64 reviews.",
+     "source": 91,
+     "excerpt": "Amador's Drywall 4.9 (64 reviews) Verified License"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "SF Outer Sunset dispatch not confirmed (SSF base).",
+    "License class/status unchecked.",
+    "Drywall scope — patch/hatch phase only."
+   ]
+  },
+  {
+   "id": "rr-drywall",
+   "name": "R & R Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-installation page lists R & R Drywall at 4.8 across about 85 reviews.",
+     "source": 91,
+     "excerpt": "R & R Drywall 4.8 (85 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Drywall scope — patch/hatch phase only."
+   ]
+  },
+  {
+   "id": "ryno-drywall",
+   "name": "Ryno Drywall",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-installation page lists Ryno Drywall at 5.0 across about 14 reviews.",
+     "source": 91,
+     "excerpt": "Ryno Drywall 5.0 (14 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Small review sample.",
+    "Drywall scope — patch/hatch phase only."
+   ]
+  },
+  {
+   "id": "baltodano",
+   "name": "Baltodano's Drywall & Painting",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-installation page lists Baltodano's Drywall & Painting at 4.4 across about 42 reviews.",
+     "source": 91,
+     "excerpt": "Baltodano's Drywall & Painting 4.4 (42 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Drywall scope — patch/hatch phase only."
+   ]
+  },
+  {
+   "id": "montes-drywall",
+   "name": "Montes Drywall Experts",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-installation page lists Montes Drywall Experts at 5.0 across about 12 reviews.",
+     "source": 91,
+     "excerpt": "Montes Drywall Experts 5.0 (12 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Small review sample.",
+    "Drywall scope — patch/hatch phase only."
+   ]
+  },
+  {
+   "id": "toms-painters",
+   "name": "Toms Painters",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Yelp drywall page; base not established for Outer Sunset dispatch.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall page lists Toms Painters at 4.8 across about 240 reviews with drywall work.",
+     "source": 91,
+     "excerpt": "Toms Painters 4.8 (240 reviews) · Drywall installation or replacement"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Painting-led firm; confirm drywall/trade license.",
+    "Drywall scope — finish phase only."
+   ]
+  },
+  {
+   "id": "dasilva-painting",
+   "name": "DaSilva Painting",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Indexed Yelp drywall page; base not established for Outer Sunset dispatch.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall page lists DaSilva Painting at 4.8 across about 145 reviews with drywall/plaster work.",
+     "source": 91,
+     "excerpt": "DaSilva Painting 4.8 (145) · drywall, plaster type work & painting"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Painting-led firm; confirm drywall/trade license.",
+    "Drywall scope — finish phase only."
+   ]
+  },
+  {
+   "id": "all-around-builder",
+   "name": "All Around Builder",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall page lists All Around Builder at 5.0 across about 13 reviews describing a drywall process.",
+     "source": 91,
+     "excerpt": "All Around Builder 5.0 (13) · drywall process"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Small review sample.",
+    "Confirm GC license class for finish phase."
+   ]
+  },
+  {
+   "id": "new-concept",
+   "name": "A New Concept General Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset drywall results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall page lists A New Concept General Construction at 5.0 across about 13 reviews with drywall repair.",
+     "source": 91,
+     "excerpt": "A New Concept General Construction 5.0 (13) · drywall repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Small review sample.",
+    "Confirm GC license class."
+   ]
+  },
+  {
+   "id": "crew-stucco",
+   "name": "The Crew Stucco & Plastering",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed San Francisco drywall-repair results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp drywall-repair page lists The Crew Stucco & Plastering at 4.3 across about 7 reviews with drywall repair.",
+     "source": 92,
+     "excerpt": "The Crew Stucco & Plastering 4.3 (7) · drywall repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Small review sample.",
+    "Plaster/stucco-led; confirm drywall/trade license."
+   ]
+  },
+  {
+   "id": "certapro",
+   "name": "CertaPro Painters of San Francisco",
+   "website": "https://certapro.com/san-francisco/professional-painters-outer-sunset/",
+   "websiteSource": 99,
+   "status": "research",
+   "area": "outer",
+   "areaText": "Business lists Outer Sunset among service areas; offers drywall repair and EPA Lead Certified renovation.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Business marketing page lists Outer Sunset among CertaPro San Francisco service areas and offers drywall repair.",
+     "source": 99,
+     "excerpt": "CertaPro Painters of San Francisco · Outer Sunset service area · Drywall Repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Franchise operation; confirm the local franchise's license and insurance.",
+    "Drywall scope — finish phase only.",
+    "No exact seized-overflow extraction case verified."
+   ]
+  },
+  {
+   "id": "je-carpentry",
+   "name": "J E Carpentry & Handy Man",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists J E Carpentry & Handy Man at 4.7 across about 37 reviews.",
+     "source": 97,
+     "excerpt": "J E Carpentry & Handy Man 4.7 (37 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Handyman/carpentry scope — hatch carpentry only.",
+    "Not a plumbing-code contractor per available evidence."
+   ]
+  },
+  {
+   "id": "tal-handyman",
+   "name": "Tal Handyman Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists Tal Handyman Services at 3.9 across about 16 reviews.",
+     "source": 97,
+     "excerpt": "Tal Handyman Services 3.9 (16 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Mid rating; handyman scope — hatch phase only.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "handy-helper",
+   "name": "Handy Helper",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists Handy Helper at 5.0 across about 18 reviews.",
+     "source": 97,
+     "excerpt": "Handy Helper 5.0 (18 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Handyman scope — hatch phase only.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "longshore-handyman",
+   "name": "Longshore Handyman",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists Longshore Handyman at 4.8 across about 56 reviews.",
+     "source": 97,
+     "excerpt": "Longshore Handyman 4.8 (56 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Handyman scope — hatch phase only.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "guerra-handyman",
+   "name": "Guerra Handyman",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists Guerra Handyman at 5.0 across about 4 reviews (Serving Sunnyvale per listing text).",
+     "source": 97,
+     "excerpt": "Guerra Handyman 5.0 (4 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Very small review sample.",
+    "Listing text shows Sunnyvale service; SF Outer Sunset dispatch unconfirmed.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "handyfix",
+   "name": "HandyFix",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists HandyFix at 5.0 across 1 review (Serving Fremont per listing text).",
+     "source": 97,
+     "excerpt": "HandyFix 5.0 (1 review)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Single review; listing shows Fremont service.",
+    "SF Outer Sunset dispatch unconfirmed.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "abc-maintenance",
+   "name": "ABC Maintenance & Handyman Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists ABC Maintenance & Handyman Services at 5.0 across about 23 reviews.",
+     "source": 97,
+     "excerpt": "ABC Maintenance & Handyman Services 5.0 (23 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Handyman scope — hatch phase only.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "speer-handyman",
+   "name": "Speer Handyman Services",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "unknown",
+   "areaText": "Appears on the indexed Outer Sunset handyman results page; base not established.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp handyman page lists Speer Handyman Services at 4.9 across about 37 reviews.",
+     "source": 97,
+     "excerpt": "Speer Handyman Services 4.9 (37 reviews)"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No identity or license captured.",
+    "Handyman scope — hatch phase only.",
+    "Not a plumbing-code contractor."
+   ]
+  },
+  {
+   "id": "kh-construction",
+   "name": "K&H Construction Development",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "Indexed Yelp contractor page lists K&H in Outer Sunset with a bathroom/kitchen remodel portfolio.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists K&H Construction Development at 5.0 across about 23 reviews in Outer Sunset with bathroom remodels.",
+     "source": 93,
+     "excerpt": "K&H Construction Development 5.0 (23 reviews) Outer Sunset · bathroom remodel"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R30",
+    "R31"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "No exact seized-overflow extraction case verified."
+   ]
+  },
+  {
+   "id": "a2z-remodeling",
+   "name": "A2Z Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco and the Surrounding Area.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists A2Z Remodeling at 4.9 across about 108 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "A2Z Remodeling 4.9 (108 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "de-nola",
+   "name": "Richard De Nola",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco; 30 years in business.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Richard De Nola at 5.0 across 5 reviews, 30 years in business, serving San Francisco.",
+     "source": 93,
+     "excerpt": "Richard De Nola 5.0 (5 reviews) 30 years in business"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R??"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Small review sample.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting."
+   ]
+  },
+  {
+   "id": "be-home",
+   "name": "Be Home Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco; family-owned.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Be Home Remodeling at 5.0 across about 24 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "Be Home Remodeling 5.0 (24 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "oshaughnessy",
+   "name": "O Shaughnessy Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists O Shaughnessy Construction at 5.0 across about 19 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "O Shaughnessy Construction 5.0 (19 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "pacific-construction",
+   "name": "Pacific Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists Pacific Construction at 4.7 across about 14 reviews serving San Francisco.",
+     "source": 94,
+     "excerpt": "Pacific Construction 4.7 (14 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "triond",
+   "name": "Triond Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists Triond Remodeling at 4.7 across about 31 reviews serving San Francisco.",
+     "source": 94,
+     "excerpt": "Triond Remodeling 4.7 (31 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "fonseca",
+   "name": "Fonseca Marble and Tile",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco (tile specialty).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists Fonseca Marble and Tile at 4.8 across about 99 reviews serving San Francisco.",
+     "source": 94,
+     "excerpt": "Fonseca Marble and Tile 4.8 (99 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Tile specialty; confirm GC license for structural/plumbing phases.",
+    "No CSLB identity/class captured in this pass.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "shower-pan-king",
+   "name": "The Shower Pan King",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists The Shower Pan King at 4.8 across about 66 reviews, with a review mentioning dry rot in a bathroom floor.",
+     "source": 94,
+     "excerpt": "The Shower Pan King 4.8 (66 reviews) · dry rot extended into bathroom floor"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R39"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Niche shower-pan/tile scope; confirm GC license for structural/plumbing phases.",
+    "No CSLB identity/class captured in this pass.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "ee-general",
+   "name": "E&E General Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists E&E General Construction at 4.7 across about 37 reviews focusing on ADUs and remodels.",
+     "source": 94,
+     "excerpt": "E&E General Construction 4.7 (37 reviews) · ADUs, additions, remodels"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "quality-painting",
+   "name": "Quality Painting & Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Quality Painting & Construction at 5.0 across about 32 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "Quality Painting & Construction 5.0 (32 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Painting-led; confirm construction license for structural phases.",
+    "No CSLB identity/class captured in this pass.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "we-do-construction",
+   "name": "We Do Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists We Do Construction at 5.0 across about 101 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "We Do Construction 5.0 (101 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "gallos",
+   "name": "Gallos Quality Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Gallos Quality Construction at 5.0 across about 15 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "Gallos Quality Construction 5.0 (15 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Small-ish review sample.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "ml-construction",
+   "name": "M & L Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sunset",
+   "areaText": "Indexed Yelp contractor page shows M & L Construction about 0.9 miles from the referenced Sunset point.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists M & L Construction at 4.7 across about 134 reviews, shown about 0.9 miles from the Sunset reference point.",
+     "source": 93,
+     "excerpt": "M & L Construction 4.7 (134 reviews) · 0.9 Miles"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R33"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Exact Outer Sunset block not confirmed."
+   ]
+  },
+  {
+   "id": "valex",
+   "name": "Valex Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp bathroom-remodeling page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling page lists Valex Construction at 4.8 across about 58 reviews serving San Francisco.",
+     "source": 94,
+     "excerpt": "Valex Construction 4.8 (58 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "reliable-construction",
+   "name": "Reliable Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco; 30 years in business.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Reliable Construction at 4.9 across about 65 reviews with bathroom-remodel work, 30 years in business.",
+     "source": 93,
+     "excerpt": "Reliable Construction 4.9 (65 reviews) · bathroom remodel"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "master-v",
+   "name": "Master-V Construction",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "Indexed Yelp profile lists 2070 45th Ave, San Francisco 94116 (Outer Sunset) with bathroom-remodel work.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp bathroom-remodeling profile lists Master-V Construction at 5.0 across 8 reviews with a 2070 45th Ave Outer Sunset address.",
+     "source": 94,
+     "excerpt": "Master-V Construction 5.0 (8 reviews) · 2070 45th Ave Outer Sunset"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R32"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Small review sample.",
+    "No CSLB identity/class captured in this pass.",
+    "Confirm GC license and insurance before booking."
+   ]
+  },
+  {
+   "id": "peters-design",
+   "name": "Peters Design-Build",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Peters Design-Build at 4.8 across about 16 reviews serving San Francisco.",
+     "source": 93,
+     "excerpt": "Peters Design-Build 4.8 (16 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "remodeling-heroes",
+   "name": "Remodeling Heroes",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp contractor page; Serving San Francisco; 15 years in business.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp contractor page lists Remodeling Heroes at 4.4 across about 93 reviews, including a 1920s-house bathroom remodel.",
+     "source": 93,
+     "excerpt": "Remodeling Heroes 4.4 (93 reviews) · 1920s house bathroom"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "GC scope must be confirmed for plumbing sub-contracting.",
+    "Older-home experience is relevant but not seized-overflow proof."
+   ]
+  },
+  {
+   "id": "allied-restoration",
+   "name": "Allied Restoration Company",
+   "website": "https://www.sanfranciscofloodrepair.com/water-damage-in-outer-sunset/",
+   "websiteSource": 100,
+   "status": "research",
+   "area": "sf",
+   "areaText": "SF office at 222 Columbus Ave per the business's water-damage page; markets ceiling/wall opening for dryout.",
+   "license": null,
+   "phone": "415-529-5637",
+   "phoneSource": 100,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Business water-damage page lists an SF office at 222 Columbus Ave and describes opening walls/ceilings for drying after leaks.",
+     "source": 100,
+     "excerpt": "Allied Restoration Company · 222 Columbus Ave #201, San Francisco · (415) 529-5637"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Restoration scope; plumbing extraction remains a separate C36 trade.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "gcd-restoration",
+   "name": "GCD Restoration",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-damage page; base Daly City; Serving Daly City and surrounding area.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage page lists GCD Restoration at 5.0 across about 108 reviews based in Daly City.",
+     "source": 95,
+     "excerpt": "GCD Restoration 5.0 (108 reviews) Daly City · water damage restoration"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R38"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Daly City base; SF Outer Sunset dispatch unconfirmed.",
+    "No CSLB identity/class captured in this pass.",
+    "Restoration scope; plumbing extraction is a separate trade."
+   ]
+  },
+  {
+   "id": "swift-restoration",
+   "name": "Swift Restoration",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-damage page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage page lists Swift Restoration at 4.8 across about 181 reviews serving San Francisco.",
+     "source": 95,
+     "excerpt": "Swift Restoration 4.8 (181 reviews) Serving San Francisco"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R36"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Restoration scope; plumbing extraction is a separate trade.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "fire-water-recovery",
+   "name": "Fire & Water Damage Recovery",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-damage page; Serving San Francisco; women-owned; 24/7.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage page lists Fire & Water Damage Recovery at 4.7 across about 140 reviews serving San Francisco.",
+     "source": 95,
+     "excerpt": "Fire & Water Damage Recovery 4.7 (140 reviews) Serving San Francisco · women-owned"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R37"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Restoration scope; plumbing extraction is a separate trade.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "bio-911",
+   "name": "Bio 911",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-damage page; Serving San Francisco; mentions drywall repair.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage page lists Bio 911 at 4.9 across about 27 reviews serving San Francisco with drywall repair.",
+     "source": 95,
+     "excerpt": "Bio 911 4.9 (27 reviews) Serving San Francisco · drywall repair"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Restoration/drywall scope; plumbing extraction is a separate trade.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  },
+  {
+   "id": "ez-mold",
+   "name": "Ez MoldRemoval",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "outer",
+   "areaText": "Indexed Yelp water-damage result lists 1600 47th Ave, San Francisco 94122 (Outer Sunset).",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage result lists Ez MoldRemoval with a 1600 47th Ave Outer Sunset address.",
+     "source": 95,
+     "excerpt": "Ez MoldRemoval 5.0 (1 review) · 1600 47th Ave Outer Sunset"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "Single review; verify identity and license.",
+    "Mold-remediation scope; confirm general-building license for repairs.",
+    "Outer Sunset address is a directory footprint until confirmed."
+   ]
+  },
+  {
+   "id": "reactic",
+   "name": "Reactic Restoration",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-extraction page; Serving San Francisco.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-extraction page lists Reactic Restoration at 5.0 across about 10 reviews serving San Francisco, including wall rebuild after mold.",
+     "source": 96,
+     "excerpt": "Reactic Restoration 5.0 (10 reviews) Serving San Francisco · rebuilding the wall afterwards"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [
+    "R??"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Small review sample.",
+    "Restoration scope; plumbing extraction is a separate trade."
+   ]
+  },
+  {
+   "id": "bay-mold",
+   "name": "Bay Mold",
+   "website": null,
+   "websiteSource": null,
+   "status": "research",
+   "area": "sf",
+   "areaText": "Indexed Yelp water-damage page; Serving San Francisco; 23 years in business.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Indexed Yelp water-damage page lists Bay Mold at 4.3 across about 46 reviews serving San Francisco.",
+     "source": 95,
+     "excerpt": "Bay Mold 4.3 (46 reviews) Serving San Francisco · 23 years in business"
+    }
+   ],
+   "flags": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-10",
+   "gaps": [
+    "No exact seized-overflow extraction case verified.",
+    "No CSLB identity/class captured in this pass.",
+    "Mold-remediation scope; confirm general-building license for repairs.",
+    "Outer Sunset dispatch not separately confirmed."
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": 91,
+   "title": "Yelp · Drywall Installation near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Direct Yelp access blocked; indexed search-page names, stars and quote fragments."
+  },
+  {
+   "id": 92,
+   "title": "Yelp · Drywall Repair in San Francisco (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=drywall+repair&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 93,
+   "title": "Yelp · Contractor near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Contractor&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 94,
+   "title": "Yelp · Bathroom Remodeling Contractor San Francisco (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractor&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 95,
+   "title": "Yelp · Water Damage Repair near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Water+Damage+Repair&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 96,
+   "title": "Yelp · Water Extraction near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Water+Extraction&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 97,
+   "title": "Yelp · Handyman near Outer Sunset (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Handyman&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 98,
+   "title": "Yelp · Plumbing near Sunset District (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Sunset+District%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Indexed search page; names, stars and quote fragments only."
+  },
+  {
+   "id": 99,
+   "title": "CertaPro Painters of San Francisco · Outer Sunset drywall",
+   "url": "https://certapro.com/san-francisco/professional-painters-outer-sunset/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Business marketing page; lists Outer Sunset among service areas and offers drywall repair + EPA Lead Certified renovation."
+  },
+  {
+   "id": 100,
+   "title": "San Francisco Flood Repair · Water Damage in Outer Sunset",
+   "url": "https://www.sanfranciscofloodrepair.com/water-damage-in-outer-sunset/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-10",
+   "note": "Allied Restoration marketing page describing water-damage and ceiling/wall opening for dryout in SF."
+  }
+ ],
+ "reviews": [
+  {
+   "id": "R30",
+   "business": "kh-construction",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "We chose K&H for our Bathroom remodel including adding a small laundry closet and had a great...",
+   "analysis": "Indexed Yelp quote describing a bathroom remodel by K&H in the Outer Sunset results; supports bath/remodel capability, not seized-overflow extraction.",
+   "theme": "Bath remodel",
+   "source": 93,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R31",
+   "business": "kh-construction",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "K&H quoted and worked on a series of roof leaks and internal ceiling damage in our bedroom and media room...",
+   "analysis": "Indexed quote shows K&H handling internal ceiling damage repair — directly relevant to the ceiling-opening/restore phase of the target job.",
+   "theme": "Ceiling repair",
+   "source": 93,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R32",
+   "business": "master-v",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "Very professional, great communication, and honest. Val and Alex completed my bathroom remodel on...",
+   "analysis": "Indexed Yelp quote for a bathroom remodel by a firm whose profile lists a 2070 45th Ave Outer Sunset address; supports local GC capability.",
+   "theme": "Bath remodel",
+   "source": 94,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R33",
+   "business": "ml-construction",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "I will never go to any other contractor for our home remodel needs.",
+   "analysis": "Indexed loyalty quote; no task detail relevant to seized overflow extraction. Shows repeat-use satisfaction only.",
+   "theme": "General quality",
+   "source": 93,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R34",
+   "business": "toms-painters",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "The painting and drywall results were high quality.",
+   "analysis": "Indexed quote about drywall + painting quality; relevant to the finish/hatch-closing phase of the target job.",
+   "theme": "Drywall finishing",
+   "source": 91,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R35",
+   "business": "amadors-drywall",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "I hired Amador's to install drywall & insulation for the entire rear portion of our two story home",
+   "analysis": "Indexed quote about whole-home drywall/insulation install; demonstrates drywall capacity but not a small access-hatch patch.",
+   "theme": "Drywall install",
+   "source": 91,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R36",
+   "business": "swift-restoration",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "I highly recommend Swift Restoration if you have water damage in home and need help.",
+   "analysis": "Indexed endorsement for water-damage restoration; supports the ceiling-dryout phase of the target job. No plumbing content.",
+   "theme": "Water damage",
+   "source": 95,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R37",
+   "business": "fire-water-recovery",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "my investment property flooded. The light well flooded the lower bathroom. Unhappy tenant.",
+   "analysis": "Indexed review describes a flooded lower bathroom in an investment property — analogous to the in-law-unit-below scenario; restoration scope, not plumbing extraction.",
+   "theme": "Water damage",
+   "source": 95,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R38",
+   "business": "gcd-restoration",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "When all is said and done, I feel Manny and the GCD team did a great job",
+   "analysis": "Indexed praise for GCD restoration work; Daly City base, SF dispatch unconfirmed. Restoration scope only.",
+   "theme": "Water damage",
+   "source": 95,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  },
+  {
+   "id": "R39",
+   "business": "shower-pan-king",
+   "platform": "Yelp",
+   "author": "Not shown in indexed extract",
+   "published": "Not displayed",
+   "quote": "the dry rot extended into the bathroom floor, and Dave did an excellent job of...",
+   "analysis": "Indexed quote about dry-rot repair extending into a bathroom floor — adjacent to subfloor/access work, not overflow mechanism.",
+   "theme": "Dry rot",
+   "source": 94,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "checkedAt": "2026-09-10",
+   "exactTask": false
+  }
+ ]
+}
