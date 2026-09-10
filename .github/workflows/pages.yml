@@ -34,6 +34,16 @@ jobs:
           status=${PIPESTATUS[0]}
           echo "exit_code=$status" >> "$GITHUB_OUTPUT"
           exit "$status"
+      - name: Surface browser test output
+        if: always()
+        run: |
+          if [ "${{ steps.browser-tests.outcome }}" = "failure" ] && [ -f playwright.log ]; then
+            output=$(tail -n 120 playwright.log | tr '\r\n' '  ')
+            output=${output//'%'/'%25'}
+            output=${output//$'\n'/'%0A'}
+            output=${output//$'\r'/'%0D'}
+            echo "::error file=.github/workflows/pages.yml,line=154,title=Browser test output::$output"
+          fi
       - name: Upload browser test diagnostics
         if: always()
         uses: actions/upload-artifact@v4
