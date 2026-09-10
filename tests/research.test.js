@@ -14,13 +14,13 @@ const data = JSON.parse(
 );
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 
-test("exactly 201 unique discovery entries across four waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 201);
+test("exactly 251 unique discovery entries across five waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 251);
   assert.equal(data.schemaVersion, 2);
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].toLowerCase())).size,
-      201,
+      251,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
