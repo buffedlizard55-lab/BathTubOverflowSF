@@ -152,7 +152,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
         "expected a name button and a view button per record",
       );
       assert.match(html, /Active license checked only/);
-      assert.match(html, /Sep 10, 2026 and Sep 11, 2026/);
+      assert.match(html, /Snapshot · Sep 10–11, 2026/);
     }
     if (view === "audit") {
       const numbers = [

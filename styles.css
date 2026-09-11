@@ -755,6 +755,8 @@ select {
   font-size: 11px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2px 12px;
   margin: 17px 0 12px;
   color: #7b8779;
 }

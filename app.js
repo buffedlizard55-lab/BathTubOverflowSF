@@ -19,6 +19,19 @@ const fmtDate = (iso) =>
     year: "numeric",
     timeZone: "UTC",
   });
+// Two same-month snapshot dates read as a range, so the directory meta line
+// stays short enough for a 390px viewport.
+const snapshotLabel = () => {
+  const ds = data.researchDates;
+  if (ds.length < 2) return fmtDate(ds[0]);
+  const a = new Date(`${ds[0]}T12:00:00Z`),
+    b = new Date(`${ds[ds.length - 1]}T12:00:00Z`);
+  const mon = a.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
+  return a.getUTCFullYear() === b.getUTCFullYear() &&
+    a.getUTCMonth() === b.getUTCMonth()
+    ? `${mon} ${a.getUTCDate()}\u2013${b.getUTCDate()}, ${b.getUTCFullYear()}`
+    : `${fmtDate(ds[0])} and ${fmtDate(ds[ds.length - 1])}`;
+};
 const LICENSE_STATUS = {
   active: ["✓ Active", ""],
   expired: ["! License expired", "red"],
@@ -194,7 +207,7 @@ function renderDirectory() {
 function directoryResults() {
   const items = filterBusinesses(data.businesses, filters);
   document.querySelector("#directory-results").innerHTML =
-    `<div class="result-meta" role="status"><span>${items.length} of ${data.businesses.length} research records</span><span>Snapshot · ${data.researchDates.map(fmtDate).join(" and ")}</span></div>${items.length ? `<div class="table-wrap"><table class="directory-table"><thead><tr><th><span class="small">Compare</span></th><th>BUSINESS / EVIDENCE</th><th>SERVICE AREA</th><th>CREDENTIAL CHECK</th><th>RESEARCH STATUS</th><th>DETAILS</th></tr></thead><tbody>${items.map((b) => `<tr><td><input class="table-check" type="checkbox" aria-label="Compare ${e(b.name)}" data-compare="${b.id}" ${selected.has(b.id) ? "checked" : ""}></td><td><button class="row-name" data-detail="${b.id}">${e(b.name)}</button>${b.priority ? ` <span class="badge">Call 0${b.priority}</span>` : ""}<p>${e(b.claims[0].text)} ${cite(b.claims[0].source)}</p></td><td>${badge(areaLabels[b.area], b.area === "outer" ? "" : b.area === "outside" ? "amber" : "gray")}<p>${e(b.areaText)}</p></td><td>${licenseBadge(b)} ${tradeBadge(b)}<p>${b.license ? `#${b.license.number} · ${e(b.license.classes.join(", "))} ${cite(b.license.source)}` : "No CSLB page read for this record"}</p></td><td>${statusBadge(b)}<p>${b.reviewIds.length ? `${b.reviewIds.length} review excerpt${b.reviewIds.length === 1 ? "" : "s"}` : "No review sample retained"}${b.flags.length ? ` · ${b.flags.length} flag${b.flags.length === 1 ? "" : "s"}` : ""}</p></td><td><button class="button-secondary button-small" data-detail="${b.id}" aria-label="View ${e(b.name)}">View ↗</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty"><h3>${filters.status === "master" ? "No businesses have passed every gate." : "No candidates match these filters."}</h3><p>${filters.status === "master" ? "This is intentional. Missing exact-task evidence is not replaced with an assumed qualification." : "Try a broader search or reset the filters."}</p><button class="button-secondary" id="reset-filters">Show all candidates</button></div>`}`;
+    `<div class="result-meta" role="status"><span>${items.length} of ${data.businesses.length} research records</span><span>Snapshot · ${snapshotLabel()}</span></div>${items.length ? `<div class="table-wrap"><table class="directory-table"><thead><tr><th><span class="small">Compare</span></th><th>BUSINESS / EVIDENCE</th><th>SERVICE AREA</th><th>CREDENTIAL CHECK</th><th>RESEARCH STATUS</th><th>DETAILS</th></tr></thead><tbody>${items.map((b) => `<tr><td><input class="table-check" type="checkbox" aria-label="Compare ${e(b.name)}" data-compare="${b.id}" ${selected.has(b.id) ? "checked" : ""}></td><td><button class="row-name" data-detail="${b.id}">${e(b.name)}</button>${b.priority ? ` <span class="badge">Call 0${b.priority}</span>` : ""}<p>${e(b.claims[0].text)} ${cite(b.claims[0].source)}</p></td><td>${badge(areaLabels[b.area], b.area === "outer" ? "" : b.area === "outside" ? "amber" : "gray")}<p>${e(b.areaText)}</p></td><td>${licenseBadge(b)} ${tradeBadge(b)}<p>${b.license ? `#${b.license.number} · ${e(b.license.classes.join(", "))} ${cite(b.license.source)}` : "No CSLB page read for this record"}</p></td><td>${statusBadge(b)}<p>${b.reviewIds.length ? `${b.reviewIds.length} review excerpt${b.reviewIds.length === 1 ? "" : "s"}` : "No review sample retained"}${b.flags.length ? ` · ${b.flags.length} flag${b.flags.length === 1 ? "" : "s"}` : ""}</p></td><td><button class="button-secondary button-small" data-detail="${b.id}" aria-label="View ${e(b.name)}">View ↗</button></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty"><h3>${filters.status === "master" ? "No businesses have passed every gate." : "No candidates match these filters."}</h3><p>${filters.status === "master" ? "This is intentional. Missing exact-task evidence is not replaced with an assumed qualification." : "Try a broader search or reset the filters."}</p><button class="button-secondary" id="reset-filters">Show all candidates</button></div>`}`;
   document.querySelector("#reset-filters")?.addEventListener("click", () => {
     filters = { query: "", status: "all", area: "all", license: false };
     renderDirectory();
@@ -260,7 +273,7 @@ ${(() => {
     ];
     return `<div class="section-heading"><div><h2>Verification ladder</h2><p>Every record sits on exactly one of these evidence levels. Higher levels are rarer and say less about workmanship than they appear to.</p></div><span class="badge gray">${c.total} records</span></div><div class="table-wrap"><table><thead><tr><th>EVIDENCE LEVEL</th><th>SOURCE TYPE</th><th>RECORDS</th><th>WHAT IT CAN AND CANNOT PROVE</th></tr></thead><tbody>${ladder.map(([a, b_, n, d]) => `<tr><td><strong>${a}</strong></td><td>${b_}</td><td>${n}</td><td>${d}</td></tr>`).join("")}</tbody></table></div>${notice("<strong>Cross-check result for wave 6.</strong> Three independent third parties (the company site footer, BBB and BuildZoom) all published CSLB #1057063 for Caledonia Plastering &amp; Stucco, and the direct CSLB read confirmed that number, the legal name, the 1551 Judah Street 94122 address and the 08/31/2027 expiry. Wave 4’s Repipe Champions number did <em>not</em> survive the same test. A third-party license number is therefore always treated as a lead until CSLB is read.")}`;
   })()}
-<div class="section-heading"><div><h2>CSLB credential checks</h2><p>Direct CSLB reads dated ${data.researchDates.map(fmtDate).join(" and ")}. Current status may change at any time; insurance coverage must match the work.</p></div></div><div class="table-wrap"><table><thead><tr><th>BUSINESS / LEGAL ENTITY</th><th>LICENSE</th><th>STATUS AT CHECK</th><th>EXPIRATION</th></tr></thead><tbody>${data.businesses
+<div class="section-heading"><div><h2>CSLB credential checks</h2><p>Direct CSLB reads dated ${snapshotLabel()}. Current status may change at any time; insurance coverage must match the work.</p></div></div><div class="table-wrap"><table><thead><tr><th>BUSINESS / LEGAL ENTITY</th><th>LICENSE</th><th>STATUS AT CHECK</th><th>EXPIRATION</th></tr></thead><tbody>${data.businesses
     .filter((b) => b.license)
     .map(
       (b) =>

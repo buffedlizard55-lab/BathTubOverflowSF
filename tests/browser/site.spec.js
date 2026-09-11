@@ -27,9 +27,15 @@ const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
 const overflowReport = (page) =>
   page.evaluate(() => {
     const limit = document.documentElement.clientWidth;
+    const all = [...document.querySelectorAll("body *")];
+    // Resolve scroll containers once: walking getComputedStyle per overflowing
+    // cell of a 301-row table is slow enough to time the test out.
+    const scrollers = new Set(
+      all.filter((n) => getComputedStyle(n).overflowX !== "visible"),
+    );
     const clipped = (el) => {
       for (let n = el.parentElement; n; n = n.parentElement)
-        if (getComputedStyle(n).overflowX !== "visible") return true;
+        if (scrollers.has(n)) return true;
       return false;
     };
     const describe = (el, r) =>
@@ -40,7 +46,7 @@ const overflowReport = (page) =>
       )} w=${Math.round(r.width)} :: ${
         (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 40)
       }`;
-    const rows = [...document.querySelectorAll("body *")]
+    const rows = all
       .map((el) => ({ el, r: el.getBoundingClientRect() }))
       .filter(({ r }) => r.right > limit + 0.5 && r.width > 0);
     return {
@@ -192,13 +198,14 @@ test("review filters, flags and method routes work", async ({ page }) => {
 test("mobile navigation, layout and accessible modal work", async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   await expect(
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
   const overflow = await overflowReport(page);
-  console.log(`MOBILE LAYOUT ${globalThis.location?.hash || ""} ${JSON.stringify(overflow)}`);
+  console.log(`MOBILE LAYOUT summary ${JSON.stringify(overflow)}`);
   expect(overflow.page).toEqual([]);
   expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.innerWidth);
   await page.locator('[data-detail="fast-response"]').first().click();
@@ -206,10 +213,12 @@ test("mobile navigation, layout and accessible modal work", async ({
   await page.getByRole("button", { name: "Close details" }).click();
   await page.getByRole("link", { name: /Business directory/ }).click();
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
-  const overflow = await overflowReport(page);
-  console.log(`MOBILE LAYOUT ${globalThis.location?.hash || ""} ${JSON.stringify(overflow)}`);
-  expect(overflow.page).toEqual([]);
-  expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.innerWidth);
+  const directoryOverflow = await overflowReport(page);
+  console.log(`MOBILE LAYOUT directory ${JSON.stringify(directoryOverflow)}`);
+  expect(directoryOverflow.page).toEqual([]);
+  expect(directoryOverflow.scrollWidth).toBeLessThanOrEqual(
+    directoryOverflow.innerWidth,
+  );
 });
 test("business deep links work and do not call external resources", async ({
   page,
