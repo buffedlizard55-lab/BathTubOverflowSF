@@ -38,7 +38,13 @@ jobs:
         if: always()
         run: |
           if [ "${{ steps.browser-tests.outcome }}" = "failure" ] && [ -f playwright.log ]; then
-            output=$(tail -n 400 playwright.log | tr '\r\n' '  ')
+            # Playwright prints failure blocks at the end, but each webServer
+            # log line is long enough to push them out of a line-count tail.
+            # Extract the failure blocks first, then fall back to raw bytes.
+            output=$(awk '/[0-9]+\) tests\/browser/{p=1} p' playwright.log | head -c 7000 | tr '\r\n' '  ')
+            if [ -z "$output" ]; then
+              output=$(tail -c 4000 playwright.log | tr '\r\n' '  ')
+            fi
             output=${output//'%'/'%25'}
             output=${output//$'\n'/'%0A'}
             output=${output//$'\r'/'%0D'}
