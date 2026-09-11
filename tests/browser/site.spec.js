@@ -19,6 +19,25 @@ const COST_CAUTION = data.reviews.filter(
   (r) => r.platform === "Thumbtack" && r.theme === "Cost caution",
 ).length;
 const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
+
+// Instead of a bare boolean, report the elements that actually overflow the
+// viewport so a layout regression names its own cause in the CI log.
+const overflowReport = (page) =>
+  page.evaluate(() => {
+    const limit = document.documentElement.clientWidth;
+    return [...document.querySelectorAll("body *")]
+      .map((el) => ({ el, r: el.getBoundingClientRect() }))
+      .filter(({ r }) => r.right > limit + 0.5 && r.width > 0)
+      .slice(0, 8)
+      .map(
+        ({ el, r }) =>
+          `<${el.tagName.toLowerCase()} class="${el.className}"> right=${Math.round(
+            r.right,
+          )} width=${Math.round(r.width)} limit=${limit} :: ${
+            (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 70)
+          }`,
+      );
+  });
 test("summary renders evidence-based shortlist with no browser errors", async ({
   page,
 }) => {
@@ -163,21 +182,13 @@ test("mobile navigation, layout and accessible modal work", async ({
   await expect(
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
+  expect(await overflowReport(page)).toEqual([]);
   await page.locator('[data-detail="fast-response"]').first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("button", { name: "Close details" }).click();
   await page.getByRole("link", { name: /Business directory/ }).click();
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
+  expect(await overflowReport(page)).toEqual([]);
 });
 test("business deep links work and do not call external resources", async ({
   page,
