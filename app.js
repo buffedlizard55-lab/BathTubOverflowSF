@@ -250,13 +250,6 @@ function renderAudit() {
     );
   main.innerHTML = `${heading("THE VERIFICATION LEDGER", "Evidence you can trace.", "Direct registry checks are distinct from business marketing, platform posts and directory leads. A license check never certifies a specific repair outcome.")} ${stats()}
 <div class="section-heading"><div><h2>Irregularities & unresolved evidence</h2><p>Not all flags are wrongdoing. Conflicting dates, redirects and expired websites require caution.</p></div></div><div class="flag-list">${flags.map(({ b, f }) => flagHTML(b, f)).join("")}</div>
-<div class="section-heading"><div><h2>CSLB credential checks</h2><p>Direct CSLB reads dated ${data.researchDates.map(fmtDate).join(" and ")}. Current status may change at any time; insurance coverage must match the work.</p></div></div><div class="table-wrap"><table><thead><tr><th>BUSINESS / LEGAL ENTITY</th><th>LICENSE</th><th>STATUS AT CHECK</th><th>EXPIRATION</th></tr></thead><tbody>${data.businesses
-    .filter((b) => b.license)
-    .map(
-      (b) =>
-        `<tr><td><strong>${e(b.name)}</strong><p>${e(b.license.entity)}</p>${tradeBadge(b)}</td><td>#${b.license.number} ${cite(b.license.source)}<p>${b.license.classes.join(" · ")}</p></td><td>${licenseBadge(b)}<p>${b.license.checkedAt}</p></td><td>${b.license.expires}</td></tr>`,
-    )
-    .join("")}</tbody></table></div>
 ${(() => {
     const c = evidenceCounts(data);
     const read = data.businesses.filter((b) => b.license).length;
@@ -267,6 +260,13 @@ ${(() => {
     ];
     return `<div class="section-heading"><div><h2>Verification ladder</h2><p>Every record sits on exactly one of these evidence levels. Higher levels are rarer and say less about workmanship than they appear to.</p></div><span class="badge gray">${c.total} records</span></div><div class="table-wrap"><table><thead><tr><th>EVIDENCE LEVEL</th><th>SOURCE TYPE</th><th>RECORDS</th><th>WHAT IT CAN AND CANNOT PROVE</th></tr></thead><tbody>${ladder.map(([a, b_, n, d]) => `<tr><td><strong>${a}</strong></td><td>${b_}</td><td>${n}</td><td>${d}</td></tr>`).join("")}</tbody></table></div>${notice("<strong>Cross-check result for wave 6.</strong> Three independent third parties (the company site footer, BBB and BuildZoom) all published CSLB #1057063 for Caledonia Plastering &amp; Stucco, and the direct CSLB read confirmed that number, the legal name, the 1551 Judah Street 94122 address and the 08/31/2027 expiry. Wave 4’s Repipe Champions number did <em>not</em> survive the same test. A third-party license number is therefore always treated as a lead until CSLB is read.")}`;
   })()}
+<div class="section-heading"><div><h2>CSLB credential checks</h2><p>Direct CSLB reads dated ${data.researchDates.map(fmtDate).join(" and ")}. Current status may change at any time; insurance coverage must match the work.</p></div></div><div class="table-wrap"><table><thead><tr><th>BUSINESS / LEGAL ENTITY</th><th>LICENSE</th><th>STATUS AT CHECK</th><th>EXPIRATION</th></tr></thead><tbody>${data.businesses
+    .filter((b) => b.license)
+    .map(
+      (b) =>
+        `<tr><td><strong>${e(b.name)}</strong><p>${e(b.license.entity)}</p>${tradeBadge(b)}</td><td>#${b.license.number} ${cite(b.license.source)}<p>${b.license.classes.join(" · ")}</p></td><td>${licenseBadge(b)}<p>${b.license.checkedAt}</p></td><td>${b.license.expires}</td></tr>`,
+    )
+    .join("")}</tbody></table></div>
 <div class="section-heading"><div><h2>Source register</h2><p>${data.sources.length} evidence references · duplicated URLs may represent different evidence roles, not independent corroboration.</p></div><a class="text-link" href="./data/research.json" download>Download evidence JSON ↓</a></div><div class="source-list">${data.sources.map((s) => `<details class="source-item" id="source-${s.id}"><summary><strong>[${s.id}] ${e(s.title)}</strong>${badge(e(accessLabels[s.access] || s.access), s.access === "page" ? "gray" : "amber")}</summary><p>${ext(s.url, e(s.url))}</p><p>Role: ${e(s.kind)} · Checked ${s.checkedAt}${s.note ? `<br>${e(s.note)}` : ""}</p></details>`).join("")}</div>`;
 }
 function renderMethod() {
@@ -405,7 +405,7 @@ try {
   const snap = document.querySelector("#snapshot-date");
   if (snap) {
     snap.dateTime = data.researchedAt;
-    snap.textContent = data.researchDates.map(fmtDate).join(" · ");
+    snap.textContent = fmtDate(data.researchedAt);
   }
   route();
   window.addEventListener("hashchange", route);

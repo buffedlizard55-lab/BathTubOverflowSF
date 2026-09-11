@@ -667,6 +667,20 @@ main {
 .compliance .dialog-actions {
   margin-top: 16px;
 }
+.compliance .dialog-actions > * {
+  flex: 1 1 240px;
+  min-width: 0;
+  max-width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.compliance-facts li,
+.compliance-position,
+.compliance-why,
+.compliance-head p {
+  overflow-wrap: break-word;
+}
 .compliance .notice {
   margin-top: 14px;
 }
@@ -1290,8 +1304,19 @@ footer span {
     padding: 24px 18px 35px;
   }
   .topbar {
-    padding: 0 18px;
+    padding: 9px 18px;
+    height: auto;
+    min-height: 55px;
     font-size: 8px;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 3px;
+  }
+  .topbar > div {
+    min-width: 0;
+  }
+  .topbar strong {
+    overflow-wrap: anywhere;
   }
   .topbar strong {
     font-size: 10px;
