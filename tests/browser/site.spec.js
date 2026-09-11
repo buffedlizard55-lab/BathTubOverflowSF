@@ -20,43 +20,45 @@ const COST_CAUTION = data.reviews.filter(
 ).length;
 const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
 
-// Instead of a bare boolean, report the elements that actually overflow the
-// viewport so a layout regression names its own cause in the CI log. Elements
-// inside a scroll container (the mobile nav rail, .table-wrap) are off-screen
-// but do NOT widen the page, so they are reported separately as clipped.
-const overflowReport = (page) =>
+// Ancestor-based clipping heuristics are unreliable here: .candidate, .hero and
+// .panel all use overflow:hidden, and zero-width absolutely positioned boxes can
+// widen the scroll area without a usable rect. So find the culprit empirically -
+// hide a subtree, re-measure documentElement.scrollWidth, and descend into
+// whichever subtree actually changes it.
+const overflowProbe = (page) =>
   page.evaluate(() => {
+    const wide = () => document.documentElement.scrollWidth;
+    const base = wide();
     const limit = document.documentElement.clientWidth;
-    const all = [...document.querySelectorAll("body *")];
-    // Resolve scroll containers once: walking getComputedStyle per overflowing
-    // cell of a 301-row table is slow enough to time the test out.
-    const scrollers = new Set(
-      all.filter((n) => getComputedStyle(n).overflowX !== "visible"),
-    );
-    const clipped = (el) => {
-      for (let n = el.parentElement; n; n = n.parentElement)
-        if (scrollers.has(n)) return true;
-      return false;
-    };
-    const describe = (el, r) =>
-      `<${el.tagName.toLowerCase()} class="${
-        typeof el.className === "string" ? el.className : ""
-      }" pos=${getComputedStyle(el).position}> right=${Math.round(
-        r.right,
-      )} w=${Math.round(r.width)} :: ${
-        (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 40)
-      }`;
-    const rows = all
-      .map((el) => ({ el, r: el.getBoundingClientRect() }))
-      .filter(({ r }) => r.right > limit + 0.5 && r.width > 0);
-    return {
-      scrollWidth: document.documentElement.scrollWidth,
-      clientWidth: limit,
-      innerWidth: window.innerWidth,
-      bodyScrollWidth: document.body.scrollWidth,
-      page: rows.filter(({ el }) => !clipped(el)).slice(0, 10).map(({ el, r }) => describe(el, r)),
-      clipped: rows.filter(({ el }) => clipped(el)).length,
-    };
+    if (base <= window.innerWidth)
+      return { base, limit, innerWidth: window.innerWidth, path: [] };
+    const path = [];
+    let nodes = [...document.body.children];
+    for (let depth = 0; depth < 12 && nodes.length; depth++) {
+      const next = [];
+      for (const n of nodes) {
+        const prev = n.style.display;
+        n.style.display = "none";
+        const after = wide();
+        n.style.display = prev;
+        if (after < base) {
+          const r = n.getBoundingClientRect();
+          path.push(
+            `d${depth} <${n.tagName.toLowerCase()}${n.id ? `#${n.id}` : ""} class="${
+              typeof n.className === "string" ? n.className : ""
+            }"> hiding=>${after} rect=${Math.round(r.left)}..${Math.round(
+              r.right,
+            )}x${Math.round(r.width)} pos=${getComputedStyle(n).position} :: ${
+              (n.textContent || "").trim().replace(/\s+/g, " ").slice(0, 45)
+            }`,
+          );
+          next.push(...n.children);
+        }
+      }
+      if (!next.length) break;
+      nodes = next;
+    }
+    return { base, limit, innerWidth: window.innerWidth, path };
   });
 
 test("summary renders evidence-based shortlist with no browser errors", async ({
@@ -211,21 +213,21 @@ test("mobile navigation, layout and accessible modal work", async ({
   await expect(
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
-  const overflow = await overflowReport(page);
-  console.log(`MOBILE LAYOUT summary ${JSON.stringify(overflow)}`);
-  expect(overflow.page).toEqual([]);
-  expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.innerWidth);
+  const summaryProbe = await overflowProbe(page);
+  expect(
+    summaryProbe.path,
+    `summary overflow ${JSON.stringify(summaryProbe)}`,
+  ).toEqual([]);
   await page.locator('[data-detail="fast-response"]').first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("button", { name: "Close details" }).click();
   await page.getByRole("link", { name: /Business directory/ }).click();
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
-  const directoryOverflow = await overflowReport(page);
-  console.log(`MOBILE LAYOUT directory ${JSON.stringify(directoryOverflow)}`);
-  expect(directoryOverflow.page).toEqual([]);
-  expect(directoryOverflow.scrollWidth).toBeLessThanOrEqual(
-    directoryOverflow.innerWidth,
-  );
+  const directoryProbe = await overflowProbe(page);
+  expect(
+    directoryProbe.path,
+    `directory overflow ${JSON.stringify(directoryProbe)}`,
+  ).toEqual([]);
 });
 test("business deep links work and do not call external resources", async ({
   page,
