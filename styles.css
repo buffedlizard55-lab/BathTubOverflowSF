@@ -686,6 +686,11 @@ main {
   max-width: 100%;
   justify-content: flex-start;
   text-align: left;
+  /* .button-secondary is white-space:nowrap, so a long official link label
+     stays one unbreakable line and spills out of its shrunk flex box, widening
+     the document. These labels are full sentences and must be allowed to wrap;
+     nowrap also defeats overflow-wrap, hence `anywhere` alongside it. */
+  white-space: normal;
   overflow-wrap: anywhere;
 }
 .compliance-facts li,
