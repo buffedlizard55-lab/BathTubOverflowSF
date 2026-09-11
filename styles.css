@@ -409,8 +409,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 8px 20px;
   margin: 25px 0 16px;
+}
+.section-heading > div {
+  min-width: 0;
+  flex: 1 1 260px;
+}
+.section-heading > .text-link {
+  flex: 0 0 auto;
 }
 .section-heading p {
   font-size: 11px;
@@ -446,7 +454,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 19px;
+}
+.candidate-top > * {
+  min-width: 0;
 }
 .rank {
   font-size: 10px;
@@ -634,7 +647,7 @@ main {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px 22px;
 }
 .compliance-facts li {
@@ -678,8 +691,22 @@ main {
 .compliance-facts li,
 .compliance-position,
 .compliance-why,
-.compliance-head p {
-  overflow-wrap: break-word;
+.compliance-head p,
+.compliance .notice p {
+  overflow-wrap: anywhere;
+}
+.compliance-head > div {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.compliance-head > .badge {
+  flex: 0 0 auto;
+}
+.compliance .notice .text-link {
+  white-space: normal;
+}
+.eyebrow {
+  overflow-wrap: anywhere;
 }
 .compliance .notice {
   margin-top: 14px;
@@ -1395,7 +1422,7 @@ footer span {
   .review-grid,
   .method-grid,
   .compliance-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .compliance {
     padding: 18px;
