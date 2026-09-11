@@ -107,7 +107,11 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
   expect(data.compliance.officialLinks.length).toBeGreaterThan(2);
   for (const l of data.compliance.officialLinks) {
     expect(l.url).toMatch(/^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org)\//);
-    await expect(page.locator(`.compliance a[href="${l.url}"]`)).toBeVisible();
+    // Scoped to the action row: the inline [S175] citation points at the same
+    // official URL, so an unscoped selector hits strict-mode.
+    await expect(
+      page.locator(`.compliance .dialog-actions a[href="${l.url}"]`),
+    ).toBeVisible();
   }
   await expect(page.locator(".compliance .notice")).toHaveCount(
     data.compliance.notRetrieved.length,
