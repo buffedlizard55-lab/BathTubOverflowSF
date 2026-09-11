@@ -21,23 +21,38 @@ const COST_CAUTION = data.reviews.filter(
 const FLAGS = data.businesses.reduce((n, b) => n + b.flags.length, 0);
 
 // Instead of a bare boolean, report the elements that actually overflow the
-// viewport so a layout regression names its own cause in the CI log.
+// viewport so a layout regression names its own cause in the CI log. Elements
+// inside a scroll container (the mobile nav rail, .table-wrap) are off-screen
+// but do NOT widen the page, so they are reported separately as clipped.
 const overflowReport = (page) =>
   page.evaluate(() => {
     const limit = document.documentElement.clientWidth;
-    return [...document.querySelectorAll("body *")]
+    const clipped = (el) => {
+      for (let n = el.parentElement; n; n = n.parentElement)
+        if (getComputedStyle(n).overflowX !== "visible") return true;
+      return false;
+    };
+    const describe = (el, r) =>
+      `<${el.tagName.toLowerCase()} class="${
+        typeof el.className === "string" ? el.className : ""
+      }" pos=${getComputedStyle(el).position}> right=${Math.round(
+        r.right,
+      )} w=${Math.round(r.width)} :: ${
+        (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 40)
+      }`;
+    const rows = [...document.querySelectorAll("body *")]
       .map((el) => ({ el, r: el.getBoundingClientRect() }))
-      .filter(({ r }) => r.right > limit + 0.5 && r.width > 0)
-      .slice(0, 8)
-      .map(
-        ({ el, r }) =>
-          `<${el.tagName.toLowerCase()} class="${el.className}"> right=${Math.round(
-            r.right,
-          )} width=${Math.round(r.width)} limit=${limit} :: ${
-            (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 70)
-          }`,
-      );
+      .filter(({ r }) => r.right > limit + 0.5 && r.width > 0);
+    return {
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: limit,
+      innerWidth: window.innerWidth,
+      bodyScrollWidth: document.body.scrollWidth,
+      page: rows.filter(({ el }) => !clipped(el)).slice(0, 10).map(({ el, r }) => describe(el, r)),
+      clipped: rows.filter(({ el }) => clipped(el)).length,
+    };
   });
+
 test("summary renders evidence-based shortlist with no browser errors", async ({
   page,
 }) => {
@@ -182,13 +197,19 @@ test("mobile navigation, layout and accessible modal work", async ({
   await expect(
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
-  expect(await overflowReport(page)).toEqual([]);
+  const overflow = await overflowReport(page);
+  console.log(`MOBILE LAYOUT ${globalThis.location?.hash || ""} ${JSON.stringify(overflow)}`);
+  expect(overflow.page).toEqual([]);
+  expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.innerWidth);
   await page.locator('[data-detail="fast-response"]').first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("button", { name: "Close details" }).click();
   await page.getByRole("link", { name: /Business directory/ }).click();
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
-  expect(await overflowReport(page)).toEqual([]);
+  const overflow = await overflowReport(page);
+  console.log(`MOBILE LAYOUT ${globalThis.location?.hash || ""} ${JSON.stringify(overflow)}`);
+  expect(overflow.page).toEqual([]);
+  expect(overflow.scrollWidth).toBeLessThanOrEqual(overflow.innerWidth);
 });
 test("business deep links work and do not call external resources", async ({
   page,
