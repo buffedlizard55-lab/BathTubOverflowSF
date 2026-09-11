@@ -37,13 +37,17 @@ export function toCSV(items, sources) {
   const rows = [
     [
       "Business",
+      "Trade",
       "Research status",
       "Qualified master",
       "Area evidence",
       "License",
+      "License classes",
       "License status",
+      "License expires",
       "Checked",
       "Website",
+      "Phone",
       "Discovery source",
       "Evidence and caveats",
     ],
@@ -51,13 +55,17 @@ export function toCSV(items, sources) {
   for (const b of items)
     rows.push([
       b.name,
+      b.trade || "",
       b.status,
       b.master ? "yes" : "no",
       b.areaText,
       b.license?.number,
+      b.license?.classes?.join(" / "),
       b.license?.status || "unchecked",
+      b.license?.expires,
       b.checkedAt,
       b.website,
+      b.phone,
       sources.find((s) => s.id === b.claims[0].source)?.url,
       [
         ...b.claims.map(
@@ -70,10 +78,55 @@ export function toCSV(items, sources) {
     ]);
   return "\uFEFF" + rows.map((row) => row.map(csvCell).join(",")).join("\r\n");
 }
+// CSLB classifications this project stores, and the classification set each
+// declared trade must actually hold. A record may never be promoted on a
+// classification that does not cover the work it would be hired for.
+export const ALLOWED_CLASSES = [
+  "C36",
+  "C-9",
+  "C35",
+  "C-4",
+  "C4",
+  "C10",
+  "C16",
+  "C20",
+  "C42",
+  "D56",
+  "B",
+  "A",
+];
+export const TRADE_CLASSES = {
+  plumbing: [["C36"]],
+  drywall: [["C-9"], ["B"]],
+  plaster: [["C35"], ["B"]],
+  finish: [["C-9"], ["C35"], ["B"]],
+  general: [["B"]],
+  engineering: [["A"]],
+  "multi-trade": [["B"], ["C36"]],
+};
+export const TRADE_LABELS = {
+  plumbing: "Plumbing (C-36)",
+  drywall: "Drywall (C-9)",
+  plaster: "Lathing & plaster (C-35)",
+  finish: "Finish / patch",
+  general: "General building (B)",
+  engineering: "General engineering (A)",
+  "multi-trade": "Multi-trade",
+};
+export function licenseSupportsTrade(b) {
+  const classes = b.license?.classes;
+  if (!classes?.length) return false;
+  if (!classes.every((c) => ALLOWED_CLASSES.includes(c))) return false;
+  // A record without a declared trade is only acceptable on the wave 1-5
+  // convention, where every stored license carried C36.
+  const combos = b.trade ? TRADE_CLASSES[b.trade] : [["C36"]];
+  if (!combos) return false;
+  return combos.some((need) => need.every((c) => classes.includes(c)));
+}
 export function mayPromote(b) {
   return (
     b.license?.status === "active" &&
-    b.license.classes.includes("C36") &&
+    licenseSupportsTrade(b) &&
     b.area === "outer" &&
     b.exactMatch === true &&
     b.insuranceVerified === true &&
@@ -86,11 +139,31 @@ export function evidenceCounts(data) {
     total: data.businesses.length,
     active: data.businesses.filter((b) => b.license?.status === "active")
       .length,
+    inactive: data.businesses.filter(
+      (b) => b.license && b.license.status !== "active",
+    ).length,
+    unchecked: data.businesses.filter((b) => !b.license).length,
     master: data.businesses.filter((b) => b.master).length,
     flags: data.businesses.filter((b) => b.flags.length).length,
     holds: data.businesses.filter((b) =>
       ["hold", "excluded"].includes(b.status),
     ).length,
     reviews: data.reviews.length,
+    waves: (data.waves || []).length,
+    cslbReads: new Set(
+      data.sources
+        .filter((s) => s.access === "page" && s.url.includes("cslb.ca.gov"))
+        .map((s) => s.url),
+    ).size,
+    registryOnly: data.businesses.filter(
+      (b) =>
+        !b.license &&
+        b.claims.some(
+          (c) => c.field === "Registry" && /Registry-recorded/.test(c.text),
+        ),
+    ).length,
+    outerVerified: data.businesses.filter(
+      (b) => b.area === "outer" && b.license?.status === "active",
+    ).length,
   };
 }
