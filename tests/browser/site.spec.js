@@ -102,10 +102,13 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
   await expect(page.locator(".compliance-facts li")).toHaveCount(
     data.compliance.facts.length,
   );
-  await expect(
-    page.getByRole("link", { name: /Apply for a plumbing or mechanical permit/ }),
-  ).toBeVisible();
-  await expect(page.getByRole("link", { name: /SF DBI Permit Services/ })).toBeVisible();
+  // Derive the link assertions from the dataset so the spec cannot drift from
+  // the labels the compliance block actually carries.
+  expect(data.compliance.officialLinks.length).toBeGreaterThan(2);
+  for (const l of data.compliance.officialLinks) {
+    expect(l.url).toMatch(/^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org)\//);
+    await expect(page.locator(`.compliance a[href="${l.url}"]`)).toBeVisible();
+  }
   await expect(page.locator(".compliance .notice")).toHaveCount(
     data.compliance.notRetrieved.length,
   );
