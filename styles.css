@@ -596,6 +596,80 @@ main {
   font-size: 11px;
   margin: 5px 0;
 }
+.trades {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+}
+/* Official permit & compliance panel — deliberately distinct from marketing. */
+.compliance {
+  margin-top: 27px;
+  padding: 25px;
+  border-left: 3px solid var(--teal);
+  background: linear-gradient(180deg, #fbfcf8, #f2f6f1);
+}
+.compliance-head {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.compliance-head h3 {
+  margin: 6px 0 4px;
+  font-size: 19px;
+  line-height: 1.3;
+  max-width: 62ch;
+}
+.compliance-head p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.compliance-facts {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 22px;
+}
+.compliance-facts li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.compliance-facts li::before {
+  content: "\00a7";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+.compliance-position,
+.compliance-why {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+  border-radius: 6px;
+  background: rgba(28, 92, 80, 0.06);
+}
+.compliance-why {
+  background: rgba(197, 121, 66, 0.09);
+}
+.compliance .dialog-actions {
+  margin-top: 16px;
+}
+.compliance .notice {
+  margin-top: 14px;
+}
 .toolbar {
   display: flex;
   gap: 12px;
@@ -1292,8 +1366,15 @@ footer span {
   .shortlist,
   .summary-bottom,
   .review-grid,
-  .method-grid {
+  .method-grid,
+  .compliance-facts {
     grid-template-columns: 1fr;
+  }
+  .compliance {
+    padding: 18px;
+  }
+  .compliance-head h3 {
+    font-size: 16px;
   }
   .candidate h3 {
     min-height: 0;

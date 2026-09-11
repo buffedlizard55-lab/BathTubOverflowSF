@@ -1,0 +1,3528 @@
+{
+ "wave": 6,
+ "researchedAt": "2026-09-11",
+ "note": "50 new records: 22 with a CSLB license detail page read directly this session, 16 registry-only leads held fail-closed, 12 drywall/plaster/finish leads from indexed extracts. Nothing promoted to the qualified master list.",
+ "businesses": [
+  {
+   "id": "w6-building-efficiency-inc",
+   "name": "Building Efficiency Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB itself records the business address as 2037 Irving Street, Suite 213, San Francisco, CA 94122 — an Outer Sunset address held by the regulator, not a marketing claim. The SF DBI registry independently records the same firm at 2037 Irving Street with 252 permit rows.",
+   "license": {
+    "number": "947504",
+    "status": "active",
+    "entity": "BUILDING EFFICIENCY INC",
+    "expires": "2028-05-31",
+    "classes": [
+     "B",
+     "C20",
+     "C36",
+     "C10"
+    ],
+    "source": 155,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-831-4535",
+   "phoneSource": 155,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Building Efficiency Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 155,
+     "excerpt": "BUILDING EFFICIENCY INC · 2037 IRVING STREET · SUITE 213 · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 831-4535 — Entity Corporation — Issue Date 05/18/2010 — Expire Date 05/31/2028 — “This license is current and active.” — B - GENERAL BUILDING; C20 - WARM-AIR HEATING, VENTILATING AND AIR-CONDITIONING; C36 - PLUMBING; C10 - ELECTRICAL — Certifications: ASB - ASBESTOS (For Bidding Purposes Only) — Contractor's Bond $25,000 eff 01/01/2023 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/12/2014 exp 08/12/2027; classification codes 55421 Sheet Metal Work-high wage, 5479 Insulation Work, 51871 Plumbing-high wage"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI plumbing-permit registry records this firm at 2037 Irving Street, 94122, with 252 permit rows — independent government corroboration of the CSLB address.",
+     "source": 150,
+     "excerpt": "firm_name \"Building Efficiency Inc\"; license_number \"947504\"; address \"2037 Irving Street\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4158314535\"; permit rows 252"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · B · C20 · C36 · C10 · Corporation · expires 2028-05-31.",
+     "source": 155,
+     "excerpt": "BUILDING EFFICIENCY INC · 2037 IRVING STREET · SUITE 213 · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 831-4535 — Entity Corporation — Issue Date 05/18/2010 — Expire Date 05/31/2028 — “This license is current and active.” — B - GENERAL BUILDING; C20 - WARM-AIR HEATING, VENTILATING AND AIR-CONDITIONING; C36 - PLUMBING; C10 - ELECTRICAL — Certifications: ASB - ASBESTOS (For Bidding Purposes Only) — Contractor's Bond $25,000 eff 01/01/2023 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/12/2014 exp 08/12/2027; classification codes 55421 Sheet Metal Work-high wage, 5479 Insulation Work, 51871 Plumbing-high wage"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 12/14/2015 - CONTRACTOR HIS LETTER SENT.",
+     "source": 155,
+     "excerpt": "BUILDING EFFICIENCY INC · 2037 IRVING STREET · SUITE 213 · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 831-4535 — Entity Corporation — Issue Date 05/18/2010 — Expire Date 05/31/2028 — “This license is current and active.” — B - GENERAL BUILDING; C20 - WARM-AIR HEATING, VENTILATING AND AIR-CONDITIONING; C36 - PLUMBING; C10 - ELECTRICAL — Certifications: ASB - ASBESTOS (For Bidding Purposes Only) — Contractor's Bond $25,000 eff 01/01/2023 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/12/2014 exp 08/12/2027; classification codes 55421 Sheet Metal Work-high wage, 5479 Insulation Work, 51871 Plumbing-high wage"
+    }
+   ],
+   "flags": [],
+   "trade": "multi-trade",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "priority": 7,
+   "rationale": "The only wave-6 record whose CSLB page shows a single corporation holding B (General Building), C36 (Plumbing), C10 (Electrical) and C20 (HVAC) at an Outer Sunset address, plus an ASB asbestos certification for bidding. That combination is the closest credential match found to a job that may need pipe work, a ceiling opening and a finish rebuild under one responsible entity.",
+   "nextStep": "Ask whether one contract covers the plumbing repair, ceiling opening, patch and access panel, and which trade classification each part is billed under. Request the entity name on the contract match BUILDING EFFICIENCY INC.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-faherty-plumbing-and-heating",
+   "name": "Faherty Plumbing and Heating",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records the business address as 4004 Irving Street, San Francisco, CA 94122 — an Outer Sunset address held by the regulator. The SF DBI registry records the firm at 1295 41st Av, 94122, with 176 permit rows.",
+   "license": {
+    "number": "998141",
+    "status": "active",
+    "entity": "FAHERTY PLUMBING AND HEATING dba FAHERTY PLUMBING",
+    "expires": "2028-09-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 156,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-640-9626",
+   "phoneSource": 156,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Faherty Plumbing and Heating was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 156,
+     "excerpt": "FAHERTY PLUMBING AND HEATING · dba FAHERTY PLUMBING · 4004 IRVING STREET · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 640-9626 — Entity Corporation — Issue Date 10/28/2014 — Reissue Date 09/10/2018 — Expire Date 09/30/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 — qualifying individual DAVID GERALD FAHERTY — workers compensation with MASSACHUSETTS BAY INSURANCE COMPANY eff 01/04/2026 exp 01/04/2027; classification code 51871 Plumbing-high wage"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI plumbing-permit registry records this firm at 1295 41st Av, 94122 with 176 permit rows and the same phone number the CSLB page publishes.",
+     "source": 150,
+     "excerpt": "firm_name \"Faherty Plumbing\"; license_number \"998141\"; address \"1295 41st Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4156409626\"; permit rows 176"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Corporation · expires 2028-09-30.",
+     "source": 156,
+     "excerpt": "FAHERTY PLUMBING AND HEATING · dba FAHERTY PLUMBING · 4004 IRVING STREET · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 640-9626 — Entity Corporation — Issue Date 10/28/2014 — Reissue Date 09/10/2018 — Expire Date 09/30/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 — qualifying individual DAVID GERALD FAHERTY — workers compensation with MASSACHUSETTS BAY INSURANCE COMPANY eff 01/04/2026 exp 01/04/2027; classification code 51871 Plumbing-high wage"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 09/10/2018 - LICENSE REISSUED TO ANOTHER ENTITY.",
+     "source": 156,
+     "excerpt": "FAHERTY PLUMBING AND HEATING · dba FAHERTY PLUMBING · 4004 IRVING STREET · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 640-9626 — Entity Corporation — Issue Date 10/28/2014 — Reissue Date 09/10/2018 — Expire Date 09/30/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 — qualifying individual DAVID GERALD FAHERTY — workers compensation with MASSACHUSETTS BAY INSURANCE COMPANY eff 01/04/2026 exp 01/04/2027; classification code 51871 Plumbing-high wage"
+    }
+   ],
+   "flags": [],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "priority": 8,
+   "rationale": "Active C-36 corporation whose regulator-held address is on Irving Street in the Outer Sunset, with a workers-compensation policy classified 51871 Plumbing-high wage — evidence of employed plumbers rather than a no-employee exemption. Longest expiry horizon in wave 6 (09/30/2028).",
+   "nextStep": "Ask directly whether they have freed a seized tub trip-lever linkage in a 1940s galvanized system, and what access route they would try first.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-de-barra-plumbing",
+   "name": "De Barra Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records the business address as 1511 39th Avenue, San Francisco, CA 94122 — an Outer Sunset address held by the regulator, matching the SF DBI registry row at 1511 39th Av with 169 permit rows.",
+   "license": {
+    "number": "916617",
+    "status": "active",
+    "entity": "DE BARRA PLUMBING",
+    "expires": "2028-06-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 157,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-368-7992",
+   "phoneSource": 157,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "De Barra Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 157,
+     "excerpt": "DE BARRA PLUMBING · 1511 39TH AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 368-7992 — Entity Sole Ownership — Issue Date 06/03/2008 — Expire Date 06/30/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 with NATIONWIDE MUTUAL INSURANCE COMPANY eff 02/12/2026 — workers compensation with PIE INSURANCE COMPANY (THE) eff 02/23/2026 exp 02/23/2027; classification codes 51871 Plumbing-high wage, 51831 Plumbing-low wage, 8810 Clerical Office Employees"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI plumbing-permit registry records the identical 1511 39th Av, 94122 address with 169 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"De Barra Plumbing\"; license_number \"916617\"; address \"1511 39th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 169"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Sole Ownership · expires 2028-06-30.",
+     "source": 157,
+     "excerpt": "DE BARRA PLUMBING · 1511 39TH AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 368-7992 — Entity Sole Ownership — Issue Date 06/03/2008 — Expire Date 06/30/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 with NATIONWIDE MUTUAL INSURANCE COMPANY eff 02/12/2026 — workers compensation with PIE INSURANCE COMPANY (THE) eff 02/23/2026 exp 02/23/2027; classification codes 51871 Plumbing-high wage, 51831 Plumbing-low wage, 8810 Clerical Office Employees"
+    }
+   ],
+   "flags": [],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "priority": 9,
+   "rationale": "Active C-36 sole ownership at a regulator-held Outer Sunset address. Bond effective 02/12/2026 and workers compensation effective 02/23/2026 are both recent, and the workers-compensation classification list includes plumbing high-wage, low-wage and clerical codes — consistent with a staffed local shop. Sole ownership means one named individual is contractually responsible.",
+   "nextStep": "Confirm who physically attends the diagnostic visit and that the contracting entity on any agreement is DE BARRA PLUMBING under license 916617.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-caledonia-plastering-stucco-inc",
+   "name": "Caledonia Plastering & Stucco Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records the business address as 1551 Judah Street, San Francisco, CA 94122. Yelp's indexed profile labels the same address “Outer Sunset”, and BBB records 1551 Judah St, San Francisco, CA 94122-1717.",
+   "license": {
+    "number": "1057063",
+    "status": "active",
+    "entity": "CALEDONIA PLASTERING & STUCCO INC",
+    "expires": "2027-08-31",
+    "classes": [
+     "C35"
+    ],
+    "source": 174,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-685-9910",
+   "phoneSource": 174,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Caledonia Plastering & Stucco Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 174,
+     "excerpt": "CALEDONIA PLASTERING & STUCCO INC · 1551 JUDAH STREET · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 685-9910 — Entity Corporation — Issue Date 08/14/2019 — Expire Date 08/31/2027 — “This license is current and active.” — C35 - LATHING AND PLASTERING — Contractor's Bond $25,000 with NORTH RIVER INSURANCE COMPANY (THE) eff 07/22/2024 — qualifying individual JOHN MARTIN CULLEN — workers compensation with AMERICAN CASUALTY COMPANY OF READING PA eff 06/12/2026 exp 06/12/2027; classification codes 5484 Plastering/Stucco Work-low wage, 5485 Plastering/Stucco Work-high wage"
+    },
+    {
+     "field": "Registry cross-check",
+     "text": "BBB records CSLB license 1057063 with expiration 8/31/2027 for this business — the same number and expiry read directly on CSLB. BBB is a directory, not the regulator; agreement between the two is corroboration of identity only.",
+     "source": 183,
+     "excerpt": "BBB records show a license number of 1057063 for this business, issued by Contractors State License Board. The expiration date of this license is 8/31/2027"
+    },
+    {
+     "field": "Third-party aggregator",
+     "text": "BuildZoom lists license #1057063, type Lathing And Plastering, status Active “verified as of February 2026”, employee John Martin Cullen, and reproduces SF DBI stucco permits tied to 1551 JUDAH STREET 94122. Aggregator data is corroboration only.",
+     "source": 184,
+     "excerpt": "Caledonia Plastering and Stucco, 1551 Judah St, San Francisco, CA (Employee: John Martin Cullen) holds a Lathing And Plastering license according to the California license board … License # 1057063 · Status Active"
+    },
+    {
+     "field": "Drywall scope",
+     "text": "Thumbtack's indexed profile places the business in San Francisco (postal code 94116 in page structured data) with an aggregate rating of 4.875 across 56 reviews, and lists the service detail “Repair / Touchup • Wall(s) • Ceiling(s) • Wood lath”.",
+     "source": 181,
+     "excerpt": "Details: Repair / Touchup • Wall(s) • Ceiling(s) • Wood lath … \"addressLocality\":\"San Francisco\",\"postalCode\":\"94116\" … \"aggregateRating\":{\"ratingValue\":4.875,\"reviewCount\":56}"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C35 · Corporation · expires 2027-08-31.",
+     "source": 174,
+     "excerpt": "CALEDONIA PLASTERING & STUCCO INC · 1551 JUDAH STREET · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 685-9910 — Entity Corporation — Issue Date 08/14/2019 — Expire Date 08/31/2027 — “This license is current and active.” — C35 - LATHING AND PLASTERING — Contractor's Bond $25,000 with NORTH RIVER INSURANCE COMPANY (THE) eff 07/22/2024 — qualifying individual JOHN MARTIN CULLEN — workers compensation with AMERICAN CASUALTY COMPANY OF READING PA eff 06/12/2026 exp 06/12/2027; classification codes 5484 Plastering/Stucco Work-low wage, 5485 Plastering/Stucco Work-high wage"
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "Address/ZIP discrepancy across sources: CSLB and Yelp record 1551 Judah Street with ZIP 94122 (Outer Sunset), while the Thumbtack profile's own structured data records postal code 94116 (Parkside). Same street address, different ZIP. Not evidence of wrongdoing; confirm the contracting address in writing.",
+     "sources": [
+      174,
+      182,
+      181
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Classification is C35 (Lathing and Plastering) only. The CSLB page shows no C-9 drywall and no C36 plumbing classification, so this business cannot lawfully self-perform the plumbing portion and a drywall-only patch may fall outside its classification.",
+     "sources": [
+      174
+     ]
+    }
+   ],
+   "trade": "plaster",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "priority": 6,
+   "rationale": "The strongest finish-side match found in six waves: a regulator-verified active C35 lathing-and-plastering corporation at a 94122 Judah Street address that Yelp labels Outer Sunset, with named, dated Thumbtack reviews describing ceiling-hole repair, veneer plaster over newly drywalled ceilings, and lath-and-plaster work that “pass the city inspection with no problems”. Correct trade for a 1940 building whose ceiling below may be lath and plaster rather than drywall.",
+   "nextStep": "Ask whether the ceiling below the tub is lath and plaster or drywall, whether they install a framed access panel as part of the patch, and whether they will coordinate behind a licensed C-36 plumber.",
+   "platformLinks": [],
+   "reviewIds": [
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "R64",
+    "R65"
+   ],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-feng-k-plumbing-co",
+   "name": "Feng K Plumbing Co",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records the business address as 1654 23rd Avenue, San Francisco, CA 94122 — an Outer Sunset address held by the regulator. The SF DBI registry records the same firm at 1654 23rd Av with 344 permit rows under the name “Feng K. Plumbing Corp.” and 97 further rows as “Feng K Plumbing Co”.",
+   "license": {
+    "number": "839447",
+    "status": "active",
+    "entity": "FENG K PLUMBING CO",
+    "expires": "2028-05-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 172,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-939-8822",
+   "phoneSource": 172,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Feng K Plumbing Co was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 172,
+     "excerpt": "FENG K PLUMBING CO · 1654 23RD AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 939-8822 — Entity Sole Ownership — Issue Date 05/28/2004 — Expire Date 05/31/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 with ATLANTIC SPECIALTY INSURANCE COMPANY eff 09/01/2026 — workers compensation exempt, certified no employees, eff 05/11/2026"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI plumbing-permit registry records this firm at 1654 23rd Av, 94122 with 344 permit rows — the fourth-highest count in that ZIP.",
+     "source": 150,
+     "excerpt": "firm_name \"Feng K. Plumbing Corp.\"; license_number \"839447\"; address \"1654 23rd Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4154180185\"; permit rows 344"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Sole Ownership · expires 2028-05-31.",
+     "source": 172,
+     "excerpt": "FENG K PLUMBING CO · 1654 23RD AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 939-8822 — Entity Sole Ownership — Issue Date 05/28/2004 — Expire Date 05/31/2028 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 with ATLANTIC SPECIALTY INSURANCE COMPANY eff 09/01/2026 — workers compensation exempt, certified no employees, eff 05/11/2026"
+    }
+   ],
+   "flags": [
+    {
+     "level": "discrepancy",
+     "text": "Entity-type and name mismatch: the registry row reads “Feng K. Plumbing Corp.” while CSLB records “FENG K PLUMBING CO” as a Sole Ownership under the same license number 839447. Confirm the exact legal entity before signing anything.",
+     "sources": [
+      150,
+      172
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Three different published phone numbers for one license: registry rows show 4154180185 and 4157565869, while CSLB publishes (415) 939-8822. Use the CSLB number as the record of authority and confirm the others verbally.",
+     "sources": [
+      150,
+      172
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "Workers compensation is exempt on a certified no-employees basis (effective 05/11/2026). If no employees are covered, confirm in writing who performs the work and how liability is insured.",
+     "sources": [
+      172
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Active C-36 sole ownership at a regulator-held Outer Sunset address with a very high registry permit count and a contractor's bond effective 09/01/2026 — the freshest bond in wave 6. Held back from the call order by the entity-name, phone and no-employee discrepancies above.",
+   "nextStep": "Resolve the legal entity name and current phone with CSLB in hand before requesting a diagnostic visit.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-west-cork-plumbing-inc",
+   "name": "West Cork Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "The official SF DBI registry records “West Cork Plumbing” at 1854 39th Av, San Francisco 94122 with 523 permit rows — the highest count of any firm in that ZIP. CSLB now records the business address as 20 Roy Ct, Novato, CA 94947, so Outer Sunset dispatch is unconfirmed.",
+   "license": {
+    "number": "900309",
+    "status": "active",
+    "entity": "WEST CORK PLUMBING INC",
+    "expires": "2027-08-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 153,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-845-3870",
+   "phoneSource": 153,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "West Cork Plumbing Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 153,
+     "excerpt": "WEST CORK PLUMBING INC · 20 ROY CT · NOVATO, CA 94947 · Business Phone Number:(415) 845-3870 — Entity Corporation — Issue Date 07/17/2007 — Reissue Date 08/18/2009 — Expire Date 08/31/2027 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 06/03/2024 — workers compensation with HARTFORD CASUALTY INSURANCE COMPANY eff 05/08/2026 exp 05/08/2027 — Misc: 08/18/2009 LICENSE REISSUED TO ANOTHER ENTITY"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI plumbing-permit registry records this firm at an Outer Sunset address (1854 39th Av, 94122) with 523 permit rows, more than any other firm in that ZIP.",
+     "source": 150,
+     "excerpt": "firm_name \"West Cork Plumbing\"; license_number \"900309\"; address \"1854 39th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 523"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Corporation · expires 2027-08-31.",
+     "source": 153,
+     "excerpt": "WEST CORK PLUMBING INC · 20 ROY CT · NOVATO, CA 94947 · Business Phone Number:(415) 845-3870 — Entity Corporation — Issue Date 07/17/2007 — Reissue Date 08/18/2009 — Expire Date 08/31/2027 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 06/03/2024 — workers compensation with HARTFORD CASUALTY INSURANCE COMPANY eff 05/08/2026 exp 05/08/2027 — Misc: 08/18/2009 LICENSE REISSUED TO ANOTHER ENTITY"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 08/18/2009 - LICENSE REISSUED TO ANOTHER ENTITY.",
+     "source": 153,
+     "excerpt": "WEST CORK PLUMBING INC · 20 ROY CT · NOVATO, CA 94947 · Business Phone Number:(415) 845-3870 — Entity Corporation — Issue Date 07/17/2007 — Reissue Date 08/18/2009 — Expire Date 08/31/2027 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 06/03/2024 — workers compensation with HARTFORD CASUALTY INSURANCE COMPANY eff 05/08/2026 exp 05/08/2027 — Misc: 08/18/2009 LICENSE REISSUED TO ANOTHER ENTITY"
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Address moved out of San Francisco: registry shows 1854 39th Av (94122); CSLB now shows 20 Roy Ct, Novato (94947). CSLB also records “08/18/2009 - LICENSE REISSUED TO ANOTHER ENTITY”. A long Outer Sunset permit history does not establish present local dispatch.",
+     "sources": [
+      150,
+      153
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Active C-36 corporation with the deepest Outer Sunset plumbing-permit history found in the official registry (523 rows), but its regulator-held address is now in Novato.",
+   "nextStep": "Ask whether the firm still dispatches to 94122 and which entity signs the contract.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-flow-masters-plumbing-inc",
+   "name": "Flow Masters Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Registry records “Flow Masters Plumbing Inc” at 1554 45th Avenue, San Francisco 94122 with 311 permit rows. CSLB now records the business address as 6169 Mission St, Daly City, CA 94014.",
+   "license": {
+    "number": "966337",
+    "status": "active",
+    "entity": "FLOW MASTERS PLUMBING INC",
+    "expires": "2027-10-31",
+    "classes": [
+     "C36",
+     "C16",
+     "C20"
+    ],
+    "source": 154,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-751-1933",
+   "phoneSource": 154,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Flow Masters Plumbing Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 154,
+     "excerpt": "FLOW MASTERS PLUMBING INC · 6169 MISSION ST · DALY CITY, CA 94014 · Business Phone Number:(415) 751-1933 — Entity Corporation — Issue Date 10/04/2011 — Expire Date 10/31/2027 — “This license is current and active.” — C36 - PLUMBING; C16 - FIRE PROTECTION; C20 - WARM-AIR HEATING, VENTILATING AND AIR-CONDITIONING — Contractor's Bond $25,000 eff 03/09/2025 — qualifying individual ALAN PATRICK MORAN — workers compensation with SECURITY NATIONAL INSURANCE COMPANY eff 06/01/2026 exp 06/01/2027"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records an Outer Sunset address (1554 45th Avenue, 94122) with 311 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Flow Masters Plumbing Inc\"; license_number \"966337\"; address \"1554 45th Avenue\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 311"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · C16 · C20 · Corporation · expires 2027-10-31.",
+     "source": 154,
+     "excerpt": "FLOW MASTERS PLUMBING INC · 6169 MISSION ST · DALY CITY, CA 94014 · Business Phone Number:(415) 751-1933 — Entity Corporation — Issue Date 10/04/2011 — Expire Date 10/31/2027 — “This license is current and active.” — C36 - PLUMBING; C16 - FIRE PROTECTION; C20 - WARM-AIR HEATING, VENTILATING AND AIR-CONDITIONING — Contractor's Bond $25,000 eff 03/09/2025 — qualifying individual ALAN PATRICK MORAN — workers compensation with SECURITY NATIONAL INSURANCE COMPANY eff 06/01/2026 exp 06/01/2027"
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Address moved out of San Francisco: registry 1554 45th Avenue (94122) versus CSLB 6169 Mission St, Daly City (94014). CSLB also notes that personnel listed on this license are listed on other licenses.",
+     "sources": [
+      150,
+      154
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Active corporation holding C36 plus C16 (fire protection) and C20 (HVAC) with an Outer Sunset permit history, now based in Daly City.",
+   "nextStep": "Confirm current dispatch to 94122 and whether the plumbing work is self-performed under C36.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-ros-plumbing-llc",
+   "name": "Ros Plumbing LLC",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Registry records “Ros Plumbing” at 1817 26th Av, San Francisco 94122 with 156 permit rows. CSLB now records 1543 Hill Road, Novato, CA 94947.",
+   "license": {
+    "number": "885083",
+    "status": "active",
+    "entity": "ROS PLUMBING LLC",
+    "expires": "2027-02-28",
+    "classes": [
+     "C36",
+     "C-4",
+     "B"
+    ],
+    "source": 159,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-505-2180",
+   "phoneSource": 159,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ros Plumbing LLC was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 159,
+     "excerpt": "ROS PLUMBING LLC · 1543 HILL ROAD · NOVATO, CA 94947 · Business Phone Number:(415) 505-2180 — Entity Ltd Liability — Issue Date 09/30/2006 — Reissue Date 02/13/2021 — Expire Date 02/28/2027 — “This license is current and active.” — C36 - PLUMBING; C-4 - BOILER, HOT WATER HEATING AND STEAM FITTING; B - GENERAL BUILDING — Contractor's Bond $25,000 eff 04/08/2024 — LLC EMPLOYEE/WORKER BOND $100,000 eff 02/13/2021 — Liability Insurance Information: CUMIS SPECIALTY INSURANCE COMPANY INC, Amount $1,000,000, eff 05/29/2026 exp 05/29/2027 — workers compensation with EVEREST PREMIER INSURANCE COMPANY eff 02/04/2026 exp 02/04/2027"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records an Outer Sunset address (1817 26th Av, 94122) with 156 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Ros Plumbing\"; license_number \"885083\"; address \"1817 26th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 156"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · C-4 · B · Ltd Liability · expires 2027-02-28.",
+     "source": 159,
+     "excerpt": "ROS PLUMBING LLC · 1543 HILL ROAD · NOVATO, CA 94947 · Business Phone Number:(415) 505-2180 — Entity Ltd Liability — Issue Date 09/30/2006 — Reissue Date 02/13/2021 — Expire Date 02/28/2027 — “This license is current and active.” — C36 - PLUMBING; C-4 - BOILER, HOT WATER HEATING AND STEAM FITTING; B - GENERAL BUILDING — Contractor's Bond $25,000 eff 04/08/2024 — LLC EMPLOYEE/WORKER BOND $100,000 eff 02/13/2021 — Liability Insurance Information: CUMIS SPECIALTY INSURANCE COMPANY INC, Amount $1,000,000, eff 05/29/2026 exp 05/29/2027 — workers compensation with EVEREST PREMIER INSURANCE COMPANY eff 02/04/2026 exp 02/04/2027"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 02/13/2021 - LICENSE REISSUED TO ANOTHER ENTITY.",
+     "source": 159,
+     "excerpt": "ROS PLUMBING LLC · 1543 HILL ROAD · NOVATO, CA 94947 · Business Phone Number:(415) 505-2180 — Entity Ltd Liability — Issue Date 09/30/2006 — Reissue Date 02/13/2021 — Expire Date 02/28/2027 — “This license is current and active.” — C36 - PLUMBING; C-4 - BOILER, HOT WATER HEATING AND STEAM FITTING; B - GENERAL BUILDING — Contractor's Bond $25,000 eff 04/08/2024 — LLC EMPLOYEE/WORKER BOND $100,000 eff 02/13/2021 — Liability Insurance Information: CUMIS SPECIALTY INSURANCE COMPANY INC, Amount $1,000,000, eff 05/29/2026 exp 05/29/2027 — workers compensation with EVEREST PREMIER INSURANCE COMPANY eff 02/04/2026 exp 02/04/2027"
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Address moved out of San Francisco (registry 94122 versus CSLB Novato 94947), and CSLB records “02/13/2021 - LICENSE REISSUED TO ANOTHER ENTITY”, so historic registry rows may predate the current LLC.",
+     "sources": [
+      150,
+      159
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "The only wave-6 CSLB page that publishes a Liability Insurance Information block: $1,000,000 with CUMIS SPECIALTY INSURANCE COMPANY INC, effective 05/29/2026, expiring 05/29/2027. Also holds C36, C-4 (boiler/hot-water heating) and B (General Building) plus a $100,000 LLC employee/worker bond. Recorded liability cover is directly relevant where a ceiling below an occupied unit will be opened.",
+   "nextStep": "Ask for a certificate of insurance naming the property, and confirm whether the B classification is used for the ceiling rebuild.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-parks-plumbing-inc",
+   "name": "Parks Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Registry records “Parks Plumbing Inc” at 2301 45th Av, San Francisco 94116 (Parkside, adjacent to the Outer Sunset) with 159 permit rows. CSLB now records 484 Cullen Dr, Pacifica, CA 94044.",
+   "license": {
+    "number": "989225",
+    "status": "active",
+    "entity": "PARKS PLUMBING INC",
+    "expires": "2026-12-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 166,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-519-6695",
+   "phoneSource": 166,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Parks Plumbing Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 166,
+     "excerpt": "PARKS PLUMBING INC · 484 CULLEN DR · PACIFICA, CA 94044 · Business Phone Number:(415) 519-6695 — Entity Corporation — Issue Date 12/17/2013 — Reissue Date 12/01/2016 — Expire Date 12/31/2026 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 08/29/2025 — qualifying individual WESLEY DAVIS PARKS — workers compensation with TECHNOLOGY INSURANCE COMPANY INC eff 04/05/2026 exp 04/05/2027"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records a 94116 address (2301 45th Av) with 159 permit rows.",
+     "source": 151,
+     "excerpt": "firm_name \"Parks Plumbing Inc\"; license_number \"989225\"; address \"2301 45th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; permit rows 159"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Corporation · expires 2026-12-31.",
+     "source": 166,
+     "excerpt": "PARKS PLUMBING INC · 484 CULLEN DR · PACIFICA, CA 94044 · Business Phone Number:(415) 519-6695 — Entity Corporation — Issue Date 12/17/2013 — Reissue Date 12/01/2016 — Expire Date 12/31/2026 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 08/29/2025 — qualifying individual WESLEY DAVIS PARKS — workers compensation with TECHNOLOGY INSURANCE COMPANY INC eff 04/05/2026 exp 04/05/2027"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "License expires 12/31/2026 — inside four months of this snapshot. Recheck CSLB status immediately before any booking.",
+     "sources": [
+      166
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Active C-36 corporation with a Parkside permit history and current workers-compensation cover, now based in Pacifica.",
+   "nextStep": "Recheck the license in December 2026 and confirm 94122 dispatch.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-hegarty-plumbing",
+   "name": "Hegarty Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "sf",
+   "areaText": "CSLB records a San Francisco mailing address (P O Box 27326, San Francisco, CA 94127) but no street location, so neighbourhood dispatch cannot be established from the regulator. The registry records 2451 28th Av, 94116 with 129 permit rows.",
+   "license": {
+    "number": "820321",
+    "status": "active",
+    "entity": "HEGARTY PLUMBING",
+    "expires": "2027-06-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 167,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-532-9255",
+   "phoneSource": 167,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Hegarty Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 167,
+     "excerpt": "HEGARTY PLUMBING · P O BOX 27326 · SAN FRANCISCO, CA 94127 · Business Phone Number:(415) 532-9255 — Entity Sole Ownership — Issue Date 06/02/2003 — Expire Date 06/30/2027 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 — workers compensation with HARTFORD CASUALTY INSURANCE COMPANY eff 04/08/2025 exp 04/08/2027; classification code 51871 Plumbing-high wage"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 2451 28th Av, 94116 with 129 permit rows.",
+     "source": 151,
+     "excerpt": "firm_name \"Hegarty Plumbing\"; license_number \"820321\"; address \"2451 28th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"415-235-0119\"; permit rows 129"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Sole Ownership · expires 2027-06-30.",
+     "source": 167,
+     "excerpt": "HEGARTY PLUMBING · P O BOX 27326 · SAN FRANCISCO, CA 94127 · Business Phone Number:(415) 532-9255 — Entity Sole Ownership — Issue Date 06/02/2003 — Expire Date 06/30/2027 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 — workers compensation with HARTFORD CASUALTY INSURANCE COMPANY eff 04/08/2025 exp 04/08/2027; classification code 51871 Plumbing-high wage"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "CSLB address is a post-office box only; no physical base is published by the regulator, so Outer Sunset coverage is unverified.",
+     "sources": [
+      167
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Active C-36 sole ownership issued 06/02/2003 with a San Francisco mailing address, workers compensation classified 51871 Plumbing-high wage, and a Parkside permit history.",
+   "nextStep": "Ask for the physical work base and confirm dispatch to 94122.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-ron-hogan-drywall",
+   "name": "Ron Hogan Drywall",
+   "website": "https://ronhogandrywall.net/commercial-residential-drywall-contractor-san-francisco-ca/",
+   "websiteSource": 187,
+   "area": "sunset",
+   "areaText": "The company's own page states it serves San Francisco neighbourhoods including the “Sunset District”. CSLB records the business address as 2380 Palmer Circle, Fairfield, CA 94534, so the Sunset statement is a business claim rather than a regulator-held local address.",
+   "license": {
+    "number": "265709",
+    "status": "active",
+    "entity": "RON HOGAN DRYWALL",
+    "expires": "2026-11-30",
+    "classes": [
+     "C-9"
+    ],
+    "source": 170,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "925-791-9099",
+   "phoneSource": 170,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ron Hogan Drywall was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 170,
+     "excerpt": "RON HOGAN DRYWALL · 2380 PALMER CIRCLE · FAIRFIELD, CA 94534 · Business Phone Number:(925) 791-9099 — Entity Sole Ownership — Issue Date 10/20/1970 — Reissue Date 11/17/2022 — Expire Date 11/30/2026 — “This license is current and active.” — C-9 - DRYWALL — Contractor's Bond $25,000 eff 07/18/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 02/12/2025 exp 02/12/2027; classification codes 5447 Wallboard Installation-high wage, 5446 Wallboard Installation-low wage — Misc: 11/04/2019 LICENSE CANCELED PER REQUEST"
+    },
+    {
+     "field": "Coverage",
+     "text": "Company page names the Sunset District among the San Francisco neighbourhoods it says it serves, and publishes CSLB #265709 — the same number read directly on CSLB.",
+     "source": 187,
+     "excerpt": "a licensed and insured expert (CSLB #265709) with over 30 years of experience … renovations in neighborhoods like Noe Valley, Pacific Heights, Mission District, Nob Hill, Sunset District, and Russian Hill"
+    },
+    {
+     "field": "Drywall scope",
+     "text": "Company page describes drywall installation, repair and finishing for San Francisco residential work.",
+     "source": 187,
+     "excerpt": "we specialize in high-quality drywall installation, repair, and finishing tailored specifically to San Francisco’s unique needs"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C-9 · Sole Ownership · expires 2026-11-30.",
+     "source": 170,
+     "excerpt": "RON HOGAN DRYWALL · 2380 PALMER CIRCLE · FAIRFIELD, CA 94534 · Business Phone Number:(925) 791-9099 — Entity Sole Ownership — Issue Date 10/20/1970 — Reissue Date 11/17/2022 — Expire Date 11/30/2026 — “This license is current and active.” — C-9 - DRYWALL — Contractor's Bond $25,000 eff 07/18/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 02/12/2025 exp 02/12/2027; classification codes 5447 Wallboard Installation-high wage, 5446 Wallboard Installation-low wage — Misc: 11/04/2019 LICENSE CANCELED PER REQUEST"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 08/02/2004 - (SON) AUTH TO CONTINUE TIL (8-2-05); 01/31/2005 - LICENSE REISSUED TO ANOTHER ENTITY; 11/04/2019 - LICENSE CANCELED PER REQUEST.",
+     "source": 170,
+     "excerpt": "RON HOGAN DRYWALL · 2380 PALMER CIRCLE · FAIRFIELD, CA 94534 · Business Phone Number:(925) 791-9099 — Entity Sole Ownership — Issue Date 10/20/1970 — Reissue Date 11/17/2022 — Expire Date 11/30/2026 — “This license is current and active.” — C-9 - DRYWALL — Contractor's Bond $25,000 eff 07/18/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 02/12/2025 exp 02/12/2027; classification codes 5447 Wallboard Installation-high wage, 5446 Wallboard Installation-low wage — Misc: 11/04/2019 LICENSE CANCELED PER REQUEST"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "License expires 11/30/2026 — inside three months of this snapshot. Recheck CSLB before booking.",
+     "sources": [
+      170
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "CSLB miscellaneous history shows “11/04/2019 - LICENSE CANCELED PER REQUEST” followed by a reissue on 11/17/2022. The license is active now; the gap in between is recorded so the history is visible.",
+     "sources": [
+      170
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Company page headline says “San Francisco CA 94103” while CSLB records Fairfield (94534). Marketing location text does not match the regulator-held address.",
+     "sources": [
+      187,
+      170
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "rationale": "Active C-9 (Drywall) sole ownership issued 10/20/1970 with wallboard workers-compensation codes, whose own site claims Sunset District coverage. C-9 is the correct classification for hanging and finishing a ceiling patch and framing an access opening.",
+   "nextStep": "Confirm current Sunset dispatch, and ask whether an access-panel frame is installed as part of the ceiling patch.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-r-s-dynamic-builders-inc",
+   "name": "R S Dynamic Builders Inc",
+   "website": "https://rsdynamicbuilders.com/",
+   "websiteSource": 192,
+   "area": "sunset",
+   "areaText": "The company's About-page structured data lists a serviceArea including “Sunset” and “Richmond”. CSLB records the business address as 909 Ocean View Ave, San Mateo, CA 94401, so Sunset coverage is a business claim only.",
+   "license": {
+    "number": "1130530",
+    "status": "active",
+    "entity": "R S DYNAMIC BUILDERS INC",
+    "expires": "2026-12-31",
+    "classes": [
+     "B"
+    ],
+    "source": 171,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "650-918-2317",
+   "phoneSource": 171,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "R S Dynamic Builders Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 171,
+     "excerpt": "R S DYNAMIC BUILDERS INC · 909 OCEAN VIEW AVE · SAN MATEO, CA 94401 · Business Phone Number:(650) 918-2317 — Entity Corporation — Issue Date 12/16/2024 — Expire Date 12/31/2026 — “This license is current and active.” — B - GENERAL BUILDING (no C36 and no C-9 shown) — Contractor's Bond $25,000 eff 12/03/2024 — qualifying individual KAMALJIT SINGH — workers compensation exempt, certified no employees, eff 12/11/2024"
+    },
+    {
+     "field": "Drywall scope",
+     "text": "Company page describes ceiling drywall repair including water stains and sagging, water damage ceiling repair, and reinforcing lath and plaster in older homes.",
+     "source": 190,
+     "excerpt": "Ceiling drywall repair San Francisco (including water stains & sagging) … Water damage repair ceiling SF … Structural Integrity for Older Homes: Reinforcing lath and plaster or updating with modern drywall while preserving your home's character"
+    },
+    {
+     "field": "Coverage",
+     "text": "About-page structured data lists a service area that includes Sunset and Richmond, and an aggregate rating of 5.0 from 5 reviews.",
+     "source": 191,
+     "excerpt": "\"serviceArea\":[{\"name\":\"San Francisco Bay Area\"},{\"name\":\"Mission District\"},{\"name\":\"Noe Valley\"},{\"name\":\"Castro\"},{\"name\":\"Sunset\"},{\"name\":\"Richmond\"}…] … \"aggregateRating\":{\"ratingValue\":\"5.0\",\"reviewCount\":\"5\"}"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · B · Corporation · expires 2026-12-31.",
+     "source": 171,
+     "excerpt": "R S DYNAMIC BUILDERS INC · 909 OCEAN VIEW AVE · SAN MATEO, CA 94401 · Business Phone Number:(650) 918-2317 — Entity Corporation — Issue Date 12/16/2024 — Expire Date 12/31/2026 — “This license is current and active.” — B - GENERAL BUILDING (no C36 and no C-9 shown) — Contractor's Bond $25,000 eff 12/03/2024 — qualifying individual KAMALJIT SINGH — workers compensation exempt, certified no employees, eff 12/11/2024"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Scope hold: CSLB shows B (General Building) only — no C36 plumbing and no C-9 drywall classification. A B licensee cannot self-perform the plumbing portion of this job and must hold or subcontract the correct trade licenses.",
+     "sources": [
+      171
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Address conflict: the company's own About-page structured data gives streetAddress “123 Main Street”, San Mateo 94401 — a placeholder-looking value — while CSLB records 909 Ocean View Ave, San Mateo 94401.",
+     "sources": [
+      191,
+      171
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Phone conflict: the site publishes +1 415 450 7338 while CSLB publishes (650) 918-2317 for the same license.",
+     "sources": [
+      192,
+      171
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "License was issued 12/16/2024, expires 12/31/2026, and workers compensation is exempt on a certified no-employees basis. Very short operating history under this license and no covered employees.",
+     "sources": [
+      171
+     ]
+    }
+   ],
+   "trade": "general",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "rationale": "Recorded because its own copy addresses ceiling water damage and older-home lath and plaster, but it fails a scope gate: B-only classification, a new license, no covered employees, and two internal identity conflicts.",
+   "nextStep": "If contacted at all, ask which license classifications cover the plumbing and the drywall, and who the subcontractors are.",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-gorman-pipeline-inc",
+   "name": "Gorman Pipeline Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records the business address as 1518 27th Ave, San Francisco, CA 94122 — an Outer Sunset address held by the regulator. The registry records the same address with 239 permit rows.",
+   "license": {
+    "number": "898289",
+    "status": "active",
+    "entity": "GORMAN PIPELINE INC",
+    "expires": "2027-06-30",
+    "classes": [
+     "A"
+    ],
+    "source": 163,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-515-7713",
+   "phoneSource": 163,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Gorman Pipeline Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 163,
+     "excerpt": "GORMAN PIPELINE INC · 1518 27TH AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 515-7713 — Entity Corporation — Issue Date 06/11/2007 — Expire Date 06/30/2027 — “This license is current and active.” — A - GENERAL ENGINEERING (no C36 plumbing classification shown) — Contractor's Bond $25,000 eff 01/01/2023 — qualifying individual MARK OLIVER GORMAN — workers compensation with STATE COMPENSATION INSURANCE FUND eff 12/01/2019 exp 12/01/2026; classification codes 6307 Sewer Construction-low wage, 6308 Sewer Construction-high wage, 8810 Clerical Office Employees"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1518 27th Av, 94122 with 239 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Gorman Pipeline Inc\"; license_number \"898289\"; address \"1518 27th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4155157713\"; permit rows 239"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · A · Corporation · expires 2027-06-30.",
+     "source": 163,
+     "excerpt": "GORMAN PIPELINE INC · 1518 27TH AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 515-7713 — Entity Corporation — Issue Date 06/11/2007 — Expire Date 06/30/2027 — “This license is current and active.” — A - GENERAL ENGINEERING (no C36 plumbing classification shown) — Contractor's Bond $25,000 eff 01/01/2023 — qualifying individual MARK OLIVER GORMAN — workers compensation with STATE COMPENSATION INSURANCE FUND eff 12/01/2019 exp 12/01/2026; classification codes 6307 Sewer Construction-low wage, 6308 Sewer Construction-high wage, 8810 Clerical Office Employees"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Scope exclusion: the CSLB page shows A (General Engineering) only, with workers-compensation codes 6307/6308 Sewer Construction. There is no C36 plumbing classification, so this firm cannot lawfully self-perform an indoor bathtub-overflow repair.",
+     "sources": [
+      163
+     ]
+    }
+   ],
+   "trade": "engineering",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "rationale": "Included as an explicit scope exclusion rather than silently dropped: an active, Outer Sunset-addressed pipeline contractor is a plausible search result for “plumbing near me” but is the wrong classification for this job.",
+   "nextStep": "None for this scope. Relevant only if a building sewer or lateral problem is separately diagnosed.",
+   "status": "excluded",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-all-point-solutions-plumbing-co",
+   "name": "All-Point Solutions Plumbing Co",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records 1651 42nd Avenue, San Francisco, CA 94122 — an Outer Sunset address held by the regulator. The registry records 1651 42nd Av with 114 permit rows and a 408-area-code phone.",
+   "license": {
+    "number": "950265",
+    "status": "suspended",
+    "entity": "ALL - POINT SOLUTIONS PLUMBING CO",
+    "expires": "2028-07-31",
+    "classes": [
+     "C36"
+    ],
+    "source": 161,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-818-2822",
+   "phoneSource": 161,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "All-Point Solutions Plumbing Co was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 161,
+     "excerpt": "ALL - POINT SOLUTIONS PLUMBING CO · 1651 42ND AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 818-2822 — Entity Sole Ownership — Issue Date 07/21/2010 — Expire Date 07/31/2028 — “License is under suspension for the following reasons: License is under Contractors Bond Suspension.” — C36 - PLUMBING — Contractor's Bond $25,000 with HUDSON INSURANCE COMPANY eff 01/01/2023 Cancellation Date 09/01/2026 — workers compensation exempt, certified no employees, eff 08/23/2026"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1651 42nd Av, 94122 with 114 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"All Point Solutions Plumbing Co.\"; license_number \"950265\"; address \"1651 42nd Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4088814686\"; permit rows 114"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C36 · Sole Ownership · expires 2028-07-31.",
+     "source": 161,
+     "excerpt": "ALL - POINT SOLUTIONS PLUMBING CO · 1651 42ND AVENUE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 818-2822 — Entity Sole Ownership — Issue Date 07/21/2010 — Expire Date 07/31/2028 — “License is under suspension for the following reasons: License is under Contractors Bond Suspension.” — C36 - PLUMBING — Contractor's Bond $25,000 with HUDSON INSURANCE COMPANY eff 01/01/2023 Cancellation Date 09/01/2026 — workers compensation exempt, certified no employees, eff 08/23/2026"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB status at the time of reading: “License is under suspension … License is under Contractors Bond Suspension.” The contractor's bond with HUDSON INSURANCE COMPANY shows a cancellation date of 09/01/2026. A suspended license cannot lawfully contract.",
+     "sources": [
+      161
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Registry phone is a 408 area code (4088814686) while CSLB publishes (415) 818-2822 for the same 94122 address.",
+     "sources": [
+      150,
+      161
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Recorded as a hold, not a candidate. The address is genuinely Outer Sunset, which is why the suspension is worth surfacing rather than dropping.",
+   "nextStep": "Do not book while suspended. If reconsidered later, re-read CSLB and ask the bonding company to confirm bond status, as the CSLB page itself advises.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-f-c-company",
+   "name": "F C Company",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Registry records “F C Company” at 3638 Noriega St, San Francisco 94122 with 107 permit rows. CSLB records 113 San Diego Avenue, Daly City, CA 94014.",
+   "license": {
+    "number": "1022789",
+    "status": "suspended",
+    "entity": "F C COMPANY",
+    "expires": "2027-01-31",
+    "classes": [
+     "B",
+     "C36"
+    ],
+    "source": 164,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-668-9423",
+   "phoneSource": 164,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "F C Company was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 164,
+     "excerpt": "F C COMPANY · 113 SAN DIEGO AVENUE · DALY CITY, CA 94014 · Business Phone Number:(415) 668-9423 — Entity Sole Ownership — Issue Date 01/20/2017 — Expire Date 01/31/2027 — “License is under suspension for the following reasons: License is under Contractors Bond Suspension.” — B - GENERAL BUILDING; C36 - PLUMBING — Contractor's Bond $25,000 with HUDSON INSURANCE COMPANY eff 01/01/2023 Cancellation Date 09/01/2026 — workers compensation exempt, certified no employees, eff 12/16/2024"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 3638 Noriega St, 94122 with 107 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"F C Company\"; license_number \"1022789\"; address \"3638 Noriega St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4159942499\"; permit rows 107"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · B · C36 · Sole Ownership · expires 2027-01-31.",
+     "source": 164,
+     "excerpt": "F C COMPANY · 113 SAN DIEGO AVENUE · DALY CITY, CA 94014 · Business Phone Number:(415) 668-9423 — Entity Sole Ownership — Issue Date 01/20/2017 — Expire Date 01/31/2027 — “License is under suspension for the following reasons: License is under Contractors Bond Suspension.” — B - GENERAL BUILDING; C36 - PLUMBING — Contractor's Bond $25,000 with HUDSON INSURANCE COMPANY eff 01/01/2023 Cancellation Date 09/01/2026 — workers compensation exempt, certified no employees, eff 12/16/2024"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB status at the time of reading: “License is under suspension … License is under Contractors Bond Suspension.” Bond with HUDSON INSURANCE COMPANY shows cancellation date 09/01/2026 — the same surety and the same cancellation date recorded for All-Point Solutions Plumbing (950265). Two unrelated firms losing bond cover on one date is a pattern to verify, not assume.",
+     "sources": [
+      164,
+      161
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. Notable only as part of the shared 09/01/2026 Hudson Insurance bond cancellation pattern with another wave-6 firm.",
+   "nextStep": "None while suspended.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-b-r-troika-incorporated-dba-mr-rooter-plumbing",
+   "name": "B R Troika Incorporated dba Mr Rooter Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records “2341 JUDAH, SAN FRANCISCO, CA 94122” — an Outer Sunset address held by the regulator. Registry rows record the same license at 2801 Judah St, 94122 under two name variants (“B R Troika Incorporated/Mr R”, 159 rows; “Br Troika Inc. Dba Mr Rooter Plumbing”, 142 rows).",
+   "license": {
+    "number": "812845",
+    "status": "expired",
+    "entity": "B R TROIKA INCORPORATED dba MR ROOTER PLUMBING",
+    "expires": "2018-09-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 162,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-520-1200",
+   "phoneSource": 162,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "B R Troika Incorporated dba Mr Rooter Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 162,
+     "excerpt": "B R TROIKA INCORPORATED · dba MR ROOTER PLUMBING · 2341 JUDAH · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 520-1200 — Entity Corporation — Issue Date 09/18/2002 — Expire Date 09/30/2018 — “This license is expired and not able to contract at this time.” — C36 - PLUMBING — Contractor's Bond $15,000 eff 03/14/2018 Cancellation Date 05/10/2019 — workers compensation exempt, certified no employees, eff 09/15/2016"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records this license at 2801 Judah St, 94122 under two different firm-name spellings, 159 and 142 permit rows respectively.",
+     "source": 150,
+     "excerpt": "firm_name \"B R Troika Incorporated/Mr R\"; license_number \"812845\"; address \"2801 Judah St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"415-520-1200\"; permit rows 159"
+    },
+    {
+     "field": "Identity",
+     "text": "This is a separate legal entity from the Mr. Rooter franchise record already in this dataset (SDP Plumbing Inc, license 1016070). Both are held: 812845 expired 09/30/2018 and 1016070 expired 07/31/2024 per direct CSLB reads.",
+     "source": 162,
+     "excerpt": "B R TROIKA INCORPORATED · dba MR ROOTER PLUMBING · 2341 JUDAH · SAN FRANCISCO, CA 94122 — Expire Date 09/30/2018 — “This license is expired and not able to contract at this time.”"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C36 · Corporation · expires 2018-09-30.",
+     "source": 162,
+     "excerpt": "B R TROIKA INCORPORATED · dba MR ROOTER PLUMBING · 2341 JUDAH · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 520-1200 — Entity Corporation — Issue Date 09/18/2002 — Expire Date 09/30/2018 — “This license is expired and not able to contract at this time.” — C36 - PLUMBING — Contractor's Bond $15,000 eff 03/14/2018 Cancellation Date 05/10/2019 — workers compensation exempt, certified no employees, eff 09/15/2016"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — license expired 09/30/2018 and CSLB states it is “not able to contract at this time”. Bond cancelled 05/10/2019; workers compensation exempt with no employees.",
+     "sources": [
+      162
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Street-number conflict on the same street: CSLB says 2341 Judah, the registry says 2801 Judah St. Combined with two registry spellings of the firm name, identity resolution for the Judah Street Mr. Rooter operation is unresolved.",
+     "sources": [
+      162,
+      150
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Corroborates and extends an existing wave-1 irregularity: the Mr. Rooter brand in San Francisco is now linked to two separately lapsed C36 licenses (812845 expired 2018; 1016070 expired 07/31/2024). A live franchise website and a large review count are still not a license.",
+     "sources": [
+      162
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Added as an entity-resolution record, not as a candidate. It strengthens the existing Mr. Rooter flag with a second, independent lapsed license at a Judah Street address.",
+   "nextStep": "None. Do not treat brand advertising as evidence of a current license.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-pro-plumbing",
+   "name": "Pro Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "CSLB records “145 BARNEVELD AVE, SAN FRANCISCO, CA 94122”. The registry records “Pro Plumbing” at 1814 40th Av, 94122 with 239 permit rows and a second row with phone 4159943468 (111 rows).",
+   "license": {
+    "number": "859973",
+    "status": "expired",
+    "entity": "PRO PLUMBING",
+    "expires": "2023-06-30",
+    "classes": [
+     "C36",
+     "C16"
+    ],
+    "source": 158,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-994-3468",
+   "phoneSource": 158,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Pro Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 158,
+     "excerpt": "PRO PLUMBING · 145 BARNEVELD AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 994-3468 — Entity Sole Ownership — Issue Date 06/04/2005 — Expire Date 06/30/2023 — “This license is expired and not able to contract at this time.” — Additional status: needs a contractors bond to renew or reactivate; may have a legal requirement to meet; needs to meet workers compensation requirements — C36 - PLUMBING; C16 - FIRE PROTECTION — Contractor's Bond $15,000 eff 01/01/2016 Cancellation Date 08/04/2017 — workers compensation exempt, certified no employees, eff 06/22/2017 Cancellation Date 07/01/2019"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1814 40th Av, 94122 with 239 permit rows, plus a further 111 rows under the same license with a different phone number.",
+     "source": 150,
+     "excerpt": "firm_name \"Pro Plumbing\"; license_number \"859973\"; address \"1814 40th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4152908462\"; permit rows 239"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C36 · C16 · Sole Ownership · expires 2023-06-30.",
+     "source": 158,
+     "excerpt": "PRO PLUMBING · 145 BARNEVELD AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 994-3468 — Entity Sole Ownership — Issue Date 06/04/2005 — Expire Date 06/30/2023 — “This license is expired and not able to contract at this time.” — Additional status: needs a contractors bond to renew or reactivate; may have a legal requirement to meet; needs to meet workers compensation requirements — C36 - PLUMBING; C16 - FIRE PROTECTION — Contractor's Bond $15,000 eff 01/01/2016 Cancellation Date 08/04/2017 — workers compensation exempt, certified no employees, eff 06/22/2017 Cancellation Date 07/01/2019"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 10/16/2023 - WC EXEMPT CANCELLED-LIC INACTIVATED.",
+     "source": 158,
+     "excerpt": "PRO PLUMBING · 145 BARNEVELD AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 994-3468 — Entity Sole Ownership — Issue Date 06/04/2005 — Expire Date 06/30/2023 — “This license is expired and not able to contract at this time.” — Additional status: needs a contractors bond to renew or reactivate; may have a legal requirement to meet; needs to meet workers compensation requirements — C36 - PLUMBING; C16 - FIRE PROTECTION — Contractor's Bond $15,000 eff 01/01/2016 Cancellation Date 08/04/2017 — workers compensation exempt, certified no employees, eff 06/22/2017 Cancellation Date 07/01/2019"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB: “This license is expired and not able to contract at this time” (expire date 06/30/2023), with additional status noting bond, legal and workers-compensation requirements must be met to renew, and “10/16/2023 - WC EXEMPT CANCELLED-LIC INACTIVATED”.",
+     "sources": [
+      158
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Address/ZIP conflict inside CSLB itself: the street is given as 145 Barnevelt Ave with ZIP 94122, while the registry address is 1814 40th Av (94122). Barneveld Avenue is not an Outer Sunset street, so the CSLB ZIP for this record looks inconsistent. Flagged for manual review.",
+     "sources": [
+      158,
+      150
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Near-name caution: this record is separate from the pre-existing “Pro Plumbing & Fire Sprinkler” entry in this dataset. They were not merged.",
+     "sources": [
+      158
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. A long-standing 40th Avenue plumbing firm whose license has been inactivated since 2023 — exactly the kind of neighbourhood shop that still appears in directory results.",
+   "nextStep": "None while expired.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-moonlight-plumbing",
+   "name": "Moonlight Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Registry records “Moonlight Plumbing” at 1406 25th Av, San Francisco 94122 with 123 permit rows. CSLB now records 59164 Wilmar Ave, Yucca Valley, CA 92284 — roughly 450 road miles from the Outer Sunset.",
+   "license": {
+    "number": "976543",
+    "status": "active",
+    "entity": "MOONLIGHT PLUMBING",
+    "expires": "2026-09-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 160,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-722-3623",
+   "phoneSource": 160,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Moonlight Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 160,
+     "excerpt": "MOONLIGHT PLUMBING · 59164 WILMAR AVE · YUCCA VALLEY, CA 92284 · Business Phone Number:(415) 722-3623 — Entity Sole Ownership — Issue Date 09/12/2012 — Expire Date 09/30/2026 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 08/08/2023 — workers compensation exempt, certified no employees, eff 08/11/2024"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1406 25th Av, 94122 with 123 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Moonlight Plumbing\"; license_number \"976543\"; address \"1406 25th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 123"
+    },
+    {
+     "field": "License",
+     "text": "Current and active · C36 · Sole Ownership · expires 2026-09-30.",
+     "source": 160,
+     "excerpt": "MOONLIGHT PLUMBING · 59164 WILMAR AVE · YUCCA VALLEY, CA 92284 · Business Phone Number:(415) 722-3623 — Entity Sole Ownership — Issue Date 09/12/2012 — Expire Date 09/30/2026 — “This license is current and active.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 08/08/2023 — workers compensation exempt, certified no employees, eff 08/11/2024"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB address is Yucca Valley (92284) while the business phone remains a 415 number, and the license expires 09/30/2026, nineteen days after this snapshot. Workers compensation is exempt with no employees.",
+     "sources": [
+      160
+     ]
+    },
+    {
+     "level": "discrepancy",
+     "text": "Registry rows record two different 415 phone numbers for the same license (4157223623 and, in a second row, none) while CSLB publishes (415) 722-3623.",
+     "sources": [
+      150,
+      160
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. Illustrates why registry presence is not present operation: an Outer Sunset permit history, a San Francisco phone number and a desert mailing address on the same active license.",
+   "nextStep": "None. If the name resurfaces, re-read CSLB after 09/30/2026.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-asia-plumbing",
+   "name": "Asia Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "outer",
+   "areaText": "CSLB records 1354 31st Ave, San Francisco, CA 94122 — an Outer Sunset address held by the regulator. The registry records the same address with 280 permit rows plus 158 further rows.",
+   "license": {
+    "number": "287477",
+    "status": "expired",
+    "entity": "ASIA PLUMBING",
+    "expires": "2014-05-31",
+    "classes": [
+     "C16",
+     "C36"
+    ],
+    "source": 173,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-731-8085",
+   "phoneSource": 173,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Asia Plumbing was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 173,
+     "excerpt": "ASIA PLUMBING · 1354 31ST AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 731-8085 — Entity Partnership — Issue Date 10/01/1973 — Expire Date 05/31/2014 — “This license is expired and not able to contract at this time.” — C16 - FIRE PROTECTION; C36 - PLUMBING — Contractor's Bond $12,500 eff 06/20/2011 Cancellation Date 07/24/2014 — workers compensation with MARKEL INSURANCE COMPANY eff 02/01/2014 exp 02/01/2015"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1354 31st Avenue, 94122 with 280 permit rows (and 158 more under a second phone formatting) — one of the deepest permit histories in the ZIP.",
+     "source": 150,
+     "excerpt": "firm_name \"Asia Plumbing\"; license_number \"287477\"; address \"1354 31st Avenue *\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-731-8085\"; permit rows 280"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C16 · C36 · Partnership · expires 2014-05-31.",
+     "source": 173,
+     "excerpt": "ASIA PLUMBING · 1354 31ST AVE · SAN FRANCISCO, CA 94122 · Business Phone Number:(415) 731-8085 — Entity Partnership — Issue Date 10/01/1973 — Expire Date 05/31/2014 — “This license is expired and not able to contract at this time.” — C16 - FIRE PROTECTION; C36 - PLUMBING — Contractor's Bond $12,500 eff 06/20/2011 Cancellation Date 07/24/2014 — workers compensation with MARKEL INSURANCE COMPANY eff 02/01/2014 exp 02/01/2015"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB: “This license is expired and not able to contract at this time”, expire date 05/31/2014, partnership entity, bond cancelled 07/24/2014. A license issued 10/01/1973 with a very large local permit history has been lapsed for over a decade.",
+     "sources": [
+      173
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. Kept visible because a firm with 438 registry permit rows at an Outer Sunset address can still appear in neighbourhood recommendations long after its license lapsed.",
+   "nextStep": "None while expired.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-chen-s-plumbing-inc",
+   "name": "Chen's Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Chen's Plumbing Inc” at 2127 - 34th Avenue, San Francisco 94116 with 223 permit rows. CSLB records 148 21st Ave, San Francisco, CA 94121-1206.",
+   "license": {
+    "number": "665412",
+    "status": "canceled",
+    "entity": "CHEN'S PLUMBING INC",
+    "expires": "2015-02-16",
+    "classes": [
+     "C16",
+     "C36"
+    ],
+    "source": 168,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-831-2661",
+   "phoneSource": 168,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Chen's Plumbing Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 168,
+     "excerpt": "CHEN'S PLUMBING INC · 148 21ST AVE · SAN FRANCISCO, CA 94121-1206 · Business Phone Number:(415) 831-2661 — Entity Corporation — Issue Date 03/02/1993 — Expire Date 02/16/2015 — “This license is canceled and not able to contract.” — C16 - FIRE PROTECTION; C36 - PLUMBING — Contractor's Bond $12,500 eff 02/08/2012 Cancellation Date 04/04/2015 — Misc: 02/16/2015 SECRETARY OF STATE - DISSOLUTION"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 2127 - 34th Avenue, 94116 with 223 permit rows.",
+     "source": 151,
+     "excerpt": "firm_name \"Chen's Plumbing Inc\"; license_number \"665412\"; address \"2127 - 34th Avenue\"; city \"San Francisco\"; zipcode \"94116\"; phone \"415-661-1758\"; permit rows 223"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C16 · C36 · Corporation · expires 2015-02-16.",
+     "source": 168,
+     "excerpt": "CHEN'S PLUMBING INC · 148 21ST AVE · SAN FRANCISCO, CA 94121-1206 · Business Phone Number:(415) 831-2661 — Entity Corporation — Issue Date 03/02/1993 — Expire Date 02/16/2015 — “This license is canceled and not able to contract.” — C16 - FIRE PROTECTION; C36 - PLUMBING — Contractor's Bond $12,500 eff 02/08/2012 Cancellation Date 04/04/2015 — Misc: 02/16/2015 SECRETARY OF STATE - DISSOLUTION"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 02/16/2015 - SECRETARY OF STATE - DISSOLUTION.",
+     "source": 168,
+     "excerpt": "CHEN'S PLUMBING INC · 148 21ST AVE · SAN FRANCISCO, CA 94121-1206 · Business Phone Number:(415) 831-2661 — Entity Corporation — Issue Date 03/02/1993 — Expire Date 02/16/2015 — “This license is canceled and not able to contract.” — C16 - FIRE PROTECTION; C36 - PLUMBING — Contractor's Bond $12,500 eff 02/08/2012 Cancellation Date 04/04/2015 — Misc: 02/16/2015 SECRETARY OF STATE - DISSOLUTION"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB: “This license is canceled and not able to contract”, expire date 02/16/2015, with “02/16/2015 - SECRETARY OF STATE - DISSOLUTION”. The corporate entity no longer exists.",
+     "sources": [
+      168
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. A dissolved corporation is not a bookable contractor regardless of how its old permit history looks.",
+   "nextStep": "None.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-goodrich-plumbing-inc",
+   "name": "Goodrich Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Goodrich Plumbing Inc” at 1412 11th Av, San Francisco 94122 with 233 permit rows. CSLB records 265 Kensington Way, San Francisco, CA 94127.",
+   "license": {
+    "number": "837694",
+    "status": "canceled",
+    "entity": "GOODRICH PLUMBING INC",
+    "expires": "2025-02-11",
+    "classes": [
+     "C36"
+    ],
+    "source": 169,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-661-9138",
+   "phoneSource": 169,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Goodrich Plumbing Inc was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 169,
+     "excerpt": "GOODRICH PLUMBING INC · 265 KENSINGTON WAY · SAN FRANCISCO, CA 94127 · Business Phone Number:(415) 661-9138 — Entity Corporation — Issue Date 05/05/2004 — Expire Date 02/11/2025 — “This license is canceled and not able to contract.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 Cancellation Date 04/04/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/17/2012 Cancellation Date 01/04/2025 — Misc: 02/11/2025 LICENSE CANCELED PER REQUEST; 02/11/2025 SECRETARY OF STATE - DISSOLUTION"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records 1412 11th Av, 94122 with 233 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Goodrich Plumbing Inc\"; license_number \"837694\"; address \"1412 11th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4156612382\"; permit rows 233"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C36 · Corporation · expires 2025-02-11.",
+     "source": 169,
+     "excerpt": "GOODRICH PLUMBING INC · 265 KENSINGTON WAY · SAN FRANCISCO, CA 94127 · Business Phone Number:(415) 661-9138 — Entity Corporation — Issue Date 05/05/2004 — Expire Date 02/11/2025 — “This license is canceled and not able to contract.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 Cancellation Date 04/04/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/17/2012 Cancellation Date 01/04/2025 — Misc: 02/11/2025 LICENSE CANCELED PER REQUEST; 02/11/2025 SECRETARY OF STATE - DISSOLUTION"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 02/11/2025 - LICENSE CANCELED PER REQUEST; 02/11/2025 - SECRETARY OF STATE - DISSOLUTION.",
+     "source": 169,
+     "excerpt": "GOODRICH PLUMBING INC · 265 KENSINGTON WAY · SAN FRANCISCO, CA 94127 · Business Phone Number:(415) 661-9138 — Entity Corporation — Issue Date 05/05/2004 — Expire Date 02/11/2025 — “This license is canceled and not able to contract.” — C36 - PLUMBING — Contractor's Bond $25,000 eff 01/01/2023 Cancellation Date 04/04/2025 — workers compensation with STATE COMPENSATION INSURANCE FUND eff 08/17/2012 Cancellation Date 01/04/2025 — Misc: 02/11/2025 LICENSE CANCELED PER REQUEST; 02/11/2025 SECRETARY OF STATE - DISSOLUTION"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB: “This license is canceled and not able to contract” with “02/11/2025 - LICENSE CANCELED PER REQUEST” and “02/11/2025 - SECRETARY OF STATE - DISSOLUTION”. Bond cancelled 04/04/2025 and workers compensation cancelled 01/04/2025.",
+     "sources": [
+      169
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. Recently dissolved (2025), so historic neighbourhood familiarity does not translate into a bookable contractor.",
+   "nextStep": "None.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-ricky-s-plumbing-company",
+   "name": "Ricky's Plumbing Company",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Ricky's Plumbing Co” at 2727 Irving St, San Francisco 94122 with 183 permit rows. CSLB records 3550 Cabrillo Street, San Francisco, CA 94121.",
+   "license": {
+    "number": "570753",
+    "status": "canceled",
+    "entity": "RICKY'S PLUMBING COMPANY",
+    "expires": "2005-06-30",
+    "classes": [
+     "C36"
+    ],
+    "source": 165,
+    "checkedAt": "2026-09-11"
+   },
+   "phone": "415-876-0333",
+   "phoneSource": 165,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ricky's Plumbing Company was surfaced by this pass and its CSLB license detail page was read directly on cslb.ca.gov on 2026-09-11.",
+     "source": 165,
+     "excerpt": "RICKY'S PLUMBING COMPANY · 3550 CABRILLO STREET · SAN FRANCISCO, CA 94121 · Business Phone Number:(415) 876-0333 — Entity Sole Ownership — Issue Date 06/13/1989 — Expire Date 06/30/2005 — “This license is expired and not able to contract at this time.” — Additional Status: The license was canceled after expiration — C36 - PLUMBING — Contractor's Bond $10,000 eff 01/01/2004 Cancellation Date 02/17/2005 — Misc: 09/16/2005 LICENSE CANCELLED PER REQUEST"
+    },
+    {
+     "field": "Registry",
+     "text": "Official SF DBI registry records an Outer Sunset corridor address (2727 Irving St, 94122) with 183 permit rows.",
+     "source": 150,
+     "excerpt": "firm_name \"Ricky's Plumbing Co\"; license_number \"570753\"; address \"2727 Irving St\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-731-9766\"; permit rows 183"
+    },
+    {
+     "field": "License",
+     "text": "Not active at the time of reading · C36 · Sole Ownership · expires 2005-06-30.",
+     "source": 165,
+     "excerpt": "RICKY'S PLUMBING COMPANY · 3550 CABRILLO STREET · SAN FRANCISCO, CA 94121 · Business Phone Number:(415) 876-0333 — Entity Sole Ownership — Issue Date 06/13/1989 — Expire Date 06/30/2005 — “This license is expired and not able to contract at this time.” — Additional Status: The license was canceled after expiration — C36 - PLUMBING — Contractor's Bond $10,000 eff 01/01/2004 Cancellation Date 02/17/2005 — Misc: 09/16/2005 LICENSE CANCELLED PER REQUEST"
+    },
+    {
+     "field": "Status",
+     "text": "CSLB miscellaneous history lines: 09/16/2005 - LICENSE CANCELLED PER REQUEST.",
+     "source": 165,
+     "excerpt": "RICKY'S PLUMBING COMPANY · 3550 CABRILLO STREET · SAN FRANCISCO, CA 94121 · Business Phone Number:(415) 876-0333 — Entity Sole Ownership — Issue Date 06/13/1989 — Expire Date 06/30/2005 — “This license is expired and not able to contract at this time.” — Additional Status: The license was canceled after expiration — C36 - PLUMBING — Contractor's Bond $10,000 eff 01/01/2004 Cancellation Date 02/17/2005 — Misc: 09/16/2005 LICENSE CANCELLED PER REQUEST"
+    }
+   ],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BOOKING HOLD — CSLB: expired 06/30/2005, “The license was canceled after expiration” and “09/16/2005 - LICENSE CANCELLED PER REQUEST”. Lapsed for more than twenty years.",
+     "sources": [
+      165
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "rationale": "Held. Demonstrates that permit-registry history reaches back decades and must never be read as current availability.",
+   "nextStep": "None.",
+   "status": "hold",
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "w6-ocean-air-heating",
+   "name": "Ocean Air Heating",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Ocean Air Heating” at 1859 42nd Av, San Francisco 94122-0000 with 244 permit rows — an Outer Sunset address, but the name suggests a heating trade.",
+   "license": null,
+   "phone": null,
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ocean Air Heating appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Ocean Air Heating\"; license_number \"968927\"; address \"1859 42nd Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 244"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 968927 and recorded business address 1859 42nd Av, San Francisco 94122-0000, with 244 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Ocean Air Heating\"; license_number \"968927\"; address \"1859 42nd Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 244"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 968927 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "multi-trade",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-bill-bragg-plumbing",
+   "name": "Bill Bragg Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Bill Bragg Plumbing” at Po Box 22073, San Francisco 94122 with 234 permit rows plus 218 further rows under a second phone formatting.",
+   "license": null,
+   "phone": "415-661-1705",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Bill Bragg Plumbing appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Bill Bragg Plumbing\"; license_number \"440780\"; address \"Po Box 22073\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-661-1705\"; permit rows 234"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 440780 and recorded business address Po Box 22073, San Francisco 94122, with 234 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Bill Bragg Plumbing\"; license_number \"440780\"; address \"Po Box 22073\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-661-1705\"; permit rows 234"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 440780 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "Registry address is a post-office box, so no physical base in the neighbourhood is established.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-c-t-construction-plumb",
+   "name": "C T Construction & Plumb",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “C T Construction & Plumb” at 1847  48th Av, San Francisco 94122 with 234 permit rows and a second block of 81 rows under phone 4156681618.",
+   "license": null,
+   "phone": "4152037178",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "C T Construction & Plumb appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"C T Construction & Plumb\"; license_number \"533324\"; address \"1847  48th Av\"; city \"San Francisco\"; zipcode \"94122\"; phone \"4152037178\"; permit rows 234"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 533324 and recorded business address 1847  48th Av, San Francisco 94122, with 234 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"C T Construction & Plumb\"; license_number \"533324\"; address \"1847  48th Av\"; city \"San Francisco\"; zipcode \"94122\"; phone \"4152037178\"; permit rows 234"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 533324 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "multi-trade",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-francis-john-burke",
+   "name": "Francis John Burke",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Francis John Burke” at 2437 Ortega St, San Francisco 94122-0000 with 175 permit rows — an individually named licensee on an Outer Sunset street.",
+   "license": null,
+   "phone": "4153078198",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Francis John Burke appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Francis John Burke\"; license_number \"762214\"; address \"2437 Ortega St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4153078198\"; permit rows 175"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 762214 and recorded business address 2437 Ortega St, San Francisco 94122-0000, with 175 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Francis John Burke\"; license_number \"762214\"; address \"2437 Ortega St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4153078198\"; permit rows 175"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 762214 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-hawk-n-lee-co",
+   "name": "Hawk N Lee Co",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Hawk N Lee Co” at 1609  Noriega St, San Francisco 94122 with 154 permit rows.",
+   "license": null,
+   "phone": "4156816325",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Hawk N Lee Co appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Hawk N Lee Co\"; license_number \"324708\"; address \"1609  Noriega St\"; city \"San Francisco\"; zipcode \"94122\"; phone \"4156816325\"; permit rows 154"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 324708 and recorded business address 1609  Noriega St, San Francisco 94122, with 154 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Hawk N Lee Co\"; license_number \"324708\"; address \"1609  Noriega St\"; city \"San Francisco\"; zipcode \"94122\"; phone \"4156816325\"; permit rows 154"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 324708 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-ren-lei-construction-co",
+   "name": "Ren Lei Construction Co",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Ren Lei Construction Co” at 750 Lawton St, San Francisco 94122-0000 with 153 permit rows.",
+   "license": null,
+   "phone": "4152381202",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ren Lei Construction Co appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Ren Lei Construction Co\"; license_number \"635360\"; address \"750 Lawton St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4152381202\"; permit rows 153"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 635360 and recorded business address 750 Lawton St, San Francisco 94122-0000, with 153 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Ren Lei Construction Co\"; license_number \"635360\"; address \"750 Lawton St\"; city \"San Francisco\"; zipcode \"94122-0000\"; phone \"4152381202\"; permit rows 153"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 635360 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "multi-trade",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-abe-s-plumbing",
+   "name": "Abe's Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Abe's Plumbing” at Po Box 22153, San Francisco 94122 with 148 permit rows.",
+   "license": null,
+   "phone": "415-664-3939",
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Abe's Plumbing appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"Abe's Plumbing\"; license_number \"439862\"; address \"Po Box 22153\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-664-3939\"; permit rows 148"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 439862 and recorded business address Po Box 22153, San Francisco 94122, with 148 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"Abe's Plumbing\"; license_number \"439862\"; address \"Po Box 22153\"; city \"San Francisco\"; zipcode \"94122\"; phone \"415-664-3939\"; permit rows 148"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 439862 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "Registry address is a post-office box, so no physical base in the neighbourhood is established.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-city-plumbing-company",
+   "name": "City Plumbing Company",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “City Plumbing Company” at 1214 40th Av, San Francisco 94122-0000 with 79 permit rows.",
+   "license": null,
+   "phone": null,
+   "phoneSource": 150,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "City Plumbing Company appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 150,
+     "excerpt": "firm_name \"City Plumbing Company\"; license_number \"792165\"; address \"1214 40th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 79"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 792165 and recorded business address 1214 40th Av, San Francisco 94122-0000, with 79 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 150,
+     "excerpt": "firm_name \"City Plumbing Company\"; license_number \"792165\"; address \"1214 40th Av\"; city \"San Francisco\"; zipcode \"94122-0000\"; permit rows 79"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 792165 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      150
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-best-plumbing-choice",
+   "name": "Best Plumbing Choice",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Best Plumbing Choice” at 2138 17th Av, San Francisco 94116-0000 with 422 permit rows — the highest count found in the 94116 query.",
+   "license": null,
+   "phone": "4157401940",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Best Plumbing Choice appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"Best Plumbing Choice\"; license_number \"738608\"; address \"2138 17th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4157401940\"; permit rows 422"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 738608 and recorded business address 2138 17th Av, San Francisco 94116-0000, with 422 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"Best Plumbing Choice\"; license_number \"738608\"; address \"2138 17th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4157401940\"; permit rows 422"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 738608 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-o-m-p-p-inc",
+   "name": "O M P P Inc.",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “O M P P Inc.” at 633 Taraval Street, San Francisco 94116 with 323 permit rows plus 161 further rows.",
+   "license": null,
+   "phone": "415-661-2050",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "O M P P Inc. appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"O M P P Inc.\"; license_number \"691287\"; address \"633 Taraval Street *\"; city \"San Francisco\"; zipcode \"94116\"; phone \"415-661-2050\"; permit rows 323"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 691287 and recorded business address 633 Taraval Street *, San Francisco 94116, with 323 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"O M P P Inc.\"; license_number \"691287\"; address \"633 Taraval Street *\"; city \"San Francisco\"; zipcode \"94116\"; phone \"415-661-2050\"; permit rows 323"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 691287 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-l-r-plumbing",
+   "name": "L R Plumbing",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “L R Plumbing” at 2162 19th Av, San Francisco 94116-0000 with 289 permit rows.",
+   "license": null,
+   "phone": "4153705325",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "L R Plumbing appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"L R Plumbing\"; license_number \"771776\"; address \"2162 19th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4153705325\"; permit rows 289"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 771776 and recorded business address 2162 19th Av, San Francisco 94116-0000, with 289 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"L R Plumbing\"; license_number \"771776\"; address \"2162 19th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4153705325\"; permit rows 289"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 771776 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-yao-star-construction",
+   "name": "Yao Star Construction",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Yao Star Construction” at 2223 42nd Avenue, San Francisco 94116-0000 with 240 permit rows.",
+   "license": null,
+   "phone": "4159879555",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Yao Star Construction appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"Yao Star Construction\"; license_number \"969667\"; address \"2223 42nd Avenue\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4159879555\"; permit rows 240"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 969667 and recorded business address 2223 42nd Avenue, San Francisco 94116-0000, with 240 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"Yao Star Construction\"; license_number \"969667\"; address \"2223 42nd Avenue\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4159879555\"; permit rows 240"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 969667 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "multi-trade",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-l-c-plumbing-fire-protection-inc",
+   "name": "L C Plumbing & Fire Protection Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “L C Plumbing & Fire Protection Inc” at 2470 27th Avenue, San Francisco 94116-0000 with 215 permit rows.",
+   "license": null,
+   "phone": "4158127596",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "L C Plumbing & Fire Protection Inc appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"L C Plumbing & Fire Protection Inc\"; license_number \"973837\"; address \"2470 27th Avenue\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4158127596\"; permit rows 215"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 973837 and recorded business address 2470 27th Avenue, San Francisco 94116-0000, with 215 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"L C Plumbing & Fire Protection Inc\"; license_number \"973837\"; address \"2470 27th Avenue\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4158127596\"; permit rows 215"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 973837 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-j-a-plumbing-inc",
+   "name": "J A Plumbing Inc",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “J A Plumbing Inc” at 3444 Ulloa St, San Francisco 94116-0000 with 173 permit rows plus 115 further rows at 2241 28th Av.",
+   "license": null,
+   "phone": "4155665003",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "J A Plumbing Inc appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"J A Plumbing Inc\"; license_number \"845259\"; address \"3444 Ulloa St\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4155665003\"; permit rows 173"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 845259 and recorded business address 3444 Ulloa St, San Francisco 94116-0000, with 173 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"J A Plumbing Inc\"; license_number \"845259\"; address \"3444 Ulloa St\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4155665003\"; permit rows 173"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 845259 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-f-1-plumbing-services",
+   "name": "F - 1 Plumbing Services",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “F - 1 Plumbing Services” at 2186 46th Av, San Francisco 94116-0000 with 152 permit rows.",
+   "license": null,
+   "phone": "4153055872",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "F - 1 Plumbing Services appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"F - 1 Plumbing Services\"; license_number \"801428\"; address \"2186 46th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4153055872\"; permit rows 152"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 801428 and recorded business address 2186 46th Av, San Francisco 94116-0000, with 152 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"F - 1 Plumbing Services\"; license_number \"801428\"; address \"2186 46th Av\"; city \"San Francisco\"; zipcode \"94116-0000\"; phone \"4153055872\"; permit rows 152"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 801428 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-excellent-plumbing-co",
+   "name": "Excellent Plumbing Co",
+   "website": null,
+   "websiteSource": null,
+   "area": "sunset",
+   "areaText": "Registry records “Excellent Plumbing Co” at 1355 33rd Av, San Francisco 94116 with 151 permit rows plus 137 further rows at 2438 35th Ave.",
+   "license": null,
+   "phone": "4158198992",
+   "phoneSource": 151,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Excellent Plumbing Co appears in the official SF DBI “Plumbing Permits Contacts” open dataset queried directly by firm ZIP on 2026-09-11.",
+     "source": 151,
+     "excerpt": "firm_name \"Excellent Plumbing Co\"; license_number \"633153\"; address \"1355 33rd Av\"; city \"San Francisco\"; zipcode \"94116\"; phone \"4158198992\"; permit rows 151"
+    },
+    {
+     "field": "Registry",
+     "text": "Registry-recorded CSLB number 633153 and recorded business address 1355 33rd Av, San Francisco 94116, with 151 plumbing-permit contact rows. This is a registry-recorded value, not an independently read license record.",
+     "source": 151,
+     "excerpt": "firm_name \"Excellent Plumbing Co\"; license_number \"633153\"; address \"1355 33rd Av\"; city \"San Francisco\"; zipcode \"94116\"; phone \"4158198992\"; permit rows 151"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "Registry-recorded license number 633153 has NOT been read on CSLB in this pass. Registry rows are historical permit contacts with no in-dataset dates; they never establish that a license is current, that the firm still operates, or that it dispatches to the Outer Sunset today.",
+     "sources": [
+      151
+     ]
+    },
+    {
+     "level": "notice",
+     "text": "Recorded address is in ZIP 94116 (Parkside), which borders the Outer Sunset but is not 94122. Treat coverage as adjacent, not confirmed.",
+     "sources": [
+      151
+     ]
+    }
+   ],
+   "trade": "plumbing",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Registry and license records prove legal identity and classification at a recorded date; they never prove current dispatch to the Outer Sunset or availability."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-sf-building-group",
+   "name": "SF Building Group",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Appears on Yelp's Outer Sunset dry-wall-repair results page; the indexed extract carries no explicit service-area statement and no license number, so coverage and credentials are unconfirmed.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "SF Building Group appears in the cited indexed result with the attributed details below.",
+     "source": 176,
+     "excerpt": "5.0 (2 reviews); appears in Yelp's sponsored results for “Dry Wall Repair” near Outer Sunset, San Francisco with a “Verified License” badge and free estimates; response time about 10 mins; 26 locals recently requested a consultation."
+    },
+    {
+     "field": "Coverage",
+     "text": "Appears on Yelp's Outer Sunset dry-wall-repair results page; the indexed extract carries no explicit service-area statement and no license number, so coverage and credentials are unconfirmed.",
+     "source": 176,
+     "excerpt": "5.0 (2 reviews); appears in Yelp's sponsored results for “Dry Wall Repair” near Outer Sunset, San Francisco with a “Verified License” badge and free estimates; response time about 10 mins; 26 locals recently requested a consultation."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "“Verified License” is a Yelp badge, not a CSLB record. No license number appears in the extract and none was read this pass.",
+     "sources": [
+      176
+     ]
+    },
+    {
+     "level": "gap",
+     "text": "Two reviews is a very small sample and cannot characterise performance in either direction.",
+     "sources": [
+      176
+     ]
+    }
+   ],
+   "trade": "general",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-mullican-remodeling",
+   "name": "Mullican Remodeling",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Appears on Yelp's Outer Sunset dry-wall-repair results page as a new listing with no review sample in the extract.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Mullican Remodeling appears in the cited indexed result with the attributed details below.",
+     "source": 176,
+     "excerpt": "Labelled “New on Yelp” in the sponsored results for “Dry Wall Repair” near Outer Sunset, San Francisco, with a “Verified License” badge and free estimates; no rating or review count shown in the extract."
+    },
+    {
+     "field": "Coverage",
+     "text": "Appears on Yelp's Outer Sunset dry-wall-repair results page as a new listing with no review sample in the extract.",
+     "source": 176,
+     "excerpt": "Labelled “New on Yelp” in the sponsored results for “Dry Wall Repair” near Outer Sunset, San Francisco, with a “Verified License” badge and free estimates; no rating or review count shown in the extract."
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No review sample and no license number in the extract; “New on Yelp” means the profile history is short, not that the business is new.",
+     "sources": [
+      176
+     ]
+    }
+   ],
+   "trade": "general",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Multi-trade scope does not establish that this business will self-perform both the plumbing and the ceiling/finish work under one contract."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-abr-pro-painting",
+   "name": "ABR PRO Painting",
+   "website": null,
+   "websiteSource": null,
+   "area": "sf",
+   "areaText": "Indexed extract states San Francisco coverage; a customer excerpt describes patching a new section of drywall alongside painting.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "ABR PRO Painting appears in the cited indexed result with the attributed details below.",
+     "source": 176,
+     "excerpt": "4.8 (49 reviews); “Serving San Francisco and the Surrounding Area”; “Verified License” badge; discounts available and free estimates; listed under “Wall finish repair” in Yelp's Outer Sunset dry-wall-repair results and categorised as Painters, General Contractors, Drywall Installation & Repair."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed extract states San Francisco coverage; a customer excerpt describes patching a new section of drywall alongside painting.",
+     "source": 176,
+     "excerpt": "4.8 (49 reviews); “Serving San Francisco and the Surrounding Area”; “Verified License” badge; discounts available and free estimates; listed under “Wall finish repair” in Yelp's Outer Sunset dry-wall-repair results and categorised as Painters, General Contractors, Drywall Installation & Repair."
+    },
+    {
+     "field": "Relevant quote",
+     "text": "An indexed customer excerpt describes scope growth that included patching new drywall — adjacent to, but not the same as, closing a ceiling opening after plumbing work.",
+     "source": 176,
+     "excerpt": "when we needed to increase the scope to paint an extra room and patch a new section of drywall."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Painting-led business: drywall patching is advertised as part of a painting scope. Confirm a C-9 or B classification for ceiling work before relying on it.",
+     "sources": [
+      176
+     ]
+    }
+   ],
+   "trade": "finish",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-northline-drywall-repair",
+   "name": "NorthLine Drywall Repair",
+   "website": null,
+   "websiteSource": null,
+   "area": "sf",
+   "areaText": "Indexed extract places the business in Bayview-Hunters Point, San Francisco; no Outer Sunset coverage statement and no rating sample appear.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "NorthLine Drywall Repair appears in the cited indexed result with the attributed details below.",
+     "source": 178,
+     "excerpt": "Listed in Yelp's San Francisco “drywall repair service” results with the neighbourhood label “Bayview-Hunters Point”, an offer “$50 OFF Cutter Cleaning”, a 10 mins response time and 447 locals recently requesting a quote; no rating or review count shown in the extract."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed extract places the business in Bayview-Hunters Point, San Francisco; no Outer Sunset coverage statement and no rating sample appear.",
+     "source": 178,
+     "excerpt": "Listed in Yelp's San Francisco “drywall repair service” results with the neighbourhood label “Bayview-Hunters Point”, an offer “$50 OFF Cutter Cleaning”, a 10 mins response time and 447 locals recently requesting a quote; no rating or review count shown in the extract."
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No rating or review count in the extract, and the base is on the opposite side of the city from the Outer Sunset. Coverage is unconfirmed.",
+     "sources": [
+      178
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-rodas-drywall-and-painting",
+   "name": "Rodas Drywall and Painting",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Indexed extract gives a strong small-sample rating and a stated 12-year operating history but no explicit service area and no license number.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Rodas Drywall and Painting appears in the cited indexed result with the attributed details below.",
+     "source": 178,
+     "excerpt": "5.0 (38 reviews); “12 years in business”; “Beat or match prices”; listed under “Drywall repair” in Yelp's San Francisco drywall-repair-service results; 1 day response time and 69 locals recently requested a quote."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed extract gives a strong small-sample rating and a stated 12-year operating history but no explicit service area and no license number.",
+     "source": 178,
+     "excerpt": "5.0 (38 reviews); “12 years in business”; “Beat or match prices”; listed under “Drywall repair” in Yelp's San Francisco drywall-repair-service results; 1 day response time and 69 locals recently requested a quote."
+    },
+    {
+     "field": "Relevant quote",
+     "text": "An indexed customer excerpt describes interior painting, new door installation and stair work — finish scope, not a ceiling opening behind plumbing.",
+     "source": 178,
+     "excerpt": "Rodas painted the interior of our home and did a great job. He installed new doors too. Did some work on our stairs which made it brand new"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "“Beat or match prices” is a marketing offer. Price competition is not evidence of capability on a constrained ceiling repair.",
+     "sources": [
+      178
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-new-line-drywall",
+   "name": "New Line Drywall",
+   "website": "https://newlinedrywall.com/",
+   "websiteSource": 189,
+   "area": "sf",
+   "areaText": "Business-site claim of San Francisco coverage, including patching ceilings and hand-matching existing texture.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "New Line Drywall appears in the cited indexed result with the attributed details below.",
+     "source": 189,
+     "excerpt": "Company site describes sheetrock repair, drywall installation, taping and Level 5 smooth finish across San Jose, San Francisco, Oakland and the Bay Area; page structured data lists areaServed including San Francisco and telephone +15107063145."
+    },
+    {
+     "field": "Coverage",
+     "text": "Business-site claim of San Francisco coverage, including patching ceilings and hand-matching existing texture.",
+     "source": 189,
+     "excerpt": "Company site describes sheetrock repair, drywall installation, taping and Level 5 smooth finish across San Jose, San Francisco, Oakland and the Bay Area; page structured data lists areaServed including San Francisco and telephone +15107063145."
+    },
+    {
+     "field": "Drywall scope",
+     "text": "Company copy describes patching affected areas on walls or ceilings and matching existing texture so the repair is not visible — the finish half of a ceiling-opening job.",
+     "source": 189,
+     "excerpt": "we patch the affected area on walls or ceilings, match your existing texture, and restore the surface without leaving a trace"
+    },
+    {
+     "field": "Coverage",
+     "text": "Page structured data lists an area served that includes San Francisco.",
+     "source": 189,
+     "excerpt": "\"areaServed\":[{\"name\":\"San Francisco\"},{\"name\":\"Oakland\"},{\"name\":\"San Jose\"},{\"name\":\"Fremont\"},{\"name\":\"Palo Alto\"}]"
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No license number is published in the extract, so no CSLB read was possible this pass. A telephone with a 510 area code and Bay Area cities listed first suggest the base is east of San Francisco.",
+     "sources": [
+      189
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-ezekiel-s-drywall-services",
+   "name": "Ezekiel's Drywall Services",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Indexed extract states a San Jose service base; Outer Sunset coverage is not stated.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Ezekiel's Drywall Services appears in the cited indexed result with the attributed details below.",
+     "source": 180,
+     "excerpt": "Listed in Yelp's drywall-repair near-me index as “Serving San Jose and the Surrounding Area” with 109 reviews and categories Drywall Installation & Repair, Stucco Services, Painters."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed extract states a San Jose service base; Outer Sunset coverage is not stated.",
+     "source": 180,
+     "excerpt": "Listed in Yelp's drywall-repair near-me index as “Serving San Jose and the Surrounding Area” with 109 reviews and categories Drywall Installation & Repair, Stucco Services, Painters."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Outside-area concern: San Jose is roughly 50 road miles from the Outer Sunset. Recorded so the sample size is visible, not as a local candidate.",
+     "sources": [
+      180
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-jr-drywall",
+   "name": "JR Drywall",
+   "website": null,
+   "websiteSource": null,
+   "area": "outside",
+   "areaText": "Indexed extract states an Emeryville service base; Outer Sunset coverage is not stated.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "JR Drywall appears in the cited indexed result with the attributed details below.",
+     "source": 180,
+     "excerpt": "Listed in Yelp's drywall-repair near-me index as “Serving Emeryville and the Surrounding Area” with 35 reviews, category Drywall Installation & Repair."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed extract states an Emeryville service base; Outer Sunset coverage is not stated.",
+     "source": 180,
+     "excerpt": "Listed in Yelp's drywall-repair near-me index as “Serving Emeryville and the Surrounding Area” with 35 reviews, category Drywall Installation & Repair."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Outside-area concern: Emeryville is across the bay. Recorded for completeness of the drywall sample only.",
+     "sources": [
+      180
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-dango-drywall-co-corp",
+   "name": "Dango Drywall Co, Corp",
+   "website": null,
+   "websiteSource": null,
+   "area": "sf",
+   "areaText": "Lead-marketplace listing for San Francisco drywall repair; the marketplace is not the regulator and prescreening claims are not verified here.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Dango Drywall Co, Corp appears in the cited indexed result with the attributed details below.",
+     "source": 193,
+     "excerpt": "Named on Angi / HomeAdvisor's San Francisco drywall-repair matching page, with a customer excerpt describing a next-day scheduling turnaround and a quote about half the competition's."
+    },
+    {
+     "field": "Coverage",
+     "text": "Lead-marketplace listing for San Francisco drywall repair; the marketplace is not the regulator and prescreening claims are not verified here.",
+     "source": 193,
+     "excerpt": "Named on Angi / HomeAdvisor's San Francisco drywall-repair matching page, with a customer excerpt describing a next-day scheduling turnaround and a quote about half the competition's."
+    },
+    {
+     "field": "Relevant quote",
+     "text": "An indexed customer excerpt describes rapid scheduling and a low quote. Speed and price are not evidence of capability on a ceiling opening above an occupied unit.",
+     "source": 193,
+     "excerpt": "They accomodated my work request 1 day after I listed a job on Angi. They quoted a price that was half that of the competititon and were able to accomodate my work request on a weekend day"
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "Angi / HomeAdvisor is a paid lead marketplace; BBB customer reviews of the platform itself record widespread complaints about lead quality and billing. A listing here is discovery only.",
+     "sources": [
+      193
+     ]
+    }
+   ],
+   "trade": "drywall",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-all-about-plastering",
+   "name": "All About Plastering",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Indexed stucco/plaster category result; no service-area statement and no license number in the extract.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "All About Plastering appears in the cited indexed result with the attributed details below.",
+     "source": 185,
+     "excerpt": "4.8 (34 reviews); “Verified License” badge; free estimates; responds in about 6 hrs; listed in Yelp's San Francisco stucco-services results alongside Caledonia Plastering and Stucco."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed stucco/plaster category result; no service-area statement and no license number in the extract.",
+     "source": 185,
+     "excerpt": "4.8 (34 reviews); “Verified License” badge; free estimates; responds in about 6 hrs; listed in Yelp's San Francisco stucco-services results alongside Caledonia Plastering and Stucco."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "“Verified License” is a Yelp badge. Plastering classification (C35) was not read on CSLB this pass.",
+     "sources": [
+      185
+     ]
+    }
+   ],
+   "trade": "plaster",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-gray-lath-and-plaster",
+   "name": "Gray Lath and Plaster",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Trade name is directly relevant to a 1940 building (wood lath and plaster ceilings), but the indexed extract carries no evidence beyond the listing.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Gray Lath and Plaster appears in the cited indexed result with the attributed details below.",
+     "source": 185,
+     "excerpt": "Listed in Yelp's San Francisco stucco-services sponsored results with free estimates; no rating, review count or service-area statement appears in the extract."
+    },
+    {
+     "field": "Coverage",
+     "text": "Trade name is directly relevant to a 1940 building (wood lath and plaster ceilings), but the indexed extract carries no evidence beyond the listing.",
+     "source": 185,
+     "excerpt": "Listed in Yelp's San Francisco stucco-services sponsored results with free estimates; no rating, review count or service-area statement appears in the extract."
+    }
+   ],
+   "flags": [
+    {
+     "level": "gap",
+     "text": "No rating sample, no service area and no license number in the extract. Name relevance is not evidence of capability.",
+     "sources": [
+      185
+     ]
+    }
+   ],
+   "trade": "plaster",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  },
+  {
+   "id": "w6-marcelino-plastering",
+   "name": "Marcelino Plastering",
+   "website": null,
+   "websiteSource": null,
+   "area": "unknown",
+   "areaText": "Indexed stucco-contractor result with a solid small-sample rating; no service-area statement and no license number in the extract.",
+   "license": null,
+   "phone": null,
+   "phoneSource": null,
+   "claims": [
+    {
+     "field": "Discovery",
+     "text": "Marcelino Plastering appears in the cited indexed result with the attributed details below.",
+     "source": 186,
+     "excerpt": "4.9 (40 reviews); “Verified License” badge; free estimates; responds in about 1 day; listed in Yelp's San Francisco “Stucco Contractor” results."
+    },
+    {
+     "field": "Coverage",
+     "text": "Indexed stucco-contractor result with a solid small-sample rating; no service-area statement and no license number in the extract.",
+     "source": 186,
+     "excerpt": "4.9 (40 reviews); “Verified License” badge; free estimates; responds in about 1 day; listed in Yelp's San Francisco “Stucco Contractor” results."
+    }
+   ],
+   "flags": [
+    {
+     "level": "notice",
+     "text": "“Verified License” is a Yelp badge, not CSLB verification. Stucco is exterior scope; interior ceiling plaster work is not established.",
+     "sources": [
+      186
+     ]
+    }
+   ],
+   "trade": "plaster",
+   "gaps": [
+    "No exact seized bathtub-overflow trip-lever extraction outcome was verified for this business.",
+    "On-site feasibility, written repair-first scope and applicable insurance are not established by this research.",
+    "Finish-trade records do not establish authority to perform regulated plumbing; a licensed C-36 plumber must own any pipe work."
+   ],
+   "platformLinks": [],
+   "reviewIds": [],
+   "exactMatch": false,
+   "master": false,
+   "checkedAt": "2026-09-11",
+   "status": "research"
+  }
+ ],
+ "sources": [
+  {
+   "id": 150,
+   "title": "SF DBI · Plumbing Permits Contacts · Outer Sunset 94122 firm query",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=firm_name,license_number,address,city,zipcode,phone,count(permit_number)&$where=zipcode%20like%20%2794122%25%27&$group=firm_name,license_number,address,city,zipcode,phone&$order=count(permit_number)%20DESC&$limit=60",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "Official City & County of San Francisco open-data API (dataset k6kv-9kix, “Plumbing Permits Contacts”, provenance: official). Queried directly this session, grouped by firm name + CSLB number + recorded business address, ordered by permit-row count. Rows are historical plumbing-permit contacts and carry no in-dataset permit date: they establish a recorded address and license linkage, never present operation."
+  },
+  {
+   "id": 151,
+   "title": "SF DBI · Plumbing Permits Contacts · Parkside 94116 firm query",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=firm_name,license_number,address,city,zipcode,phone,count(permit_number)&$where=zipcode%20like%20%2794116%25%27&$group=firm_name,license_number,address,city,zipcode,phone&$order=count(permit_number)%20DESC&$limit=45",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "Same official dataset queried for ZIP 94116 (Parkside / southern Outer Sunset border). Same limits: historical permit-contact rows, no in-dataset dates."
+  },
+  {
+   "id": 152,
+   "title": "SF DBI · dataset metadata for k6kv-9kix",
+   "url": "https://data.sf.gov/api/views/k6kv-9kix.json",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "Read directly to confirm the dataset identity used for firm discovery: name “Plumbing Permits Contacts”, description “Contacts of contractors for Plumbing Permits”, category Housing and Buildings, provenance “official”, 511,862 rows, rowsUpdatedAt 2026 (data_as_of 2026-09-11T05:04:44 in returned records)."
+  },
+  {
+   "id": 175,
+   "title": "SF.gov / DBI · Apply for a plumbing and mechanical permit",
+   "url": "https://www.sf.gov/apply-plumbing-and-mechanical-permit",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "Official Department of Building Inspection service page, read directly this session. States that a permit is required before cutting into or replacing pipes —particularly pipes that will be covered by a wall— points to the exemptions in San Francisco Plumbing Code Section 104.2, requires a City-registered licensed contractor for online applications, restricts owner-installer applications to stand-alone single-family dwellings, and requires inspection before pipes are covered."
+  },
+  {
+   "id": 153,
+   "title": "CSLB · 900309 · West Cork Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=900309",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 154,
+   "title": "CSLB · 966337 · Flow Masters Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=966337",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 155,
+   "title": "CSLB · 947504 · Building Efficiency Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=947504",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 156,
+   "title": "CSLB · 998141 · Faherty Plumbing and Heating",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=998141",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 157,
+   "title": "CSLB · 916617 · De Barra Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=916617",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 158,
+   "title": "CSLB · 859973 · Pro Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=859973",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 159,
+   "title": "CSLB · 885083 · Ros Plumbing LLC",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=885083",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 160,
+   "title": "CSLB · 976543 · Moonlight Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=976543",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 161,
+   "title": "CSLB · 950265 · All-Point Solutions Plumbing Co",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=950265",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 162,
+   "title": "CSLB · 812845 · B R Troika Incorporated dba Mr Rooter Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=812845",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 163,
+   "title": "CSLB · 898289 · Gorman Pipeline Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=898289",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 164,
+   "title": "CSLB · 1022789 · F C Company",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1022789",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 165,
+   "title": "CSLB · 570753 · Ricky's Plumbing Company",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=570753",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 166,
+   "title": "CSLB · 989225 · Parks Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=989225",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 167,
+   "title": "CSLB · 820321 · Hegarty Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=820321",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 168,
+   "title": "CSLB · 665412 · Chen's Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=665412",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 169,
+   "title": "CSLB · 837694 · Goodrich Plumbing Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=837694",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 170,
+   "title": "CSLB · 265709 · Ron Hogan Drywall",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=265709",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 171,
+   "title": "CSLB · 1130530 · R S Dynamic Builders Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1130530",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 172,
+   "title": "CSLB · 839447 · Feng K Plumbing Co",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=839447",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 173,
+   "title": "CSLB · 287477 · Asia Plumbing",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=287477",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 174,
+   "title": "CSLB · 1057063 · Caledonia Plastering & Stucco Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1057063",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11. Page carries the CSLB disclaimer that a status check is database information only and that relevant data may not yet be entered."
+  },
+  {
+   "id": 176,
+   "title": "Yelp · Outer Sunset “Dry Wall Repair” results (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Dry+Wall+Repair&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed result page read through search extract; the full review corpus was not retrieved. Supplied SF Building Group and Mullican Remodeling. “Verified License” is a Yelp badge, not a CSLB record."
+  },
+  {
+   "id": 177,
+   "title": "Yelp · Outer Sunset “Drywall Installation” results (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed result page. Contains a truncated ceiling-drywall review excerpt for Bernal Hill Drywall (applied to the pre-existing entry by the wave-6 patch, not double-counted here)."
+  },
+  {
+   "id": 178,
+   "title": "Yelp · San Francisco “drywall repair service” results (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=drywall+repair+service&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed result page; supplied NorthLine Drywall Repair, Rodas Drywall and Painting, and an unattributed Jose HandyMan Services excerpt that was REJECTED for the pre-existing entry (review text names a different person than the business — probable index text bleed)."
+  },
+  {
+   "id": 179,
+   "title": "Yelp · San Francisco “drywall ceiling repair” results (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=drywall+ceiling+repair&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed result page. Contains the truncated Bernal Hill ceiling-patch excerpt and a truncated Meticulous Handyman plaster-ceiling excerpt; both are applied to pre-existing entries by the wave-6 patch and are not double-counted here."
+  },
+  {
+   "id": 180,
+   "title": "Yelp · drywall repair near-me index (indexed extract)",
+   "url": "https://www.yelp.com/nearme/drywall-repair",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed near-me page listing review counts and stated service areas. Supplied Ezekiel's Drywall Services (San Jose) and JR Drywall (Emeryville); both are recorded as outside-area concerns."
+  },
+  {
+   "id": 181,
+   "title": "Thumbtack · Caledonia Plastering & Stucco profile (indexed extract + page JSON-LD)",
+   "url": "https://www.thumbtack.com/ca/san-francisco/drywall-repair/caledonia-plastering-stucco/service/281335206093636654",
+   "kind": "platform",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed profile read through search extract. Page JSON-LD states addressLocality San Francisco, postalCode 94116, aggregateRating 4.875 from 56 reviews, and carries dated, named reviews used in this wave. Only the reviews actually present in the extract are retained; no complete corpus is claimed."
+  },
+  {
+   "id": 182,
+   "title": "Yelp · Caledonia Plastering and Stucco business profile (indexed extract)",
+   "url": "https://www.yelp.com/biz/caledonia-plastering-and-stucco-san-francisco-2",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed profile places the business at 1551 Judah St, San Francisco, CA 94122 and labels the neighbourhood “Outer Sunset”; owner listed as John C.; shows a Yelp “Verified License” badge (badge only, not regulator verification)."
+  },
+  {
+   "id": 183,
+   "title": "BBB · Caledonia Plastering & Stucco Inc. profile (indexed extract)",
+   "url": "https://www.bbb.org/us/ca/san-francisco/profile/insulation-contractors/caledonia-plastering-stucco-inc-1116-946248",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed BBB profile: 1551 Judah St, San Francisco, CA 94122-1717; NOT BBB Accredited; BBB records CSLB license 1057063 with expiration 8/31/2027; business started 2/24/2023; file opened 6/12/2023. BBB is a directory, not the regulator."
+  },
+  {
+   "id": 184,
+   "title": "BuildZoom · Caledonia Plastering and Stucco (indexed extract)",
+   "url": "https://www.buildzoom.com/contractor/caledonia-plastering-and-stucco",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Third-party aggregator. Lists license #1057063, type Lathing And Plastering, status Active “verified as of February 2026”, employee John Martin Cullen, and reproduces SF DBI stucco permits tied to 1551 JUDAH STREET 94122. Treated as corroboration only; the CSLB page itself is the authority (source 174)."
+  },
+  {
+   "id": 185,
+   "title": "Yelp · San Francisco stucco services results (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=stucco&find_loc=San+Francisco,+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed category page; supplied All About Plastering and Gray Lath and Plaster, and independently shows Caledonia at “1551 Judah St · Outer Sunset”."
+  },
+  {
+   "id": 186,
+   "title": "Yelp · San Francisco “Stucco Contractor” results (indexed extract)",
+   "url": "https://www.yelp.com/search?find_desc=Stucco+Contractor&find_loc=San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed result page; supplied Marcelino Plastering."
+  },
+  {
+   "id": 187,
+   "title": "Ron Hogan Drywall · official San Francisco drywall page",
+   "url": "https://ronhogandrywall.net/commercial-residential-drywall-contractor-san-francisco-ca/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Company page located through search extract; not retrieved directly this pass. States CSLB #265709 and lists the Sunset District among neighbourhoods served. Marketing copy is a business claim, not independent proof of coverage."
+  },
+  {
+   "id": 188,
+   "title": "Bernal Hill Drywall · official site",
+   "url": "https://www.bernalhilldrywall.com/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Company site located through search extract; not retrieved directly this pass. Footer states “CALIFORNIA License #995163”, which matches the CSLB record read directly this session (source 196). Used by the wave-6 patch to attach that license to the pre-existing Bernal Hill Drywall entry."
+  },
+  {
+   "id": 189,
+   "title": "New Line Drywall · official site",
+   "url": "https://newlinedrywall.com/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Company site located through search extract; not retrieved directly this pass. Page JSON-LD lists areaServed including San Francisco and telephone +15107063145; copy describes patching walls or ceilings and hand-matching existing texture. No license number is published in the extract."
+  },
+  {
+   "id": 190,
+   "title": "RS Dynamic Builders · San Francisco drywall repair services page",
+   "url": "https://rsdynamicbuilders.com/drywall-repair-services-san-francisco/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Company page located through search extract; not retrieved directly this pass. Describes ceiling drywall repair including water stains and sagging, water-damage ceiling repair, reinforcing lath and plaster in older homes, and a permit handling / code compliance section. Marketing copy only."
+  },
+  {
+   "id": 191,
+   "title": "RS Dynamic Builders · About page (structured data)",
+   "url": "https://rsdynamicbuilders.com/about/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Page JSON-LD lists serviceArea including “Sunset” and “Richmond”, aggregateRating 5.0 from 5 reviews, and streetAddress “123 Main Street”, San Mateo 94401 — a placeholder-looking address that does not match the CSLB record."
+  },
+  {
+   "id": 192,
+   "title": "RS Dynamic Builders · home page",
+   "url": "https://rsdynamicbuilders.com/",
+   "kind": "business",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Company home page located through search extract. Publishes “CSLB# 1130530”, location San Mateo CA 94401 and phone +1 415 450 7338."
+  },
+  {
+   "id": 193,
+   "title": "Angi / HomeAdvisor · San Francisco drywall repair pros (indexed extract)",
+   "url": "https://www.homeadvisor.com/tloc/San-Francisco-CA/Drywall-Repair/",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed lead-generation page; supplied Dango Drywall Co, Corp and one customer excerpt. Lead-marketplace prescreening is not regulator verification."
+  },
+  {
+   "id": 194,
+   "title": "Angi / HomeAdvisor · San Francisco drywall & plaster matching page (indexed extract)",
+   "url": "https://www.homeadvisor.com/c.Drywall-Plaster.San_Francisco.CA.-12025.html",
+   "kind": "directory",
+   "access": "search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed matching page. Named providers are hidden behind a quote form in the extract; only a popcorn-ceiling-removal customer excerpt was visible, and it is not attributable to a named business, so it produced NO wave-6 entry."
+  },
+  {
+   "id": 195,
+   "title": "Yelp · Sunset District plumbing best-10 (indexed extract)",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=Sunset+District%2C+San+Francisco%2C+CA",
+   "kind": "directory",
+   "access": "blocked-with-search-extract",
+   "checkedAt": "2026-09-11",
+   "note": "Indexed category page for the Sunset District. Re-checked this session; used by the wave-6 patch to add one clearly-labelled business portfolio caption to a pre-existing entry. No new wave-6 business is drawn from it."
+  },
+  {
+   "id": 196,
+   "title": "CSLB · 995163 · Bernal Hill Drywall Inc",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=995163",
+   "kind": "government",
+   "access": "page",
+   "checkedAt": "2026-09-11",
+   "note": "License detail page read directly on cslb.ca.gov on 2026-09-11 and applied by the wave-6 patch to the pre-existing Bernal Hill Drywall entry rather than double-counted as a new record."
+  }
+ ],
+ "reviews": [
+  {
+   "id": "R60",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "Tom S.",
+   "published": "Jun 2, 2018",
+   "quote": "Quick to respond, fair price, explained the work clearly. job well done. John took care of the hole in the ceiling and cleaned up after. Thank you. Definitely will call again if there's a need for plastering job.",
+   "analysis": "Closest finish-side task evidence in wave 6: a hole in a ceiling was made good by this business, with the work explained beforehand and the site cleaned afterwards. It does not say what created the hole, whether plumbing was involved, whether an access panel was framed, or how the texture was matched.",
+   "theme": "Ceiling repair",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "R61",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "Joe M.",
+   "published": "Jul 26, 2018",
+   "quote": "John did a great job repairing our ceiling plaster with minimal hassle",
+   "analysis": "Ceiling plaster repair described as low-disruption. Supports capability on plaster ceilings in occupied homes; “minimal hassle” is a customer's characterisation, not a measured dust, noise or access outcome.",
+   "theme": "Ceiling repair",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "R62",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "Karl W.",
+   "published": "Dec 12, 2016",
+   "quote": "John did a great job adding a veneer plaster to a newly drywalled ceiling. He was easy to communicate with, friendly, and took great care of the space. The finish of the ceiling was amazing, he truly is a pro. Highly recommended.",
+   "analysis": "Shows veneer plaster applied over new drywall on a ceiling — the exact combination needed when a modern drywall patch meets an older plaster ceiling. “Took great care of the space” is relevant to working above an occupied unit but is one customer's account.",
+   "theme": "Finish work",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "R63",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "John L.",
+   "published": "Nov 12, 2018",
+   "quote": "John did great work patching several interior and exterior holes made by an electrician. He took extra care to set up and clean up to avoid making a mess. I would recommend.",
+   "analysis": "Patching holes left behind by another trade, with deliberate set-up and clean-up. That is the same coordination pattern as closing an opening made for a plumber, and the containment comment is the most relevant detail in wave 6 for work above an occupied unit.",
+   "theme": "Clean work",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "R64",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "Eric S.",
+   "published": "Jan 27, 2019",
+   "quote": "Really great work repairing our plaster wall around a heater. Almost doesn't needs painting",
+   "analysis": "Repair around an existing penetration with a finish close enough that painting was nearly unnecessary. Supports finish-matching skill on plaster; the excerpt is a wall, not a ceiling, and the reviewer's grammar is reproduced as published.",
+   "theme": "Finish work",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  },
+  {
+   "id": "R65",
+   "business": "w6-caledonia-plastering-stucco-inc",
+   "platform": "Thumbtack",
+   "author": "Not reliably resolved in extract",
+   "published": null,
+   "quote": "His lath and plaster pass the city inspection with no problems.",
+   "analysis": "The single most compliance-relevant sentence found in wave 6: a customer states that this business's lath and plaster work passed city inspection. It is an unattributed excerpt with no visible date, it does not name the inspection type, and a customer's account of an inspection is not an official inspection record. Treated as a lead to raise with the business, not as proof.",
+   "theme": "Permit & inspection",
+   "source": 181,
+   "access": "search-extract",
+   "identity": "indexed",
+   "negative": false,
+   "exactTask": false,
+   "checkedAt": "2026-09-11"
+  }
+ ]
+}

@@ -13,6 +13,7 @@ const OUTER_ACTIVE = data.businesses.filter(
   (b) => b.area === "outer" && b.license?.status === "active",
 ).length;
 const REVIEWS = data.reviews.length;
+const SHORTLIST = data.businesses.filter((b) => b.priority).length;
 const THUMBTACK = data.reviews.filter((r) => r.platform === "Thumbtack").length;
 const COST_CAUTION = data.reviews.filter(
   (r) => r.platform === "Thumbtack" && r.theme === "Cost caution",
@@ -27,7 +28,7 @@ test("summary renders evidence-based shortlist with no browser errors", async ({
   await expect(
     page.getByRole("heading", { name: "Find the right expertise." }),
   ).toBeVisible();
-  await expect(page.locator(".candidate")).toHaveCount(5);
+  await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
   await expect(page.locator(".stat-value").nth(0)).toContainText(String(TOTAL));
   await expect(page.locator(".stat-value").nth(1)).toContainText(String(ACTIVE));
   await expect(page.locator(".stat-value").nth(3)).toContainText("0");
@@ -42,6 +43,52 @@ test("summary renders evidence-based shortlist with no browser errors", async ({
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).not.toBeVisible();
   expect(errors).toEqual([]);
+});
+test("summary surfaces both shortlist tiers and the official permit panel", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
+  await expect(
+    page.getByRole("heading", {
+      name: "Credential additions from the latest pass",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      name: /Permits and inspections are part of this scope/,
+    }),
+  ).toBeVisible();
+  await expect(page.locator(".compliance-facts li")).toHaveCount(
+    data.compliance.facts.length,
+  );
+  await expect(
+    page.getByRole("link", { name: /Apply for a plumbing or mechanical permit/ }),
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: /SF DBI Permit Services/ })).toBeVisible();
+  await expect(page.locator(".compliance .notice")).toHaveCount(
+    data.compliance.notRetrieved.length,
+  );
+  await expect(page.locator("#snapshot-date")).toContainText("2026");
+});
+test("audit page shows the verification ladder with correct tier counts", async ({
+  page,
+}) => {
+  await page.goto("/#audit");
+  await expect(
+    page.getByRole("heading", { name: "Verification ladder" }),
+  ).toBeVisible();
+  const ladder = page.locator(".table-wrap table").nth(0).locator("tbody tr");
+  await expect(ladder).toHaveCount(3);
+  await expect(ladder.nth(0).locator("td").nth(2)).toHaveText(
+    String(data.businesses.filter((b) => b.license).length),
+  );
+  await expect(
+    page.getByRole("heading", { name: "CSLB credential checks" }),
+  ).toBeVisible();
+  await expect(
+    page.locator(".table-wrap table").nth(1).locator("tbody tr"),
+  ).toHaveCount(data.businesses.filter((b) => b.license).length);
 });
 test("directory searches, filters, resets and exports source-linked CSV", async ({
   page,
@@ -66,7 +113,7 @@ test("directory searches, filters, resets and exports source-linked CSV", async 
     }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Show all candidates" }).click();
-  await page.getByLabel("Active C-36 checked only").check();
+  await page.getByLabel("Active license checked only").check();
   await expect(page.locator("tbody tr")).toHaveCount(ACTIVE);
   await page.getByLabel("Filter by service area").selectOption("outer");
   await expect(page.locator("tbody tr")).toHaveCount(OUTER_ACTIVE);
@@ -156,7 +203,7 @@ test("relative assets load correctly beneath the GitHub project path", async ({
   await page.goto("/BathTubOverflowSF/#directory");
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
   await page.getByRole("link", { name: "Decision summary" }).click();
-  await expect(page.locator(".candidate")).toHaveCount(5);
+  await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
 });
 
 test("preview exposes public assets, not repository internals", async ({
