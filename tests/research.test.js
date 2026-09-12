@@ -56,8 +56,8 @@ function assertPrivacySafe(value, label) {
       );
 }
 
-test("exactly 451 unique discovery entries across nine waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 451);
+test("exactly 501 unique discovery entries across ten waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 501);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, [
     "2026-09-10",
@@ -65,10 +65,10 @@ test("exactly 451 unique discovery entries across nine waves, no fabricated mast
     "2026-09-12",
   ]);
   assert.equal(data.researchedAt, "2026-09-12");
-  assert.equal(data.waves.length, 9);
+  assert.equal(data.waves.length, 10);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    451,
+    501,
   );
   assert.deepEqual(data.waves[7], {
     wave: 8,
@@ -95,8 +95,19 @@ test("exactly 451 unique discovery entries across nine waves, no fabricated mast
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      451,
+      501,
     );
+  // wave 10 publishes its own regulator reads, registry leads and platform rows
+  assert.deepEqual(data.waves[9], {
+    wave: 10,
+    date: "2026-09-12",
+    count: 50,
+    cslbReads: 23,
+    registryOnly: 22,
+    platformListings: 5,
+    verificationUpgrades: 10,
+    retainedReviewExcerpts: 5,
+  });
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
   assert.equal(data.methodology.completeReviewCorpus, false);
@@ -225,8 +236,11 @@ test("shortlist requires an active license whose class covers its trade", () => 
     });
   // wave 9 adds 12 active and 5 non-active CSLB-read licences; its 33 registry-only
   // records hold no licence at all and therefore count in neither column.
-  assert.equal(evidenceCounts(data).active, 93);
-  assert.equal(evidenceCounts(data).inactive, 43);
+  // Wave 10 adds 23 regulator reads (15 active, 8 non-active and held) and ten verification
+  // upgrades that attach a licence to a stored record, and 22 registry-only
+  // leads plus 5 platform listings that hold no licence at all.
+  assert.equal(evidenceCounts(data).active, 114);
+  assert.equal(evidenceCounts(data).inactive, 55);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -240,7 +254,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 93);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 114);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -314,6 +328,8 @@ test("HTML is escaped and the public schema and artifacts pass the privacy allow
     "sources",
     "businesses",
     "reviews",
+    "verificationUpgrades",
+    "registryUpgrades",
   ]);
   const businessFields = new Set([
     "id",
@@ -340,6 +356,13 @@ test("HTML is escaped and the public schema and artifacts pass the privacy allow
     "insuranceVerified",
     "scopeConfirmed",
     "master",
+    // written by the wave-10 merge: the regulator facts attached to a stored
+    // record, the date they were read, the check dates they supersede, and the
+    // stored record a shared phone number overlaps with
+    "verifiedAt",
+    "verification",
+    "previousCheckDates",
+    "phone_collision",
   ]);
   for (const key of Object.keys(data)) assert.ok(topLevel.has(key), key);
   for (const b of data.businesses)
@@ -364,8 +387,18 @@ test("wave 6 is 50 new records with regulator reads kept separate from registry 
   assert.equal(W6.length, 50);
   assert.equal(new Set(W6.map((b) => b.id)).size, 50);
   const licensed = W6.filter((b) => b.license);
-  assert.equal(licensed.length, 22);
-  assert.equal(licensed.filter((b) => b.license.status === "active").length, 14);
+  // 22 at wave 6, plus two records wave 10 attached a regulator read to:
+  // Bill Bragg Plumbing (440780, active) and Ren Lei Construction Co (635360,
+  // active B — which is also why that record's trade was corrected to general).
+  assert.equal(licensed.length, 24);
+  assert.equal(licensed.filter((b) => b.license.status === "active").length, 16);
+  assert.deepEqual(
+    licensed
+      .filter((b) => b.verification)
+      .map((b) => b.id)
+      .sort(),
+    ["w6-bill-bragg-plumbing", "w6-ren-lei-construction-co"],
+  );
   for (const b of licensed) {
     const s = sources.get(b.license.source);
     assert.equal(s.kind, "government", b.id);
@@ -379,7 +412,10 @@ test("wave 6 is 50 new records with regulator reads kept separate from registry 
       !b.license &&
       b.claims.some((c) => /Registry-recorded/.test(c.text)),
   );
-  assert.equal(registryOnly.length, 16);
+  // 16 at wave 6; wave 10 attached a regulator read to two more of its
+  // registry leads (Bill Bragg 440780, Ren Lei 635360), which therefore left
+  // this tier rather than being duplicated.
+  assert.equal(registryOnly.length, 14);
   for (const b of registryOnly)
     assert.ok(
       b.flags.some((f) => /has NOT been read on CSLB/.test(f.text)),
@@ -466,7 +502,17 @@ test("wave 7 is 50 new records with three evidence channels kept separate", () =
 
   // channel 1 — CSLB licence pages read directly
   const licensed = W7.filter((b) => b.license);
-  assert.equal(licensed.length, 10);
+  // 10 at wave 7, plus two records wave 10 attached a regulator read to:
+  // Franks All City Plumbing (319594, expired) and David Chu Plumbing
+  // (343610, inactive). Both were already held and stay held.
+  assert.equal(licensed.length, 12);
+  assert.deepEqual(
+    licensed
+      .filter((b) => b.verification)
+      .map((b) => b.id)
+      .sort(),
+    ["w7-david-chu-plumbing", "w7-franks-all-city-plumbing"],
+  );
   assert.deepEqual(
     [...new Set(licensed.map((b) => b.license.status))].sort(),
     ["active", "expired", "inactive", "revoked"],
@@ -496,7 +542,10 @@ test("wave 7 is 50 new records with three evidence channels kept separate", () =
   const registryOnly = W7.filter(
     (b) => !b.license && b.claims.some((c) => /Registry-recorded/.test(c.text)),
   );
-  assert.equal(registryOnly.length, 20);
+  // 20 at wave 7; wave 10 read the licence behind two of those leads
+  // (Franks All City Plumbing 319594, David Chu Plumbing 343610), so they now
+  // sit in the regulator-read tier instead of the registry tier.
+  assert.equal(registryOnly.length, 18);
   for (const b of registryOnly) {
     assert.equal(b.area, "sunset", `${b.id} registry ZIP is not an Outer Sunset confirmation`);
     assert.ok(
@@ -576,7 +625,14 @@ test("wave 8 adds 50 collision-free, directly licensed plumbing and restoration 
       .join(" ");
   const priorCores = new Set(prior.map((b) => coreName(b.name)));
   for (const b of W8) {
-    assert.equal(priorPhones.has(b.phone.replace(/\D/g, "")), false, b.id);
+    // Wave 10's registry lead for "Danny Chen" carries the same phone as
+    // w8-dc-plumbing-llc, and publishes that overlap on its own record. A
+    // shared number is a documented finding here, never a silent duplicate.
+    assert.equal(
+      priorPhones.has(b.phone.replace(/\D/g, "")) && b.id !== "w8-dc-plumbing-llc",
+      false,
+      b.id,
+    );
     assert.equal(priorLicenses.has(b.license.number), false, b.id);
     assert.equal(priorCores.has(coreName(b.name)), false, b.id);
   }
@@ -706,7 +762,7 @@ test("wave 8 irregularities remain visible and never relax the master gate", () 
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
   // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
   // seven follow-up targets, which remain pre-existing ids.
-  assert.equal(data.businesses.length, 451);
+  assert.equal(data.businesses.length, 501);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -803,11 +859,15 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
     assert.equal(b.license.status, "active", b.id);
   }
   assert.equal(
-    data.reviews.filter((r) => !r.business.startsWith("w8-") && !r.business.startsWith("w9-"))
-      .length,
+    data.reviews.filter(
+      (r) =>
+        !r.business.startsWith("w8-") &&
+        !r.business.startsWith("w9-") &&
+        !r.business.startsWith("w10-"),
+    ).length,
     98,
   );
-  assert.equal(data.reviews.length, 128);
+  assert.equal(data.reviews.length, 133);
 });
 
 test("wave 9 separates CSLB-read records from registry-only leads and promotes nothing", () => {
@@ -881,7 +941,14 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
   for (const b of W9) {
     const digits = b.phone?.replace(/\D/g, "");
     if (!digits) continue;
-    assert.ok(!priorPhones.has(digits) || digits === "4152037178", b.id);
+    // Two documented exceptions: the CT Plumbing address/phone overlap that
+    // wave 9 itself published, and the Jones Bros family number, which wave 10
+    // found on a second, separately licensed sibling (w10-jones-bros-construction-inc)
+    // and flagged on that record in the same way.
+    assert.ok(
+      !priorPhones.has(digits) || ["4152037178", "4153417285"].includes(digits),
+      b.id,
+    );
     wavePhones.push(digits);
   }
   assert.equal(new Set(wavePhones).size, wavePhones.length, "wave-9 phones are unique");

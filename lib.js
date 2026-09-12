@@ -87,6 +87,12 @@ export const ALLOWED_CLASSES = [
   // into B, because a residential-remodeling license does not carry the same
   // scope as a general building license.
   "B-2",
+  // C-29 Masonry and C-54 Tile were first read directly in wave 10, on licences
+  // 863410 and 489739. Neither covers plumbing or drywall, so both are stored
+  // with their own trade label and held as documented scope exclusions instead
+  // of being mapped onto a classification that would overstate their scope.
+  "C29",
+  "C54",
   "C36",
   "C-9",
   "C35",
@@ -117,6 +123,16 @@ export const TRADE_CLASSES = {
   general: [["B"]],
   engineering: [["A"]],
   "multi-trade": [["B", "C36"]],
+  // Wave 10 scope exclusions: a masonry or tile licence is a real licence and a
+  // real trade, but it cannot self-perform either of the two trades this project
+  // needs, so neither can ever satisfy a plumbing or drywall requirement.
+  "masonry": [["C29"]],
+  "tile": [["C54"]],
+  // Licence 917252, read directly in wave 10, carries C-9 drywall and C36
+  // plumbing on one active licence: the only single licence in the corpus that
+  // covers both trades this project requires. It is labelled for what it is
+  // rather than folded into multi-trade, which only asserts B + C36.
+  "plumbing-and-drywall": [["C-9", "C36"]],
   // A registry-only lead asserts no classification at all, so no class set can
   // satisfy it and such a record can never reach the promotion gate.
   "registry-lead": [],
@@ -129,6 +145,9 @@ export const TRADE_LABELS = {
   general: "General building (B)",
   engineering: "General engineering (A)",
   "multi-trade": "Multi-trade",
+  masonry: "Masonry (C-29) · scope excluded",
+  tile: "Tile (C-54) · scope excluded",
+  "plumbing-and-drywall": "Plumbing (C-36) + drywall (C-9) on one licence",
   "registry-lead": "Registry lead · classification not read",
 };
 export function licenseSupportsTrade(b) {

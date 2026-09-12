@@ -91,13 +91,17 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
 }) => {
   await page.goto("/");
   await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
-  // Six editorial direction cards per research wave: wave 8 and wave 9.
-  await expect(page.locator(".direction-card")).toHaveCount(12);
+  // Editorial direction cards: six for wave 8, six for wave 9, four for
+  // wave 10.
+  await expect(page.locator(".direction-card")).toHaveCount(16);
   await expect(
     page.getByRole("heading", { name: "Wave 8 research directions" }),
   ).toBeVisible();
   await expect(
     page.getByRole("heading", { name: "Wave 9 research directions" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Wave 10 research directions" }),
   ).toBeVisible();
   await expect(
     page.getByRole("heading", {
@@ -346,6 +350,37 @@ test("wave 9 irregularities surface on the decision brief, not only in detail vi
   await expect(wave9.locator(".direction-card")).toHaveCount(6);
   await expect(wave9).toContainText("BOTH TRADES · HELD");
   await expect(wave9).toContainText("Registry number ≠ credential.");
+});
+
+test("wave 10 leads render their trade and licence reality, not a badge", async ({
+  page,
+}) => {
+  await page.goto("/#summary");
+  const wave10 = page
+    .locator("section")
+    .filter({ has: page.getByRole("heading", { name: "Wave 10 research directions" }) });
+  await expect(wave10.locator(".direction-card")).toHaveCount(4);
+  await expect(wave10).toContainText("BOTH TRADES ON ONE LICENCE");
+  await expect(wave10).toContainText("C-9 drywall, C36 plumbing");
+  // Registry-only and platform records must never render a regulator badge.
+  await page.goto("/#directory");
+  await page
+    .getByRole("searchbox", { name: "Search businesses" })
+    .fill("danny chen");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody").first()).toContainText(
+    "Registry lead · classification not read",
+  );
+  await expect(page.locator("tbody").first()).toContainText(
+    "No CSLB page read for this record",
+  );
+  await page.locator('[data-detail="w10-danny-chen"]').first().click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toContainText("Registry lead · classification not read");
+  await expect(dialog).toContainText("License unchecked");
+  await expect(dialog).toContainText("893929");
+  await expect(dialog).toContainText("has NOT been read on CSLB");
+  await page.keyboard.press("Escape");
 });
 
 test("preview exposes public assets, not repository internals", async ({
