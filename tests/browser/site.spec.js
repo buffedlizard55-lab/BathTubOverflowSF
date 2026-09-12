@@ -91,9 +91,13 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
 }) => {
   await page.goto("/");
   await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
-  await expect(page.locator(".direction-card")).toHaveCount(6);
+  // Six editorial direction cards per research wave: wave 8 and wave 9.
+  await expect(page.locator(".direction-card")).toHaveCount(12);
   await expect(
     page.getByRole("heading", { name: "Wave 8 research directions" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Wave 9 research directions" }),
   ).toBeVisible();
   await expect(
     page.getByRole("heading", {
@@ -260,6 +264,88 @@ test("relative assets load correctly beneath the GitHub project path", async ({
   await expect(page.locator("tbody tr")).toHaveCount(TOTAL);
   await page.getByRole("link", { name: "Decision summary" }).click();
   await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
+});
+
+test("wave 9 registry-only leads never render as though a licence was read", async ({
+  page,
+}) => {
+  await page.goto("/#directory");
+  await page
+    .getByRole("searchbox", { name: "Search businesses" })
+    .fill("kevel home performance");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody").first()).toContainText(
+    "Registry lead · classification not read",
+  );
+  await expect(page.locator("tbody").first()).toContainText(
+    "No CSLB page read for this record",
+  );
+  await page.locator('[data-detail="w9-kevel-home-performance"]').first().click();
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page.getByRole("dialog")).toContainText("NOT read on CSLB");
+  await expect(page.getByRole("dialog")).toContainText(
+    "HVAC, energy and insulation",
+  );
+  await page.keyboard.press("Escape");
+  // a CSLB-read wave-9 record shows its licence and its held irregularity
+  await page
+    .getByRole("searchbox", { name: "Search businesses" })
+    .fill("innovation plumbing and rooter");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody").first()).toContainText("#1013565");
+  await page
+    .locator('[data-detail="w9-innovation-plumbing-and-rooter"]')
+    .first()
+    .click();
+  await expect(page.getByRole("dialog")).toContainText("1013565");
+  await expect(page.getByRole("dialog")).toContainText("1.0-star");
+  await page.keyboard.press("Escape");
+  await page
+    .getByRole("searchbox", { name: "Search businesses" })
+    .fill("knb tile");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await page
+    .locator('[data-detail="w9-knb-tile-and-stone-inc-dba-knb-remodeling"]')
+    .first()
+    .click();
+  await expect(page.getByRole("dialog")).toContainText("B-2");
+  await expect(page.getByRole("dialog")).toContainText("replace tub in same location");
+  await page.keyboard.press("Escape");
+  // the documented two-licence overlap is explained on the record itself
+  await page
+    .getByRole("searchbox", { name: "Search businesses" })
+    .fill("ct plumbing");
+  await page.locator('[data-detail="w9-ct-plumbing-fire-protection"]').first().click();
+  await expect(page.getByRole("dialog")).toContainText("533324");
+  await expect(page.getByRole("dialog")).toContainText("w6-c-t-construction-plumb");
+});
+
+test("wave 9 irregularities surface on the decision brief, not only in detail views", async ({
+  page,
+}) => {
+  await page.goto("/");
+  for (const text of [
+    "Admonishment letter on an active licence",
+    "One review, 1.0 stars, text unreachable",
+    "Plumbing-scope permits, no C-36",
+    "One address and phone, two licence numbers",
+  ])
+    await expect(
+      page.locator(".mini-flag").filter({ hasText: text }),
+    ).toHaveCount(1);
+  await expect(page.locator(".mini-flag").filter({ hasText: "Admonishment letter" })).toContainText(
+    "LETTER OF ADMONISHMENT ISSUED",
+  );
+  await expect(
+    page.locator(".mini-flag").filter({ hasText: "Admonishment letter" }),
+  ).toContainText("allegation");
+  // the wave-9 direction grid names both trade sides and its held lead
+  const wave9 = page
+    .locator("section")
+    .filter({ has: page.getByRole("heading", { name: "Wave 9 research directions" }) });
+  await expect(wave9.locator(".direction-card")).toHaveCount(6);
+  await expect(wave9).toContainText("BOTH TRADES · HELD");
+  await expect(wave9).toContainText("Registry number ≠ credential.");
 });
 
 test("preview exposes public assets, not repository internals", async ({

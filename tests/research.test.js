@@ -13,6 +13,7 @@ import {
   evidenceCounts,
   licenseSupportsTrade,
   TRADE_CLASSES,
+  ALLOWED_CLASSES,
 } from "../lib.js";
 const data = JSON.parse(
   readFileSync(new URL("../data/research.json", import.meta.url)),
@@ -22,6 +23,7 @@ const byId = new Map(data.businesses.map((b) => [b.id, b]));
 const W6 = data.businesses.filter((b) => b.id.startsWith("w6-"));
 const W7 = data.businesses.filter((b) => b.id.startsWith("w7-"));
 const W8 = data.businesses.filter((b) => b.id.startsWith("w8-"));
+const W9 = data.businesses.filter((b) => b.id.startsWith("w9-"));
 
 // Known private-context markers are held only as one-way fingerprints. This
 // lets the public repository test every artifact without restating excluded
@@ -54,8 +56,8 @@ function assertPrivacySafe(value, label) {
       );
 }
 
-test("exactly 401 unique discovery entries across eight waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 401);
+test("exactly 451 unique discovery entries across nine waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 451);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, [
     "2026-09-10",
@@ -63,10 +65,10 @@ test("exactly 401 unique discovery entries across eight waves, no fabricated mas
     "2026-09-12",
   ]);
   assert.equal(data.researchedAt, "2026-09-12");
-  assert.equal(data.waves.length, 8);
+  assert.equal(data.waves.length, 9);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    401,
+    451,
   );
   assert.deepEqual(data.waves[7], {
     wave: 8,
@@ -79,10 +81,21 @@ test("exactly 401 unique discovery entries across eight waves, no fabricated mas
     completedRestorationPermits94122: 27,
     retainedReviewExcerpts: 23,
   });
+  assert.deepEqual(data.waves[8], {
+    wave: 9,
+    date: "2026-09-12",
+    count: 50,
+    cslbReads: 17,
+    registryOnly: 33,
+    activeLicenses: 12,
+    nonActiveLicenses: 5,
+    completedPermits94122: 35,
+    retainedReviewExcerpts: 7,
+  });
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      401,
+      451,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
@@ -210,8 +223,10 @@ test("shortlist requires an active license whose class covers its trade", () => 
       assert.match(b.license.entity, /SAN FRANCISCO|INC|CO|PLUMBING|STUCCO/i);
       assert.ok(/94122/.test(b.areaText), b.id);
     });
-  assert.equal(evidenceCounts(data).active, 81);
-  assert.equal(evidenceCounts(data).inactive, 38);
+  // wave 9 adds 12 active and 5 non-active CSLB-read licences; its 33 registry-only
+  // records hold no licence at all and therefore count in neither column.
+  assert.equal(evidenceCounts(data).active, 93);
+  assert.equal(evidenceCounts(data).inactive, 43);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -225,7 +240,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 81);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 93);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -691,7 +706,7 @@ test("wave 8 irregularities remain visible and never relax the master gate", () 
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
   // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
   // seven follow-up targets, which remain pre-existing ids.
-  assert.equal(data.businesses.length, 401);
+  assert.equal(data.businesses.length, 451);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -787,6 +802,209 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
     assert.equal(b.status, "research", `${b.id} a held record must not sit in the call order`);
     assert.equal(b.license.status, "active", b.id);
   }
-  assert.equal(data.reviews.filter((r) => !r.business.startsWith("w8-")).length, 98);
-  assert.equal(data.reviews.length, 121);
+  assert.equal(
+    data.reviews.filter((r) => !r.business.startsWith("w8-") && !r.business.startsWith("w9-"))
+      .length,
+    98,
+  );
+  assert.equal(data.reviews.length, 128);
+});
+
+test("wave 9 separates CSLB-read records from registry-only leads and promotes nothing", () => {
+  assert.equal(W9.length, 50);
+  const licensed = W9.filter((b) => b.license);
+  const registryOnly = W9.filter((b) => !b.license);
+  assert.equal(licensed.length, 17);
+  assert.equal(registryOnly.length, 33);
+  assert.equal(licensed.filter((b) => b.license.status === "active").length, 12);
+  assert.equal(licensed.filter((b) => b.license.status !== "active").length, 5);
+
+  // Tier 1: every licence fact traces to a CSLB detail page read on the wave date.
+  for (const b of licensed) {
+    const s = sources.get(b.license.source);
+    assert.equal(s.kind, "government", b.id);
+    assert.equal(s.access, "page", b.id);
+    assert.equal(s.checkedAt, "2026-09-12", b.id);
+    assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
+    assert.ok(s.url.endsWith(b.license.number), b.id);
+    assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
+    for (const field of ["priority", "master", "exactMatch", "insuranceVerified", "scopeConfirmed"])
+      assert.ok(!b[field], `${b.id} ${field} must stay falsy`);
+    assert.ok(b.claims.some((c) => c.field === "Insurance & bond"), `${b.id} bond/WC read`);
+    if (b.license.status !== "active") {
+      assert.equal(b.status, "hold", b.id);
+      assert.ok(b.flags.some((f) => f.level === "hold"), b.id);
+    } else {
+      assert.ok(b.license.expires > "2026-09-12", b.id);
+    }
+  }
+
+  // Tier 2: a registry number is a lead, never a credential, and can never promote.
+  for (const b of registryOnly) {
+    assert.equal(b.license, null, b.id);
+    assert.equal(b.trade, "registry-lead", b.id);
+    assert.equal(licenseSupportsTrade(b), false, b.id);
+    assert.equal(mayPromote(b), false, b.id);
+    assert.equal(b.status, "research", b.id);
+    assert.notEqual(b.area, "outer", `${b.id} no Outer Sunset label without a regulator read`);
+    assert.ok(b.flags.some((f) => f.level === "gap" && /NOT read on CSLB/.test(f.text)), b.id);
+    assert.ok(b.gaps.some((g) => /NOT read on CSLB/.test(g)), b.id);
+    assert.ok(b.flags.some((f) => /registry lead/i.test(f.text)), `${b.id} trade caveat`);
+    if (!b.phone) assert.equal(b.phoneSource, null, b.id);
+  }
+
+  // The single documented cross-wave overlap: one address and phone, two licences.
+  const ct = byId.get("w9-ct-plumbing-fire-protection");
+  const priorCt = byId.get("w6-c-t-construction-plumb");
+  assert.equal(ct.phone.replace(/\D/g, ""), priorCt.phone.replace(/\D/g, ""));
+  assert.equal(ct.license.number, "1112261");
+  assert.equal(priorCt.license, null, "the stored registry row still asserts no licence fact");
+  assert.ok(priorCt.claims.some((c) => /533324/.test(c.excerpt)), "registry licence 533324");
+  assert.ok(
+    ct.flags.some((f) => f.level === "discrepancy" && f.text.includes("w6-c-t-construction-plumb")),
+    "the overlap must be flagged, not deduplicated silently",
+  );
+  assert.ok(
+    ct.claims.some((c) => c.field === "Relationship" && /533324/.test(c.text)),
+    "the overlap must be explained on the record",
+  );
+  assert.ok(ct.gaps.some((g) => /533324/.test(g)), "the overlap must remain an open gap");
+
+  // Apart from that documented case no wave-9 phone repeats the baseline.
+  const priorPhones = new Set(
+    data.businesses
+      .filter((b) => !b.id.startsWith("w9-"))
+      .map((b) => b.phone?.replace(/\D/g, ""))
+      .filter(Boolean),
+  );
+  const wavePhones = [];
+  for (const b of W9) {
+    const digits = b.phone?.replace(/\D/g, "");
+    if (!digits) continue;
+    assert.ok(!priorPhones.has(digits) || digits === "4152037178", b.id);
+    wavePhones.push(digits);
+  }
+  assert.equal(new Set(wavePhones).size, wavePhones.length, "wave-9 phones are unique");
+  assert.equal(new Set(W9.map((b) => b.license?.number).filter(Boolean)).size, 17);
+
+  // B-2 Residential Remodeling is a real CSLB class, added rather than mapped onto B.
+  const knb = byId.get("w9-knb-tile-and-stone-inc-dba-knb-remodeling");
+  assert.deepEqual(knb.license.classes, ["B-2", "B"]);
+  assert.ok(ALLOWED_CLASSES.includes("B-2"));
+  assert.ok(TRADE_CLASSES["registry-lead"], "registry-lead is a declared trade");
+  assert.equal(TRADE_CLASSES["registry-lead"].length, 0, "it requires no class, so it can never pass");
+  assert.ok(knb.flags.some((f) => /B-2/.test(f.text)), "the B-2 distinction must be published");
+  assert.ok(knb.flags.some((f) => /C-36/.test(f.text)), "the missing C-36 must be published");
+
+  // A CSLB complaint disclosure stays an allegation sourced to CSLB itself.
+  assert.equal(sources.get(334).kind, "government");
+  assert.match(sources.get(334).url, /ComplaintDisclosure\.aspx\?LicNum=1017991$/);
+  const sfr = byId.get("w9-san-francisco-remodel");
+  assert.ok(
+    sfr.flags.some((f) => /allegation/i.test(f.text) && f.sources.includes(334)),
+    "admonishment letter recorded as an allegation",
+  );
+  assert.equal(sfr.license.status, "active");
+  assert.equal(sfr.master, false);
+
+  // Holds are raised for coverage and review problems, not only for lapsed licences.
+  const garzac = byId.get("w9-garzac-plumbing");
+  assert.equal(garzac.license.status, "active");
+  assert.equal(garzac.status, "hold");
+  assert.ok(garzac.flags.some((f) => f.level === "hold" && /09\/11\/2026/.test(f.text)));
+  const innovation = byId.get("w9-innovation-plumbing-and-rooter");
+  assert.equal(innovation.license.status, "active");
+  assert.equal(innovation.status, "hold");
+  assert.ok(innovation.flags.some((f) => f.level === "hold" && /1\.0-star/.test(f.text)));
+  assert.equal(innovation.reviewIds.length, 0, "an unreachable review is never attached");
+  for (const id of [
+    "w9-euro-plumbing-inc-dba-general-contractor",
+    "w9-lam-pui-electrical-plumbing-inc",
+    "w9-lee-s-plumbing-co",
+    "w9-euro-plastering",
+    "w9-charles-lakamp",
+  ]) {
+    const b = byId.get(id);
+    assert.notEqual(b.license.status, "active", id);
+    assert.equal(b.status, "hold", id);
+  }
+  assert.equal(W9.filter((b) => b.status === "hold").length, 7);
+
+  // Plumbing-side licences without C-36 are called out, never quietly accepted.
+  const euro = byId.get("w9-euro-plumbing-inc-dba-general-contractor");
+  assert.deepEqual(euro.license.classes, ["B"]);
+  assert.ok(euro.flags.some((f) => /NO C-36/.test(f.text)));
+  assert.ok(sfr.flags.some((f) => /B only and no C-36/.test(f.text)));
+
+  // Multi-trade coverage: the pattern this project needs, still unpromoted.
+  const multi = licensed.filter(
+    (b) => b.license.classes.includes("B") && b.license.classes.includes("C36"),
+  );
+  assert.deepEqual(
+    multi.map((b) => b.license.number).sort(),
+    ["1013565", "341277", "373337", "786183"],
+  );
+  assert.equal(multi.filter((b) => b.master).length, 0);
+  assert.equal(W9.filter((b) => b.master).length, 0);
+
+  // Only identity-matched, attributable excerpts became reviews.
+  const w9Reviews = data.reviews.filter((r) => r.business.startsWith("w9-"));
+  assert.deepEqual(
+    w9Reviews.map((r) => r.id),
+    ["R122", "R123", "R124", "R125", "R126", "R127", "R128"],
+  );
+  for (const r of w9Reviews) {
+    assert.equal(r.exactTask, false, r.id);
+    assert.equal(r.identity, "matched", r.id);
+    assert.equal(r.checkedAt, "2026-09-12", r.id);
+    assert.equal(sources.get(r.source).access, r.access, r.id);
+    assert.ok(byId.get(r.business).reviewIds.includes(r.id), r.id);
+    assert.equal(r.published, null, `${r.id} month and year only, so no day is invented`);
+  }
+  const smelly = w9Reviews.filter((r) => r.business === "w9-smelly-mel-s-plumbing-inc");
+  assert.equal(smelly.length, 3);
+  assert.ok(smelly.some((r) => r.negative), "the 1.0-star/text mismatch stays a negative signal");
+  assert.ok(
+    byId.get("w9-smelly-mel-s-plumbing-inc").flags.some((f) => /1\.0 of 5/.test(f.text)),
+    "the mismatch is flagged on the record too",
+  );
+  const kevel = byId.get("w9-kevel-home-performance");
+  assert.equal(kevel.reviewIds.length, 4);
+  assert.ok(kevel.flags.some((f) => /HVAC, energy and insulation/.test(f.text)));
+  assert.ok(kevel.flags.some((f) => f.level === "discrepancy" && /claimed or unclaimed/.test(f.text)));
+
+  // Unattributable platform and community extracts stay sources, never reviews.
+  for (const id of [345, 346, 347]) {
+    assert.equal(sources.get(id).kind, "platform", id);
+    assert.match(sources.get(id).note, /NOT attributed|[Uu]nattributable|quarantined/i, id);
+  }
+  for (const id of [348, 349, 350, 351, 352]) {
+    assert.equal(sources.get(id).kind, "community", id);
+    assert.match(
+      sources.get(id).note,
+      /names no business|no business is named|[Uu]nattributable|Task evidence only/i,
+      id,
+    );
+  }
+  assert.equal(
+    data.reviews.filter((r) => [337, 345, 346, 347, 348, 349, 350, 351, 352].includes(r.source))
+      .length,
+    0,
+    "no review is sourced from a category page, a community thread or caption metadata",
+  );
+  assert.equal(sources.get(339).kind, "directory");
+  assert.match(sources.get(339).note, /never presented as an official Google rating/i);
+
+  // Wave-9 sources are contiguous, official-first, and the wave stays fail-closed.
+  const w9Sources = data.sources.filter((s) => s.id >= 306 && s.id <= 352);
+  assert.equal(w9Sources.length, 47);
+  assert.equal(w9Sources.filter((s) => s.kind === "government").length, 29);
+  assert.equal(w9Sources.every((s) => s.checkedAt === "2026-09-12"), true);
+  assert.match(
+    data.methodology.passes,
+    /Pass 19 \(wave 9, Sep 12 2026\):[\s\S]*Pass 20:[\s\S]*Pass 21:/,
+  );
+  assert.match(data.methodology.governmentSources, /137 distinct license numbers, 17 read in wave 9/);
+  assert.deepEqual(data.master, []);
+  assert.equal(data.businesses.filter((b) => b.priority).length, 9);
 });

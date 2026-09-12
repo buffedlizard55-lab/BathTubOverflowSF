@@ -132,9 +132,29 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   assert.match(el("#snapshot-date").textContent, /Sep 12, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
-  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 6);
-  assert.equal((html.match(/direction-card panel/g) || []).length, 6);
+  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 12);
+  assert.equal((html.match(/direction-card panel/g) || []).length, 12);
   assert.match(html, /Wave 8 research directions/);
+  assert.match(html, /Wave 9 research directions/);
+  // wave 9 publishes its two evidence tiers on the summary itself
+  assert.match(html, /Registry number ≠ credential\./);
+  assert.match(html, /trade label “registry lead”/);
+  assert.match(html, /17 whose CSLB page was read line by line/);
+  for (const name of [
+    "Innovation Plumbing and Rooter",
+    "Coit Construction",
+    "Ct Plumbing &amp; Fire Protection",
+    "Smelly Mel&#39;s Plumbing Inc",
+    "KNB Tile and Stone Inc dba KNB Remodeling",
+    "Kevel Home Performance",
+  ])
+    assert.ok(html.includes(name), `wave-9 direction card missing: ${name}`);
+  // the wave-9 irregularities are on the summary, not only in the detail dialog
+  assert.match(html, /Admonishment letter on an active licence/);
+  assert.match(html, /One review, 1\.0 stars, text unreachable/);
+  assert.match(html, /Plumbing-scope permits, no C-36/);
+  assert.match(html, /One address and phone, two licence numbers/);
+  assert.match(html, /LETTER OF ADMONISHMENT ISSUED/);
   for (const p of BAD) assert.equal(p.test(html), false, `${hash()} matched ${p}`);
 });
 function hash() {
@@ -174,15 +194,30 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /corrected a wave-6 review attribution in place/);
       assert.match(html, /Wave 8 cross-check/);
       assert.match(html, /17 completed plumbing permits and 27 completed restoration permits/);
+      assert.match(html, /Wave 9 cross-check/);
+      assert.match(html, /fifteen discrepancy flags/);
+      assert.match(html, /one address and phone shared by two different licence numbers/);
+      // a registry-only record must never render a licence fact
+      assert.match(html, /Registry lead · classification not read/);
+      assert.match(html, /No CSLB page read for this record/);
     }
     if (view === "method") {
-      assert.match(html, /120 distinct CSLB license detail pages/);
-      assert.match(html, /8 waves/);
+      assert.match(html, /137 distinct CSLB license detail pages/);
+      assert.match(html, /9 waves/);
       // the live totals must not be attributed to a single wave's bullet
       assert.match(html, /Wave 8 \(Sep 12, 2026\)/);
-      assert.match(html, /23 records directory-wide now combine an active license/);
+      // wave 9 adds one regulator-read 94122 record (CT Plumbing & Fire Protection),
+      // so this live total moves from 23 to 24
+      assert.match(html, /24 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
       assert.match(html, /three additional passes/);
+      // the live totals stay out of any single wave's bullet
+      assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
+      assert.match(html, /12 active, 5 non-active and held/);
+      assert.match(html, /33 are registry-only leads/);
+      assert.match(html, /35 completed permits at work-location ZIP 94122/);
+      assert.match(html, /Only seven review excerpts were attributable/);
+      assert.match(html, /Waves 8 and 9 each received three additional passes/);
 
     }
   });
@@ -226,4 +261,40 @@ test("business deep links open a detail dialog with source-linked evidence", asy
   assert.match(html, /1057063/);
   assert.match(html, /lath and plaster/);
   assert.equal(/undefined/.test(html), false);
+});
+
+test("wave 9 detail dialogs keep the two evidence tiers visibly different", async () => {
+  // Tier 2: a registry-only lead must say out loud that no licence was read.
+  await render("#directory/w9-kevel-home-performance");
+  let html = el("#detail-content").innerHTML;
+  assert.ok(el("dialog").open);
+  assert.match(html, /Registry lead · classification not read/);
+  assert.match(html, /NOT read on CSLB/);
+  assert.match(html, /HVAC, energy and insulation/);
+  assert.equal(/undefined/.test(html), false);
+
+  // Tier 1: a CSLB-read record shows its licence, its classes and its hold.
+  await render("#directory/w9-innovation-plumbing-and-rooter");
+  html = el("#detail-content").innerHTML;
+  assert.match(html, /1013565/);
+  assert.match(html, /1\.0-star/);
+  assert.equal(/undefined/.test(html), false);
+
+  // B-2 renders as its own classification rather than being folded into B.
+  await render("#directory/w9-knb-tile-and-stone-inc-dba-knb-remodeling");
+  html = el("#detail-content").innerHTML;
+  assert.match(html, /B-2/);
+  assert.match(html, /replace tub in same location/);
+
+  // A CSLB complaint disclosure stays labelled as an allegation.
+  await render("#directory/w9-san-francisco-remodel");
+  html = el("#detail-content").innerHTML;
+  assert.match(html, /LETTER OF ADMONISHMENT ISSUED/);
+  assert.match(html, /allegation/i);
+
+  // The documented two-licence overlap is explained on the record itself.
+  await render("#directory/w9-ct-plumbing-fire-protection");
+  html = el("#detail-content").innerHTML;
+  assert.match(html, /533324/);
+  assert.match(html, /w6-c-t-construction-plumb/);
 });

@@ -82,6 +82,11 @@ export function toCSV(items, sources) {
 // declared trade must actually hold. A record may never be promoted on a
 // classification that does not cover the work it would be hired for.
 export const ALLOWED_CLASSES = [
+  // B-2 Residential Remodeling is a distinct CSLB classification, read directly
+  // on license 1120735 in wave 9. It is listed separately rather than folded
+  // into B, because a residential-remodeling license does not carry the same
+  // scope as a general building license.
+  "B-2",
   "C36",
   "C-9",
   "C35",
@@ -112,6 +117,9 @@ export const TRADE_CLASSES = {
   general: [["B"]],
   engineering: [["A"]],
   "multi-trade": [["B", "C36"]],
+  // A registry-only lead asserts no classification at all, so no class set can
+  // satisfy it and such a record can never reach the promotion gate.
+  "registry-lead": [],
 };
 export const TRADE_LABELS = {
   plumbing: "Plumbing (C-36)",
@@ -121,6 +129,7 @@ export const TRADE_LABELS = {
   general: "General building (B)",
   engineering: "General engineering (A)",
   "multi-trade": "Multi-trade",
+  "registry-lead": "Registry lead · classification not read",
 };
 export function licenseSupportsTrade(b) {
   const classes = b.license?.classes;
