@@ -164,10 +164,21 @@ for (const view of ["directory", "reviews", "audit", "method"])
         assert.ok(html.includes(n), `CSLB credential table is missing ${n}`);
       assert.match(html, /Verification ladder/);
       assert.match(html, /License suspended/);
+      // wave-7 follow-up: the corroborated-but-now-held record is explained,
+      // and the platform pages read directly are named in the ladder
+      assert.match(html, /Wave 7 follow-up/);
+      assert.match(html, /removed from the call order and placed on hold/);
+      assert.match(html, /Thumbtack category and pro pages read directly/);
+      assert.match(html, /corrected a wave-6 review attribution in place/);
     }
     if (view === "method") {
-      assert.match(html, /59 distinct CSLB license detail pages/);
-      assert.match(html, /6 waves/);
+      assert.match(html, /70 distinct CSLB license detail pages/);
+      assert.match(html, /7 waves/);
+      // the live totals must not be attributed to a single wave's bullet
+      assert.match(html, /Wave 7 \(Sep 11, 2026\)/);
+      assert.match(html, /14 records directory-wide now combine an active license/);
+      assert.match(html, /inactive or revoked records/);
+
     }
   });
 

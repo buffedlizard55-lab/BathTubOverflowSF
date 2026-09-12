@@ -150,10 +150,17 @@ export function evidenceCounts(data) {
     ).length,
     reviews: data.reviews.length,
     waves: (data.waves || []).length,
+    // Licence detail pages only. CSLB's area-search form was also read directly
+    // but returns no contractor data (POST-only results page), so counting it
+    // would overstate the number of licence pages this project has read.
     cslbReads: new Set(
       data.sources
-        .filter((s) => s.access === "page" && s.url.includes("cslb.ca.gov"))
-        .map((s) => s.url),
+        .filter(
+          (s) =>
+            s.access === "page" &&
+            /cslb\.ca\.gov.*LicenseDetail\.aspx\?LicNum=\d+/.test(s.url),
+        )
+        .map((s) => s.url.match(/LicNum=(\d+)/)[1]),
     ).size,
     registryOnly: data.businesses.filter(
       (b) =>
