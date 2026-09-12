@@ -252,7 +252,7 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 
 Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-9 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a09707-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a097ab-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 

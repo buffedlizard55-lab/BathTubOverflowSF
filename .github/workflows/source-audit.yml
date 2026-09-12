@@ -6,6 +6,7 @@ on:
         main,
         arena/01a09694-bathtuboverflowsf,
         arena/01a09707-bathtuboverflowsf,
+        arena/01a097ab-bathtuboverflowsf,
       ]
     paths:
       [
