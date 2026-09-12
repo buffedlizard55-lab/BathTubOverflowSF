@@ -9,22 +9,54 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 12, 2026 · nine waves**
+**Checked through September 12, 2026 · ten waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **451** |
-| Direct CSLB license-detail reads | **137** |
-| Records with an active license at check time | **93** |
-| Records with a non-active license | **43** |
-| Records with no direct regulator read | **315** |
-| Retained review excerpts | **128** |
-| Evidence references | **352** |
-| Held or scope-excluded records | **57** |
-| Active-license records with regulator-recorded 94122 area evidence | **24** |
+| Unique business research records | **501** |
+| Direct CSLB license-detail reads | **170** |
+| Records with an active license at check time | **114** |
+| Records with a non-active license | **55** |
+| Records with no direct regulator read | **332** |
+| Retained review excerpts | **133** |
+| Evidence references | **400** |
+| Held or scope-excluded records | **64** |
+| Active-license records with regulator-recorded 94122 area evidence | **37** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 451 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 501 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 10: 50 new records in three published evidence tiers
+
+Wave 10 adds **50 nonduplicate businesses** after normalized name, near-name, phone, and CSLB-number collision checks against all 451 earlier records. Thirty-three further candidates were rejected as duplicates; none was stored twice. It keeps three evidence tiers separate on every record:
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **23** | `LicenseDetail.aspx` opened and transcribed field by field | legal entity, business form, address, phone, issue and expiry dates, status text, every classification, bond, workers’ compensation, liability lines, Additional Status |
+| Registry only | **22** | City open-data permit registries | a recorded firm name, address, phone, license **number**, and permit identifiers — nothing more |
+| Platform listing | **5** | Thumbtack category pages read directly | the listing's own category, hire count or review text, with no licence implication |
+
+- **15 active** and **8 non-active** licenses among the 23 reads; every non-active one is held, and across all 33 regulator pages opened in this wave the split is 21 active and 12 non-active
+- **10 verification upgrades** and **2 registry upgrades** applied to records earlier waves had stored without a regulator read — including the trade correction on a wave-6 record whose license (635360) holds B only
+- **the first license in the corpus carrying C-9 drywall and C36 plumbing together** (Sederap's Drywall Inc, 917252, also B and C10)
+- **48 new sources** (IDs 353–400), 37 of them official CSLB or City pages
+- **5 review excerpts** attached (R129–R133); every other platform or community extract stayed a source
+- **24 discrepancy flags** and **40 hold flags** raised in this wave alone
+
+Registry-only records carry `license: null` and the trade value `registry-lead` (“Registry lead · classification not read”). That value requires no CSLB class, so `licenseSupportsTrade()` returns false and `mayPromote()` can never be satisfied: **a registry lead is structurally incapable of reaching the master list.** Each of those records repeats the caveat in its area text, in a `hold`-level flag, and in its plain gap list.
+
+Discovery ran licence-first from the two City contact registries — every licence with a 94122 firm address in `k6kv-9kix` and every `license1` with a 94122 firm ZIP in `3pee-9qhc`, grouped and ordered by permit count — then to completed 94122 drywall- and plumbing-scope permits in `i98e-djp9` and `a6aw-rudh`, then to the Thumbtack drywall and plumbing category pages. There is still no CSLB bulk API; license facts come from `cslb.ca.gov` one page at a time.
+
+### Most relevant new directions—not additions to the call order
+
+- **Sederap's Drywall Inc (917252)** — active **C-9 drywall plus C36 plumbing** on one licence, with B and C10 as well, and 113 registry permit rows at its 94110 firm address. The closest single-licence match to this project's two required trades verified so far, and **held anyway**: no review was attributable to it and its registry address does not match the regulator's.
+- **Hawk N Lee Design & Construction Company (324708)** — active A, B, C10 and C36 on one licence, placed by CSLB itself inside ZIP 94122 (1032 Irving Street #930), with registry name and address conflicts flagged.
+- **Oran Plumbing Corp (762214)** — active C36 with the largest 94122 permit count of any still-active licence read in this wave (362 rows); the regulator names the qualifying individual who resolves a phone overlap with an earlier stored record.
+- **National Plumbing (619642)** — wave 10 upgraded a stored discovery record to a regulator read: active C36 with 1,036 registry permit rows and CSLB's own 1472 24th Avenue, 94122 address.
+- **Canel Solutions** — the wave's drywall-category platform listing whose attached review describes a wall and a ceiling rebuilt, insulated, textured and painted after being opened.
+- **Repipe Specialists (San Francisco Bay Area)** — a plumbing platform listing whose attached review describes walls and ceiling cut open for pipe access, visqueen sheeting, and the closed finish afterwards; no licence is asserted for the listing.
+
+Every one remains outside the qualified master.
 
 ## Wave 9: 50 new records in two published evidence tiers
 
@@ -83,13 +115,13 @@ The permit joins use separate official City datasets for contact identity and pe
 
 ## Three additional verification passes (run for every wave)
 
-After each discovery pass the project runs three further fail-closed passes. Wave 9’s are Passes 19–21:
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s are Passes 22–24:
 
 1. **Regulator pass (19)** — 17 CSLB detail pages opened directly and transcribed field by field, including bond, workers’ compensation and liability lines; five licenses found non-active; the complaint disclosure behind 1017991 read as a separate page; every registry license number that was *not* read published as a lead with `license: null`.
 2. **Cross-source pass (20)** — registry identity compared with regulator identity field by field, producing 15 discrepancy flags: four phone conflicts, six registry spellings of one licensee, a license reissued to another entity in 2006, three ZIP variants on one active multi-trade license, and one address plus phone shared by two different license numbers. Directory pages checked for review corpora; unattributable Thumbtack category quotes and Reddit task threads quarantined as sources; CSLB class **B-2** discovered and added to the schema rather than mapped onto B.
 3. **Fail-closed qualification pass (21)** — no record promoted, the master list left empty, the nine-call order unchanged; holds raised for expired and inactive licenses, a workers’-compensation cancellation dated before the research date, and a single unreachable 1.0-star review; public-data privacy scrub; structural, render and browser tests re-run; merge verified idempotent.
 
-The reproducible gates are in [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
@@ -189,11 +221,12 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 9:
+Rebuild and validate wave 10:
 
 ```sh
-python3 scripts/gen_wave9.py     # rebuilds data/wave9.json and runs a collision pre-flight
-python3 scripts/merge_wave9.py   # idempotent after a successful merge
+git checkout -- data/research.json   # restore the committed 451-record baseline first
+python3 scripts/gen_wave10.py        # rebuilds data/wave10.json and runs a collision pre-flight
+python3 scripts/merge_wave10.py      # fail-closed merge; idempotent after a successful run
 npm test
 ```
 
@@ -226,9 +259,11 @@ This workspace is fixed to branch `arena/01a09707-bathtuboverflowsf`; no other b
 ```text
 index.html, styles.css, app.js    Static GitHub Pages UI
 lib.js                           Filters, exports, counts, allowed classes, and promotion gate
-data/research.json               Merged schema-v2 dataset (451 records, 9 waves)
-data/wave2.json … wave9.json     Reproducible per-wave artifacts
+data/research.json               Merged schema-v2 dataset (501 records, 10 waves)
+data/wave2.json … wave10.json    Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
+scripts/gen_wave10.py            Wave-10 generator (three evidence tiers)
+scripts/merge_wave10.py          Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave9.py             Wave-9 generator (two evidence tiers)
 scripts/merge_wave9.py           Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave8.py             Wave-8 generator

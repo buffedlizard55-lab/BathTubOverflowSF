@@ -132,10 +132,13 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   assert.match(el("#snapshot-date").textContent, /Sep 12, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
-  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 12);
-  assert.equal((html.match(/direction-card panel/g) || []).length, 12);
+  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 16);
+  assert.equal((html.match(/direction-card panel/g) || []).length, 16);
   assert.match(html, /Wave 8 research directions/);
   assert.match(html, /Wave 9 research directions/);
+  assert.match(html, /Wave 10 research directions/);
+  assert.match(html, /BOTH TRADES ON ONE LICENCE/);
+  assert.match(html, /C-9 drywall, C36 plumbing/);
   // wave 9 publishes its two evidence tiers on the summary itself
   assert.match(html, /Registry number ≠ credential\./);
   assert.match(html, /trade label “registry lead”/);
@@ -202,22 +205,26 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /No CSLB page read for this record/);
     }
     if (view === "method") {
-      assert.match(html, /137 distinct CSLB license detail pages/);
-      assert.match(html, /9 waves/);
+      assert.match(html, /170 distinct CSLB license detail pages/);
+      assert.match(html, /10 waves/);
+      assert.match(html, /501 businesses discovered/);
+      assert.match(html, /114 records show an active license/);
+      assert.match(html, /Wave 10 \(Sep 12, 2026\)/);
       // the live totals must not be attributed to a single wave's bullet
       assert.match(html, /Wave 8 \(Sep 12, 2026\)/);
-      // wave 9 adds one regulator-read 94122 record (CT Plumbing & Fire Protection),
-      // so this live total moves from 23 to 24
-      assert.match(html, /24 records directory-wide now combine an active license/);
+      // This live total is computed from the dataset, not hard-coded in app.js.
+      // Wave 10 adds 13 more active licences whose recorded evidence includes a
+      // 94122 address (the wave-9 total was 24), so it now reads 37.
+      assert.match(html, /37 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
-      assert.match(html, /three additional passes/);
+      assert.match(html, /Waves 8, 9 and 10 each received three additional passes/);
       // the live totals stay out of any single wave's bullet
       assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
       assert.match(html, /12 active, 5 non-active and held/);
       assert.match(html, /33 are registry-only leads/);
       assert.match(html, /35 completed permits at work-location ZIP 94122/);
       assert.match(html, /Only seven review excerpts were attributable/);
-      assert.match(html, /Waves 8 and 9 each received three additional passes/);
+      assert.match(html, /Wave 10 normalised every candidate name/);
 
     }
   });
