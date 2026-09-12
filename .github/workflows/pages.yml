@@ -1,7 +1,7 @@
 name: Test and deploy Pages
 on:
   push:
-    branches: [main, arena/01a09269-bathtuboverflowsf]
+    branches: [main, arena/01a09269-bathtuboverflowsf, arena/01a092e2-bathtuboverflowsf]
   workflow_dispatch:
 permissions:
   contents: read

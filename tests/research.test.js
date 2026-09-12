@@ -17,21 +17,30 @@ const data = JSON.parse(
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 const byId = new Map(data.businesses.map((b) => [b.id, b]));
 const W6 = data.businesses.filter((b) => b.id.startsWith("w6-"));
+const W7 = data.businesses.filter((b) => b.id.startsWith("w7-"));
 
-test("exactly 301 unique discovery entries across six waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 301);
+test("exactly 351 unique discovery entries across seven waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 351);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, ["2026-09-10", "2026-09-11"]);
   assert.equal(data.researchedAt, "2026-09-11");
-  assert.equal(data.waves.length, 6);
+  assert.equal(data.waves.length, 7);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    301,
+    351,
   );
+  assert.deepEqual(data.waves[6], {
+    wave: 7,
+    date: "2026-09-11",
+    count: 50,
+    cslbReads: 12,
+    registryOnly: 20,
+    thumbtack: 20,
+  });
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      301,
+      351,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
@@ -147,7 +156,11 @@ test("shortlist requires an active license whose class covers its trade", () => 
     assert.ok(b.nextStep);
   });
   // calls 06-09 were admitted on a stricter basis: the regulator itself
-  // records an Outer Sunset 94122 address for the license.
+  // records an Outer Sunset 94122 address for the license. Calls 06-08 came
+  // from wave 6 and call 09 from wave 7; wave 6's Caledonia held call 06 until
+  // a directly-read negative review removed it from the order (see the
+  // wave-7 follow-up test below), and the remaining calls were renumbered so
+  // the order stays contiguous.
   short
     .filter((b) => b.priority > 5)
     .forEach((b) => {
@@ -155,8 +168,8 @@ test("shortlist requires an active license whose class covers its trade", () => 
       assert.match(b.license.entity, /SAN FRANCISCO|INC|CO|PLUMBING|STUCCO/i);
       assert.ok(/94122/.test(b.areaText), b.id);
     });
-  assert.equal(evidenceCounts(data).active, 40);
-  assert.equal(evidenceCounts(data).inactive, 18);
+  assert.equal(evidenceCounts(data).active, 41);
+  assert.equal(evidenceCounts(data).inactive, 28);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -170,7 +183,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 40);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 41);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -308,7 +321,7 @@ test("non-active licenses are always held, never presented as bookable", () => {
   );
   assert.deepEqual(
     [...statuses].sort(),
-    ["active", "canceled", "expired", "suspended"],
+    ["active", "canceled", "expired", "inactive", "revoked", "suspended"],
   );
 });
 
@@ -349,4 +362,203 @@ test("official permit rules are cited to a government page and nothing is paraph
   const raw = JSON.stringify(data).toLowerCase();
   assert.equal(raw.includes("permit is not required"), false);
   assert.equal(raw.includes("no permit needed"), false);
+});
+
+test("wave 7 is 50 new records with three evidence channels kept separate", () => {
+  assert.equal(W7.length, 50);
+  assert.equal(new Set(W7.map((b) => b.id)).size, 50);
+  assert.equal(W7.filter((b) => b.trade).length, 50);
+  // no Thumbtack profile is ever stored as the business's own website
+  assert.deepEqual(
+    W7.filter((b) => b.website).map((b) => b.id),
+    [],
+  );
+
+  // channel 1 — CSLB licence pages read directly
+  const licensed = W7.filter((b) => b.license);
+  assert.equal(licensed.length, 10);
+  assert.deepEqual(
+    [...new Set(licensed.map((b) => b.license.status))].sort(),
+    ["active", "expired", "inactive", "revoked"],
+  );
+  const active = licensed.filter((b) => b.license.status === "active");
+  assert.equal(active.length, 1);
+  assert.equal(active[0].id, "w7-michael-kuenzli-plumbing-co");
+  assert.equal(active[0].area, "outer");
+  assert.ok(/94122/.test(active[0].areaText));
+  for (const b of licensed) {
+    const s = sources.get(b.license.source);
+    assert.equal(s.kind, "government", b.id);
+    assert.equal(s.access, "page", b.id);
+    assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
+    assert.ok(s.url.includes(b.license.number), b.id);
+    assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
+    if (b.license.status !== "active") {
+      assert.ok(b.flags.some((f) => f.level === "hold"), `${b.id} lapsed licence needs a hold`);
+      assert.ok(["research", "hold"].includes(b.status), b.id);
+    }
+  }
+  // "inactive" and "revoked" first appear in wave 7 and must never render green
+  for (const st of ["inactive", "revoked"])
+    assert.ok(licensed.some((b) => b.license.status === st), st);
+
+  // channel 2 — registry-only leads: a permit row is never a licence read
+  const registryOnly = W7.filter(
+    (b) => !b.license && b.claims.some((c) => /Registry-recorded/.test(c.text)),
+  );
+  assert.equal(registryOnly.length, 20);
+  for (const b of registryOnly) {
+    assert.equal(b.area, "sunset", `${b.id} registry ZIP is not an Outer Sunset confirmation`);
+    assert.ok(
+      b.flags.some((f) => /has NOT been read on CSLB/.test(f.text)),
+      `${b.id} registry-only record must carry the unread-licence flag`,
+    );
+    assert.ok(
+      b.claims.some(
+        (c) =>
+          c.field === "Registry" &&
+          /Registry-recorded plumbing-permit contact/.test(c.text) &&
+          /Re-read in a confirmatory query/.test(c.text),
+      ),
+      b.id,
+    );
+  }
+
+  // channel 3 — Thumbtack listings read directly; a platform badge is not a licence
+  const marketplace = W7.filter((b) =>
+    b.claims.some((c) => c.field === "Listing evidence"),
+  );
+  assert.equal(marketplace.length, 20);
+  for (const b of marketplace) {
+    assert.equal(b.license, null, `${b.id} may not carry a licence from a platform badge`);
+    const c = b.claims.find((x) => x.field === "Listing evidence");
+    const s = sources.get(c.source);
+    assert.equal(s.access, "page", b.id);
+    assert.match(s.url, /^https:\/\/www\.thumbtack\.com\//, b.id);
+    assert.ok(
+      b.platformLinks.some((p) => /^https:\/\/www\.thumbtack\.com\//.test(p.url)),
+      `${b.id} should retain the profile URL it was read from`,
+    );
+  }
+  assert.equal(licensed.length + registryOnly.length + marketplace.length, 50);
+
+  // every wave-7 review comes from a Thumbtack page read directly, not an index
+  const w7Reviews = data.reviews.filter((r) => r.business.startsWith("w7-"));
+  assert.equal(w7Reviews.length, 20);
+  assert.equal(new Set(w7Reviews.map((r) => r.business)).size, 20);
+  for (const r of w7Reviews) {
+    assert.equal(r.platform, "Thumbtack", r.id);
+    assert.equal(r.access, "page", r.id);
+    assert.match(sources.get(r.source).url, /^https:\/\/www\.thumbtack\.com\//, r.id);
+    assert.equal(r.exactTask, false, r.id);
+  }
+  // the negative review that put a wave-7 record on hold is marked negative
+  const elite = byId.get("w7-elite-solution-will-team");
+  assert.equal(elite.status, "hold");
+  assert.ok(elite.reviewIds.length >= 1);
+  assert.ok(
+    elite.reviewIds.some((id) => data.reviews.find((r) => r.id === id).negative),
+    "the allegation must be flagged as a negative review, not buried",
+  );
+});
+
+test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
+  // 50 new records only — the seven follow-up targets are pre-existing ids
+  assert.equal(data.businesses.length, 351);
+  for (const s of [218, 219, 220, 221]) {
+    assert.equal(sources.get(s).access, "page", s);
+    assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
+  }
+  assert.equal(sources.get(218).kind, "platform");
+  assert.equal(sources.get(219).kind, "platform");
+  assert.equal(sources.get(220).kind, "government");
+  assert.equal(sources.get(221).kind, "government");
+
+  // wave-1 record: an expired C-36 is attached, held, and never bookable
+  const bc = byId.get("bill-callaway");
+  assert.equal(bc.license.number, "660638");
+  assert.equal(bc.license.status, "expired");
+  assert.deepEqual(bc.license.classes, ["C36"]);
+  assert.equal(bc.license.source, 211);
+  assert.equal(bc.status, "hold");
+  assert.equal(bc.trade, "plumbing");
+  assert.ok(bc.flags.some((f) => f.level === "hold" && /EXPIRED/.test(f.text)));
+  assert.ok(bc.flags.some((f) => f.level === "discrepancy"));
+  assert.equal(bc.checkedAt, "2026-09-11");
+
+  // wave-2 record: corroborating re-read, name history resolved, area NOT widened
+  const jw = byId.get("joe-watterson");
+  assert.equal(jw.license.status, "active");
+  assert.equal(jw.license.source, 210, "the later read must be the cited one");
+  assert.equal(jw.license.checkedAt, "2026-09-11");
+  assert.equal(jw.checkedAt, "2026-09-11");
+  assert.notEqual(jw.area, "outer", "no 94122 row exists for 723992");
+  assert.ok(jw.claims.some((c) => c.source === 60), "the original read stays traceable");
+  assert.ok(jw.claims.some((c) => c.source === 220 && c.field === "Registry cross-check"));
+  assert.ok(jw.flags.some((f) => f.level === "discrepancy" && /Slemish/.test(f.text)));
+  assert.ok(jw.flags.some((f) => f.level === "gap" && /94122/.test(f.text)));
+
+  // wave-6 shortlisted record: removed from the call order and held
+  const cal = byId.get("w6-caledonia-plastering-stucco-inc");
+  assert.equal(cal.priority, null);
+  assert.equal(cal.status, "hold");
+  assert.equal(cal.license.status, "active", "the licence read is unchanged by the hold");
+  assert.ok(cal.flags.some((f) => f.level === "hold" && /call order/.test(f.text)));
+  assert.ok(/Removed from the call order/.test(cal.rationale));
+  const r89 = data.reviews.find((r) => r.id === "R89");
+  assert.equal(r89.business, cal.id);
+  assert.equal(r89.negative, true);
+  assert.equal(r89.author, "Jay D.");
+  assert.equal(r89.published, null, "no date is displayed for that review");
+  assert.ok(/covered up a square bathroom exhaust with plaster/.test(r89.quote));
+  // the mis-attributed wave-6 review is corrected, and the displaced author is restored
+  const r60 = data.reviews.find((r) => r.id === "R60");
+  assert.equal(r60.author, "Vipada W.");
+  assert.equal(r60.published, "Oct 5, 2017");
+  assert.equal(r60.source, 219);
+  assert.equal(r60.access, "page");
+  assert.equal(r60.identity, "matched");
+  const r98 = data.reviews.find((r) => r.id === "R98");
+  assert.equal(r98.business, cal.id);
+  assert.equal(r98.author, "Tom S.");
+  assert.equal(r98.published, "Jun 2, 2018");
+  assert.ok(/exterior stucco/.test(r98.quote));
+  assert.ok(cal.flags.some((f) => f.level === "discrepancy" && /attribution corrected/.test(f.text)));
+
+  // wave-5 drywall record: platform credential must not become a licence fact
+  const na = byId.get("w5-new-age-drywall-inc");
+  assert.equal(na.license, null);
+  assert.equal(na.trade, "drywall");
+  assert.equal(na.area, "outside");
+  assert.deepEqual(na.reviewIds.sort(), ["R91", "R92", "R93", "R94"]);
+  assert.ok(na.claims.some((c) => /C9 – Drywall/.test(c.excerpt) && c.source === 218));
+  assert.ok(na.flags.some((f) => f.level === "gap" && /No CSLB licence number is published/.test(f.text)));
+  const tuan = data.reviews.find((r) => r.id === "R92");
+  assert.equal(tuan.published, "Jan 8, 2026");
+  assert.ok(/ceiling our plumber had to cut into/.test(tuan.quote));
+
+  // wave-5 records whose profile paths put them outside the area
+  const figs = byId.get("w5-figs-drywall-repair-paint");
+  assert.equal(figs.area, "outside");
+  assert.ok(figs.platformLinks.some((p) => p.url.includes("/id/boise/")));
+  assert.ok(figs.flags.some((f) => f.level === "discrepancy" && /Boise/.test(f.text)));
+  assert.ok(figs.reviewIds.includes("R95"));
+  const walty = byId.get("w5-walty-handy-service-pro");
+  assert.equal(walty.area, "outside");
+  assert.ok(walty.platformLinks.some((p) => p.url.includes("/ca/san-pablo/moving-companies/")));
+  assert.ok(walty.reviewIds.includes("R97"));
+  const magana = byId.get("w5-maga-a-time-handyman");
+  assert.ok(magana.reviewIds.includes("R96"));
+  assert.ok(magana.platformLinks.some((p) => p.url.includes("/ca/san-francisco/handyman/")));
+
+  // the call order stays contiguous and every call still clears the strict gate
+  const short = data.businesses.filter((b) => b.priority).sort((a, b) => a.priority - b.priority);
+  assert.deepEqual(short.map((b) => b.priority), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  assert.ok(!short.some((b) => b.id === cal.id));
+  assert.equal(short[8].id, "w7-michael-kuenzli-plumbing-co");
+  for (const b of short) {
+    assert.equal(b.status, "research", `${b.id} a held record must not sit in the call order`);
+    assert.equal(b.license.status, "active", b.id);
+  }
+  assert.equal(data.reviews.length, 98);
 });
