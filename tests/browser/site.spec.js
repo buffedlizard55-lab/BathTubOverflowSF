@@ -375,7 +375,11 @@ test("wave 10 leads render their trade and licence reality, not a badge", async 
     "No CSLB page read for this record",
   );
   await page.locator('[data-detail="w10-danny-chen"]').first().click();
-  await expect(page.getByRole("dialog")).toContainText("NOT read on CSLB");
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toContainText("Registry lead · classification not read");
+  await expect(dialog).toContainText("License unchecked");
+  await expect(dialog).toContainText("893929");
+  await expect(dialog).toContainText("has NOT been read on CSLB");
   await page.keyboard.press("Escape");
 });
 
