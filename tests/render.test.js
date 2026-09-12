@@ -129,10 +129,12 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   const html = await render("#summary");
   assert.match(html, /Find the right expertise\./);
   assert.equal(el(".nav-count").textContent, data.businesses.length);
-  assert.match(el("#snapshot-date").textContent, /Sep 11, 2026/);
+  assert.match(el("#snapshot-date").textContent, /Sep 12, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
-  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length);
+  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 6);
+  assert.equal((html.match(/direction-card panel/g) || []).length, 6);
+  assert.match(html, /Wave 8 research directions/);
   for (const p of BAD) assert.equal(p.test(html), false, `${hash()} matched ${p}`);
 });
 function hash() {
@@ -152,7 +154,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
         "expected a name button and a view button per record",
       );
       assert.match(html, /Active license checked only/);
-      assert.match(html, /Snapshot · Sep 10–11, 2026/);
+      assert.match(html, /Snapshot · Sep 10–12, 2026/);
     }
     if (view === "audit") {
       const numbers = [
@@ -170,33 +172,39 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /removed from the call order and placed on hold/);
       assert.match(html, /Thumbtack category and pro pages read directly/);
       assert.match(html, /corrected a wave-6 review attribution in place/);
+      assert.match(html, /Wave 8 cross-check/);
+      assert.match(html, /17 completed plumbing permits and 27 completed restoration permits/);
     }
     if (view === "method") {
-      assert.match(html, /70 distinct CSLB license detail pages/);
-      assert.match(html, /7 waves/);
+      assert.match(html, /120 distinct CSLB license detail pages/);
+      assert.match(html, /8 waves/);
       // the live totals must not be attributed to a single wave's bullet
-      assert.match(html, /Wave 7 \(Sep 11, 2026\)/);
-      assert.match(html, /14 records directory-wide now combine an active license/);
-      assert.match(html, /inactive or revoked records/);
+      assert.match(html, /Wave 8 \(Sep 12, 2026\)/);
+      assert.match(html, /23 records directory-wide now combine an active license/);
+      assert.match(html, /Forty licenses were active and 10 non-active/);
+      assert.match(html, /three additional passes/);
 
     }
   });
 
-test("compliance panel quotes only the official City page", async () => {
+test("compliance panel cites the official City page and current code section", async () => {
   const html = await render("#summary");
   assert.match(html, /OFFICIAL CITY REQUIREMENTS/);
   for (const fact of data.compliance.facts)
     assert.ok(html.includes(fact.replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[m])), fact);
   assert.match(html, /sf\.gov\/apply-plumbing-and-mechanical-permit/);
-  assert.match(html, /NOT\s+retrieved/);
+  assert.match(html, /codelibrary\.amlegal\.com/);
+  assert.doesNotMatch(html, /NOT\s+retrieved/);
 });
 
-test("suspended, canceled and expired licenses render a red badge, never a green one", async () => {
+test("non-active license statuses render a red badge, never a green one", async () => {
   const html = await render("#audit");
   for (const [status, label] of [
     ["expired", "License expired"],
     ["canceled", "License canceled"],
     ["suspended", "License suspended"],
+    ["inactive", "License inactive"],
+    ["revoked", "License revoked"],
   ]) {
     assert.equal(data.businesses.some((b) => b.license?.status === status), true, status);
     assert.ok(html.includes(label), `${status} badge missing`);

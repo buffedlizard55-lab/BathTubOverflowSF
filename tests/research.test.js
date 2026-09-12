@@ -1,6 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { extname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   filterBusinesses,
   mayPromote,
@@ -18,29 +21,68 @@ const sources = new Map(data.sources.map((s) => [s.id, s]));
 const byId = new Map(data.businesses.map((b) => [b.id, b]));
 const W6 = data.businesses.filter((b) => b.id.startsWith("w6-"));
 const W7 = data.businesses.filter((b) => b.id.startsWith("w7-"));
+const W8 = data.businesses.filter((b) => b.id.startsWith("w8-"));
 
-test("exactly 351 unique discovery entries across seven waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 351);
+// Known private-context markers are held only as one-way fingerprints. This
+// lets the public repository test every artifact without restating excluded
+// details in source code or assertion output.
+const privateMarkerDigests = new Set([
+  "710cdcb6c633b8993d8a341d73f247282495408c2a12cc797c8006bc327464a8",
+  "bea6c284fb02b5d0aa611eb727ee69cdfa283f832f667cc45edb395d9510841f",
+  "510d3a4233002578d42ac8558c5324d8ffbd34ab0e08eb0b2a2c00485f77a361",
+  "ae2785f2d5d577ecc622fecffaec531fd1687d55c347569fe805bf27af17c47e",
+  "66f4a7521f5a2a3b0b21c97c9fd4e28c0564fbe5b75ae3ce316b4d157dd55bfc",
+  "9903c83e316d8a40f84bc00adf967aa5caa0e58bec37584e45cf16b97edcd317",
+  "cf109ac20d0a56c95192a248efbe6bc41c16113928b786d8588830efbb79f5d6",
+  "4c2733abf54ccb0f418600316449c0a3d7bfe21de1894dae833860be7f5f3434",
+  "bcbb4b2505d42b71121ea904ec141a825e4f3fd90d4f694d5b81e4a3f77a07e1",
+  "7cca84535e81d2d1d7a838c892dac1d7ba7d409313d44810b742b8192a63bb1d",
+  "8f53059107c1aca3174b4a75a6b8f520653b0fa5e2180b2121ddb4bd59a1e4ea",
+  "2c7f437a907912af18e334413020d366916094f724ec3159f823470ad701cfd4",
+  "57a8ef6d2c7995352c6a74233741e7bef6c1113782966662a8eccb586d7356d3",
+  "e9f172ce2a0beb97843f2a5b9aab9978d9a956a23606da206789ec714d98efa0",
+]);
+const digest = (value) => createHash("sha256").update(value).digest("hex");
+function assertPrivacySafe(value, label) {
+  const words = value.toLowerCase().match(/[a-z0-9]+/g) || [];
+  for (let width = 1; width <= 4; width += 1)
+    for (let i = 0; i + width <= words.length; i += 1)
+      assert.equal(
+        privateMarkerDigests.has(digest(words.slice(i, i + width).join(" "))),
+        false,
+        `${label} contains an excluded private-context marker`,
+      );
+}
+
+test("exactly 401 unique discovery entries across eight waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 401);
   assert.equal(data.schemaVersion, 2);
-  assert.deepEqual(data.researchDates, ["2026-09-10", "2026-09-11"]);
-  assert.equal(data.researchedAt, "2026-09-11");
-  assert.equal(data.waves.length, 7);
+  assert.deepEqual(data.researchDates, [
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-12",
+  ]);
+  assert.equal(data.researchedAt, "2026-09-12");
+  assert.equal(data.waves.length, 8);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    351,
+    401,
   );
-  assert.deepEqual(data.waves[6], {
-    wave: 7,
-    date: "2026-09-11",
+  assert.deepEqual(data.waves[7], {
+    wave: 8,
+    date: "2026-09-12",
     count: 50,
-    cslbReads: 12,
-    registryOnly: 20,
-    thumbtack: 20,
+    cslbReads: 50,
+    activeLicenses: 40,
+    nonActiveLicenses: 10,
+    completedPlumbingPermits94122: 17,
+    completedRestorationPermits94122: 27,
+    retainedReviewExcerpts: 23,
   });
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      351,
+      401,
     );
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.master).length, 0);
@@ -168,8 +210,8 @@ test("shortlist requires an active license whose class covers its trade", () => 
       assert.match(b.license.entity, /SAN FRANCISCO|INC|CO|PLUMBING|STUCCO/i);
       assert.ok(/94122/.test(b.areaText), b.id);
     });
-  assert.equal(evidenceCounts(data).active, 41);
-  assert.equal(evidenceCounts(data).inactive, 28);
+  assert.equal(evidenceCounts(data).active, 81);
+  assert.equal(evidenceCounts(data).inactive, 38);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -183,7 +225,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 41);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 81);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -240,39 +282,67 @@ test("exports preserve citations, handle commas/quotes and neutralize spreadshee
   assert.match(csv, /License classes/);
 });
 
-test("HTML is escaped and public schema excludes private property fields", () => {
+test("HTML is escaped and the public schema and artifacts pass the privacy allowlist", () => {
   assert.equal(
     escapeHTML('<img onerror="x">'),
     "&lt;img onerror=&quot;x&quot;&gt;",
   );
-  for (const key of [
-    "propertyAddress",
-    "occupants",
-    "privateNotes",
-    "accessInstructions",
-    "tenantStatus",
-    "rentControl",
-    "permitAvoidance",
-  ]) {
-    assert.equal(Object.hasOwn(data, key), false);
-    data.businesses.forEach((b) => assert.equal(Object.hasOwn(b, key), false));
-  }
-  const raw = readFileSync(
-    new URL("../data/research.json", import.meta.url),
-    "utf8",
-  ).toLowerCase();
-  for (const forbidden of [
-    "rent control",
-    "rent-controlled",
-    "in-law unit",
-    "inlaw unit",
-    "without a permit",
-    "no permit",
-    "unpermitted",
-    "discreet",
-    "do not disclose",
-  ])
-    assert.equal(raw.includes(forbidden), false, `dataset leaks "${forbidden}"`);
+  const topLevel = new Set([
+    "schemaVersion",
+    "researchedAt",
+    "scope",
+    "master",
+    "methodology",
+    "researchDates",
+    "waves",
+    "compliance",
+    "sources",
+    "businesses",
+    "reviews",
+  ]);
+  const businessFields = new Set([
+    "id",
+    "name",
+    "trade",
+    "phone",
+    "phoneSource",
+    "website",
+    "websiteSource",
+    "area",
+    "areaText",
+    "status",
+    "checkedAt",
+    "claims",
+    "license",
+    "reviewIds",
+    "platformLinks",
+    "flags",
+    "gaps",
+    "priority",
+    "rationale",
+    "nextStep",
+    "exactMatch",
+    "insuranceVerified",
+    "scopeConfirmed",
+    "master",
+  ]);
+  for (const key of Object.keys(data)) assert.ok(topLevel.has(key), key);
+  for (const b of data.businesses)
+    for (const key of Object.keys(b)) assert.ok(businessFields.has(key), `${b.id}.${key}`);
+
+  const root = fileURLToPath(new URL("../", import.meta.url));
+  const ignored = new Set([".git", "node_modules", "reports", "test-results", "playwright-report"]);
+  const textTypes = new Set([".css", ".html", ".js", ".json", ".md", ".py", ".yaml", ".yml"]);
+  const visit = (dir) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (ignored.has(entry.name)) continue;
+      const path = join(dir, entry.name);
+      if (entry.isDirectory()) visit(path);
+      else if (textTypes.has(extname(entry.name)))
+        assertPrivacySafe(readFileSync(path, "utf8"), path.slice(root.length));
+    }
+  };
+  visit(root);
 });
 
 test("wave 6 is 50 new records with regulator reads kept separate from registry leads", () => {
@@ -341,27 +411,32 @@ test("classification-versus-scope audit: every trade is supported by a real CSLB
   assert.ok(rs.flags.some((f) => f.level === "hold"));
 });
 
-test("official permit rules are cited to a government page and nothing is paraphrased as exempt", () => {
+test("official permit rules and the cited code section were read directly", () => {
   const c = data.compliance;
   assert.ok(c, "compliance block missing");
-  const s = sources.get(c.sourceId);
-  assert.equal(s.kind, "government");
-  assert.equal(s.access, "page");
-  assert.match(s.url, /^https:\/\/www\.sf\.gov\//);
-  assert.ok(c.facts.length >= 6);
+  assert.deepEqual(c.sourceIds, [175, 305]);
+  for (const id of c.sourceIds) {
+    const s = sources.get(id);
+    assert.equal(s.kind, "government");
+    assert.equal(s.access, "page");
+  }
+  assert.match(sources.get(175).url, /^https:\/\/www\.sf\.gov\//);
+  assert.match(sources.get(305).url, /^https:\/\/codelibrary\.amlegal\.com\//);
+  assert.ok(c.facts.length >= 9);
   assert.ok(
     c.facts.some((f) => /permit before cutting into or replacing pipes/.test(f)),
   );
-  assert.ok(c.facts.some((f) => /must have it inspected/.test(f)));
+  assert.ok(c.facts.some((f) => /inspected before pipes are covered/.test(f)));
+  assert.ok(c.facts.some((f) => /Section 104\.2 was read directly/.test(f)));
   assert.ok(/does not plan, sequence, recommend or assist/.test(c.position));
-  for (const l of c.officialLinks)
-    assert.match(l.url, /^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org)\//);
-  // the exemption section itself was not retrieved, and the dataset says so
-  assert.equal(c.notRetrieved.length, 1);
-  assert.match(c.notRetrieved[0].note, /NOT\s+retrieved/);
-  const raw = JSON.stringify(data).toLowerCase();
-  assert.equal(raw.includes("permit is not required"), false);
-  assert.equal(raw.includes("no permit needed"), false);
+  for (const link of c.officialLinks) {
+    assert.ok(sources.has(link.sourceId));
+    assert.match(
+      link.url,
+      /^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org|codelibrary\.amlegal\.com)\//,
+    );
+  }
+  assert.deepEqual(c.notRetrieved, []);
 });
 
 test("wave 7 is 50 new records with three evidence channels kept separate", () => {
@@ -462,9 +537,161 @@ test("wave 7 is 50 new records with three evidence channels kept separate", () =
   );
 });
 
+test("wave 8 adds 50 collision-free, directly licensed plumbing and restoration records", () => {
+  assert.equal(W8.length, 50);
+  assert.equal(new Set(W8.map((b) => b.id)).size, 50);
+  assert.equal(new Set(W8.map((b) => b.name.toLowerCase())).size, 50);
+  assert.equal(new Set(W8.map((b) => b.phone.replace(/\D/g, ""))).size, 50);
+  assert.equal(new Set(W8.map((b) => b.license.number)).size, 50);
+  const prior = data.businesses.filter((b) => !b.id.startsWith("w8-"));
+  const priorPhones = new Set(prior.map((b) => b.phone?.replace(/\D/g, "")).filter(Boolean));
+  const priorLicenses = new Set(prior.map((b) => b.license?.number).filter(Boolean));
+  const suffixes = new Set([
+    "and", "co", "company", "corp", "corporation", "dba",
+    "inc", "incorporated", "llc", "the",
+  ]);
+  const coreName = (name) =>
+    name
+      .normalize("NFKD")
+      .replace(/[^a-zA-Z0-9]+/g, " ")
+      .trim()
+      .toLowerCase()
+      .split(" ")
+      .filter((word) => !suffixes.has(word))
+      .join(" ");
+  const priorCores = new Set(prior.map((b) => coreName(b.name)));
+  for (const b of W8) {
+    assert.equal(priorPhones.has(b.phone.replace(/\D/g, "")), false, b.id);
+    assert.equal(priorLicenses.has(b.license.number), false, b.id);
+    assert.equal(priorCores.has(coreName(b.name)), false, b.id);
+  }
+  assert.equal(W8.filter((b) => b.license.status === "active").length, 40);
+  assert.equal(W8.filter((b) => b.license.status !== "active").length, 10);
+  assert.equal(W8.slice(0, 23).every((b) => ["plumbing", "multi-trade"].includes(b.trade)), true);
+  assert.equal(W8.slice(23).every((b) => ["general", "multi-trade"].includes(b.trade)), true);
+
+  for (const b of W8) {
+    const s = sources.get(b.license.source);
+    assert.equal(s.kind, "government", b.id);
+    assert.equal(s.access, "page", b.id);
+    assert.equal(s.checkedAt, "2026-09-12", b.id);
+    assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
+    assert.ok(s.url.endsWith(b.license.number), b.id);
+    assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
+    assert.equal(b.priority, null, b.id);
+    assert.equal(b.master, false, b.id);
+    assert.equal(b.exactMatch, false, b.id);
+    assert.equal(b.insuranceVerified, false, b.id);
+    assert.equal(b.scopeConfirmed, false, b.id);
+    assert.ok(b.gaps.length >= 4, b.id);
+    if (b.license.status !== "active") {
+      assert.equal(b.status, "hold", b.id);
+      assert.ok(b.flags.some((f) => f.level === "hold"), b.id);
+    }
+  }
+
+  const directLicenseSources = data.sources.filter(
+    (s) => s.id >= 228 && s.id <= 277,
+  );
+  assert.equal(directLicenseSources.length, 50);
+  assert.equal(directLicenseSources.every((s) => /LicenseDetail\.aspx\?LicNum=/.test(s.url)), true);
+
+  const plumbingLinks = W8.filter((b) =>
+    b.claims.some((c) => c.field === "Permit linkage" && c.source === 222),
+  );
+  const restorationLinks = W8.filter((b) =>
+    b.claims.some((c) => c.field === "Permit linkage" && c.source === 225),
+  );
+  assert.equal(plumbingLinks.length, 17);
+  assert.equal(restorationLinks.length, 28, "27 restoration selections plus one historical multi-trade permit");
+  assert.equal(
+    W8.filter((b) => b.claims.some((c) => c.field === "Coverage" && c.source === 223)).length,
+    17,
+  );
+  assert.equal(
+    W8.filter((b) => b.claims.some((c) => c.field === "Coverage" && c.source === 226)).length,
+    27,
+  );
+  assert.equal(
+    W8.filter((b) => b.claims.some((c) => c.field === "Coverage" && c.source === 227)).length,
+    1,
+  );
+  for (const id of [222, 223, 224, 225, 226, 227]) {
+    const s = sources.get(id);
+    assert.equal(s.kind, "government");
+    assert.equal(s.access, "page");
+    assert.match(s.url, /^https:\/\/data\.sf\.gov\/resource\//);
+    assert.doesNotMatch(decodeURIComponent(s.url), /status_date/);
+  }
+  const buildingJoin = decodeURIComponent(sources.get(225).url);
+  assert.match(buildingJoin, /license1/);
+  assert.match(buildingJoin, /firm_name/);
+  assert.doesNotMatch(buildingJoin, /contact_name|license_number/);
+});
+
+test("wave 8 review sample is attributable, deduplicated and explicitly incomplete", () => {
+  const reviews = data.reviews.filter((r) => r.business.startsWith("w8-"));
+  assert.equal(reviews.length, 23);
+  assert.deepEqual(
+    reviews.map((r) => r.id),
+    Array.from({ length: 23 }, (_, i) => `R${99 + i}`),
+  );
+  for (const r of reviews) {
+    assert.equal(r.checkedAt, "2026-09-12", r.id);
+    assert.equal(r.exactTask, false, r.id);
+    assert.equal(r.access, sources.get(r.source).access, r.id);
+    assert.ok(W8.find((b) => b.id === r.business).reviewIds.includes(r.id), r.id);
+  }
+  const normalized = reviews.map((r) => r.quote.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim());
+  assert.equal(new Set(normalized).size, reviews.length);
+
+  const proCare = reviews.filter((r) => r.business === "w8-pro-care-restoration-inc");
+  assert.equal(proCare.length, 7);
+  assert.equal(proCare.filter((r) => r.source === 287).length, 3);
+  assert.ok(
+    byId.get("w8-pro-care-restoration-inc").flags.some((f) => /duplicate text/i.test(f.text)),
+  );
+  const holland = reviews.filter((r) => r.business === "w8-holland-plumbing-works");
+  assert.equal(holland.length, 2);
+  assert.ok(holland.some((r) => /shower-control handle mechanism/.test(r.analysis)));
+  assert.ok(holland.every((r) => !r.exactTask));
+  assert.equal(reviews.some((r) => r.platform === "Reddit" || r.platform === "Thumbtack"), false);
+
+  const safeStepRejections = [300, 301].map((id) => sources.get(id));
+  assert.ok(safeStepRejections.every((s) => /rejected/i.test(`${s.title} ${s.note}`)));
+  assert.equal(data.methodology.completeReviewCorpus, false);
+});
+
+test("wave 8 irregularities remain visible and never relax the master gate", () => {
+  const axion = byId.get("w8-axion-plumbing");
+  assert.ok(
+    axion.flags.some(
+      (f) => f.level === "discrepancy" && /415-672-0249/.test(f.text) && /415-286-3451/.test(f.text),
+    ),
+  );
+  const chen = byId.get("w8-chen-s-construction-and-mechanical-inc");
+  assert.ok(chen.flags.some((f) => f.level === "discrepancy" && /earlier firm name/i.test(f.text)));
+  for (const id of [
+    "w8-brus-box-contractor-works",
+    "w8-rprw-inc-dba-james-macmillan",
+    "w8-gerson-construction-inc",
+    "w8-wolfe-painting-co",
+  ]) {
+    const b = byId.get(id);
+    assert.ok(b.flags.some((f) => f.level === "hold"), id);
+    assert.equal(b.master, false, id);
+  }
+  assert.equal(sources.get(302).kind, "government");
+  assert.equal(sources.get(303).kind, "government");
+  assert.equal(sources.get(304).kind, "government");
+  assert.equal(sources.get(305).kind, "government");
+  assert.match(data.methodology.passes, /Pass 16:[\s\S]*Pass 17:[\s\S]*Pass 18:/);
+});
+
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
-  // 50 new records only — the seven follow-up targets are pre-existing ids
-  assert.equal(data.businesses.length, 351);
+  // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
+  // seven follow-up targets, which remain pre-existing ids.
+  assert.equal(data.businesses.length, 401);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -560,5 +787,6 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
     assert.equal(b.status, "research", `${b.id} a held record must not sit in the call order`);
     assert.equal(b.license.status, "active", b.id);
   }
-  assert.equal(data.reviews.length, 98);
+  assert.equal(data.reviews.filter((r) => !r.business.startsWith("w8-")).length, 98);
+  assert.equal(data.reviews.length, 121);
 });

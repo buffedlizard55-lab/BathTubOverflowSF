@@ -107,8 +107,7 @@ marketing pages 131/133) and were each confirmed or refuted only by a direct
   Outer Sunset dispatch unless a cited retrieval states it; absences are explicit gaps.
 - Indexed extracts may be stale; stars are never blended across platforms; sponsored
   placements are labeled advertising.
-- The privacy guardrail holds: no property address, occupant detail, access instruction
-  or private project note is stored anywhere in this repository.
-- Licensing and any permit obligations remain the owner's responsibility; this research
-  identifies licensed, credentialed options from public records (CSLB, SF DBI) and does
-  not arrange or endorse unpermitted work.
+- The privacy guardrail holds: no nonpublic project detail or personal data is stored in
+  this repository.
+- Licensing and permit obligations require a scope-specific check; this research identifies
+  credentialed options from public records (CSLB, SF DBI) and does not arrange work.

@@ -114,13 +114,14 @@ class Monitor:
     def get(self, url):
         """Single request. Redirects are explicitly revalidated and robot-checked."""
         public_url(url)
-        with self.opener.open(request.Request(url, headers={'User-Agent': AGENT, 'Accept': 'text/html,text/plain'}), timeout=TIMEOUT) as response:
+        with self.opener.open(request.Request(url, headers={'User-Agent': AGENT, 'Accept': 'text/html,text/plain,application/json'}), timeout=TIMEOUT) as response:
             raw = response.read(LIMIT + 1)
             if len(raw) > LIMIT:
                 raise ValueError('Page size exceeds monitoring limit')
             mime = response.headers.get_content_type()
-            if mime not in ('text/html', 'text/plain', 'application/xhtml+xml'):
-                raise ValueError('Not an HTML/text page')
+            if mime not in ('text/html', 'text/plain', 'application/xhtml+xml',
+                             'application/json', 'application/geo+json'):
+                raise ValueError('Not an HTML/text/JSON page')
             return raw.decode(response.headers.get_content_charset() or 'utf-8', errors='replace'), response.status
 
     def policy(self, origin):
@@ -185,8 +186,19 @@ def audit_one(monitor, url, sources, expected):
             result['findings'].append('Redirect detected: recheck page identity, not just link availability.')
         if body:
             parsed = PageParser()
-            parsed.feed(body)
-            text = normalize(' '.join(parsed.text))
+            stripped = body.lstrip()
+            if stripped.startswith(('{', '[')):
+                # SODA and other official open-data endpoints are JSON. Treat
+                # the complete response as searchable text rather than feeding
+                # it through an HTML parser, which would discard it.
+                text = normalize(body)
+                try:
+                    parsed.json_documents.append(json.loads(body))
+                except (ValueError, TypeError):
+                    pass
+            else:
+                parsed.feed(body)
+                text = normalize(' '.join(parsed.text))
             result['textHash'] = hashlib.sha256(text.encode()).hexdigest()
             # Avoid classifying ordinary contact-form CAPTCHA mentions as a barrier.
             if len(text) < 1500 and any(x in text for x in ('verify you are human', 'just a moment', 'access denied', 'enable javascript and cookies')):

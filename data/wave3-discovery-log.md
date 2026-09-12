@@ -46,10 +46,9 @@ They are recorded here as leads for a follow-up CSLB pass.
   Missing information is recorded as a gap, never inferred.
 - License/CSLB checks for all 51 wave-3 leads remain **pending**; only 21 direct CSLB reads
   exist from waves 1–2.
-- No property address, occupant information, access instruction, or private project note is stored
-  in this repository (privacy guardrail). This is public research, not a concealed work order.
+- No nonpublic project detail or personal data is stored in this repository (privacy guardrail).
+  This artifact contains only a generalized repair objective and public business research.
 - The research identifies and verifies **licensed, credentialed** contractors from public records.
-  Any plumbing/drywall/structural work in San Francisco — especially work affecting an occupied or
-  in-law unit — is the property owner's responsibility and should follow San Francisco Department
-  of Building Inspection requirements. A license check verifies legal identity and status; it is not
+  Plumbing, drywall, and structural scopes must be matched to current San Francisco Department of
+  Building Inspection requirements. A license check verifies legal identity and status; it is not
   a guarantee of a specific repair outcome.

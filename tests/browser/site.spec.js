@@ -91,6 +91,10 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
 }) => {
   await page.goto("/");
   await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
+  await expect(page.locator(".direction-card")).toHaveCount(6);
+  await expect(
+    page.getByRole("heading", { name: "Wave 8 research directions" }),
+  ).toBeVisible();
   await expect(
     page.getByRole("heading", {
       name: "Credential additions from the latest pass",
@@ -108,7 +112,9 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
   // the labels the compliance block actually carries.
   expect(data.compliance.officialLinks.length).toBeGreaterThan(2);
   for (const l of data.compliance.officialLinks) {
-    expect(l.url).toMatch(/^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org)\//);
+    expect(l.url).toMatch(
+      /^https:\/\/(www\.)?(sf\.gov|dbiweb02\.sfgov\.org|codelibrary\.amlegal\.com)\//,
+    );
     // Scoped to the action row: the inline [S175] citation points at the same
     // official URL, so an unscoped selector hits strict-mode.
     await expect(
