@@ -9,26 +9,58 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 12, 2026 · eight waves**
+**Checked through September 12, 2026 · nine waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **401** |
-| Direct CSLB license-detail reads | **120** |
-| Records with an active license at check time | **81** |
-| Records with a non-active license | **38** |
-| Records with no direct regulator read | **282** |
-| Retained review excerpts | **121** |
-| Evidence references | **305** |
-| Held or scope-excluded records | **50** |
-| Active-license records with regulator-recorded 94122 area evidence | **23** |
+| Unique business research records | **451** |
+| Direct CSLB license-detail reads | **137** |
+| Records with an active license at check time | **93** |
+| Records with a non-active license | **43** |
+| Records with no direct regulator read | **315** |
+| Retained review excerpts | **128** |
+| Evidence references | **352** |
+| Held or scope-excluded records | **57** |
+| Active-license records with regulator-recorded 94122 area evidence | **24** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 401 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 451 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 9: 50 new records in two published evidence tiers
+
+Wave 9 adds **50 nonduplicate businesses** after normalized name, near-name, phone, and CSLB-number collision checks against all 401 earlier records. Unlike earlier waves it does **not** claim a regulator read for every record, and the split is stated on each record rather than smoothed over:
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **17** | `LicenseDetail.aspx` opened and transcribed field by field | legal entity, business form, address, phone, issue and expiry dates, status text, every classification, bond, workers’ compensation, liability lines, Additional Status |
+| Registry only | **33** | City open-data permit registries | a recorded firm name, address, phone, license **number**, and permit identifiers — nothing more |
+
+- **12 active** and **5 non-active** licenses among the 17 reads; every non-active one is held
+- **35 completed permits** at work-location ZIP 94122 across both tiers
+- **4 licenses hold both plumbing and building classifications** (786183, 1013565, 373337, 341277)
+- **2 records earned the Outer Sunset area label**, because only for those does CSLB itself — not a directory — place the business in ZIP 94122
+- **7 review excerpts** attached; every other platform or community extract stayed a source
+- **47 new sources** (IDs 306–352), 29 of them official government pages
+- **15 discrepancy flags** and **7 holds** raised in this wave alone
+
+Registry-only records carry `license: null` and the trade value `registry-lead` (“Registry lead · classification not read”). That value requires no CSLB class, so `licenseSupportsTrade()` returns false and `mayPromote()` can never be satisfied: **a registry lead is structurally incapable of reaching the master list.** Each of those records repeats the caveat in its area text, in a `gap`-level flag, and in its plain gap list.
+
+Discovery ran from permits to contacts — the reverse of wave 8 — using completed 94122 permits in `a6aw-rudh` and `i98e-djp9`, joined to their recorded contacts in `k6kv-9kix` and `3pee-9qhc`, plus a firm-ZIP 94122 sweep of both contact registries. There is still no official CSLB bulk API; license facts come from `cslb.ca.gov` one page at a time.
+
+### Most relevant new directions—not additions to the call order
+
+- **Innovation Plumbing and Rooter (1013565)** — active C-36 **and** B on one license, with completed 94122 permit 202510288289 whose printed scope combines new drain and water lines with “replace a section of drywall apprx. 2x4'”. The closest plumbing-plus-finish match verified in wave 9, and **held anyway**: its only public review is a single 1.0-star Yelp entry on an unclaimed listing whose text could not be retrieved.
+- **Coit Construction (341277)** — active B and C-36 on one license since 1977, with a completed 94122 permit installing about 700 sq ft of 5/8 type sheetrock. Three ZIP variants across CSLB, the plumbing registry, and the building-permit contact row; BuildZoom reports no reviews.
+- **CT Plumbing & Fire Protection (1112261)** — active C-36 plus C-16, and the only wave-9 record where the regulator itself places the business inside ZIP 94122 (1847 48th Ave). The same address and phone are already stored against a different, never-read license number.
+- **Smelly Mel’s Plumbing Inc (786183)** — active A, C-36, B and C-16 with two completed 94122 sewer permits, and three attributable HomeAdvisor reviews. One displays 1.0 stars while its text reads as satisfied; both are preserved as published.
+- **KNB Tile and Stone Inc dba KNB Remodeling (1120735)** — active **B-2** Residential Remodeling plus B on a completed 94122 permit reading “replace tub in same location upgrade plumbing up to code as needed”, with no C-36 on the license.
+- **Kevel Home Performance (registry-only)** — a 94122 firm address with five plumbing and water-heater permit rows and four attributable reviews, including one describing work carried out while tenants were in place. Its Yelp categories are HVAC, energy and insulation, no CSLB page was read, and Angi prints that it does not offer free estimates.
+
+Every one remains outside the qualified master.
 
 ## Wave 8: 50 new records
 
-Wave 8 adds **50 nonduplicate businesses** after normalized name, phone, and CSLB-number collision checks against all 351 earlier records.
+Wave 8 added **50 nonduplicate businesses** after normalized name, phone, and CSLB-number collision checks against all 351 earlier records.
 
 - **23 plumbing-side records** and **27 restoration/general-building records**
 - **50 CSLB detail pages read directly**
@@ -40,7 +72,7 @@ Wave 8 adds **50 nonduplicate businesses** after normalized name, phone, and CSL
 
 The permit joins use separate official City datasets for contact identity and permit detail. A retained permit can establish a historical license contact, completion status, work ZIP, date, and described scope. It **cannot** establish current dispatch, current insurance, who performed every task on a multi-contact permit, or experience with the exact overflow mechanism.
 
-### Most relevant new directions—not additions to the call order
+### Most relevant wave-8 directions—not additions to the call order
 
 - **Flow Form Plumbing** — active C-36; completed 94122 permit; indexed evidence mentions very old tub/shower fixtures and profile content describes avoiding tile work on an old valve. No stuck-overflow result was found.
 - **Holland Plumbing Works** — active C-36; completed 94122 permit history; a dated syndicated account describes repair of a shower-handle mechanism. It is not an overflow trip lever and dates to 2011.
@@ -49,26 +81,27 @@ The permit joins use separate official City datasets for contact identity and pe
 - **Pro-Care Restoration Inc** — active B/C-22; completed 94122 water-damage drywall work; stated San Francisco County coverage. Duplicate review text, address variation, and an unsubstantiated negative allegation remain flagged.
 - **Hargens Inc** — active B, C-36, C-33, C-43, and C-20; completed 94122 water-damage drywall/plumbing-leak permit. Exact access and finish matching remain unverified.
 
-Every one remains outside the qualified master.
+## Three additional verification passes (run for every wave)
 
-## Three additional verification passes
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s are Passes 19–21:
 
-After the wave-8 discovery pass, the project ran three further fail-closed passes:
+1. **Regulator pass (19)** — 17 CSLB detail pages opened directly and transcribed field by field, including bond, workers’ compensation and liability lines; five licenses found non-active; the complaint disclosure behind 1017991 read as a separate page; every registry license number that was *not* read published as a lead with `license: null`.
+2. **Cross-source pass (20)** — registry identity compared with regulator identity field by field, producing 15 discrepancy flags: four phone conflicts, six registry spellings of one licensee, a license reissued to another entity in 2006, three ZIP variants on one active multi-trade license, and one address plus phone shared by two different license numbers. Directory pages checked for review corpora; unattributable Thumbtack category quotes and Reddit task threads quarantined as sources; CSLB class **B-2** discovered and added to the schema rather than mapped onto B.
+3. **Fail-closed qualification pass (21)** — no record promoted, the master list left empty, the nine-call order unchanged; holds raised for expired and inactive licenses, a workers’-compensation cancellation dated before the research date, and a single unreachable 1.0-star review; public-data privacy scrub; structural, render and browser tests re-run; merge verified idempotent.
 
-1. **Line-by-line source pass** — legal name, status, classifications, expiry, address, phone, permit number, completion date, work ZIP, and condensed scope checked against the cited regulator or City row.
-2. **Collision and attribution pass** — names, phones, and licenses checked against earlier records; review identity and duplicate text checked across accessible Yelp/search, Yahoo-fed Yelp, Nextdoor, Birdeye, GuildQuality, BuildZoom, Judy’s Book, and official business pages.
-3. **Publication-safety pass** — status/classification/coverage flags rechecked, public artifacts privacy-scrubbed, City permit guidance and Code §104.2 re-read, then structural, render, browser, source-monitor, and privacy tests run.
-
-The reproducible gates are in [`scripts/merge_wave8.py`](scripts/merge_wave8.py), and the evidence trail is in [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
 This project does **not** claim a complete all-review corpus.
 
 - Tested Yelp pages frequently returned access barriers; indexed extracts and Yahoo-fed Yelp excerpts are labeled as such.
-- The original Google panel was not retrieved. Three Google-attributed rows were read only through Birdeye and are labeled **Google via Birdeye**.
-- Birdeye displayed five Pro-Care rows but only three unique texts; two verbatim duplicate pairs were counted once each.
-- No safely attributable new wave-8 Reddit or Thumbtack review was found. Earlier-wave Reddit and Thumbtack evidence remains separately labeled.
+- The original Google panel was not retrieved. Three Google-attributed rows were read only through Birdeye and are labeled **Google via Birdeye**. A directory’s “Google 4.8 from 243 reviews” restatement for Smelly Mel’s could not be confirmed on Google and is stored as an unverified third-party claim, never rendered as a Google rating.
+- Wave 9 attached seven excerpts only: three HomeAdvisor reviews for Smelly Mel’s (identity matched on exact corporate name, city, and the CSLB phone) and four for Kevel Home Performance (identity matched on the Yelp listing’s own 3624 Ortega St 94122 address and (415) 213-5545 phone, both identical to the City registry row). `published` stays `null` wherever a platform shows only a month and year — no day is invented.
+- Yelp’s 4.5-star aggregate for Discount Plumbing Rooter Services was reachable only as JSON-LD photo-caption metadata, so it is quarantined as a source and no excerpt is attached. Yelp’s single 1.0-star review for Innovation Plumbing could not be retrieved at all; the record is held and nothing is attached.
+- BuildZoom states that the Coit Construction, Yu Plumbing and H&J Plumbing profiles “haven’t received any reviews”. Absence of reviews is stored as a gap, never as a neutral or positive signal.
+- Four Reddit threads in wave 9 are directly on-task for the repair itself — a stuck trip lever where penetrating oil and steam failed and the work “went thru the drywall”; access “from behind and below” through a downstairs neighbour’s ceiling with galvanized rust debris; a 1940s tub with an odd 1⅜ inch pipe; and a reply framing the patch as “sheetrock isn’t hard”. **None names a business**, so none became a review.
+- No safely attributable new wave-8 or wave-9 Thumbtack review was found. Earlier-wave Reddit and Thumbtack evidence remains separately labeled.
 - National Safe Step review corpora were rejected because continuity to the California contracting entity was not established.
 - A mismatched “DC Plumbing” review corpus was rejected rather than attached to license 1115284.
 - Business-hosted testimonials are labeled `company-published`, never presented as independent reviews.
@@ -76,23 +109,26 @@ This project does **not** claim a complete all-review corpus.
 
 Ratings are not blended across platforms. Inaccessible text remains incomplete rather than reconstructed.
 
-## Important wave-8 irregularities
+## Important wave-9 irregularities
 
-- All **10 non-active licenses** are held and cannot be presented as bookable.
-- **O’Connor Plumbing & Fire Protection** carries a CSLB reissue notice; confirm the current entity.
-- **Chen’s Construction and Mechanical** has a 2008 permit-contact row under an earlier firm name, predating the current entity’s 2020 reissue. That row proves license-number history, not current-entity performance.
-- **Axion Plumbing** has conflicting regulator and business/profile phone numbers.
-- **Pro-Care Restoration** has duplicate republished review text, address variation, and one preserved but unsubstantiated negative excerpt.
-- **Brus Box Contractor Works** markets plumbing, while CSLB lists B without C-36; the properly licensed plumbing performer must be identified. Its displayed workers-compensation date also requires a fresh check.
-- **RPRW / James Macmillan**, **Gerson Construction**, and **Wolfe Painting** remain held on current coverage, pending-citation, or near-term status concerns described in their records.
-- **Raxe Construction** has a workers-compensation policy date equal to the research date and requires rechecking.
-- **Hargens** has a current regulator/site address and an older platform address; the discrepancy remains visible.
+- **Admonishment letter on an active license.** San Francisco Remodel (1017991) is active with B only, and its CSLB page points to complaint disclosure: Complaint # N A 2025 2297, dated 06/23/2026, status **LETTER OF ADMONISHMENT ISSUED**. CSLB states a listed complaint is only an allegation of a probable violation and does not affect license status, so it is recorded as an allegation — and the firm’s completed 94122 permit includes plumbing repair it holds no C-36 for.
+- **Plumbing-scope permits without C-36.** Three licenses appear on City plumbing or plumbing-scope permits while CSLB shows no C-36: Euro Plumbing Inc dba General Contractor (1028917, B only, expired 2021), San Francisco Remodel (1017991, B only), and KNB Remodeling (1120735, B-2 and B, on a tub-replacement permit). Wave 8 had rejected 1028917 for a name mismatch; wave 9 opened the page and resolved it, so it is stored as a documented hold rather than dropped.
+- **One address and phone, two license numbers.** CSLB reads CT Plumbing & Fire Protection (1112261) at 1847 48th Ave, 94122 with (415) 203-7178 — the same address and phone the City registry stores for “C T Construction & Plumb” under license **533324**, which has never been read on CSLB. Re-licensing, shared office, and registry error all remain open. This is the wave’s only permitted phone overlap, and the merge gate accepts it **only** if the record publishes it.
+- **Six registry spellings of one licensee, and a 2006 reissue.** Lam Pui (373337) appears under six firm-name variants in the 94122 registry rows; CSLB shows the license expired 2010 and “LICENSE REISSUED TO ANOTHER ENTITY” on 04/06/2006, so the number no longer identifies the original contractor.
+- **Registry name does not match the regulator.** License 342141 is stored in the registry as “L & L Plumbing Inc.” with a 94122 address, but the CSLB licensee is LEE’S PLUMBING CO at 94118, expired 1997, with “no workers comp information found for this license”.
+- **Registry phone versus regulator phone (four conflicts).** 786183, 1097098, 1140843 and 1028917 each print a different phone in the City registry than on their CSLB page. The CSLB reading is stored; the registry reading is flagged.
+- **Workers’ compensation cancelled the day before the check.** Garzac Plumbing (830368) reads active, but State Fund policy 9242676 shows CANCELLATION DATE 09/11/2026 — one day before this research date. Held.
+- **Directory misspelling and a same-address inactive entity.** BuildZoom prints Yu Plumbing (1051988) as “Yu Pluming” and links an inactive “Y&L Plumbing Inc” (1041444, expired 2018) at the same 148 San Diego Ave address. No record was created for 1041444.
+- **City annotations left unresolved.** The registry prints “Kilb's Construction Inc\*\*\*Check Id\*\*\*”, two firm names against license 1033146, and “Boman Deign & Construction Inc” for 1111133. Each is flagged and the registry string is quoted as-read.
+- **Trade coverage contradicted in both directions.** Kevel Home Performance (1021221) sits on plumbing and water-heater permit rows while its Yelp categories are HVAC, energy and insulation; two Yelp snapshots also disagree on whether the listing is claimed.
+- **Star value contradicts review text.** The retained HomeAdvisor review from Michael N. displays 1.0 of 5 while its text reads as satisfied, and the extract ends mid-phrase. Both are preserved exactly as published and the mismatch is flagged.
+- **B-2 is a real classification the schema did not have.** `ALLOWED_CLASSES` in `lib.js` gained `"B-2"` rather than mapping it onto B, because a residential-remodeling license does not carry the same scope as a general building license.
 
 No irregularity is treated as wrongdoing unless an official source actually establishes it.
 
 ## Existing diagnostic call order
 
-The site retains the earlier nine-entry **diagnostic conversation order**. Wave 8 does not add or reorder it.
+The site retains the earlier nine-entry **diagnostic conversation order**. Waves 8 and 9 do not add or reorder it.
 
 1. Fast Response Plumbing & Rooter
 2. Heise’s Plumbing
@@ -116,11 +152,11 @@ A business can enter the qualified master only when all gates are supported:
 4. applicable insurance and a written non-destructive-first scope; and
 5. no unresolved blocking identity, status, classification, or coverage issue.
 
-`lib.js` and the merge scripts enforce the gate. Missing evidence never becomes a positive assumption.
+`lib.js` and the merge scripts enforce the gate. Missing evidence never becomes a positive assumption. Registry-only records cannot satisfy gate 1 by construction, because a record with no license read supports no trade.
 
 ## Permits and current official guidance
 
-The project re-read both sources on September 12, 2026:
+Both sources were read on September 12, 2026 and were not re-read during wave 9, so their stamps and published facts are unchanged:
 
 - [SF.gov · Apply for a plumbing and mechanical permit](https://www.sf.gov/apply-plumbing-and-mechanical-permit)
 - [San Francisco Plumbing Code §104.2 · Exempt Work](https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_building/0-0-0-85830)
@@ -129,7 +165,7 @@ The City page states the trigger for cutting into or replacing pipes and require
 
 ## Privacy and responsible publication
 
-Only a generalized repair objective and public business evidence belong in this repository. Nonpublic project details and personal data are excluded. A one-way-fingerprint regression test scans repository text artifacts so excluded context is not restated in the test itself.
+Only a generalized repair objective and public business evidence belong in this repository. Nonpublic project details and personal data are excluded. A one-way-fingerprint regression test scans repository text artifacts so excluded context is not restated in the test itself — it scans every text file, including wave logs, generators and UI copy, and it rejected one draft phrase during wave 9.
 
 The project does not contact businesses, submit forms, book appointments, bypass access controls, or store credentials. Public source links are retained for manual review.
 
@@ -153,11 +189,11 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 8:
+Rebuild and validate wave 9:
 
 ```sh
-python3 scripts/gen_wave8.py
-python3 scripts/merge_wave8.py   # idempotent after a successful merge
+python3 scripts/gen_wave9.py     # rebuilds data/wave9.json and runs a collision pre-flight
+python3 scripts/merge_wave9.py   # idempotent after a successful merge
 npm test
 ```
 
@@ -181,20 +217,22 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 - `assets/mark.svg`
 - `data/research.json`
 
-Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings.
+Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-9 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a09694-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a09707-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 
 ```text
 index.html, styles.css, app.js    Static GitHub Pages UI
-lib.js                           Filters, exports, counts, and promotion gate
-data/research.json               Merged schema-v2 dataset (401 records, 8 waves)
-data/wave2.json … wave8.json     Reproducible per-wave artifacts
+lib.js                           Filters, exports, counts, allowed classes, and promotion gate
+data/research.json               Merged schema-v2 dataset (451 records, 9 waves)
+data/wave2.json … wave9.json     Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
+scripts/gen_wave9.py             Wave-9 generator (two evidence tiers)
+scripts/merge_wave9.py           Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave8.py             Wave-8 generator
-scripts/merge_wave8.py           Collision-gated, privacy-gated fail-closed merge
+scripts/merge_wave8.py           Wave-8 fail-closed merge
 scripts/check_sources.py         Read-only source monitor
 scripts/serve.py                 Public-file-only preview server
 tests/research.test.js           Dataset, collision, privacy, and qualification invariants
