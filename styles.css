@@ -433,10 +433,27 @@ main {
   font-weight: 550;
   white-space: nowrap;
 }
-.shortlist {
+.shortlist,
+.direction-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+.direction-grid {
+  margin-top: 16px;
+}
+.direction-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.direction-card .candidate-top {
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+.direction-card > p {
+  flex: 1;
+  line-height: 1.6;
 }
 .candidate {
   border: 1px solid var(--line);
@@ -922,7 +939,7 @@ td p {
 }
 .coverage-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
   gap: 12px;
   margin: 24px 0;
 }
@@ -1423,6 +1440,7 @@ footer span {
     font-size: 11px;
   }
   .shortlist,
+  .direction-grid,
   .summary-bottom,
   .review-grid,
   .method-grid,

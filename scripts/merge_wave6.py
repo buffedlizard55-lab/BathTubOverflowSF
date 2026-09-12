@@ -58,7 +58,7 @@ TRADE_REQUIRES = {
     "finish": [{"C-9"}, {"C35"}, {"B"}, {"C-9", "B"}],
     "general": [{"B"}],
     "engineering": [{"A"}],
-    "multi-trade": [{"B"}, {"C36"}, {"B", "C36"}],
+    "multi-trade": [{"B", "C36"}],
 }
 NOT_ACTIVE = {"expired", "canceled", "cancelled", "suspended", "inactive", "revoked"}
 

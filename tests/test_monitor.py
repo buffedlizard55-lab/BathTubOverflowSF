@@ -53,6 +53,19 @@ class SourceMonitorTests(unittest.TestCase):
         self.assertFalse(out['evidenceChecks'][0]['excerptFound'])
         self.assertTrue(out['findings'])
 
+    def test_json_open_data_is_searched_without_html_parsing(self):
+        class JsonPage:
+            def fetch(self, url):
+                return '[{"permit_number":"P-1","status":"complete"}]', url, [], 'retrieved', 'HTTP 200'
+        out = m.audit_one(
+            JsonPage(),
+            'https://example.com/data.json',
+            [{'id': 1, 'kind': 'government'}],
+            [('permit', '"permit_number":"P-1"')],
+        )
+        self.assertTrue(out['evidenceChecks'][0]['excerptFound'])
+        self.assertEqual(out['state'], 'retrieved')
+
     def test_robots_failure_skips_page(self):
         with patch.object(m, 'public_url', return_value=m.parse.urlsplit('https://example.com/')):
             monitor = m.Monitor()

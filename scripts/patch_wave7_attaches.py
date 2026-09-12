@@ -89,6 +89,7 @@ platform "license verified" badge never populates the licence field; nothing is
 promoted to master; review invariants (back-reference, <500 characters,
 exactTask false) still hold.
 """
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -106,11 +107,30 @@ TRADE_REQUIRES = {
     "finish": [{"C-9"}, {"C35"}, {"B"}],
     "general": [{"B"}],
     "engineering": [{"A"}],
-    "multi-trade": [{"B"}, {"C36"}],
+    "multi-trade": [{"B", "C36"}],
 }
 NOT_ACTIVE = {"expired", "suspended", "canceled", "inactive", "revoked"}
-FORBIDDEN = ("rent control", "in-law unit", "without a permit", "no permit",
-             "unpermitted", "discreet", "do not disclose")
+PRIVATE_MARKER_DIGESTS = {
+    "710cdcb6c633b8993d8a341d73f247282495408c2a12cc797c8006bc327464a8",
+    "bea6c284fb02b5d0aa611eb727ee69cdfa283f832f667cc45edb395d9510841f",
+    "510d3a4233002578d42ac8558c5324d8ffbd34ab0e08eb0b2a2c00485f77a361",
+    "ae2785f2d5d577ecc622fecffaec531fd1687d55c347569fe805bf27af17c47e",
+    "66f4a7521f5a2a3b0b21c97c9fd4e28c0564fbe5b75ae3ce316b4d157dd55bfc",
+    "9903c83e316d8a40f84bc00adf967aa5caa0e58bec37584e45cf16b97edcd317",
+    "cf109ac20d0a56c95192a248efbe6bc41c16113928b786d8588830efbb79f5d6",
+    "4c2733abf54ccb0f418600316449c0a3d7bfe21de1894dae833860be7f5f3434",
+    "bcbb4b2505d42b71121ea904ec141a825e4f3fd90d4f694d5b81e4a3f77a07e1",
+}
+
+
+def assert_privacy_safe(value):
+    words = re.findall(r"[a-z0-9]+", json.dumps(value, ensure_ascii=False).lower())
+    for width in range(1, 4):
+        for index in range(len(words) - width + 1):
+            text = " ".join(words[index:index + width])
+            assert hashlib.sha256(text.encode()).hexdigest() not in PRIVATE_MARKER_DIGESTS, \
+                "private-context marker detected"
+
 
 data = json.loads(TARGET.read_text())
 assert any(b["id"].startswith("w7-") for b in data["businesses"]), "run merge_wave7.py first"
@@ -933,9 +953,7 @@ for b_ in data["businesses"]:
     assert b_["checkedAt"] in data["researchDates"], b_["id"]
     assert b_["claims"] and b_["claims"][0]["field"] == "Discovery", b_["id"]
     assert len(b_["gaps"]) >= 2, b_["id"]
-    blob = json.dumps(b_, ensure_ascii=False).lower()
-    for phrase in FORBIDDEN:
-        assert phrase not in blob, f"{b_['id']} contains forbidden phrase {phrase!r}"
+    assert_privacy_safe(b_)
     for c in b_["claims"]:
         assert c["source"] in sources, (b_["id"], c["source"])
         assert c["text"].strip() and c["excerpt"].strip(), b_["id"]
