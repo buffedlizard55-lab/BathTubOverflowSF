@@ -92,8 +92,8 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
   await page.goto("/");
   await expect(page.locator(".candidate")).toHaveCount(SHORTLIST);
   // Editorial direction cards: six for wave 8, six for wave 9, four for
-  // wave 10.
-  await expect(page.locator(".direction-card")).toHaveCount(16);
+  // wave 10, and four for wave 11.
+  await expect(page.locator(".direction-card")).toHaveCount(20);
   await expect(
     page.getByRole("heading", { name: "Wave 8 research directions" }),
   ).toBeVisible();
@@ -102,6 +102,9 @@ test("summary surfaces both shortlist tiers and the official permit panel", asyn
   ).toBeVisible();
   await expect(
     page.getByRole("heading", { name: "Wave 10 research directions" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Wave 11 research directions" }),
   ).toBeVisible();
   await expect(
     page.getByRole("heading", {

@@ -94,6 +94,10 @@ export const ALLOWED_CLASSES = [
   "C29",
   "C54",
   "C36",
+  "C12",
+  "C27",
+  "C39",
+  "C45",
   "C-9",
   "C35",
   "C-4",
@@ -133,6 +137,10 @@ export const TRADE_CLASSES = {
   // covers both trades this project requires. It is labelled for what it is
   // rather than folded into multi-trade, which only asserts B + C36.
   "plumbing-and-drywall": [["C-9", "C36"]],
+  // Wave 11 preserves real CSLB classifications that do not cover the
+  // project's required plumbing-plus-drywall combination. These labels are
+  // intentionally non-promotable scope exclusions, not guessed trades.
+  "scope-exclusion": [["A"], ["B"], ["C12"], ["C20"], ["C27"], ["C39"], ["C43"], ["C45"]],
   // A registry-only lead asserts no classification at all, so no class set can
   // satisfy it and such a record can never reach the promotion gate.
   "registry-lead": [],
@@ -147,6 +155,7 @@ export const TRADE_LABELS = {
   "multi-trade": "Multi-trade",
   masonry: "Masonry (C-29) · scope excluded",
   tile: "Tile (C-54) · scope excluded",
+  "scope-exclusion": "Other CSLB class · plumbing/drywall scope excluded",
   "plumbing-and-drywall": "Plumbing (C-36) + drywall (C-9) on one licence",
   "registry-lead": "Registry lead · classification not read",
 };

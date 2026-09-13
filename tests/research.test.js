@@ -56,8 +56,8 @@ function assertPrivacySafe(value, label) {
       );
 }
 
-test("exactly 501 unique discovery entries across ten waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 501);
+test("exactly 551 unique discovery entries across eleven waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 551);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, [
     "2026-09-10",
@@ -65,10 +65,10 @@ test("exactly 501 unique discovery entries across ten waves, no fabricated maste
     "2026-09-12",
   ]);
   assert.equal(data.researchedAt, "2026-09-12");
-  assert.equal(data.waves.length, 10);
+  assert.equal(data.waves.length, 11);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    501,
+    551,
   );
   assert.deepEqual(data.waves[7], {
     wave: 8,
@@ -95,9 +95,9 @@ test("exactly 501 unique discovery entries across ten waves, no fabricated maste
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      501,
+      551,
     );
-  // wave 10 publishes its own regulator reads, registry leads and platform rows
+  // wave 10 publishes its own regulator reads, registry leads and platform rows; wave 11 follows below
   assert.deepEqual(data.waves[9], {
     wave: 10,
     date: "2026-09-12",
@@ -239,8 +239,8 @@ test("shortlist requires an active license whose class covers its trade", () => 
   // Wave 10 adds 23 regulator reads (15 active, 8 non-active and held) and ten verification
   // upgrades that attach a licence to a stored record, and 22 registry-only
   // leads plus 5 platform listings that hold no licence at all.
-  assert.equal(evidenceCounts(data).active, 114);
-  assert.equal(evidenceCounts(data).inactive, 55);
+  assert.equal(evidenceCounts(data).active, 144);
+  assert.equal(evidenceCounts(data).inactive, 70);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -254,7 +254,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 114);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 144);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -762,7 +762,7 @@ test("wave 8 irregularities remain visible and never relax the master gate", () 
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
   // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
   // seven follow-up targets, which remain pre-existing ids.
-  assert.equal(data.businesses.length, 501);
+  assert.equal(data.businesses.length, 551);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -863,11 +863,12 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
       (r) =>
         !r.business.startsWith("w8-") &&
         !r.business.startsWith("w9-") &&
-        !r.business.startsWith("w10-"),
+        !r.business.startsWith("w10-") &&
+        !r.business.startsWith("w11-"),
     ).length,
     98,
   );
-  assert.equal(data.reviews.length, 133);
+  assert.equal(data.reviews.length, 137);
 });
 
 test("wave 9 separates CSLB-read records from registry-only leads and promotes nothing", () => {
@@ -1074,4 +1075,69 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
   assert.match(data.methodology.governmentSources, /137 distinct license numbers, 17 read in wave 9/);
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.priority).length, 9);
+});
+
+test("wave 11 keeps regulator reads, registry leads and platform listings fail-closed", () => {
+  const w11 = data.businesses.filter((b) => b.id.startsWith("w11-"));
+  assert.equal(w11.length, 50);
+  assert.deepEqual(data.waves[10], {
+    wave: 11,
+    date: "2026-09-12",
+    count: 50,
+    cslbReads: 42,
+    registryOnly: 4,
+    platformListings: 4,
+    verificationUpgrades: 3,
+    retainedReviewExcerpts: 4,
+  });
+  const reads = w11.filter((b) => b.license);
+  assert.equal(reads.length, 42);
+  assert.equal(reads.filter((b) => b.license.status === "active").length, 28);
+  assert.equal(reads.filter((b) => b.license.status !== "active").length, 14);
+  for (const b of reads) {
+    const s = sources.get(b.license.source);
+    assert.equal(s.kind, "government", b.id);
+    assert.equal(s.access, "page", b.id);
+    assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
+    assert.ok(s.url.includes(b.license.number), b.id);
+    assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
+    assert.notEqual(b.area, "outer", `${b.id} has no direct Outer Sunset evidence`);
+    if (b.license.status !== "active") assert.equal(b.status, "hold", b.id);
+  }
+  const leads = w11.filter((b) => b.trade === "registry-lead");
+  assert.equal(leads.length, 4);
+  for (const b of leads) {
+    assert.equal(b.license, null, b.id);
+    assert.equal(mayPromote(b), false, b.id);
+    assert.ok(b.flags.some((f) => /NOT been read on CSLB/.test(f.text)), b.id);
+    assert.notEqual(b.area, "outer", b.id);
+  }
+  const platform = w11.filter((b) => b.platformLinks.length);
+  assert.equal(platform.length, 4);
+  for (const b of platform) {
+    assert.equal(b.license, null, b.id);
+    assert.equal(b.status, "hold", b.id);
+    assert.equal(sources.get(b.platformLinks[0].source).access, "page", b.id);
+    assert.match(sources.get(b.platformLinks[0].source).url, /^https:\/\/www\.thumbtack\.com\//, b.id);
+  }
+  const reviews = data.reviews.filter((r) => r.business.startsWith("w11-"));
+  assert.equal(reviews.length, 4);
+  for (const r of reviews) {
+    assert.equal(r.platform, "Thumbtack", r.id);
+    assert.equal(r.exactTask, false, r.id);
+    assert.equal(r.access, "page", r.id);
+    assert.ok(byId.get(r.business).reviewIds.includes(r.id), r.id);
+  }
+  assert.deepEqual(
+    data.verificationUpgrades.slice(-3).map((u) => u.record).sort(),
+    ["a1-plumbing", "amx", "sugar-bear"],
+  );
+  for (const id of ["amx", "sugar-bear", "a1-plumbing"]) {
+    const b = byId.get(id);
+    assert.ok(b.license, id);
+    assert.equal(b.verifiedAt, "2026-09-12", id);
+    assert.equal(b.license.source >= 472, true, id);
+    assert.equal(b.master, false, id);
+  }
+  assert.equal(data.master.length, 0);
 });

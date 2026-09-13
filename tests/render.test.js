@@ -132,8 +132,8 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   assert.match(el("#snapshot-date").textContent, /Sep 12, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
-  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 16);
-  assert.equal((html.match(/direction-card panel/g) || []).length, 16);
+  assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 20);
+  assert.equal((html.match(/direction-card panel/g) || []).length, 20);
   assert.match(html, /Wave 8 research directions/);
   assert.match(html, /Wave 9 research directions/);
   assert.match(html, /Wave 10 research directions/);
@@ -205,11 +205,12 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /No CSLB page read for this record/);
     }
     if (view === "method") {
-      assert.match(html, /170 distinct CSLB license detail pages/);
-      assert.match(html, /10 waves/);
-      assert.match(html, /501 businesses discovered/);
-      assert.match(html, /114 records show an active license/);
+      assert.match(html, /215 distinct CSLB license detail pages/);
+      assert.match(html, /11 waves/);
+      assert.match(html, /551 businesses discovered/);
+      assert.match(html, /144 records show an active license/);
       assert.match(html, /Wave 10 \(Sep 12, 2026\)/);
+      assert.match(html, /Wave 11 \(Sep 12, 2026\)/);
       // the live totals must not be attributed to a single wave's bullet
       assert.match(html, /Wave 8 \(Sep 12, 2026\)/);
       // This live total is computed from the dataset, not hard-coded in app.js.
@@ -217,7 +218,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
       // 94122 address (the wave-9 total was 24), so it now reads 37.
       assert.match(html, /37 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
-      assert.match(html, /Waves 8, 9 and 10 each received three additional passes/);
+      assert.match(html, /Waves 8, 9, 10 and 11 each received three additional passes/);
       // the live totals stay out of any single wave's bullet
       assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
       assert.match(html, /12 active, 5 non-active and held/);

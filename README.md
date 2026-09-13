@@ -9,22 +9,40 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 12, 2026 · ten waves**
+**Checked through September 12, 2026 · eleven waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **501** |
-| Direct CSLB license-detail reads | **170** |
-| Records with an active license at check time | **114** |
-| Records with a non-active license | **55** |
-| Records with no direct regulator read | **332** |
-| Retained review excerpts | **133** |
-| Evidence references | **400** |
-| Held or scope-excluded records | **64** |
+| Unique business research records | **551** |
+| Direct CSLB license-detail reads | **215** |
+| Records with an active license at check time | **144** |
+| Records with a non-active license | **70** |
+| Records with no direct regulator read | **337** |
+| Retained review excerpts | **137** |
+| Evidence references | **466** |
+| Held or scope-excluded records | **91** |
 | Active-license records with regulator-recorded 94122 area evidence | **37** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 501 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 551 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 11: 50 new records in three published evidence tiers
+
+Wave 11 adds **50 nonduplicate businesses** after identity, phone, normalized-name, licence-number and source checks against the earlier corpus. It keeps the evidence tiers separate and publishes three verification upgrades against existing records rather than counting them as new businesses:
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **42** | `LicenseDetail.aspx` opened and transcribed field by field | legal entity, business form, address, phone, issue and expiry dates, status text, every classification, bond, workers’ compensation, liability lines and Additional Status |
+| Registry only | **4** | City open-data permit registries | a recorded firm name, address, phone, licence **number** and permit identifiers — nothing more |
+| Platform listing | **4** | Thumbtack category page read directly | the listing’s own category, hire count or review text, with no licence implication |
+
+- **28 active** and **14 non-active** licenses among the 42 direct reads; every non-active one is held
+- **3 verification upgrades** attached to `amx`, `sugar-bear` and `a1-plumbing`; the expired upgrade remains held
+- **66 new sources** (IDs 401–474, with deliberate gaps in the artifact IDs) and **4 retained review excerpts** (R134–R137)
+- No record was promoted, assigned a priority, or added to the qualified master; wave 11 remains fully held or research-only
+- The adjacent-ZIP discovery channel is evidence of a recorded registry address only. It does not establish present Outer Sunset dispatch, both-trade coverage, insurance, or exact repair experience.
+
+The four registry-only records carry `license: null` and the trade value `registry-lead` (“Registry lead · classification not read”). A registry lead is structurally incapable of reaching the master list because it has no regulator-backed classification. The four platform records likewise carry no CSLB fact, even when the platform displays a “Licensed pro” badge. All four attached review excerpts are retained as platform evidence and marked `exactTask: false`.
 
 ## Wave 10: 50 new records in three published evidence tiers
 
@@ -115,13 +133,13 @@ The permit joins use separate official City datasets for contact identity and pe
 
 ## Three additional verification passes (run for every wave)
 
-After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s are Passes 22–24:
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27:
 
 1. **Regulator pass (19)** — 17 CSLB detail pages opened directly and transcribed field by field, including bond, workers’ compensation and liability lines; five licenses found non-active; the complaint disclosure behind 1017991 read as a separate page; every registry license number that was *not* read published as a lead with `license: null`.
 2. **Cross-source pass (20)** — registry identity compared with regulator identity field by field, producing 15 discrepancy flags: four phone conflicts, six registry spellings of one licensee, a license reissued to another entity in 2006, three ZIP variants on one active multi-trade license, and one address plus phone shared by two different license numbers. Directory pages checked for review corpora; unattributable Thumbtack category quotes and Reddit task threads quarantined as sources; CSLB class **B-2** discovered and added to the schema rather than mapped onto B.
 3. **Fail-closed qualification pass (21)** — no record promoted, the master list left empty, the nine-call order unchanged; holds raised for expired and inactive licenses, a workers’-compensation cancellation dated before the research date, and a single unreachable 1.0-star review; public-data privacy scrub; structural, render and browser tests re-run; merge verified idempotent.
 
-The reproducible gates are in [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
@@ -221,14 +239,18 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 10:
+Rebuild and validate wave 11 from a clean wave-10 dataset:
 
 ```sh
-git checkout -- data/research.json   # restore the committed 451-record baseline first
-python3 scripts/gen_wave10.py        # rebuilds data/wave10.json and runs a collision pre-flight
-python3 scripts/merge_wave10.py      # fail-closed merge; idempotent after a successful run
+git checkout -- data/research.json   # restore the committed 501-record baseline first
+python3 scripts/gen_wave11.py        # rebuilds data/wave11.json and runs a collision pre-flight
+python3 scripts/merge_wave11.py      # fail-closed merge; idempotent after a successful run
 npm test
+npm run test:browser
 ```
+
+The wave-11 merge verifies source links, identity and licence collisions, registry/platform tier boundaries, classification coverage, review attribution, privacy, non-active holds and upgrade targets before writing the merged dataset. It does not promote records to the master list.
+
 
 ## Read-only source monitoring
 
@@ -250,20 +272,22 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 - `assets/mark.svg`
 - `data/research.json`
 
-Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-9 pushes are validated; deployment remains `main`-only.
+Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-11 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a097ab-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a097d2-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 
 ```text
 index.html, styles.css, app.js    Static GitHub Pages UI
 lib.js                           Filters, exports, counts, allowed classes, and promotion gate
-data/research.json               Merged schema-v2 dataset (501 records, 10 waves)
-data/wave2.json … wave10.json    Reproducible per-wave artifacts
+data/research.json               Merged schema-v2 dataset (551 records, 11 waves)
+data/wave2.json … wave11.json    Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
+scripts/gen_wave11.py            Wave-11 generator (three evidence tiers plus upgrades)
+scripts/merge_wave11.py          Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave10.py            Wave-10 generator (three evidence tiers)
-scripts/merge_wave10.py          Collision-, privacy- and tier-gated fail-closed merge
+scripts/merge_wave10.py          Wave-10 collision-, privacy- and tier-gated merge
 scripts/gen_wave9.py             Wave-9 generator (two evidence tiers)
 scripts/merge_wave9.py           Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave8.py             Wave-8 generator
