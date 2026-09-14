@@ -9,22 +9,40 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 12, 2026 · eleven waves**
+**Checked through September 14, 2026 · twelve waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **551** |
-| Direct CSLB license-detail reads | **215** |
-| Records with an active license at check time | **144** |
+| Unique business research records | **601** |
+| Direct CSLB license-detail reads | **218** |
+| BuildZoom-verified CSLB reads | **3** |
+| Records with an active license at check time | **147** |
 | Records with a non-active license | **70** |
-| Records with no direct regulator read | **337** |
-| Retained review excerpts | **137** |
-| Evidence references | **466** |
+| Records with no direct regulator read | **384** |
+| Retained review excerpts | **147** |
+| Evidence references | **517** |
 | Held or scope-excluded records | **91** |
 | Active-license records with regulator-recorded 94122 area evidence | **37** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 551 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 601 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 12: 50 new records with BuildZoom CSLB verification
+
+Wave 12 adds **50 nonduplicate businesses** from fresh platform discovery across Yelp, Thumbtack, BuildZoom, Google, Reddit, Porch, and company websites. The wave prioritises businesses advertising combined plumbing and drywall/repair services, old-house experience, and verified Outer Sunset service.
+
+**Key CSLB discoveries via BuildZoom:**
+
+| Business | License | Classifications | Status | Significance |
+| --- | --- | --- | --- | --- |
+| Rapid Flow Plumbing & Rooter Inc | 1115649 | B (General Building) + C-36 (Plumbing) | Active through Jan 2028 | Dual-licensed: can perform both plumbing AND general building/drywall work |
+| Handyman Heroes Inc | 1003394 | B + C-10 (Electrical) + C-36 (Plumbing) | Active | Triple-licensed; SF DBI permit at 1225 Quintara St (94122/Outer Sunset) |
+| Repipe Champions Plumbing and Rooter | 1057926 | B + C-36 + C-22 + C-2 | Active | Includes drywall patching in every repipe; galvanized pipe expertise |
+
+- **51 new sources** (IDs 475–525) and **10 retained review excerpts** (R138–R147)
+- **5 false claims rejected** — Yelp/Thumbtack badges are not CSLB reads; proximity search results are not service confirmation
+- No record was promoted, assigned a priority, or added to the qualified master; wave 12 remains fully held or research-only
+- The three BuildZoom reads are treated as third-party aggregator evidence; direct CSLB `LicenseDetail.aspx` reads remain the verification gold standard
 
 ## Wave 11: 50 new records in three published evidence tiers
 

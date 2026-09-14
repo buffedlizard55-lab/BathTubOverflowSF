@@ -1,0 +1,2744 @@
+{
+ "wave": 12,
+ "date": "2026-09-14",
+ "note": "Wave 12 adds 50 new research records from fresh platform discovery across Yelp, Thumbtack, BuildZoom, Google, and Reddit. Both plumbing and drywall remain required for qualification; no record is promoted and master remains empty. Key CSLB reads: Rapid Flow Plumbing (1115649, B+C36, active), Handyman Heroes (1003394, B+C10+C36, active), Repipe Champions (1057926, B+C36, active). Wave 12 prioritises businesses advertising both plumbing AND drywall/repair services, old-house experience, and verified Outer Sunset service area.",
+ "composition": {
+  "cslbReads": 3,
+  "buildZoomReads": 3,
+  "platformListings": 28,
+  "registryOnly": 0,
+  "companySiteReads": 16,
+  "retainedReviewExcerpts": 10
+ },
+ "sources": [
+  {
+   "id": 475,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/biz/rapid-flow-plumbing-and-rooter-san-francisco",
+   "title": "Rapid Flow Plumbing & Rooter — Yelp listing",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 476,
+   "kind": "buildzoom",
+   "access": "page",
+   "url": "https://www.buildzoom.com/contractor/rapid-flow-plumbing-and-rooter",
+   "title": "BuildZoom — Rapid Flow Plumbing (License 1115649, B+C-36, Active)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 477,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.rapidflowbayarea.com/",
+   "title": "Rapid Flow Plumbing & Rooter — Official site",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 478,
+   "kind": "buildzoom",
+   "access": "page",
+   "url": "https://www.buildzoom.com/contractor/handyman-heroes-inc-san-francisco",
+   "title": "BuildZoom — Handyman Heroes (License 1003394, B+C10+C36, Active)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 479,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/handyman-heroes-san-francisco-4",
+   "title": "Handyman Heroes — Yelp (4.7, 399 reviews)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 480,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.handymanhero.es/plumbing-services/plumbing/",
+   "title": "Handyman Heroes — Plumbing Services page",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 481,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/shg-plumbing-contractors-south-san-francisco",
+   "title": "SHG Plumbing Contractors — Yelp (5.0, 8 reviews)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 482,
+   "kind": "company",
+   "access": "page",
+   "url": "https://shgplumbing.com/bathtub-replacement-san-francisco/",
+   "title": "SHG Plumbing — Bathtub Replacement page",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 483,
+   "kind": "trustindex",
+   "access": "page",
+   "url": "https://www.trustindex.io/reviews/shgplumbing.com/lang/en",
+   "title": "SHG Plumbing — Trustindex reviews (21 reviews, 5.0)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 484,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/precision-flow-plumbing-san-francisco",
+   "title": "Precision Flow Plumbing — Yelp listing",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 485,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.precisionflowplumbing.com/",
+   "title": "Precision Flow Plumbing — Official site (415-873-3774, SF 94134)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 486,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/albion-plumbing-and-rooter-oakland",
+   "title": "Albion Plumbing & Rooter — Yelp listing",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 487,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Handyman+Plumber&find_loc=San+Francisco",
+   "title": "Yelp search — Handyman Plumber SF (Handlify results)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 488,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/handlify-san-francisco-3",
+   "title": "Handlify — Yelp (4.9, 152 reviews, SF 94131)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 489,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Repair&find_loc=San+Francisco",
+   "title": "Yelp — Bathroom Repair SF (Handlify drywall mention)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 490,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=drywall+repair+service&find_loc=Outer+Sunset",
+   "title": "Yelp — Drywall repair Outer Sunset (Toms Painters, Speedy Patch area)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 491,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.speedypatchdrywall.com/damage/plumbing/",
+   "title": "Speedy Patch Drywall — Plumbing Drywall Repair page",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 492,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=plumber&find_loc=Outer+Sunset",
+   "title": "Yelp — Plumber Outer Sunset Sep 2026",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 493,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Contractor&find_loc=San+Francisco",
+   "title": "Yelp — Bathroom Contractor SF (Fahan, Benjamin Shaw, etc.)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 494,
+   "kind": "company",
+   "access": "page",
+   "url": "https://legendplumbingsf.com/",
+   "title": "Legend Plumbing & Drain — Official site",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 495,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/legend-plumbing-and-drain-san-francisco",
+   "title": "Legend Plumbing & Drain — Yelp (5.0, 19 reviews, SF 94117)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 496,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/phams-plumbing-san-francisco",
+   "title": "Pham's Plumbing — Yelp (4.6, 20 reviews, SF 94116)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 497,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Handyman&find_loc=Outer+Sunset",
+   "title": "Yelp — Handyman Outer Sunset (Octavio, Reasonably Honest Mike's)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 498,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset",
+   "title": "Yelp — Drywall Installation Outer Sunset",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 499,
+   "kind": "reddit",
+   "access": "thread",
+   "url": "https://www.reddit.com/r/AskSF/comments/jcy9dl/can_you_recommend_a_plumber/",
+   "title": "r/AskSF — Can you recommend a plumber? (Pipeline, A-1, Ace mentions)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 500,
+   "kind": "reddit",
+   "access": "thread",
+   "url": "https://www.reddit.com/r/AskSF/comments/171irdh/looking_for_a_contractor_in_or_near_sf_who_does/",
+   "title": "r/AskSF — Looking for drywall contractor SF (Paul Woodford hired)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 501,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+   "title": "Yelp — Bathroom Remodel SF (Prosper, Mission, Green Group, etc.)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 502,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=inner+sunset",
+   "title": "Yelp — Plumbing Inner Sunset (Oro Pro, Central Service)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 503,
+   "kind": "diamond-certified",
+   "access": "page",
+   "url": "https://www.diamondcertified.org/bay-area-plumbing/",
+   "title": "Diamond Certified — Mason Plumbing (252 surveys, 4.7)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 504,
+   "kind": "buildzoom",
+   "access": "page",
+   "url": "https://repipechampions.com/",
+   "title": "Repipe Champions — Official site (CSLB #1057926)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 505,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.heisesplumbing.com/property-maintenance/handyman-and-repair-services/",
+   "title": "Heise's Plumbing — Handyman & Drywall Patching Services",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 506,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractors&find_loc=San+Francisco",
+   "title": "Yelp — Bathroom Remodeling Contractors SF",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 507,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Repair&find_loc=San+Francisco",
+   "title": "Yelp — Drywall Repair SF (Bernal Hill, Amador's area)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 508,
+   "kind": "yelp",
+   "access": "page",
+   "url": "https://www.yelp.com/biz/drywall-and-painting-sf-san-francisco-2",
+   "title": "Drywall & Painting SF — Yelp (3.3, 7 reviews)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 509,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=24+hour+plumber&find_loc=Outer+Sunset",
+   "title": "Yelp — 24 Hour Plumber Outer Sunset (Amorim Plumbing found)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 510,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=San+Francisco%2C+CA+94122",
+   "title": "Yelp — Plumbing 94122 (J&K Plumbing, Martinez found)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 511,
+   "kind": "thumbtack",
+   "access": "page",
+   "url": "https://www.thumbtack.com/ca/san-francisco/handyman/shane/service/367989586839937028",
+   "title": "Thumbtack — Shane (SF 94122, 19yr plumber+carpenter)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 512,
+   "kind": "company",
+   "access": "page",
+   "url": "https://zomgthehandyman.com/drywall-repair/san-francisco",
+   "title": "Zomg The Handyman — Drywall Repair SF",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 513,
+   "kind": "company",
+   "access": "page",
+   "url": "https://watersfault.com/",
+   "title": "Water's Fault — Water Damage Restoration (drywall + plumbing)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 514,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Plumbing+Service&find_loc=NoPa",
+   "title": "Yelp — Plumbing Service NoPa (Handy Helper plumbing)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 515,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Plumbing+Contractors&find_loc=San+Francisco",
+   "title": "Yelp — Plumbing Contractors SF (Build by Bogdan, etc.)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 516,
+   "kind": "porch",
+   "access": "page",
+   "url": "https://pro.porch.com/san-francisco-ca/bathtub-installation/cs",
+   "title": "Porch — Bathtub Installation SF (Metzler Brothers, etc.)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 517,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel+Contractors&find_loc=San+Francisco",
+   "title": "Yelp — Bathroom Remodel Contractors SF (K&H, Edri, etc.)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 518,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Galvanized+Pipe+Repair&find_loc=San+Francisco",
+   "title": "Yelp — Galvanized Pipe Repair SF (Handlify, Ace, Discount)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 519,
+   "kind": "company",
+   "access": "page",
+   "url": "https://www.handymanhero.es/city/san-francisco-ca/",
+   "title": "Handyman Heroes — SF City page (drywall + plumbing listed)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 520,
+   "kind": "company",
+   "access": "page",
+   "url": "https://advancedplumbingsf.com/",
+   "title": "Advanced Plumbing & Drain — Official site",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 521,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Plumbing+Service&find_loc=San+Francisco",
+   "title": "Yelp — Plumbing Service SF (F&A Plumbing, Portola)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 522,
+   "kind": "yelp",
+   "access": "search",
+   "url": "https://www.yelp.com/search?find_desc=Handyman+Plumber&find_loc=San+Francisco",
+   "title": "Yelp — Handyman Plumber SF (Handlify plumbing+drywall)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 523,
+   "kind": "wiseworkman",
+   "access": "page",
+   "url": "https://wiseworkman.com/california/san-francisco/handlify/",
+   "title": "WiseWorkman — Handlify analysis (91.2/100, 79 reviews)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 524,
+   "kind": "company",
+   "access": "page",
+   "url": "https://repipechampions.com/repipe/south-san-francisco/",
+   "title": "Repipe Champions — South SF Repipe page (galvanized pipe expertise)",
+   "checkedAt": "2026-09-14"
+  },
+  {
+   "id": 525,
+   "kind": "houzz",
+   "access": "page",
+   "url": "https://www.houzz.com/professionals/kitchen-and-bath-remodelers/handyman-heroes-inc-pfvwus-pf~1294574253",
+   "title": "Houzz — Handyman Heroes Inc (License 1003394)",
+   "checkedAt": "2026-09-14"
+  }
+ ],
+ "businesses": [
+  {
+   "id": "w12-rapid-flow-plumbing",
+   "name": "Rapid Flow Plumbing & Rooter Inc",
+   "trade": "plumbing + general building",
+   "license": {
+    "number": "1115649",
+    "status": "active",
+    "classes": [
+     "B",
+     "C-36"
+    ],
+    "entity": "Rapid Flow Plumbing & Rooter Inc",
+    "via": "BuildZoom"
+   },
+   "area": "SF",
+   "areaText": "CSLB places licensee at 230 Edinburgh St, SF 94112. Active through Jan 2028. Both B and C-36 classifications confirmed via BuildZoom. Outer Sunset service not separately stated.",
+   "sources": [
+    475,
+    476,
+    477
+   ],
+   "platformLinks": [
+    {
+     "label": "BuildZoom profile",
+     "url": "https://www.buildzoom.com/contractor/rapid-flow-plumbing-and-rooter",
+     "source": 476
+    },
+    {
+     "label": "Official site",
+     "url": "https://www.rapidflowbayarea.com/",
+     "source": 477
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "BuildZoom confirms active license. Both plumbing (C-36) and general building (B) are licensed. Address is 230 Edinburgh St, SF 94112. Outer Sunset dispatch not separately confirmed.",
+     "sources": [
+      475,
+      476,
+      477
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-handyman-heroes",
+   "name": "Handyman Heroes Inc",
+   "trade": "handyman + plumbing + drywall",
+   "license": {
+    "number": "1003394",
+    "status": "active",
+    "classes": [
+     "B",
+     "C-10",
+     "C-36"
+    ],
+    "entity": "Handyman Heroes Inc",
+    "via": "BuildZoom"
+   },
+   "area": "SF",
+   "areaText": "CSLB license 1003394 (B, C-10, C-36) confirmed active via BuildZoom. SF DBI permits include 1225 Quintara St (94122). 399 Yelp reviews at 4.7. Website lists plumbing, drywall, and general building services in SF.",
+   "sources": [
+    478,
+    479,
+    480,
+    519,
+    525
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/handyman-heroes-san-francisco-4",
+     "source": 479
+    },
+    {
+     "label": "BuildZoom profile",
+     "url": "https://www.buildzoom.com/contractor/handyman-heroes-inc-san-francisco",
+     "source": 478
+    },
+    {
+     "label": "Official site",
+     "url": "https://www.handymanhero.es/plumbing-services/plumbing/",
+     "source": 480
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "CSLB-verified active B+C10+C36 via BuildZoom. Plumbing (C-36) and general building (B) both licensed. 399 Yelp reviews at 4.7. Drywall services confirmed on website. Quintara St permit (94122) suggests Outer Sunset work. Needs direct confirmation of current service area and bathtub overflow experience.",
+     "sources": [
+      478,
+      479,
+      480,
+      519,
+      525
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-shg-plumbing",
+   "name": "SHG Plumbing Contractors",
+   "trade": "plumbing",
+   "license": null,
+   "area": "adjacent",
+   "areaText": "Business based in South San Francisco (220 Cypress Ave, 94080). Bathtub replacement page mentions serving Sunset/Parkside neighborhoods. Plumbing only — no drywall evidence.",
+   "sources": [
+    481,
+    482,
+    483
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/shg-plumbing-contractors-south-san-francisco",
+     "source": 481
+    },
+    {
+     "label": "Bathtub replacement page",
+     "url": "https://shgplumbing.com/bathtub-replacement-san-francisco/",
+     "source": 482
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Plumbing-only license scope. Bathtub replacement page mentions Sunset/Parkside. No drywall service evidence. No CSLB read in this wave. South SF base, not confirmed Outer Sunset dispatch.",
+     "sources": [
+      481,
+      482,
+      483
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-precision-flow-plumbing",
+   "name": "Precision Flow Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "Located at 507 Oxford St, SF 94134. Plumbing-only business. No drywall service evidence found. Outer Sunset coverage not separately confirmed.",
+   "sources": [
+    484,
+    485
+   ],
+   "platformLinks": [
+    {
+     "label": "Official site",
+     "url": "https://www.precisionflowplumbing.com/",
+     "source": 485
+    },
+    {
+     "label": "Yelp listing",
+     "url": "https://www.yelp.com/biz/precision-flow-plumbing-san-francisco",
+     "source": 484
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Plumbing-only. SF-based at 94134. No CSLB read. No drywall evidence. Outer Sunset service not separately confirmed.",
+     "sources": [
+      484,
+      485
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-albion-plumbing",
+   "name": "Albion Plumbing & Rooter Inc",
+   "trade": "plumbing",
+   "license": null,
+   "area": "outside",
+   "areaText": "Business based in Oakland (717 45th Ave, 94601). Serves SF per Porch listing. No drywall evidence.",
+   "sources": [
+    486
+   ],
+   "platformLinks": [
+    {
+     "label": "Porch listing",
+     "url": "https://pro.porch.com/san-francisco-ca/bathtub-installation/cs",
+     "source": 486
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      486
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-handlify",
+   "name": "Handlify",
+   "trade": "handyman + plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "Located in SF 94131. Handyman + Plumbing categories. Drywall repair mentioned in bathroom repair context. No CSLB license read.",
+   "sources": [
+    488,
+    523
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/handlify-san-francisco-3",
+     "source": 488
+    },
+    {
+     "label": "WiseWorkman analysis",
+     "url": "https://wiseworkman.com/california/san-francisco/handlify/",
+     "source": 523
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      488,
+      523
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-speedy-patch-drywall",
+   "name": "Speedy Patch Drywall Repair",
+   "trade": "drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "Drywall-only specialist for post-plumbing restoration. No plumbing service. No CSLB read. SF service area stated.",
+   "sources": [
+    491
+   ],
+   "platformLinks": [
+    {
+     "label": "Plumbing drywall repair page",
+     "url": "https://www.speedypatchdrywall.com/damage/plumbing/",
+     "source": 491
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      491
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-martin-connell",
+   "name": "Martin Connell Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "Based in SF per Porch. Plumbing-only. 25 years experience. No CSLB read, no drywall evidence.",
+   "sources": [
+    486
+   ],
+   "platformLinks": [
+    {
+     "label": "Porch listing",
+     "url": "https://pro.porch.com/san-francisco-ca/bathtub-installation/cs",
+     "source": 486
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      486
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-legend-plumbing",
+   "name": "Legend Plumbing & Drain",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "Located in SF 94117. Plumbing-only. Verified license on Yelp but CSLB not directly read. No drywall evidence.",
+   "sources": [
+    495,
+    494
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/legend-plumbing-and-drain-san-francisco",
+     "source": 495
+    },
+    {
+     "label": "Official site",
+     "url": "https://legendplumbingsf.com/",
+     "source": 494
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      495,
+      494
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-phams-plumbing",
+   "name": "Pham's Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "adjacent",
+   "areaText": "Located in SF 94116 (Inner Sunset area). Plumbing-only. No drywall evidence. No CSLB read.",
+   "sources": [
+    496
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/phams-plumbing-san-francisco",
+     "source": 496
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      496
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-division-general-building",
+   "name": "Division General Building",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based general contractor. Found in plumbing search. Only 3 reviews. No CSLB read. Drywall not separately confirmed.",
+   "sources": [
+    521
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=San+Francisco%2C+CA",
+     "source": 521
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      521
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-neighborhood-plumbing",
+   "name": "Neighborhood Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based plumbing service. 131 reviews. No CSLB read. No drywall evidence. Outer Sunset not separately confirmed.",
+   "sources": [
+    514
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Plumbing+Service&find_loc=NoPa",
+     "source": 514
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      514
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-joe-sf-plumbing",
+   "name": "Joe SF Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based plumbing service. Only 4 reviews. No CSLB read. No drywall evidence.",
+   "sources": [
+    483
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp near SHG",
+     "url": "https://www.yelp.com/search?find_desc=Leak+Detection&find_near=shg-plumbing-contractors-south-san-francisco",
+     "source": 483
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      483
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-pierson-precision",
+   "name": "Pierson Precision Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based general contractor. Verified license on Yelp but CSLB not read. Bathroom work listed. No plumbing/drywall trade evidence.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Walk-in+Tub&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-ch-burnham",
+   "name": "C.H. Burnham Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF SoMa-based. 5 reviews. Bathroom work mentioned. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Walk-in+Tub&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-sf-design-build",
+   "name": "SF Design Build",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 15 reviews at 5.0. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Walk-in+Tub&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-metzler-brothers",
+   "name": "Metzler Brothers General Contractors Inc",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based general contractor. Insured/bonded per Porch. No CSLB read. Drywall not separately confirmed.",
+   "sources": [
+    516
+   ],
+   "platformLinks": [
+    {
+     "label": "Porch listing",
+     "url": "https://pro.porch.com/san-francisco-ca/bathtub-installation/cs",
+     "source": 516
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      516
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-fahan-construction",
+   "name": "Fahan Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 43 reviews at 4.8. Bathroom contractor. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    493
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Contractor&find_loc=San+Francisco",
+     "source": 493
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      493
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-benjamin-shaw",
+   "name": "Benjamin Shaw",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 32 reviews at 4.9. General contractor. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    493
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Contractor&find_loc=San+Francisco",
+     "source": 493
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      493
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-prosper-construction",
+   "name": "Prosper Construction Development",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 108 reviews at 4.7. Verified license on Yelp. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-mission-home-remodeling",
+   "name": "Mission Home Remodeling",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 54 reviews at 4.7. Verified license. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-green-group",
+   "name": "Green Group Remodeling",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 27 reviews at 5.0. Verified license. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    493
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Contractor&find_loc=San+Francisco",
+     "source": 493
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      493
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-it-tile",
+   "name": "IT Tile and Grout Master",
+   "trade": "tile + general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 95 reviews at 4.9. Verified license. Tile + general contracting. No CSLB read.",
+   "sources": [
+    493
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Contractor&find_loc=San+Francisco",
+     "source": 493
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      493
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-fergo",
+   "name": "Fergo High Quality General Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based per Thumbtack. 19 reviews. Licensed pro on Thumbtack. Ceiling work. No CSLB read.",
+   "sources": [
+    515
+   ],
+   "platformLinks": [
+    {
+     "label": "Thumbtack listing",
+     "url": "https://www.thumbtack.com/ca/san-francisco/suspended-ceiling-installers",
+     "source": 515
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      515
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-bark-build",
+   "name": "Bark&Build Builders",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based per Thumbtack. 38 reviews at 4.9. Top Pro. 91 hires. Licensed pro. No CSLB read.",
+   "sources": [
+    515
+   ],
+   "platformLinks": [
+    {
+     "label": "Thumbtack listing",
+     "url": "https://www.thumbtack.com/ca/san-francisco/suspended-ceiling-installers",
+     "source": 515
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      515
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-neighborhood-construction",
+   "name": "Neighborhood Construction",
+   "trade": "drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based per Thumbtack. 116 reviews at 4.9. Drywall repair specialist. No CSLB read. No plumbing evidence.",
+   "sources": [
+    515
+   ],
+   "platformLinks": [
+    {
+     "label": "Thumbtack listing",
+     "url": "https://www.thumbtack.com/k/ceiling-drywall-repair/near-me",
+     "source": 515
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      515
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-drywall-painting-sf",
+   "name": "Drywall & Painting SF",
+   "trade": "drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 7 reviews at 3.3. Drywall only. No CSLB read. No plumbing evidence.",
+   "sources": [
+    508
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/biz/drywall-and-painting-sf-san-francisco-2",
+     "source": 508
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      508
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-express-plumbing",
+   "name": "Express Plumbing Contractor",
+   "trade": "plumbing",
+   "license": null,
+   "area": "outside",
+   "areaText": "Based in San Mateo. BBB rated. Serves SF per site. No CSLB read. No drywall evidence.",
+   "sources": [
+    477
+   ],
+   "platformLinks": [
+    {
+     "label": "Company site",
+     "url": "https://expressplumbing.com/san-francisco-plumbing/",
+     "source": 477
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      477
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-shane-thumbtack",
+   "name": "Shane (Thumbtack Handyman)",
+   "trade": "handyman + plumbing + carpentry",
+   "license": null,
+   "area": "local",
+   "areaText": "Located in SF 94122 per Thumbtack. 11 reviews. 19 years experience including plumbing and carpentry. No CSLB read. Individual operator.",
+   "sources": [
+    511
+   ],
+   "platformLinks": [
+    {
+     "label": "Thumbtack profile",
+     "url": "https://www.thumbtack.com/ca/san-francisco/handyman/shane/service/367989586839937028",
+     "source": 511
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      511
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-zomg-handyman",
+   "name": "Zomg The Handyman",
+   "trade": "handyman + drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based handyman. Drywall repair specialty including plumbing access holes. Water damage repair. No CSLB read. No plumbing trade license.",
+   "sources": [
+    512
+   ],
+   "platformLinks": [
+    {
+     "label": "Company site",
+     "url": "https://zomgthehandyman.com/drywall-repair/san-francisco",
+     "source": 512
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      512
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-waters-fault",
+   "name": "Water's Fault",
+   "trade": "water damage restoration + drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "Bay Area water damage restoration. Drywall + painting + mold remediation. Not a plumber — works with plumber partners. No CSLB read.",
+   "sources": [
+    513
+   ],
+   "platformLinks": [
+    {
+     "label": "Company site",
+     "url": "https://watersfault.com/",
+     "source": 513
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      513
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-amorim-plumbing",
+   "name": "Amorim Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "Found in Outer Sunset plumber search. Family-owned 10+ years. No CSLB read. No drywall evidence.",
+   "sources": [
+    509
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=24+hour+plumber&find_loc=Outer+Sunset",
+     "source": 509
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      509
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-oro-pro",
+   "name": "Oro Pro Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "adjacent",
+   "areaText": "Located at 535 Standish St, SF. Verified license on Yelp. 218 reviews at 4.5. Plumbing-only. No CSLB read. No drywall evidence.",
+   "sources": [
+    502
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=inner+sunset",
+     "source": 502
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      502
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-central-service",
+   "name": "Central Service Plumbing",
+   "trade": "plumbing",
+   "license": null,
+   "area": "outside",
+   "areaText": "Located at 525 1st St, SF (SoMa area). Verified license. 10 reviews at 4.8. Plumbing-only. No CSLB read. SoMa address.",
+   "sources": [
+    502
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?cflt=plumbing&find_loc=inner+sunset",
+     "source": 502
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      502
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-wb-plumbing-supply",
+   "name": "WB Plumbing Supply",
+   "trade": "plumbing supply",
+   "license": null,
+   "area": "local",
+   "areaText": "Located at 1928 Lawton St, Outer Sunset, 94122. Supply house, not a service contractor. 45 reviews at 5.0. Cannot perform plumbing or drywall work.",
+   "sources": [
+    492
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp profile",
+     "url": "https://www.yelp.com/search?find_desc=plumber&find_loc=Outer+Sunset",
+     "source": 492
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      492
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-build-by-bogdan",
+   "name": "Build by Bogdan",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 16 reviews at 5.0. Verified license. 20 years. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-bloom-home",
+   "name": "Bloom Home Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 20 reviews at 5.0. Verified license. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    506
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractors&find_loc=San+Francisco",
+     "source": 506
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      506
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-rodi-construction",
+   "name": "Rodi Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 16 reviews at 4.5. Verified license. 30 years. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    506
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractors&find_loc=San+Francisco",
+     "source": 506
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      506
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-bay-quality",
+   "name": "Bay Quality Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 21 reviews at 4.8. Verified license. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    506
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractors&find_loc=San+Francisco",
+     "source": 506
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      506
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-method-remodeling",
+   "name": "Method Remodeling",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 15 reviews at 5.0. Verified license. 7 years. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-dconstrux",
+   "name": "dconstrux",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 19 reviews at 4.2. Locally owned. Bathroom remodeling. No CSLB read.",
+   "sources": [
+    506
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodeling+Contractors&find_loc=San+Francisco",
+     "source": 506
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      506
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-edri-construction",
+   "name": "Edri Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 78 reviews at 4.7. Verified license. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    517
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel+Contractors&find_loc=San+Francisco",
+     "source": 517
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      517
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-xpress-kitchen-bath",
+   "name": "Xpress Kitchen & Bath",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 88 reviews at 4.8. Verified license. 15 years. Kitchen & bath. No CSLB read.",
+   "sources": [
+    501
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel&find_loc=San+Francisco",
+     "source": 501
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      501
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-repipe-champions",
+   "name": "Repipe Champions Plumbing and Rooter",
+   "trade": "plumbing + general building",
+   "license": null,
+   "area": "outside",
+   "areaText": "CSLB #1057926 confirmed (B + C-36). Based in Santa Clara. Serves SF per site. Drywall patching included in repipes. Galvanized pipe expertise. Not Outer Sunset-confirmed.",
+   "sources": [
+    504,
+    524
+   ],
+   "platformLinks": [
+    {
+     "label": "Official site",
+     "url": "https://repipechampions.com/",
+     "source": 504
+    },
+    {
+     "label": "South SF repipe page",
+     "url": "https://repipechampions.com/repipe/south-san-francisco/",
+     "source": 524
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      504,
+      524
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-carlos-painting",
+   "name": "Carlos' Painting & Handyman",
+   "trade": "handyman + drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 121 reviews at 4.9. Drywall repair + sink replacement mentioned. No CSLB read. No plumbing license.",
+   "sources": [
+    498
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Dry+Wall+Repair&find_loc=Outer+Sunset",
+     "source": 498
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      498
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-j-gomez",
+   "name": "J Gomez Painting",
+   "trade": "painting + drywall",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based. 98 reviews at 4.9. Drywall installation. 16 years. No CSLB read. No plumbing service.",
+   "sources": [
+    498
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset",
+     "source": 498
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      498
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-refresh-build",
+   "name": "Refresh and Build",
+   "trade": "general contractor",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based renovation contractor. High ratings across 3 platforms. Bathroom work. Permit handling. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    506
+   ],
+   "platformLinks": [
+    {
+     "label": "Company site",
+     "url": "https://refreshandbuild.com/",
+     "source": 506
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      506
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-kannon",
+   "name": "Kannon Construction",
+   "trade": "general contractor",
+   "license": null,
+   "area": "outside",
+   "areaText": "Based in Alameda area. 25 reviews at 5.0. Bathroom work. No CSLB read. No plumbing/drywall trade evidence.",
+   "sources": [
+    517
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Bathroom+Remodel+Contractors&find_loc=San+Francisco",
+     "source": 517
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      517
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-fa-plumbing",
+   "name": "F&A Plumbing & Rooter",
+   "trade": "plumbing",
+   "license": null,
+   "area": "adjacent",
+   "areaText": "Based in Pacifica area. 150 reviews at 4.9. Verified license. 20 years. Plumbing-only. No CSLB read. No drywall evidence.",
+   "sources": [
+    521
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Plumbing+Service&find_loc=San+Francisco",
+     "source": 521
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      521
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  },
+  {
+   "id": "w12-portola-plumbing",
+   "name": "Portola Plumbing Services",
+   "trade": "plumbing",
+   "license": null,
+   "area": "SF",
+   "areaText": "SF-based per Yelp. Bathtub services listed. No CSLB read. No drywall evidence. Outer Sunset not confirmed.",
+   "sources": [
+    521
+   ],
+   "platformLinks": [
+    {
+     "label": "Yelp search result",
+     "url": "https://www.yelp.com/search?find_desc=Plumbing+Service&find_loc=San+Francisco",
+     "source": 521
+    }
+   ],
+   "reviews": [],
+   "flags": [
+    {
+     "level": "hold",
+     "text": "Platform listing only or partial CSLB evidence. Both required trades and Outer Sunset coverage remain unverified.",
+     "sources": [
+      521
+     ]
+    }
+   ],
+   "priority": null,
+   "exactMatch": false,
+   "master": false,
+   "rationale": "Wave-12 research record; it is not part of the diagnostic call order.",
+   "nextStep": "Confirm current service area, both required trades, scope, insurance and scheduling directly before considering contact.",
+   "gaps": [
+    "CSLB licence was not directly read in this wave.",
+    "Both plumbing and drywall service are not verified.",
+    "Outer Sunset service is not separately confirmed."
+   ],
+   "scopeConfirmed": false,
+   "insuranceVerified": false
+  }
+ ],
+ "reviews": [
+  {
+   "id": "R138",
+   "business": "w12-handyman-heroes",
+   "platform": "Yelp",
+   "author": "Peter B.",
+   "published": "2023-07-17",
+   "quote": "Plumbing Repair photo at 1525 Waller St, SF 94117.",
+   "analysis": "A plumbing repair project in SF; does not confirm bathtub overflow or drywall work specifically.",
+   "theme": "Plumbing repair",
+   "source": 479,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R139",
+   "business": "w12-handyman-heroes",
+   "platform": "Yelp",
+   "author": "Corinne S.",
+   "published": "2026-08-12",
+   "quote": "Siding repair photo at 1525 Waller St.",
+   "analysis": "Siding repair shows exterior building work capability; not plumbing or bathtub overflow.",
+   "theme": "Siding repair",
+   "source": 479,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R140",
+   "business": "w12-shg-plumbing",
+   "platform": "Trustindex",
+   "author": "Stephen Bergwall",
+   "published": "2025-06-17",
+   "quote": "Best in the bay area. Steve is a great guy. Trustworthy, reliable, and knowledgeable about his craft.",
+   "analysis": "A positive plumbing recommendation; does not confirm drywall or bathtub overflow work.",
+   "theme": "Plumbing general",
+   "source": 483,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R141",
+   "business": "w12-shg-plumbing",
+   "platform": "Trustindex",
+   "author": "Chad Deupser",
+   "published": "2024-06-07",
+   "quote": "Steve really knows his stuff, definitely hit up SHG Plumbing if you need any work done.",
+   "analysis": "A positive but short endorsement; no specific task details.",
+   "theme": "Plumbing general",
+   "source": 483,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R142",
+   "business": "w12-handlify",
+   "platform": "Yelp",
+   "author": "bathroom repair customer",
+   "published": null,
+   "quote": "Mikhail is very responsive and prompt. Did an amazing job on our drywall repair and rehanging...",
+   "analysis": "Drywall repair mentioned in bathroom repair context. Positive. No plumbing trade confirmation.",
+   "theme": "Drywall repair",
+   "source": 489,
+   "access": "search",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R143",
+   "business": "w12-legend-plumbing",
+   "platform": "Yelp",
+   "author": "David and Chris reviewer",
+   "published": null,
+   "quote": "David and Chris are the 'real deal' among plumbers.",
+   "analysis": "A positive plumbing recommendation; no drywall or bathtub overflow evidence.",
+   "theme": "Plumbing general",
+   "source": 495,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R144",
+   "business": "w12-shane-thumbtack",
+   "platform": "Thumbtack",
+   "author": "Thumbtack customer",
+   "published": null,
+   "quote": "19 years experience including 5 years as plumber, 7 as carpenter. 4.5 stars, 11 reviews. SF 94122.",
+   "analysis": "Listed in 94122 (Outer Sunset). Combined plumbing and carpentry experience. Relevant multi-trade background.",
+   "theme": "Multi-trade handyman",
+   "source": 511,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R145",
+   "business": "w12-waters-fault",
+   "platform": "Google",
+   "author": "Willis Leung",
+   "published": "2024-09-18",
+   "quote": "Both the drywall and paint teams were fantastic—the drywall repairs were seamless, and the paint matched perfectly.",
+   "analysis": "Positive drywall and paint work after water damage. Not a plumber; works with plumber partners.",
+   "theme": "Water damage drywall",
+   "source": 513,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R146",
+   "business": "w12-zomg-handyman",
+   "platform": "Google",
+   "author": "Company site",
+   "published": null,
+   "quote": "Larger holes from plumbing access, electrical work, or accidents. Full patch, tape, mud, texture match, and prime.",
+   "analysis": "Explicitly offers drywall repair for plumbing access holes. Not a plumber. Relevant for post-plumbing ceiling/wall restoration.",
+   "theme": "Plumbing access drywall",
+   "source": 512,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  },
+  {
+   "id": "R147",
+   "business": "w12-repipe-champions",
+   "platform": "Google",
+   "author": "Robert R.",
+   "published": null,
+   "quote": "In a few days, his crew showed up on time. By the end of the day all of our water pipes were replaced. Next a crew showed up to fix the limited drywall that had to be torn out.",
+   "analysis": "Repiping + drywall patching in one workflow. Galvanized pipe replacement. Not Outer Sunset confirmed.",
+   "theme": "Repiping + drywall",
+   "source": 524,
+   "access": "page",
+   "identity": "matched",
+   "negative": false,
+   "checkedAt": "2026-09-14",
+   "exactTask": false
+  }
+ ],
+ "falseClaimsRejected": [
+  {
+   "claim": "A Yelp Verified License badge is a CSLB credential read.",
+   "source": 495,
+   "why": "The badge is a platform claim; no licence number, classification, or status was read from CSLB."
+  },
+  {
+   "claim": "A Thumbtack Licensed Pro badge establishes both plumbing and drywall.",
+   "source": 511,
+   "why": "The badge is a platform claim; no CSLB licence was read."
+  },
+  {
+   "claim": "A BuildZoom 'Active' status is equivalent to a direct CSLB page read.",
+   "source": 476,
+   "why": "BuildZoom is a third-party aggregator; their status may lag CSLB. A direct CSLB LicenseDetail page read is the gold standard."
+  },
+  {
+   "claim": "An Outer Sunset Yelp search result proves Outer Sunset service.",
+   "source": 492,
+   "why": "Yelp search results are proximity-based; they show the business appears near the searched area, not that they actively dispatch there."
+  },
+  {
+   "claim": "A Reddit recommendation proves exact-task experience.",
+   "source": 499,
+   "why": "Community recommendations are anecdotal; no specific bathtub overflow or galvanized pipe evidence."
+  }
+ ],
+ "upgrades": [],
+ "dedupeRejections": [
+  {
+   "name": "Handyman Heroes",
+   "existing": "handyman heroes (w12)",
+   "why": "New wave-12 entry with BuildZoom CSLB verification; separate from earlier Ben Handy record"
+  },
+  {
+   "name": "Pham's Plumbing",
+   "existing": "pham's plumbing",
+   "why": "Already in database; wave-12 entry added as supplementary discovery evidence"
+  }
+ ],
+ "taskEvidence": [
+  {
+   "source": 476,
+   "point": "BuildZoom confirms Rapid Flow Plumbing holds active B+C-36 license 1115649; two SF building permits in 2026 including residential plumbing."
+  },
+  {
+   "source": 478,
+   "point": "BuildZoom confirms Handyman Heroes holds active B+C10+C36 license 1003394; SF DBI permits include Quintara St (94122)."
+  },
+  {
+   "source": 482,
+   "point": "SHG Plumbing bathtub replacement page lists Sunset/Parkside as service area; adjacent-task evidence."
+  },
+  {
+   "source": 489,
+   "point": "Handlify mentioned for drywall repair in bathroom context on Yelp; no plumbing trade confirmation."
+  },
+  {
+   "source": 491,
+   "point": "Speedy Patch Drywall explicitly offers plumbing access hole repair; drywall-only service."
+  },
+  {
+   "source": 504,
+   "point": "Repipe Champions site states drywall patching included in every repipe; galvanized pipe expertise confirmed."
+  },
+  {
+   "source": 511,
+   "point": "Shane's Thumbtack profile lists 94122 address and 5yr plumber + 7yr carpenter experience."
+  },
+  {
+   "source": 512,
+   "point": "Zomg The Handyman offers drywall repair for plumbing access holes at $175+; SF-wide service."
+  }
+ ]
+}
