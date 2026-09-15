@@ -279,7 +279,7 @@ test("wave 9 registry-only leads never render as though a licence was read", asy
   await page.goto("/#directory");
   await page
     .getByRole("searchbox", { name: "Search businesses" })
-    .fill("kevel home performance");
+    .fill("jones bros construction & design");
   await expect(page.locator("tbody tr")).toHaveCount(1);
   await expect(page.locator("tbody").first()).toContainText(
     "Registry lead · classification not read",
@@ -287,12 +287,9 @@ test("wave 9 registry-only leads never render as though a licence was read", asy
   await expect(page.locator("tbody").first()).toContainText(
     "No CSLB page read for this record",
   );
-  await page.locator('[data-detail="w9-kevel-home-performance"]').first().click();
+  await page.locator('[data-detail="w9-jones-bros-construction-design-inc"]').first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("dialog")).toContainText("NOT read on CSLB");
-  await expect(page.getByRole("dialog")).toContainText(
-    "HVAC, energy and insulation",
-  );
   await page.keyboard.press("Escape");
   // a CSLB-read wave-9 record shows its licence and its held irregularity
   await page
@@ -366,10 +363,12 @@ test("wave 10 leads render their trade and licence reality, not a badge", async 
   await expect(wave10).toContainText("BOTH TRADES ON ONE LICENCE");
   await expect(wave10).toContainText("C-9 drywall, C36 plumbing");
   // Registry-only and platform records must never render a regulator badge.
+  // Danny Chen left this tier in wave 13, when licence 893929 was read as
+  // inactive C36, so a still-unread wave-10 lead is used here instead.
   await page.goto("/#directory");
   await page
     .getByRole("searchbox", { name: "Search businesses" })
-    .fill("danny chen");
+    .fill("ireland tile & stone");
   await expect(page.locator("tbody tr")).toHaveCount(1);
   await expect(page.locator("tbody").first()).toContainText(
     "Registry lead · classification not read",
@@ -377,11 +376,11 @@ test("wave 10 leads render their trade and licence reality, not a badge", async 
   await expect(page.locator("tbody").first()).toContainText(
     "No CSLB page read for this record",
   );
-  await page.locator('[data-detail="w10-danny-chen"]').first().click();
+  await page.locator('[data-detail="w10-ireland-tile-and-stone-inc"]').first().click();
   const dialog = page.getByRole("dialog");
   await expect(dialog).toContainText("Registry lead · classification not read");
   await expect(dialog).toContainText("License unchecked");
-  await expect(dialog).toContainText("893929");
+  await expect(dialog).toContainText("897547");
   await expect(dialog).toContainText("has NOT been read on CSLB");
   await page.keyboard.press("Escape");
 });

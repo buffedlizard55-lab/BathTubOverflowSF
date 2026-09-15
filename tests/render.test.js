@@ -129,7 +129,7 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   const html = await render("#summary");
   assert.match(html, /Find the right expertise\./);
   assert.equal(el(".nav-count").textContent, data.businesses.length);
-  assert.match(el("#snapshot-date").textContent, /Sep 12, 2026/);
+  assert.match(el("#snapshot-date").textContent, /Sep 15, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
   assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 20);
@@ -177,7 +177,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
         "expected a name button and a view button per record",
       );
       assert.match(html, /Active license checked only/);
-      assert.match(html, /Snapshot · Sep 10–12, 2026/);
+      assert.match(html, /Snapshot · Sep 10–15, 2026/);
     }
     if (view === "audit") {
       const numbers = [
@@ -205,23 +205,26 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /No CSLB page read for this record/);
     }
     if (view === "method") {
-      assert.match(html, /215 distinct CSLB license detail pages/);
-      assert.match(html, /11 waves/);
-      assert.match(html, /551 businesses discovered/);
-      assert.match(html, /144 records show an active license/);
+      assert.match(html, /261 distinct CSLB license detail pages/);
+      assert.match(html, /13 waves/);
+      assert.match(html, /643 businesses discovered/);
+      assert.match(html, /179 records show an active license/);
       assert.match(html, /Wave 10 \(Sep 12, 2026\)/);
       assert.match(html, /Wave 11 \(Sep 12, 2026\)/);
       // the live totals must not be attributed to a single wave's bullet
       assert.match(html, /Wave 8 \(Sep 12, 2026\)/);
-      // This live total is computed from the dataset, not hard-coded in app.js.
-      // Wave 10 adds 13 more active licences whose recorded evidence includes a
-      // 94122 address (the wave-9 total was 24), so it now reads 37.
-      assert.match(html, /37 records directory-wide now combine an active license/);
+      // wave 12 wrote its own day and wave 13 folded wave 12's duplicate rows
+      assert.match(html, /Wave 12 \(Sep 14, 2026\)/);
+      assert.match(html, /Wave 13 \(Sep 15, 2026\)/);
+      // This live total is computed from the dataset, not hard-coded in app.js: it
+      // counts records with an active licence whose recorded evidence includes a
+      // 94122 address, and it moves with every wave that adds one.
+      assert.match(html, /60 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
       assert.match(html, /Waves 8, 9, 10 and 11 each received three additional passes/);
       // the live totals stay out of any single wave's bullet
       assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
-      assert.match(html, /12 active, 5 non-active and held/);
+      assert.match(html, /17 active, 5 non-active and held/);
       assert.match(html, /33 are registry-only leads/);
       assert.match(html, /35 completed permits at work-location ZIP 94122/);
       assert.match(html, /Only seven review excerpts were attributable/);
@@ -273,12 +276,14 @@ test("business deep links open a detail dialog with source-linked evidence", asy
 
 test("wave 9 detail dialogs keep the two evidence tiers visibly different", async () => {
   // Tier 2: a registry-only lead must say out loud that no licence was read.
-  await render("#directory/w9-kevel-home-performance");
+  // Kevel Home Performance left this tier in wave 13, when its recorded licence
+  // number 1021221 was finally read at CSLB, so a still-unread wave-9 lead is
+  // used here instead. Same assertion, current tier.
+  await render("#directory/w9-jones-bros-construction-design-inc");
   let html = el("#detail-content").innerHTML;
   assert.ok(el("dialog").open);
   assert.match(html, /Registry lead · classification not read/);
   assert.match(html, /NOT read on CSLB/);
-  assert.match(html, /HVAC, energy and insulation/);
   assert.equal(/undefined/.test(html), false);
 
   // Tier 1: a CSLB-read record shows its licence, its classes and its hold.

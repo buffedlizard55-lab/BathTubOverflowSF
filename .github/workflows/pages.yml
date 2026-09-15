@@ -7,6 +7,7 @@ on:
         arena/01a09694-bathtuboverflowsf,
         arena/01a09707-bathtuboverflowsf,
         arena/01a097ab-bathtuboverflowsf,
+        arena/01a0a734-bathtuboverflowsf,
       ]
   workflow_dispatch:
 permissions:
