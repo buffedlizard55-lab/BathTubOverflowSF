@@ -56,20 +56,27 @@ function assertPrivacySafe(value, label) {
       );
 }
 
-test("exactly 551 unique discovery entries across eleven waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 551);
+test("exactly 643 unique discovery entries across thirteen waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 643);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, [
     "2026-09-10",
     "2026-09-11",
     "2026-09-12",
+    "2026-09-14",
+    "2026-09-15",
   ]);
-  assert.equal(data.researchedAt, "2026-09-12");
-  assert.equal(data.waves.length, 11);
+  assert.equal(data.researchedAt, "2026-09-15");
+  assert.equal(data.waves.length, 13);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    551,
+    643,
   );
+  // Wave 12 re-listed eight firms earlier waves had already stored. Wave 13
+  // folded those eight rows into the earlier records and reduced the wave-12
+  // count by the same amount, so the wave totals still equal the record count.
+  assert.equal(data.waves[11].count, 42);
+  assert.equal(data.dedupeCorrections.length, 8);
   assert.deepEqual(data.waves[7], {
     wave: 8,
     date: "2026-09-12",
@@ -95,7 +102,7 @@ test("exactly 551 unique discovery entries across eleven waves, no fabricated ma
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      551,
+      643,
     );
   // wave 10 publishes its own regulator reads, registry leads and platform rows; wave 11 follows below
   assert.deepEqual(data.waves[9], {
@@ -239,8 +246,17 @@ test("shortlist requires an active license whose class covers its trade", () => 
   // Wave 10 adds 23 regulator reads (15 active, 8 non-active and held) and ten verification
   // upgrades that attach a licence to a stored record, and 22 registry-only
   // leads plus 5 platform listings that hold no licence at all.
-  assert.equal(evidenceCounts(data).active, 144);
-  assert.equal(evidenceCounts(data).inactive, 70);
+  // Wave 11 added 28 active and 14 non-active regulator reads; wave 12 added two
+  // directory-sourced licences that wave 13 re-read at CSLB (both active); wave 13
+  // added 18 active and 6 non-active direct licence reads (24 CSLB pages) and
+  // re-read 34 licence numbers already stored on earlier records. Twenty of the 34
+  // attached a licence fact to a record that had none. Four of the reads were
+  // folded into the stored record instead of being published twice: Ocean Air
+  // Heating 968927, Macro Builder Inc 797077, FLMC Development Corp 805968 and
+  // Allen Mechanical Plumbing Co 611082 were already named in stored registry
+  // evidence, so a second row would have double-counted one firm.
+  assert.equal(evidenceCounts(data).active, 179);
+  assert.equal(evidenceCounts(data).inactive, 80);
 });
 
 test("case-insensitive search, status, area and active-license filters combine", () => {
@@ -254,7 +270,7 @@ test("case-insensitive search, status, area and active-license filters combine",
   );
   assert.equal(filterBusinesses(data.businesses, { status: "shortlist" }).length, 9);
   assert.equal(filterBusinesses(data.businesses, { status: "master" }).length, 0);
-  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 144);
+  assert.equal(filterBusinesses(data.businesses, { license: true }).length, 179);
   const exact = filterBusinesses(data.businesses, {
     area: "outer",
     license: true,
@@ -330,7 +346,10 @@ test("HTML is escaped and the public schema and artifacts pass the privacy allow
     "reviews",
     "verificationUpgrades",
     "registryUpgrades",
-  ]);
+    "dedupeCorrections",
+  "reviewWithdrawals",
+  "shapeNormalisations",
+]);
   const businessFields = new Set([
     "id",
     "name",
@@ -363,7 +382,12 @@ test("HTML is escaped and the public schema and artifacts pass the privacy allow
     "verification",
     "previousCheckDates",
     "phone_collision",
-  ]);
+    // written by the wave-13 pass: the duplicate rows folded into an earlier
+    // record, and the review excerpts withdrawn for platform-policy reasons
+    "dedupeCorrections",
+    "reviewWithdrawals",
+    "sources",
+]);
   for (const key of Object.keys(data)) assert.ok(topLevel.has(key), key);
   for (const b of data.businesses)
     for (const key of Object.keys(b)) assert.ok(businessFields.has(key), `${b.id}.${key}`);
@@ -387,17 +411,34 @@ test("wave 6 is 50 new records with regulator reads kept separate from registry 
   assert.equal(W6.length, 50);
   assert.equal(new Set(W6.map((b) => b.id)).size, 50);
   const licensed = W6.filter((b) => b.license);
-  // 22 at wave 6, plus two records wave 10 attached a regulator read to:
-  // Bill Bragg Plumbing (440780, active) and Ren Lei Construction Co (635360,
-  // active B — which is also why that record's trade was corrected to general).
-  assert.equal(licensed.length, 24);
-  assert.equal(licensed.filter((b) => b.license.status === "active").length, 16);
+  // 22 at wave 6, plus two records wave 10 attached a regulator read to
+  // (Bill Bragg Plumbing 440780 and Ren Lei Construction Co 635360, both active),
+  // plus nine wave-6 licence numbers wave 13 read at CSLB on 2026-09-15. Five of
+  // the nine came back active; four are non-active and held (Abe's Plumbing 439862
+  // expired 2009, Pro Plumbing 859973 expired, Goodrich Plumbing 837694 and City
+  // Plumbing Company 792165 canceled). Ocean Air Heating 968927 is one of the five
+  // active reads and was folded into the wave-6 record its own registry row had
+  // already named, rather than published as a second row for the same firm.
+  assert.equal(licensed.length, 28);
+  assert.equal(licensed.filter((b) => b.license.status === "active").length, 18);
   assert.deepEqual(
     licensed
       .filter((b) => b.verification)
       .map((b) => b.id)
       .sort(),
-    ["w6-bill-bragg-plumbing", "w6-ren-lei-construction-co"],
+    [
+      "w6-abe-s-plumbing",
+      "w6-bill-bragg-plumbing",
+      "w6-building-efficiency-inc",
+      "w6-c-t-construction-plumb",
+      "w6-city-plumbing-company",
+      "w6-flow-masters-plumbing-inc",
+      "w6-goodrich-plumbing-inc",
+      "w6-ocean-air-heating",
+      "w6-pro-plumbing",
+      "w6-ren-lei-construction-co",
+      "w6-west-cork-plumbing-inc",
+    ],
   );
   for (const b of licensed) {
     const s = sources.get(b.license.source);
@@ -413,9 +454,13 @@ test("wave 6 is 50 new records with regulator reads kept separate from registry 
       b.claims.some((c) => /Registry-recorded/.test(c.text)),
   );
   // 16 at wave 6; wave 10 attached a regulator read to two more of its
-  // registry leads (Bill Bragg 440780, Ren Lei 635360), which therefore left
-  // this tier rather than being duplicated.
-  assert.equal(registryOnly.length, 14);
+  // registry leads (Bill Bragg 440780, Ren Lei 635360), and wave 13 read the
+  // four remaining wave-6 leads' own recorded licence numbers at CSLB - Abe's
+  // Plumbing 439862 (expired 2009), C T Construction & Plumb 533324 (active),
+  // City Plumbing Company 792165 (canceled) and Ocean Air Heating 968927
+  // (active, C20 only) - so those four also left this tier rather than being
+  // duplicated.
+  assert.equal(registryOnly.length, 10);
   for (const b of registryOnly)
     assert.ok(
       b.flags.some((f) => /has NOT been read on CSLB/.test(f.text)),
@@ -502,26 +547,38 @@ test("wave 7 is 50 new records with three evidence channels kept separate", () =
 
   // channel 1 — CSLB licence pages read directly
   const licensed = W7.filter((b) => b.license);
-  // 10 at wave 7, plus two records wave 10 attached a regulator read to:
-  // Franks All City Plumbing (319594, expired) and David Chu Plumbing
-  // (343610, inactive). Both were already held and stay held.
-  assert.equal(licensed.length, 12);
+  // 10 at wave 7, plus two records wave 10 attached a regulator read to
+  // (Franks All City Plumbing 319594, expired; David Chu Plumbing 343610,
+  // inactive - both already held), plus Chow's Plumbing Co, whose registry
+  // licence number 502603 wave 13 read directly and found expired since 2014,
+  // plus Allen Mechanical Plumbing Co, whose registry row already stored licence
+  // 611082 and which wave 13 read at CSLB (active C36 plumbing to 01/31/2027)
+  // rather than publishing it as a second row for the same licence number.
+  assert.equal(licensed.length, 14);
   assert.deepEqual(
     licensed
       .filter((b) => b.verification)
       .map((b) => b.id)
       .sort(),
-    ["w7-david-chu-plumbing", "w7-franks-all-city-plumbing"],
+    [
+      "w7-allen-mechanical-plbg-co",
+      "w7-chow-s-plumbing-co",
+      "w7-david-chu-plumbing",
+      "w7-franks-all-city-plumbing",
+    ],
   );
   assert.deepEqual(
     [...new Set(licensed.map((b) => b.license.status))].sort(),
     ["active", "expired", "inactive", "revoked"],
   );
   const active = licensed.filter((b) => b.license.status === "active");
-  assert.equal(active.length, 1);
-  assert.equal(active[0].id, "w7-michael-kuenzli-plumbing-co");
-  assert.equal(active[0].area, "outer");
-  assert.ok(/94122/.test(active[0].areaText));
+  assert.deepEqual(active.map((b) => b.id).sort(), [
+    "w7-allen-mechanical-plbg-co",
+    "w7-michael-kuenzli-plumbing-co",
+  ]);
+  const kuenzli = byId.get("w7-michael-kuenzli-plumbing-co");
+  assert.equal(kuenzli.area, "outer");
+  assert.ok(/94122/.test(kuenzli.areaText));
   for (const b of licensed) {
     const s = sources.get(b.license.source);
     assert.equal(s.kind, "government", b.id);
@@ -543,9 +600,11 @@ test("wave 7 is 50 new records with three evidence channels kept separate", () =
     (b) => !b.license && b.claims.some((c) => /Registry-recorded/.test(c.text)),
   );
   // 20 at wave 7; wave 10 read the licence behind two of those leads
-  // (Franks All City Plumbing 319594, David Chu Plumbing 343610), so they now
-  // sit in the regulator-read tier instead of the registry tier.
-  assert.equal(registryOnly.length, 18);
+  // (Franks All City Plumbing 319594, David Chu Plumbing 343610), and wave 13
+  // read the numbers behind two more (Chow's Plumbing Co 502603, expired 2014;
+  // Allen Mechanical Plumbing Co 611082, active), so all four now sit in the
+  // regulator-read tier instead of the registry tier.
+  assert.equal(registryOnly.length, 16);
   for (const b of registryOnly) {
     assert.equal(b.area, "sunset", `${b.id} registry ZIP is not an Outer Sunset confirmation`);
     assert.ok(
@@ -645,7 +704,9 @@ test("wave 8 adds 50 collision-free, directly licensed plumbing and restoration 
     const s = sources.get(b.license.source);
     assert.equal(s.kind, "government", b.id);
     assert.equal(s.access, "page", b.id);
-    assert.equal(s.checkedAt, "2026-09-12", b.id);
+    // Wave 13 re-read two of these licences on 2026-09-15, so a wave-8 record
+    // may carry either the original read date or the re-read date.
+    assert.ok(["2026-09-12", "2026-09-15"].includes(s.checkedAt), b.id);
     assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
     assert.ok(s.url.endsWith(b.license.number), b.id);
     assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
@@ -762,7 +823,7 @@ test("wave 8 irregularities remain visible and never relax the master gate", () 
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
   // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
   // seven follow-up targets, which remain pre-existing ids.
-  assert.equal(data.businesses.length, 551);
+  assert.equal(data.businesses.length, 643);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -866,32 +927,49 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
         !r.business.startsWith("w10-") &&
         !r.business.startsWith("w11-"),
     ).length,
-    98,
+    116,
   );
-  assert.equal(data.reviews.length, 137);
+  // 137 at wave 11, plus wave 12's five retained excerpts (eight were stored,
+  // three of them Google quotes withdrawn in the wave-13 pass), plus the eleven
+  // wave-13 excerpts - 155 in total, all of them attributable.
+  assert.equal(data.reviews.length, 155);
 });
 
 test("wave 9 separates CSLB-read records from registry-only leads and promotes nothing", () => {
   assert.equal(W9.length, 50);
   const licensed = W9.filter((b) => b.license);
   const registryOnly = W9.filter((b) => !b.license);
-  assert.equal(licensed.length, 17);
-  assert.equal(registryOnly.length, 33);
-  assert.equal(licensed.filter((b) => b.license.status === "active").length, 12);
+  // Wave 13 read seven of the wave-9 records' recorded licence numbers at CSLB.
+  // Five of them gained a licence fact here (Elux 893710, Vij 1059074, All Bay
+  // Cities 872779, Kevel Home Performance 1021221 and FLMC Development Corp
+  // 805968, all active); American Plumbing 1140051 and Speedy Serrano 1026009
+  // were re-reads of licences already stored. Danny Chen's 893929 is a wave-10
+  // record instead.
+  assert.equal(licensed.length, 22);
+  assert.equal(registryOnly.length, 28);
+  assert.equal(licensed.filter((b) => b.license.status === "active").length, 17);
   assert.equal(licensed.filter((b) => b.license.status !== "active").length, 5);
 
-  // Tier 1: every licence fact traces to a CSLB detail page read on the wave date.
+  // Tier 1: every licence fact traces to a CSLB detail page. Wave 13 re-read seven
+  // of these licences on 2026-09-15, so both read dates are legitimate here.
   for (const b of licensed) {
     const s = sources.get(b.license.source);
     assert.equal(s.kind, "government", b.id);
     assert.equal(s.access, "page", b.id);
-    assert.equal(s.checkedAt, "2026-09-12", b.id);
+    assert.ok(["2026-09-12", "2026-09-15"].includes(s.checkedAt), b.id);
     assert.match(s.url, /LicenseDetail\.aspx\?LicNum=/, b.id);
     assert.ok(s.url.endsWith(b.license.number), b.id);
     assert.ok(licenseSupportsTrade(b), `${b.id} class/trade mismatch`);
     for (const field of ["priority", "master", "exactMatch", "insuranceVerified", "scopeConfirmed"])
       assert.ok(!b[field], `${b.id} ${field} must stay falsy`);
-    assert.ok(b.claims.some((c) => c.field === "Insurance & bond"), `${b.id} bond/WC read`);
+    // Wave 9's own upgrades quoted bond and WC lines; wave 13's re-reads are
+    // dated instead, and some CSLB pages carry no bond line to quote, so a
+    // dated regulator re-read is accepted in place of the bond/WC field.
+    assert.ok(
+      b.claims.some((c) => c.field === "Insurance & bond") ||
+        b.claims.some((c) => c.field === "Verification upgrade" && /2026-09-15/.test(c.text)),
+      `${b.id} dated regulator re-read`,
+    );
     if (b.license.status !== "active") {
       assert.equal(b.status, "hold", b.id);
       assert.ok(b.flags.some((f) => f.level === "hold"), b.id);
@@ -919,7 +997,12 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
   const priorCt = byId.get("w6-c-t-construction-plumb");
   assert.equal(ct.phone.replace(/\D/g, ""), priorCt.phone.replace(/\D/g, ""));
   assert.equal(ct.license.number, "1112261");
-  assert.equal(priorCt.license, null, "the stored registry row still asserts no licence fact");
+  // Wave 13 read the registry number 533324 at CSLB on 2026-09-15: it is an
+  // active B licence held by CT Construction at 1847 48th Ave, 94122, so the
+  // stored registry row now carries a regulator read instead of a bare number.
+  assert.equal(priorCt.license.number, "533324");
+  assert.equal(priorCt.license.status, "active");
+  assert.equal(priorCt.verifiedAt, "2026-09-15");
   assert.ok(priorCt.claims.some((c) => /533324/.test(c.excerpt)), "registry licence 533324");
   assert.ok(
     ct.flags.some((f) => f.level === "discrepancy" && f.text.includes("w6-c-t-construction-plumb")),
@@ -953,7 +1036,11 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
     wavePhones.push(digits);
   }
   assert.equal(new Set(wavePhones).size, wavePhones.length, "wave-9 phones are unique");
-  assert.equal(new Set(W9.map((b) => b.license?.number).filter(Boolean)).size, 17);
+  // Wave 13 read five more of this wave's registry numbers at CSLB (Elux 893710,
+  // Vij 1059074, All Bay Cities 872779, Kevel Home Performance 1021221 and FLMC
+  // Development Corp 805968), so 22 of the 50 wave-9 records now carry a licence
+  // number and no two of them share one.
+  assert.equal(new Set(W9.map((b) => b.license?.number).filter(Boolean)).size, 22);
 
   // B-2 Residential Remodeling is a real CSLB class, added rather than mapped onto B.
   const knb = byId.get("w9-knb-tile-and-stone-inc-dba-knb-remodeling");
@@ -1072,7 +1159,7 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
     data.methodology.passes,
     /Pass 19 \(wave 9, Sep 12 2026\):[\s\S]*Pass 20:[\s\S]*Pass 21:/,
   );
-  assert.match(data.methodology.governmentSources, /137 distinct license numbers, 17 read in wave 9/);
+  assert.match(data.methodology.governmentSources, /259 distinct license numbers, 24 read in wave 13/);
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.priority).length, 9);
 });
@@ -1129,7 +1216,11 @@ test("wave 11 keeps regulator reads, registry leads and platform listings fail-c
     assert.ok(byId.get(r.business).reviewIds.includes(r.id), r.id);
   }
   assert.deepEqual(
-    data.verificationUpgrades.slice(-3).map((u) => u.record).sort(),
+    data.verificationUpgrades
+      .filter((u) => u.date === "2026-09-12")
+      .slice(-3)
+      .map((u) => u.record)
+      .sort(),
     ["a1-plumbing", "amx", "sugar-bear"],
   );
   for (const id of ["amx", "sugar-bear", "a1-plumbing"]) {

@@ -116,6 +116,15 @@ export const ALLOWED_CLASSES = [
   "D34",
   "D39",
   "D56",
+  // D06 (C-61/D06, concrete-related services) was read directly in wave 13 on
+  // licence 1059074. It is stored as a real classification that covers neither
+  // plumbing nor drywall, so it can never satisfy the project's trades.
+  "D06",
+  // Wave 12 stored two licences with the hyphenated spellings CSLB itself uses
+  // in prose ("B + C-36", "B + C-10 + C-36"); wave 13 re-read both at CSLB, so
+  // the spellings are kept as legitimate class tokens.
+  "C-36",
+  "C-10",
   "B",
   "A",
 ];
@@ -144,6 +153,22 @@ export const TRADE_CLASSES = {
   // A registry-only lead asserts no classification at all, so no class set can
   // satisfy it and such a record can never reach the promotion gate.
   "registry-lead": [],
+  // A platform listing is the platform's own category, not a CSLB class; the
+  // empty set means a listing can never be promoted however good its reviews.
+  "platform-listing": [],
+  // Wave 11/12 platform labels. They are the platform's category wording, so
+  // each is mapped only where a directly read licence actually covers it, and
+  // left empty - unpromotable - everywhere else.
+  "general contractor": [["B"]],
+  "plumbing + general building": [["B", "C-36"], ["B", "C36"]],
+  "handyman + plumbing + drywall": [["B", "C-10", "C-36"], ["B", "C10", "C36"]],
+  "handyman + drywall": [],
+  "handyman + plumbing": [],
+  "handyman + plumbing + carpentry": [],
+  "tile + general contractor": [["C54", "B"]],
+  "water damage restoration + drywall": [],
+  "plumbing supply": [],
+  "painting + drywall": [["C33", "B"], ["C33", "C-9"]],
 };
 export const TRADE_LABELS = {
   plumbing: "Plumbing (C-36)",
@@ -158,6 +183,17 @@ export const TRADE_LABELS = {
   "scope-exclusion": "Other CSLB class · plumbing/drywall scope excluded",
   "plumbing-and-drywall": "Plumbing (C-36) + drywall (C-9) on one licence",
   "registry-lead": "Registry lead · classification not read",
+  "platform-listing": "Platform listing · no licence published",
+  "general contractor": "Platform category: general contractor",
+  "plumbing + general building": "Platform category: plumbing + general building",
+  "handyman + plumbing + drywall": "Platform category: handyman + plumbing + drywall",
+  "handyman + drywall": "Platform category: handyman + drywall",
+  "handyman + plumbing": "Platform category: handyman + plumbing",
+  "handyman + plumbing + carpentry": "Platform category: handyman + plumbing + carpentry",
+  "tile + general contractor": "Platform category: tile + general contractor",
+  "water damage restoration + drywall": "Platform category: water damage + drywall",
+  "plumbing supply": "Platform category: plumbing supply",
+  "painting + drywall": "Platform category: painting + drywall",
 };
 export function licenseSupportsTrade(b) {
   const classes = b.license?.classes;
