@@ -392,7 +392,7 @@ test("wave 14 renders its three evidence tiers without promoting a lead", async 
   await expect(page.locator("tbody")).toContainText("#749693 · B, C36");
   await page.locator('[data-detail="w14-749693"]').first().click();
   await expect(page.getByRole("dialog")).toContainText("Not admitted to the qualified master list");
-  await expect(page.getByRole("dialog")).toContainText("CSLB now records 768 Brannan St");
+  await expect(page.getByRole("dialog")).toContainText("Current CSLB address is 768 Brannan St");
   await page.keyboard.press("Escape");
 
   await page.getByRole("searchbox", { name: "Search businesses" }).fill("Christopher Gate Construction");
