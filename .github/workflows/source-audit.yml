@@ -9,6 +9,7 @@ on:
         arena/01a097ab-bathtuboverflowsf,
         arena/01a0a734-bathtuboverflowsf,
         arena/01a0ab53-bathtuboverflowsf,
+        arena/01a0ac0b-bathtuboverflowsf,
       ]
     paths:
       [

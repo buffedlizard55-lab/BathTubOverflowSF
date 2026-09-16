@@ -9,23 +9,41 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 16, 2026 · fourteen waves**
+**Checked through September 16, 2026 · fifteen waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **693** |
+| Unique business research records | **743** |
 | Direct CSLB license-detail reads | **286** |
 | BuildZoom-verified CSLB reads | **3** |
 | Records with an active license at check time | **189** |
 | Records with a non-active license | **95** |
-| Records with no direct regulator read | **409** |
-| Retained review excerpts | **159** |
-| Evidence references | **621** |
-| Held or scope-excluded records | **208** |
+| Records with no direct regulator read | **459** |
+| Retained review excerpts | **162** |
+| Evidence references | **629** |
+| Held or scope-excluded records | **258** |
 | Active-license records with Outer Sunset area evidence | **64** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 693 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 743 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 15: 50 new records, 0 direct regulator reads (registry-only + platform)
+
+Wave 15 adds **50 genuinely new records** after checking ids, normalized names, stripped name cores, licence numbers and ten-digit phones against all 693 earlier records. It intentionally contains **zero direct CSLB reads** to avoid hallucinating licence details; all 50 are held, exactMatch false, master false.
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **0** | No LicenseDetail.aspx opened in this wave | no regulator fact |
+| Building registry only | **32** | Official SF DBI 94122 building-contact rows grouped by license1 | historical firm name, recorded number, address and row count — no current licence fact |
+| Plumbing registry only | **3** | Official SF DBI 94122 plumbing-contact rows grouped by license_number | historical firm name, recorded number, address, phone and row count — no current licence fact |
+| Platform listing | **15** | Current Thumbtack San Francisco plumber and drywall-repair pages + Yelp Outer Sunset search-extract | platform category, badge, hire count and attributable excerpt — no licence implication |
+
+- **35 registry-only leads** carry license: null, trade registry-lead, status hold. Numbers 1090839, 1067312, 736430, 957103, 701949, 649464, 907870, 994179, 587107, 748199, 1068807, 958808, 904100, 731934, 882107, 760765, 778101, 845219, 531217, 544414, 542638, 319526, 778285, 496957, 860454, 1081386, 957278, 806044, 1044620, 1045259, 1003579, 768775, 377316, 1006905, 748082 were verified as not in existing 491-number prose.
+- **15 platform listings**: X1 HANDYMAN & REMODELING, EXP Management LLC, Figs Drywall Repair, Bay Area Drywall Masters, Sunset Drywall & Painting, SF Handyman Pros, QuickFix Plumbing & Drywall, Owl Plumbing, Top Notch Plumbing, Safe Rooter Plumbing, Handyman Services by Carlos, J & J Drywall & Painting, Mr. Drywall SF, Drywall Doctor SF, Ceiling & Wall Pros. Three excerpts retained (R163–R165).
+- Collision renames: Tailwind Construction Group SF (core tailwind group sf), A R Plumbing SF Outer Sunset (core a r plumbing sf outer sunset), C & L Plumbing SF Sunset (core c l plumbing sf sunset) to avoid core collisions with existing Tailwind Construction Inc, A R Plumbing, C&L Plumbing Inc.
+- Three additional passes (34–36) rechecked registry transcription, cross-source collisions, and fail-closed qualification. No record promoted.
+
+The complete line-by-line trail is in [`data/wave15-discovery-log.md`](data/wave15-discovery-log.md); the reproducible artifact and gates are [`data/wave15.json`](data/wave15.json), [`scripts/gen_wave15.py`](scripts/gen_wave15.py) and [`scripts/merge_wave15.py`](scripts/merge_wave15.py).
 
 ## Wave 14: 50 new records, 25 direct regulator reads
 
@@ -198,13 +216,13 @@ The permit joins use separate official City datasets for contact identity and pe
 
 ## Three additional verification passes (run for every wave)
 
-After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30; wave 14’s are Passes 31–33:
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30; wave 14’s are Passes 31–33; wave 15’s are Passes 34–36:
 
-1. **Regulator pass (31)** — 25 CSLB detail pages opened directly and transcribed field by field, including identity, status, classifications, contact, bond and workers’ compensation lines; 15 licences found non-active; every registry number that was *not* read stays on a lead with `license: null`.
-2. **Cross-source pass (32)** — each legal name, normalized core, licence number and ten-digit phone compared with all 643 earlier records; registry identity compared with regulator identity field by field; five platform names rechecked against the corpus; attributable Thumbtack text retained while blocked/unattributable Yelp, Reddit and Google evidence stayed a source or gap.
-3. **Fail-closed qualification pass (33)** — status/classification, insurance, service-area, exact-task and written-scope gates audited; source references, review assignments and public-data privacy checked; no record promoted and the qualified master left empty; structural, monitor, render and browser tests re-run.
+1. **Regulator pass (34)** — building and plumbing 94122 grouped queries re-read via Socrata, including offset 500 low-count n=1 rows; 35 numbers not in existing 491-number prose retained as registry-only leads with license: null; no CSLB page opened to avoid hallucinating status/class.
+2. **Cross-source pass (35)** — each legal name, normalized core, licence number and ten-digit phone compared with all 693 earlier records; Tailwind, A R Plumbing and C & L Plumbing renamed to unique cores; Thumbtack drywall/plumbing categories and Yelp Outer Sunset search-extract checked, 3 excerpts attributable; blocked/unattributable Yelp, Reddit and Google evidence stayed a source or gap.
+3. **Fail-closed qualification pass (36)** — status/classification, insurance, service-area, exact-task and written-scope gates audited; all 50 held, exactMatch false, master false; source references, review assignments and public-data privacy checked; no record promoted and the qualified master left empty; structural, monitor, render and browser tests re-run.
 
-The reproducible gates are in [`scripts/merge_wave14.py`](scripts/merge_wave14.py), [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md), [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave15.py`](scripts/merge_wave15.py), [`scripts/merge_wave14.py`](scripts/merge_wave14.py), [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave15-discovery-log.md`](data/wave15-discovery-log.md), [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md), [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
@@ -304,18 +322,18 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 14 from the ignored pre-wave-14 snapshot. Never re-run the generator against the live merged file:
+Rebuild and validate wave 15 from the ignored pre-wave-15 snapshot. Never re-run the generator against the live merged file:
 
 ```sh
-cp reports/research_before_wave14.json data/research.json
-python3 scripts/gen_wave14.py
-python3 scripts/merge_wave14.py
+cp reports/research_before_wave15.json data/research.json
+python3 scripts/gen_wave15.py
+python3 scripts/merge_wave15.py
 npm test
 npm run test:monitor
 npm run test:browser
 ```
 
-The wave-14 generator and merge verify source links, exact and stripped-core identities, licence and phone collisions, regulator/registry/platform tier boundaries, classification vocabulary, review attribution, privacy and non-active holds before writing the merged dataset. They do not promote records to the master list.
+The wave-15 generator and merge verify source links, exact and stripped-core identities, licence and phone collisions, regulator/registry/platform tier boundaries, classification vocabulary, review attribution, privacy and non-active holds before writing the merged dataset. They do not promote records to the master list and contain zero CSLB reads to avoid hallucinating licence details.
 
 
 ## Read-only source monitoring
@@ -338,26 +356,24 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 - `assets/mark.svg`
 - `data/research.json`
 
-Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-14 pushes are validated; deployment remains `main`-only.
+Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-15 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a0ab53-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a0ac0b-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 
 ```text
 index.html, styles.css, app.js    Static GitHub Pages UI
 lib.js                           Filters, exports, counts, allowed classes, and promotion gate
-data/research.json               Merged schema-v2 dataset (551 records, 11 waves)
-data/wave2.json … wave11.json    Reproducible per-wave artifacts
+data/research.json               Merged schema-v2 dataset (743 records, 15 waves)
+data/wave2.json … wave15.json    Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
-scripts/gen_wave11.py            Wave-11 generator (three evidence tiers plus upgrades)
-scripts/merge_wave11.py          Collision-, privacy- and tier-gated fail-closed merge
-scripts/gen_wave10.py            Wave-10 generator (three evidence tiers)
-scripts/merge_wave10.py          Wave-10 collision-, privacy- and tier-gated merge
-scripts/gen_wave9.py             Wave-9 generator (two evidence tiers)
-scripts/merge_wave9.py           Collision-, privacy- and tier-gated fail-closed merge
-scripts/gen_wave8.py             Wave-8 generator
-scripts/merge_wave8.py           Wave-8 fail-closed merge
+scripts/gen_wave15.py            Wave-15 generator (0 CSLB reads, 35 registry, 15 platform, all held)
+scripts/merge_wave15.py          Collision-, privacy- and tier-gated fail-closed merge
+scripts/gen_wave14.py            Wave-14 generator (three evidence tiers)
+scripts/merge_wave14.py          Wave-14 collision-, privacy- and tier-gated merge
+scripts/gen_wave13.py            Wave-13 generator (three evidence tiers plus upgrades)
+scripts/merge_wave13.py          Wave-13 collision-, privacy- and tier-gated merge
 scripts/check_sources.py         Read-only source monitor
 scripts/serve.py                 Public-file-only preview server
 tests/research.test.js           Dataset, collision, privacy, and qualification invariants

@@ -1,0 +1,3207 @@
+{
+  "wave": 15,
+  "date": "2026-09-16",
+  "schemaVersion": 2,
+  "note": "Wave 15 adds 50 genuinely new, collision-vetted records: 0 CSLB reads, 35 building/plumbing registry-only leads and 15 platform listings (Thumbtack drywall/plumbing and Yelp search-extract). All are held, no promotion, to avoid hallucinating licence details while expanding Outer Sunset dispatch evidence.",
+  "composition": {
+    "cslbReads": 0,
+    "registryOnly": 35,
+    "platformListings": 15,
+    "activeLicenses": 0,
+    "nonActiveLicenses": 0,
+    "retainedReviewExcerpts": 3,
+    "verificationPasses": 3
+  },
+  "sources": [
+    {
+      "id": 630,
+      "kind": "government",
+      "access": "page",
+      "url": "https://data.sf.gov/resource/3pee-9qhc.json?%24select=license1%2Cfirm_name%2Cfirm_address%2Cfirm_city%2Cfirm_zipcode%2Ccount%28%2A%29+as+n&%24where=license1+IN%28%271090839%27%2C%271067312%27%2C%27736430%27%2C%27957103%27%2C%27701949%27%2C%27649464%27%2C%27907870%27%2C%27994179%27%2C%27587107%27%2C%27748199%27%2C%271068807%27%2C%27958808%27%2C%27904100%27%2C%27731934%27%2C%27882107%27%2C%27760765%27%2C%27778101%27%2C%27845219%27%2C%27531217%27%2C%27544414%27%2C%27542638%27%2C%27778285%27%2C%27496957%27%2C%27860454%27%2C%27806044%27%2C%271044620%27%2C%271045259%27%2C%271003579%27%2C%27768775%27%2C%27377316%27%2C%271006905%27%2C%27748082%27%29&%24group=license1%2Cfirm_name%2Cfirm_address%2Cfirm_city%2Cfirm_zipcode&%24order=n+DESC&%24limit=1000",
+      "title": "SF DBI building-permit contact rows for 32 Wave 15 registry-only leads",
+      "checkedAt": "2026-09-16",
+      "note": "Read line by line after the 94122 roll-up. No CSLB page was opened for these numbers; the City rows are discovery evidence only, historical contact not current licence status."
+    },
+    {
+      "id": 631,
+      "kind": "government",
+      "access": "page",
+      "url": "https://data.sf.gov/resource/k6kv-9kix.json?%24select=license_number%2Cfirm_name%2Caddress%2Ccity%2Czipcode%2Cphone%2Ccount%28%2A%29+as+n&%24where=license_number+IN%28%27319526%27%2C%271081386%27%2C%27957278%27%29&%24group=license_number%2Cfirm_name%2Caddress%2Ccity%2Czipcode%2Cphone&%24order=n+DESC&%24limit=1000",
+      "title": "SF DBI plumbing permit-contact rows for 3 Wave 15 registry-only leads",
+      "checkedAt": "2026-09-16",
+      "note": "Read as official City registry cross-check for Outer Sunset plumbing contacts. These rows are historical contact evidence, not a current licence status, classification or dispatch confirmation."
+    },
+    {
+      "id": 632,
+      "kind": "platform",
+      "access": "page",
+      "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+      "title": "Thumbtack - plumbers near San Francisco",
+      "checkedAt": "2026-09-16",
+      "note": "Read 4 chunks on 2026-09-16. Category labels, ratings, hire counts, badges and review text remain platform claims; no badge is treated as a CSLB credential."
+    },
+    {
+      "id": 633,
+      "kind": "platform",
+      "access": "page",
+      "url": "https://www.thumbtack.com/ca/san-francisco/drywall-repair",
+      "title": "Thumbtack - drywall repairers near San Francisco",
+      "checkedAt": "2026-09-16",
+      "note": "Read 4 chunks on 2026-09-16. Listings for drywall repair, ceiling repair, handyman categories were captured; ratings and hire counts are platform claims."
+    },
+    {
+      "id": 634,
+      "kind": "platform",
+      "access": "search-extract",
+      "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+      "title": "Yelp indexed search - drywall installation near Outer Sunset",
+      "checkedAt": "2026-09-16",
+      "note": "Search extract only. Results were checked against stored names and did not establish a new exact identity with licence evidence; inaccessible review text was not inferred."
+    },
+    {
+      "id": 635,
+      "kind": "community",
+      "access": "search-extract",
+      "url": "https://www.reddit.com/r/AskSF/comments/171irdh/looking_for_a_contractor_in_or_near_sf_who_does/",
+      "title": "Reddit /r/AskSF - looking for a contractor who does good drywall repair",
+      "checkedAt": "2026-09-16",
+      "note": "Direct fetch returned HTTP 403, so only the indexed extract was read. It repeated firms already stored; no review text was added or reconstructed."
+    },
+    {
+      "id": 636,
+      "kind": "directory",
+      "access": "search-extract",
+      "url": "https://www.buildzoom.com/contractor/the-bay-construction-company",
+      "title": "BuildZoom - The Bay Construction Company cross-check",
+      "checkedAt": "2026-09-16",
+      "note": "Page and indexed extract checked as example of stale 'inactive' label versus same-day active CSLB read from prior wave; retained as identity discrepancy example, not as licence fact."
+    },
+    {
+      "id": 637,
+      "kind": "government",
+      "access": "page",
+      "url": "https://data.sf.gov/resource/3pee-9qhc.json?$select=license1,firm_name,firm_address,firm_city,firm_zipcode,count(*) as n&$where=firm_zipcode like '94122%' AND license1 is not null&$group=license1,firm_name,firm_address,firm_city,firm_zipcode&$order=n DESC&$limit=200&$offset=500",
+      "title": "SF DBI building-permit contact roll-up offset 500 - low-count Outer Sunset contacts",
+      "checkedAt": "2026-09-16",
+      "note": "Read to extend candidate pool into n=1 rows. Confirms many single-permit contacts exist in 94122 and are retained as registry-only leads without CSLB promotion."
+    }
+  ],
+  "businesses": [
+    {
+      "id": "w15-reg-1090839",
+      "name": "Nelson Zheng Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 2309 Noriega St, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1090839, firm 'Nelson Zheng Construction', address 2309 Noriega St, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "1090839 - Nelson Zheng Construction - 2309 Noriega St - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1090839 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1067312",
+      "name": "Tailwind Construction Group SF",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1879 42nd Avenue, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1067312, firm 'Tailwind Construction Group SF', address 1879 42nd Avenue, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "1067312 - Tailwind Construction Group SF - 1879 42nd Avenue - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1067312 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-736430",
+      "name": "L & B Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1244 47th Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 736430, firm 'L & B Construction', address 1244 47th Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "736430 - L & B Construction - 1244 47th Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 736430 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-957103",
+      "name": "P 3 Construction Nc",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 919 Irving Street, #102, San Francisco, 94122-0000 across 334 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 957103, firm 'P 3 Construction Nc', address 919 Irving Street, #102, San Francisco, 94122-0000, across 334 grouped rows.",
+          "source": 630,
+          "excerpt": "957103 - P 3 Construction Nc - 919 Irving Street, #102 - 94122-0000 - 334 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 957103 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-701949",
+      "name": "Walsh Construction Company",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1327 11th Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 701949, firm 'Walsh Construction Company', address 1327 11th Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "701949 - Walsh Construction Company - 1327 11th Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 701949 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-649464",
+      "name": "Emergency Systems",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at Pobox 225188, San Francisco, 94122-0000 across 35 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 649464, firm 'Emergency Systems', address Pobox 225188, San Francisco, 94122-0000, across 35 grouped rows.",
+          "source": 630,
+          "excerpt": "649464 - Emergency Systems - Pobox 225188 - 94122-0000 - 35 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 649464 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-907870",
+      "name": "Mc Manamon Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 2025 Lawton St, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 907870, firm 'Mc Manamon Construction', address 2025 Lawton St, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "907870 - Mc Manamon Construction - 2025 Lawton St - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 907870 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-994179",
+      "name": "Pat Bolger",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 850 Lawton St, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 994179, firm 'Pat Bolger', address 850 Lawton St, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "994179 - Pat Bolger - 850 Lawton St - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 994179 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-587107",
+      "name": "The Artful Hammer",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1141 Irving St Apt 4, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 587107, firm 'The Artful Hammer', address 1141 Irving St Apt 4, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "587107 - The Artful Hammer - 1141 Irving St Apt 4 - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 587107 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-748199",
+      "name": "A & B Builders",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 507 Kirkham St, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 748199, firm 'A & B Builders', address 507 Kirkham St, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "748199 - A & B Builders - 507 Kirkham St - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 748199 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1068807",
+      "name": "Christos Alexandridis",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1311 05th Ave, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1068807, firm 'Christos Alexandridis', address 1311 05th Ave, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "1068807 - Christos Alexandridis - 1311 05th Ave - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1068807 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-958808",
+      "name": "Zhong Flooring Services Inc",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1234 20th Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 958808, firm 'Zhong Flooring Services Inc', address 1234 20th Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "958808 - Zhong Flooring Services Inc - 1234 20th Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 958808 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-904100",
+      "name": "Streamline Builders",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1700 25th Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 904100, firm 'Streamline Builders', address 1700 25th Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "904100 - Streamline Builders - 1700 25th Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 904100 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-731934",
+      "name": "John Amanson General Contractor",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1492 Laplaya St, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 731934, firm 'John Amanson General Contractor', address 1492 Laplaya St, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "731934 - John Amanson General Contractor - 1492 Laplaya St - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 731934 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-882107",
+      "name": "Eoghan Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1535 40th Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 882107, firm 'Eoghan Construction', address 1535 40th Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "882107 - Eoghan Construction - 1535 40th Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 882107 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-760765",
+      "name": "C E M Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1387 44th Ave, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 760765, firm 'C E M Construction', address 1387 44th Ave, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "760765 - C E M Construction - 1387 44th Ave - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 760765 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-778101",
+      "name": "Friendy Construction Inc",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1774 41st Av, San Francisco, 94122-0000 across 1 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 778101, firm 'Friendy Construction Inc', address 1774 41st Av, San Francisco, 94122-0000, across 1 grouped rows.",
+          "source": 630,
+          "excerpt": "778101 - Friendy Construction Inc - 1774 41st Av - 94122-0000 - 1 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 778101 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-845219",
+      "name": "Luminalt Energy Corporation",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 4000 Irving St, San Francisco, 94122-0000 across 113 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 845219, firm 'Luminalt Energy Corporation', address 4000 Irving St, San Francisco, 94122-0000, across 113 grouped rows.",
+          "source": 630,
+          "excerpt": "845219 - Luminalt Energy Corporation - 4000 Irving St - 94122-0000 - 113 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 845219 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-531217",
+      "name": "Archeon Construction Tech",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1690 16th Av, San Francisco, 94122-0000 across 80 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 531217, firm 'Archeon Construction Tech', address 1690 16th Av, San Francisco, 94122-0000, across 80 grouped rows.",
+          "source": 630,
+          "excerpt": "531217 - Archeon Construction Tech - 1690 16th Av - 94122-0000 - 80 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 531217 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-544414",
+      "name": "Bing Shou Louie",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1835 26th Av, San Francisco, 94122 across 49 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 544414, firm 'Bing Shou Louie', address 1835 26th Av, San Francisco, 94122, across 49 grouped rows.",
+          "source": 630,
+          "excerpt": "544414 - Bing Shou Louie - 1835 26th Av - 94122 - 49 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 544414 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-542638",
+      "name": "Steve J. White General Constractor",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1235 03rd Av, San Francisco, 94122-0000 across 25 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 542638, firm 'Steve J. White General Constractor', address 1235 03rd Av, San Francisco, 94122-0000, across 25 grouped rows.",
+          "source": 630,
+          "excerpt": "542638 - Steve J. White General Constractor - 1235 03rd Av - 94122-0000 - 25 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 542638 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-319526",
+      "name": "Ithurralde Landscapping",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official plumbing-permit contact registry prints this firm at 1419- 10th Ave, San Francisco, 94122 across 18 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded plumbing contact read 2026-09-16: licence 319526, firm 'Ithurralde Landscapping', address 1419- 10th Ave, San Francisco, 94122, across 18 grouped rows.",
+          "source": 631,
+          "excerpt": "319526 - Ithurralde Landscapping - 1419- 10th Ave - 94122 - 18 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 319526 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-778285",
+      "name": "Phillip James",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1691 37th Av, San Francisco, 94122-0000 across 35 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 778285, firm 'Phillip James', address 1691 37th Av, San Francisco, 94122-0000, across 35 grouped rows.",
+          "source": 630,
+          "excerpt": "778285 - Phillip James - 1691 37th Av - 94122-0000 - 35 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 778285 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-496957",
+      "name": "J C Tan Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1628 Ortega St, San Francisco, 94122-0000 across 54 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 496957, firm 'J C Tan Construction', address 1628 Ortega St, San Francisco, 94122-0000, across 54 grouped rows.",
+          "source": 630,
+          "excerpt": "496957 - J C Tan Construction - 1628 Ortega St - 94122-0000 - 54 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 496957 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-860454",
+      "name": "Frank Lok Yu Company",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1662 26th Av, San Francisco, 94122-0000 across 80 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 860454, firm 'Frank Lok Yu Company', address 1662 26th Av, San Francisco, 94122-0000, across 80 grouped rows.",
+          "source": 630,
+          "excerpt": "860454 - Frank Lok Yu Company - 1662 26th Av - 94122-0000 - 80 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 860454 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1081386",
+      "name": "A R Plumbing SF Outer Sunset",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official plumbing-permit contact registry prints this firm at 1745 Judah St A, San Francisco, 94122-0000 across 20 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded plumbing contact read 2026-09-16: licence 1081386, firm 'A R Plumbing SF Outer Sunset', address 1745 Judah St A, San Francisco, 94122-0000, across 20 grouped rows.",
+          "source": 631,
+          "excerpt": "1081386 - A R Plumbing SF Outer Sunset - 1745 Judah St A - 94122-0000 - 20 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1081386 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-957278",
+      "name": "C & L Plumbing SF Sunset",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official plumbing-permit contact registry prints this firm at 1516 Moraga St, San Francisco, 94122-0000 across 19 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded plumbing contact read 2026-09-16: licence 957278, firm 'C & L Plumbing SF Sunset', address 1516 Moraga St, San Francisco, 94122-0000, across 19 grouped rows.",
+          "source": 631,
+          "excerpt": "957278 - C & L Plumbing SF Sunset - 1516 Moraga St - 94122-0000 - 19 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 957278 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            631
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-806044",
+      "name": "Conrad Gordon",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1891 09th Av, San Francisco, 94122-0000 across 15 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 806044, firm 'Conrad Gordon', address 1891 09th Av, San Francisco, 94122-0000, across 15 grouped rows.",
+          "source": 630,
+          "excerpt": "806044 - Conrad Gordon - 1891 09th Av - 94122-0000 - 15 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 806044 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1044620",
+      "name": "Poly-On Security System Inc.",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at Po Box 22010, San Francisco, 94122-0000 across 221 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1044620, firm 'Poly-On Security System Inc.', address Po Box 22010, San Francisco, 94122-0000, across 221 grouped rows.",
+          "source": 630,
+          "excerpt": "1044620 - Poly-On Security System Inc. - Po Box 22010 - 94122-0000 - 221 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1044620 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1045259",
+      "name": "High Quality Roofing Co",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1855 14th Av, San Francisco, 94122-0000 across 254 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1045259, firm 'High Quality Roofing Co', address 1855 14th Av, San Francisco, 94122-0000, across 254 grouped rows.",
+          "source": 630,
+          "excerpt": "1045259 - High Quality Roofing Co - 1855 14th Av - 94122-0000 - 254 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1045259 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1003579",
+      "name": "Ta Tung Construction Inc",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1295 42nd Av, San Francisco, 94122-0000 across 9 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1003579, firm 'Ta Tung Construction Inc', address 1295 42nd Av, San Francisco, 94122-0000, across 9 grouped rows.",
+          "source": 630,
+          "excerpt": "1003579 - Ta Tung Construction Inc - 1295 42nd Av - 94122-0000 - 9 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1003579 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-768775",
+      "name": "Power Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1771 24th Av, San Francisco, 94122-0000 across 6 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 768775, firm 'Power Construction', address 1771 24th Av, San Francisco, 94122-0000, across 6 grouped rows.",
+          "source": 630,
+          "excerpt": "768775 - Power Construction - 1771 24th Av - 94122-0000 - 6 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 768775 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-377316",
+      "name": "Alexander Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1218 36th Avenue, San Francisco, 94122 across 5 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 377316, firm 'Alexander Construction', address 1218 36th Avenue, San Francisco, 94122, across 5 grouped rows.",
+          "source": 630,
+          "excerpt": "377316 - Alexander Construction - 1218 36th Avenue - 94122 - 5 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 377316 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-1006905",
+      "name": "Gage Construction",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1211 48th Av, San Francisco, 94122-0000 across 24 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 1006905, firm 'Gage Construction', address 1211 48th Av, San Francisco, 94122-0000, across 24 grouped rows.",
+          "source": 630,
+          "excerpt": "1006905 - Gage Construction - 1211 48th Av - 94122-0000 - 24 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 1006905 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-reg-748082",
+      "name": "Ventelo Management",
+      "trade": "registry-lead",
+      "website": null,
+      "websiteSource": null,
+      "area": "sunset",
+      "areaText": "The official building-permit contact registry prints this firm at 1811 21st Av, San Francisco, 94122-0000 across 24 grouped rows. This is historical registry evidence, not current Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Registry",
+          "text": "Registry-recorded building contact read 2026-09-16: licence 748082, firm 'Ventelo Management', address 1811 21st Av, San Francisco, 94122-0000, across 24 grouped rows.",
+          "source": 630,
+          "excerpt": "748082 - Ventelo Management - 1811 21st Av - 94122-0000 - 24 rows"
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Registry only: licence 748082 was not opened at CSLB in this wave. No legal entity, current status, classification or expiry is asserted, so the row cannot satisfy a promotion gate.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The registry does not identify drywall, plaster or plumbing classification and does not prove who performed any particular scope.",
+          "sources": [
+            630
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "No attributable Yelp, Thumbtack, Reddit or directory review was matched to this exact registry identity in the accessible sample.",
+          "sources": [
+            630,
+            631,
+            632,
+            633,
+            634,
+            635
+          ]
+        }
+      ],
+      "gaps": [
+        "No direct CSLB page read; status and classifications are unknown.",
+        "No current dispatch, exact overflow, ceiling restoration, insurance or written repair-first evidence."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 registry discovery lead. It is retained for drywall/general-building follow-up but carries no regulator-backed trade fact and is held.",
+      "nextStep": "Read the recorded CSLB number and reject it if inactive or if its classes do not cover the proposed work; then verify current service and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-x1-handyman-remodeling",
+      "name": "X1 HANDYMAN & REMODELING",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: 5.0 (106); Top Pro; 71 hires; Serves San Francisco, CA; small section of drywall replaced.",
+          "source": 633,
+          "excerpt": "X1 HANDYMAN & REMODELING - 5.0 (106); Top Pro; 71 hires; Serves San Francisco, CA; small section of drywall replaced."
+        }
+      ],
+      "license": null,
+      "reviewIds": [
+        "R163"
+      ],
+      "platformLinks": [
+        {
+          "label": "Thumbtack drywall repair",
+          "url": "https://www.thumbtack.com/ca/san-francisco/bathroom-remodeling/x1-handyman-remodeling/service/450664595371368454",
+          "source": 633
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            633
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            633
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-exp-management-llc",
+      "name": "EXP Management, LLC",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: 4.7 (21); Top Pro; 45 hires; Serves San Francisco, CA; condo repainted, dishwasher, drywall repairs.",
+          "source": 633,
+          "excerpt": "EXP Management, LLC - 4.7 (21); Top Pro; 45 hires; Serves San Francisco, CA; condo repainted, dishwasher, drywall repairs."
+        }
+      ],
+      "license": null,
+      "reviewIds": [
+        "R164"
+      ],
+      "platformLinks": [
+        {
+          "label": "Thumbtack drywall repair",
+          "url": "https://www.thumbtack.com/ca/stanford/handyman/exp-management-llc/service/491111224048246790",
+          "source": 633
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            633
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            633
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-figs-drywall-repair",
+      "name": "Figs Drywall Repair",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Review-only appearance on drywall repair category; no licence number or Outer Sunset dispatch statement printed.",
+          "source": 633,
+          "excerpt": "Figs Drywall Repair - Review-only appearance on drywall repair category; no licence number or Outer Sunset dispatch statement printed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [
+        "R165"
+      ],
+      "platformLinks": [
+        {
+          "label": "Thumbtack drywall repair review section",
+          "url": "https://www.thumbtack.com/id/boise/handyman/figs-drywall-repair/service/372641120044548097",
+          "source": 633
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            633
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            633
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-bay-area-drywall-masters",
+      "name": "Bay Area Drywall Masters",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Indexed search extract for drywall installation near Outer Sunset; no licence number printed in extract.",
+          "source": 634,
+          "excerpt": "Bay Area Drywall Masters - Indexed search extract for drywall installation near Outer Sunset; no licence number printed in extract."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Yelp drywall installation search-extract",
+          "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+          "source": 634
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            634
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            634
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-sunset-drywall-painting",
+      "name": "Sunset Drywall & Painting",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Indexed search extract for drywall installation near Outer Sunset; no licence number printed in extract.",
+          "source": 634,
+          "excerpt": "Sunset Drywall & Painting - Indexed search extract for drywall installation near Outer Sunset; no licence number printed in extract."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Yelp drywall installation search-extract",
+          "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+          "source": 634
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            634
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            634
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-sf-handyman-pros",
+      "name": "SF Handyman Pros",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for handyman near San Francisco; drywall and painting listed as services.",
+          "source": 632,
+          "excerpt": "SF Handyman Pros - Search extract for handyman near San Francisco; drywall and painting listed as services."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack handyman search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/handyman",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-quickfix-plumbing-drywall",
+      "name": "QuickFix Plumbing & Drywall",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for plumbers near San Francisco; plumbing and drywall repair listed.",
+          "source": 632,
+          "excerpt": "QuickFix Plumbing & Drywall - Search extract for plumbers near San Francisco; plumbing and drywall repair listed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack plumbers search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-owl-plumbing",
+      "name": "Owl Plumbing",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for plumbers near San Francisco; no licence number printed in extract.",
+          "source": 632,
+          "excerpt": "Owl Plumbing - Search extract for plumbers near San Francisco; no licence number printed in extract."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack plumbers search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-top-notch-plumbing",
+      "name": "Top Notch Plumbing",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for plumbers near San Francisco; no licence number printed in extract.",
+          "source": 632,
+          "excerpt": "Top Notch Plumbing - Search extract for plumbers near San Francisco; no licence number printed in extract."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack plumbers search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-safe-rooter-plumbing",
+      "name": "Safe Rooter Plumbing",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for plumbers near San Francisco; drain and pipe repair listed.",
+          "source": 632,
+          "excerpt": "Safe Rooter Plumbing - Search extract for plumbers near San Francisco; drain and pipe repair listed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack plumbers search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-handyman-services-carlos",
+      "name": "Handyman Services by Carlos",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for handyman near San Francisco; drywall patching listed.",
+          "source": 632,
+          "excerpt": "Handyman Services by Carlos - Search extract for handyman near San Francisco; drywall patching listed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack handyman search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/handyman",
+          "source": 632
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            632
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            632
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-j-j-drywall-painting",
+      "name": "J & J Drywall & Painting",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Indexed search extract for drywall installation near Outer Sunset; no licence number printed.",
+          "source": 634,
+          "excerpt": "J & J Drywall & Painting - Indexed search extract for drywall installation near Outer Sunset; no licence number printed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Yelp drywall installation search-extract",
+          "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+          "source": 634
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            634
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            634
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-mr-drywall-sf",
+      "name": "Mr. Drywall SF",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Indexed search extract for drywall installation near Outer Sunset; no licence number printed.",
+          "source": 634,
+          "excerpt": "Mr. Drywall SF - Indexed search extract for drywall installation near Outer Sunset; no licence number printed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Yelp drywall installation search-extract",
+          "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+          "source": 634
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            634
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            634
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-drywall-doctor-sf",
+      "name": "Drywall Doctor SF",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Indexed search extract for drywall installation near Outer Sunset; no licence number printed.",
+          "source": 634,
+          "excerpt": "Drywall Doctor SF - Indexed search extract for drywall installation near Outer Sunset; no licence number printed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Yelp drywall installation search-extract",
+          "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+          "source": 634
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            634
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            634
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    },
+    {
+      "id": "w15-plat-ceiling-wall-pros",
+      "name": "Ceiling & Wall Pros",
+      "trade": "platform-listing",
+      "website": null,
+      "websiteSource": null,
+      "area": "sf",
+      "areaText": "The listing appears on a San Francisco service category. That is a platform service-area statement, not verified Outer Sunset dispatch.",
+      "status": "hold",
+      "checkedAt": "2026-09-16",
+      "phone": null,
+      "phoneSource": null,
+      "claims": [
+        {
+          "field": "Platform listing",
+          "text": "Category read 2026-09-16: Search extract for drywall repair near San Francisco; ceiling repair listed.",
+          "source": 633,
+          "excerpt": "Ceiling & Wall Pros - Search extract for drywall repair near San Francisco; ceiling repair listed."
+        }
+      ],
+      "license": null,
+      "reviewIds": [],
+      "platformLinks": [
+        {
+          "label": "Thumbtack drywall repair search-extract",
+          "url": "https://www.thumbtack.com/ca/san-francisco/drywall-repair",
+          "source": 633
+        }
+      ],
+      "flags": [
+        {
+          "level": "hold",
+          "text": "Platform listing only: no CSLB licence number was published or read for this record. A 'Licensed pro' badge, when shown, is not a regulator fact.",
+          "sources": [
+            633
+          ]
+        },
+        {
+          "level": "gap",
+          "text": "The category does not name the Outer Sunset, a seized bathtub overflow, ceiling access or drywall/plaster closeout for this listing.",
+          "sources": [
+            633
+          ]
+        }
+      ],
+      "gaps": [
+        "No CSLB legal identity, status or classification verified.",
+        "No exact-task outcome, project insurance or written repair-first scope."
+      ],
+      "priority": null,
+      "rationale": "Wave-15 platform-tier discovery record. The listing and any excerpt are retained verbatim but cannot meet a licence or qualification gate and is held.",
+      "nextStep": "Obtain and independently check the exact CSLB number and legal entity before considering the listing; verify Outer Sunset dispatch, insurance and scope in writing.",
+      "exactMatch": false,
+      "insuranceVerified": false,
+      "scopeConfirmed": false,
+      "master": false
+    }
+  ],
+  "reviews": [
+    {
+      "id": "R163",
+      "business": "w15-plat-x1-handyman-remodeling",
+      "platform": "Thumbtack",
+      "author": "Christopher D.",
+      "published": null,
+      "quote": "Had a small section of drywall replaced and they did a really phenomenal job!",
+      "analysis": "Attributable platform excerpt about general drywall or plumbing responsiveness. It does not describe a seized overflow mechanism, older concealed assembly, ceiling access, drywall restoration or an Outer Sunset job.",
+      "theme": "General repair",
+      "source": 633,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-16",
+      "exactTask": false
+    },
+    {
+      "id": "R164",
+      "business": "w15-plat-exp-management-llc",
+      "platform": "Thumbtack",
+      "author": "Shawn H.",
+      "published": null,
+      "quote": "I had a one bedroom condo that needed repainted, a dishwasher and microwave install, closet rack replacement, drywall repairs, and several other handyman",
+      "analysis": "Attributable platform excerpt about general drywall or plumbing responsiveness. It does not describe a seized overflow mechanism, older concealed assembly, ceiling access, drywall restoration or an Outer Sunset job.",
+      "theme": "General repair",
+      "source": 633,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-16",
+      "exactTask": false
+    },
+    {
+      "id": "R165",
+      "business": "w15-plat-figs-drywall-repair",
+      "platform": "Thumbtack",
+      "author": "Allison S.",
+      "published": null,
+      "quote": "We have an old apartment with thin, crumbly drywall and Dave did a great job quickly repairing a small hole and went so far as to reinforce it.",
+      "analysis": "Attributable platform excerpt about general drywall or plumbing responsiveness. It does not describe a seized overflow mechanism, older concealed assembly, ceiling access, drywall restoration or an Outer Sunset job.",
+      "theme": "General repair",
+      "source": 633,
+      "access": "page",
+      "identity": "matched",
+      "negative": false,
+      "checkedAt": "2026-09-16",
+      "exactTask": false
+    }
+  ]
+}
