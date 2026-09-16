@@ -208,8 +208,8 @@ for (const view of ["directory", "reviews", "audit", "method"])
     }
     if (view === "method") {
       assert.match(html, /286 distinct CSLB license detail pages/);
-      assert.match(html, /14 waves/);
-      assert.match(html, /693 businesses discovered/);
+      assert.match(html, /15 waves/);
+      assert.match(html, /743 businesses discovered/);
       assert.match(html, /189 records show an active license/);
       assert.match(html, /Wave 10 \(Sep 12, 2026\)/);
       assert.match(html, /Wave 11 \(Sep 12, 2026\)/);
@@ -224,7 +224,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
       // 94122 address, and it moves with every wave that adds one.
       assert.match(html, /64 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
-      assert.match(html, /Waves 8, 9, 10, 11, 13 and 14 each received three additional passes/);
+      assert.match(html, /Waves 8, 9, 10, 11, 13, 14 and 15 each received three additional passes/);
       // the live totals stay out of any single wave's bullet
       assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
       assert.match(html, /17 active, 5 non-active and held/);

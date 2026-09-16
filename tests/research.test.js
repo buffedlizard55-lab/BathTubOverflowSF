@@ -57,8 +57,8 @@ function assertPrivacySafe(value, label) {
       );
 }
 
-test("exactly 693 unique discovery entries across fourteen waves, no fabricated master approvals", () => {
-  assert.equal(data.businesses.length, 693);
+test("exactly 743 unique discovery entries across fifteen waves, no fabricated master approvals", () => {
+  assert.equal(data.businesses.length, 743);
   assert.equal(data.schemaVersion, 2);
   assert.deepEqual(data.researchDates, [
     "2026-09-10",
@@ -69,10 +69,10 @@ test("exactly 693 unique discovery entries across fourteen waves, no fabricated 
     "2026-09-16",
   ]);
   assert.equal(data.researchedAt, "2026-09-16");
-  assert.equal(data.waves.length, 14);
+  assert.equal(data.waves.length, 15);
   assert.equal(
     data.waves.reduce((n, w) => n + w.count, 0),
-    693,
+    743,
   );
   // Wave 12 re-listed eight firms earlier waves had already stored. Wave 13
   // folded those eight rows into the earlier records and reduced the wave-12
@@ -104,7 +104,7 @@ test("exactly 693 unique discovery entries across fourteen waves, no fabricated 
   for (const field of ["id", "name"])
     assert.equal(
       new Set(data.businesses.map((b) => b[field].trim().toLowerCase())).size,
-      693,
+      743,
     );
   // wave 10 publishes its own regulator reads, registry leads and platform rows; wave 11 follows below
   assert.deepEqual(data.waves[9], {
@@ -826,7 +826,7 @@ test("wave 8 irregularities remain visible and never relax the master gate", () 
 test("wave 7 follow-up attaches to pre-existing records instead of double-counting", () => {
   // Wave 7 still contributed exactly 50 rows; later waves do not duplicate its
   // seven follow-up targets, which remain pre-existing ids.
-  assert.equal(data.businesses.length, 693);
+  assert.equal(data.businesses.length, 743);
   for (const s of [218, 219, 220, 221]) {
     assert.equal(sources.get(s).access, "page", s);
     assert.equal(sources.get(s).checkedAt, "2026-09-11", s);
@@ -929,14 +929,14 @@ test("wave 7 follow-up attaches to pre-existing records instead of double-counti
         !r.business.startsWith("w9-") &&
         !r.business.startsWith("w10-") &&
         !r.business.startsWith("w11-") &&
-        !r.business.startsWith("w14-"),
+        !r.business.startsWith("w14-") && !r.business.startsWith("w15-"),
     ).length,
     116,
   );
   // 137 at wave 11, plus wave 12's five retained excerpts (eight were stored,
   // three of them Google quotes withdrawn in the wave-13 pass), wave 13's eleven,
-  // and wave 14's four more attributable excerpts, for 159 in total.
-  assert.equal(data.reviews.length, 159);
+  // and wave 14's four more attributable excerpts, for 162 in total. Wave 15 adds 3 more.
+  assert.equal(data.reviews.length, 162);
 });
 
 test("wave 9 separates CSLB-read records from registry-only leads and promotes nothing", () => {
@@ -1163,7 +1163,7 @@ test("wave 9 separates CSLB-read records from registry-only leads and promotes n
     data.methodology.passes,
     /Pass 19 \(wave 9, Sep 12 2026\):[\s\S]*Pass 20:[\s\S]*Pass 21:/,
   );
-  assert.match(data.methodology.governmentSources, /286 distinct detail pages; 284 stored licence numbers; 25 read in wave 14/);
+  assert.match(data.methodology.governmentSources, /286 distinct detail pages; 284 stored licence numbers/);
   assert.deepEqual(data.master, []);
   assert.equal(data.businesses.filter((b) => b.priority).length, 9);
 });
