@@ -9,23 +9,41 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 16, 2026 · fifteen waves**
+**Checked through September 16, 2026 · sixteen waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **743** |
-| Direct CSLB license-detail reads | **286** |
+| Unique business research records | **793** |
+| Direct CSLB license-detail reads | **311** |
 | BuildZoom-verified CSLB reads | **3** |
-| Records with an active license at check time | **189** |
-| Records with a non-active license | **95** |
-| Records with no direct regulator read | **459** |
-| Retained review excerpts | **162** |
-| Evidence references | **629** |
-| Held or scope-excluded records | **258** |
+| Records with an active license at check time | **207** |
+| Records with a non-active license | **102** |
+| Records with no direct regulator read | **484** |
+| Retained review excerpts | **172** |
+| Evidence references | **673** |
+| Held or scope-excluded records | **308** |
 | Active-license records with Outer Sunset area evidence | **64** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 743 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 793 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 16: 50 new records, 25 direct regulator reads, 10 registry-only rows and 15 platform/community listings
+
+Wave 16 adds **50 genuinely new records** after checking ids, normalized names, stripped name cores, licence numbers and ten-digit phones against all 743 earlier records. It keeps three evidence tiers separate on every record and opens 25 CSLB licence pages line by line: business information, entity, issue and expiry dates, the status line, classifications, the contractor's bond line, workers compensation and, where printed, liability insurance.
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **25** | 25 live LicenseDetail.aspx pages, one per licence, read 2026-09-16 | legal entity type, licence number, classification(s), status, issue/expiry, bond, workers compensation and liability lines as printed |
+| Registry only | **10** | Official SF DBI 94122 building-contact rows grouped by firm | historical firm name, address and permit-row count — no current licence fact |
+| Platform / community listing | **15** | Current Thumbtack San Francisco plumber, drywall-repair and bathroom-remodeling categories, Yelp Outer Sunset search-extract, Reddit threads | platform category, badge, hire count and attributable excerpt — no licence implication |
+
+- **25 direct CSLB reads:** 18 active and 7 non-active (inactive, expired, canceled, suspended or revoked) — every non-active record held. The closest trade match is **New City Construction Company (1023648)**, the only new read carrying **B + C10 + C36** at a 94122 address; it is still held because no attributable review, ceiling-restoration evidence, project insurance or written repair-first scope was joined to it.
+- **Queued irregularities:** **D-Finity Construction (1033149)** reads revoked — “not able to contract” — and its page links a complaint-disclosure record that this wave did not open, so no allegation is characterised. **Hybrid City Construction (1021804)** is under a contractors' bond suspension, and CSLB prints ZIP 94112 and a different phone from the City row's 94122. **CMAC Construction LLC (1053452)** is the single new read whose CSLB page prints a liability-insurance line, and its business address is Novato while the City row is 1295 41st Av, 94122. **B&K Construction (1047639)** carries plumbing workers-compensation code 51831 with no C36 on the licence. **Sound Build (1092217)** holds B and C-2 (insulation and acoustical), not plumbing or drywall. **Basset Engineering (1070288)** is A (general engineering) only. **Chris William Construction (1018105)** expires 09/30/2026. Address and phone mismatches (Actually Design Build, Jian Hua, Yan, Dreamsky) are published as discrepancy flags rather than reconciled. A CSLB-printed phone already stored against another record was left unstored so two licence identities are not merged by a shared line.
+- **40 registry-only rows** from the 94122 building-contact query with no licence recorded and the 94122 plumbing-contact query's tail rows were screened by name before any were kept; 10 survived identity checks. Names already stored (WB Plumbing Supply, Gerber Plumbing, X-Ray Plumbing, Eric Brand Plumbing, General SF, GCD Restoration, Kenneth Asire Plumbing, Plumbing Pure, VRG Plumbing, Handyman Heroes, Happy Bay, Edri, Inspired Builders, Promodeling, Paul Woodford, Owl Plumbing, Safe Rooter, Reasonably Honest Mike's, Handy Helper, Speer, Tal, ABC Maintenance, Paint Studio SF, M & L Construction, Valex, Precision Rooter & Drain) were rejected rather than re-published.
+- **10 review excerpts (R166–R175)** retained from Yelp search-extracts, Thumbtack pro pages and Reddit threads, each with the reader, page, platform and edition recorded; cards whose review text was unreadable kept no excerpt. Yelp remains reachable only as search-extract, and that limitation is printed on the record.
+- **Three further passes (37–39)** re-read the registry queries, opened all 25 CSLB pages, compared all 50 candidates against every stored identity, and re-ran the fail-closed qualification audit. All 50 held; `exactMatch`, `insuranceVerified`, `scopeConfirmed` and `master` false; nothing promoted.
+
+The complete line-by-line trail is in [`data/wave16-discovery-log.md`](data/wave16-discovery-log.md); the reproducible artifact and gates are [`data/wave16.json`](data/wave16.json), [`scripts/gen_wave16.py`](scripts/gen_wave16.py) and [`scripts/merge_wave16.py`](scripts/merge_wave16.py).
 
 ## Wave 15: 50 new records, 0 direct regulator reads (registry-only + platform)
 
@@ -216,13 +234,13 @@ The permit joins use separate official City datasets for contact identity and pe
 
 ## Three additional verification passes (run for every wave)
 
-After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30; wave 14’s are Passes 31–33; wave 15’s are Passes 34–36:
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30; wave 14’s are Passes 31–33; wave 15’s are Passes 34–36; wave 16’s are Passes 37–39:
 
-1. **Regulator pass (34)** — building and plumbing 94122 grouped queries re-read via Socrata, including offset 500 low-count n=1 rows; 35 numbers not in existing 491-number prose retained as registry-only leads with license: null; no CSLB page opened to avoid hallucinating status/class.
-2. **Cross-source pass (35)** — each legal name, normalized core, licence number and ten-digit phone compared with all 693 earlier records; Tailwind, A R Plumbing and C & L Plumbing renamed to unique cores; Thumbtack drywall/plumbing categories and Yelp Outer Sunset search-extract checked, 3 excerpts attributable; blocked/unattributable Yelp, Reddit and Google evidence stayed a source or gap.
-3. **Fail-closed qualification pass (36)** — status/classification, insurance, service-area, exact-task and written-scope gates audited; all 50 held, exactMatch false, master false; source references, review assignments and public-data privacy checked; no record promoted and the qualified master left empty; structural, monitor, render and browser tests re-run.
+1. **Regulator pass (37)** — the 94122 grouped plumbing and building contact queries re-read via Socrata and every licence number diffed against the 531-number baseline (284 stored licence numbers plus 523 prose tokens); the 25 numbers that appeared nowhere before were opened at CSLB and transcribed field by field, including bond, workers compensation and liability lines.
+2. **Cross-source pass (38)** — every legal name, normalized core, licence number and ten-digit phone compared with all 743 earlier records; a phone already stored against another record was left unstored and flagged; Thumbtack plumber, drywall-repair and bathroom-remodeling categories, six Yelp search-extracts and four Reddit threads were read, 10 excerpts attributable; unreadable review panels kept no excerpt.
+3. **Fail-closed qualification pass (39)** — status/classification, insurance, service-area, exact-task and written-scope gates audited; all 50 held, exactMatch false, insuranceVerified false, scopeConfirmed false, master false; source references, review assignments and the privacy fingerprint checked; nothing promoted and the qualified master left empty; structural, render and monitor tests re-run.
 
-The reproducible gates are in [`scripts/merge_wave15.py`](scripts/merge_wave15.py), [`scripts/merge_wave14.py`](scripts/merge_wave14.py), [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave15-discovery-log.md`](data/wave15-discovery-log.md), [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md), [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave16.py`](scripts/merge_wave16.py), [`scripts/merge_wave15.py`](scripts/merge_wave15.py), [`scripts/merge_wave14.py`](scripts/merge_wave14.py), [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave16-discovery-log.md`](data/wave16-discovery-log.md), [`data/wave15-discovery-log.md`](data/wave15-discovery-log.md), [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md), [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
@@ -322,18 +340,18 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 15 from the ignored pre-wave-15 snapshot. Never re-run the generator against the live merged file:
+Rebuild and validate wave 16 from the ignored pre-wave-16 snapshot. Never re-run the generator against the live merged file:
 
 ```sh
-cp reports/research_before_wave15.json data/research.json
-python3 scripts/gen_wave15.py
-python3 scripts/merge_wave15.py
+cp reports/research_before_wave16.json data/research.json
+python3 scripts/gen_wave16.py
+python3 scripts/merge_wave16.py
 npm test
 npm run test:monitor
 npm run test:browser
 ```
 
-The wave-15 generator and merge verify source links, exact and stripped-core identities, licence and phone collisions, regulator/registry/platform tier boundaries, classification vocabulary, review attribution, privacy and non-active holds before writing the merged dataset. They do not promote records to the master list and contain zero CSLB reads to avoid hallucinating licence details.
+The wave-16 generator and merge verify source links, exact and stripped-core identities, licence and phone collisions, regulator/registry/platform tier boundaries, classification vocabulary, review attribution, privacy and non-active holds before writing the merged dataset. The merge refuses to run unless the target is the reviewed pre-wave snapshot, the composition matches exactly (25 CSLB reads, 10 registry-only rows, 15 platform/community listings, 18 active and 7 non-active licences, 10 retained excerpts, 3 verification passes), every licence source is a CSLB detail page whose URL ends in the licence number, every licence-less record is a registry or platform tier with a hold flag, and the post-merge totals are exactly 793 businesses, 673 sources, 172 reviews and 16 waves with an empty master list.
 
 
 ## Read-only source monitoring
@@ -358,16 +376,18 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 
 Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-15 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a0ac0b-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a0ac7b-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 
 ```text
 index.html, styles.css, app.js    Static GitHub Pages UI
 lib.js                           Filters, exports, counts, allowed classes, and promotion gate
-data/research.json               Merged schema-v2 dataset (743 records, 15 waves)
-data/wave2.json … wave15.json    Reproducible per-wave artifacts
+data/research.json               Merged schema-v2 dataset (793 records, 16 waves)
+data/wave2.json … wave16.json    Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
+scripts/gen_wave16.py            Wave-16 generator (25 CSLB reads, 10 registry, 15 platform, all held)
+scripts/merge_wave16.py          Wave-16 collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave15.py            Wave-15 generator (0 CSLB reads, 35 registry, 15 platform, all held)
 scripts/merge_wave15.py          Collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave14.py            Wave-14 generator (three evidence tiers)
