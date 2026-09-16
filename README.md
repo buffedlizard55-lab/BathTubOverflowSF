@@ -9,23 +9,42 @@ A static, source-linked research workspace for a repair-first bathtub overflow p
 
 ## Current research snapshot
 
-**Checked through September 15, 2026 · thirteen waves**
+**Checked through September 16, 2026 · fourteen waves**
 
 | Measure | Current result |
 | --- | ---: |
-| Unique business research records | **643** |
-| Direct CSLB license-detail reads | **261** |
+| Unique business research records | **693** |
+| Direct CSLB license-detail reads | **286** |
 | BuildZoom-verified CSLB reads | **3** |
-| Records with an active license at check time | **179** |
-| Records with a non-active license | **80** |
-| Records with no direct regulator read | **384** |
-| Retained review excerpts | **155** |
-| Evidence references | **587** |
-| Held or scope-excluded records | **165** |
-| Active-license records with Outer Sunset area evidence | **60** |
+| Records with an active license at check time | **189** |
+| Records with a non-active license | **95** |
+| Records with no direct regulator read | **409** |
+| Retained review excerpts | **159** |
+| Evidence references | **621** |
+| Held or scope-excluded records | **208** |
+| Active-license records with Outer Sunset area evidence | **64** |
 | Fully qualified master entries | **0** |
 
-These are discovery and verification records, **not 643 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+These are discovery and verification records, **not 693 approved contractors**. The qualified master remains empty because no business has all required evidence for legal identity, current relevant licensing, present Outer Sunset dispatch, applicable project insurance, exact difficult-overflow experience, and a written repair-first scope.
+
+## Wave 14: 50 new records, 25 direct regulator reads
+
+Wave 14 adds **50 genuinely new records** after checking ids, normalized names, stripped name cores, licence numbers and ten-digit phones against all 643 earlier records. It preserves three evidence tiers rather than treating every search result as a contractor credential.
+
+| Tier | Records | What was read | What the record may assert |
+| --- | ---: | --- | --- |
+| CSLB read directly | **25** | Matching `LicenseDetail.aspx` page opened and transcribed field by field | regulator-published identity, form, status, classes, dates, contact, bond and workers’ compensation lines |
+| Building registry only | **20** | Official SF DBI 94122 building-contact rows | historical firm name, recorded number, address and row count — no current licence fact |
+| Platform listing | **5** | Current Thumbtack San Francisco plumber page | platform category, badge, hire count and attributable excerpt — no licence implication |
+
+- **10 active** and **15 non-active** regulator reads: nine expired, two canceled, two inactive and two revoked; every non-active record is held
+- **J N Pacific Construction Co (749693)** is the only active Wave-14 read with B + C36. Its current CSLB address is 94103 while its City registry row is in 94122, and no exact overflow/restoration outcome, project insurance or written repair-first scope was found
+- Four active reads have a current CSLB 94122 address: Elite Engineering Contractors, Mallard Construction, The Bay Construction Company and Soon Yu Construction; none qualifies because one trade, exact-task, insurance and written-scope evidence remain incomplete
+- BuildZoom’s stale “inactive” label for The Bay conflicts with the same-day active CSLB page. Its Mallard page mixes licence 849492 with an Orange contractor, a 760 phone and two other licence numbers. Both conflicts remain visible instead of being resolved by assumption
+- Current Yelp/search, Thumbtack, Reddit, Google-indexed and BuildZoom evidence was checked. Four Thumbtack excerpts were attributable and retained; the current drywall category’s attributable names were already stored, so they were not counted again. Blocked Reddit/Yelp text was not reconstructed
+- Three additional passes (31–33) rechecked line transcription, collisions, status/class scope, source links, review attribution, privacy and fail-closed qualification. No record was promoted or added to the call order
+
+The complete line-by-line trail is in [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md); the reproducible artifact and gates are [`data/wave14.json`](data/wave14.json), [`scripts/gen_wave14.py`](scripts/gen_wave14.py) and [`scripts/merge_wave14.py`](scripts/merge_wave14.py).
 
 ## Wave 13: 50 new records in three published evidence tiers
 
@@ -179,13 +198,13 @@ The permit joins use separate official City datasets for contact identity and pe
 
 ## Three additional verification passes (run for every wave)
 
-After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30:
+After each discovery pass the project runs three further fail-closed passes. Wave 9’s were Passes 19–21; wave 10’s were Passes 22–24; wave 11’s were Passes 25–27; wave 13’s were Passes 28–30; wave 14’s are Passes 31–33:
 
-1. **Regulator pass (19)** — 17 CSLB detail pages opened directly and transcribed field by field, including bond, workers’ compensation and liability lines; five licenses found non-active; the complaint disclosure behind 1017991 read as a separate page; every registry license number that was *not* read published as a lead with `license: null`.
-2. **Cross-source pass (20)** — registry identity compared with regulator identity field by field, producing 15 discrepancy flags: four phone conflicts, six registry spellings of one licensee, a license reissued to another entity in 2006, three ZIP variants on one active multi-trade license, and one address plus phone shared by two different license numbers. Directory pages checked for review corpora; unattributable Thumbtack category quotes and Reddit task threads quarantined as sources; CSLB class **B-2** discovered and added to the schema rather than mapped onto B.
-3. **Fail-closed qualification pass (21)** — no record promoted, the master list left empty, the nine-call order unchanged; holds raised for expired and inactive licenses, a workers’-compensation cancellation dated before the research date, and a single unreachable 1.0-star review; public-data privacy scrub; structural, render and browser tests re-run; merge verified idempotent.
+1. **Regulator pass (31)** — 25 CSLB detail pages opened directly and transcribed field by field, including identity, status, classifications, contact, bond and workers’ compensation lines; 15 licences found non-active; every registry number that was *not* read stays on a lead with `license: null`.
+2. **Cross-source pass (32)** — each legal name, normalized core, licence number and ten-digit phone compared with all 643 earlier records; registry identity compared with regulator identity field by field; five platform names rechecked against the corpus; attributable Thumbtack text retained while blocked/unattributable Yelp, Reddit and Google evidence stayed a source or gap.
+3. **Fail-closed qualification pass (33)** — status/classification, insurance, service-area, exact-task and written-scope gates audited; source references, review assignments and public-data privacy checked; no record promoted and the qualified master left empty; structural, monitor, render and browser tests re-run.
 
-The reproducible gates are in [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
+The reproducible gates are in [`scripts/merge_wave14.py`](scripts/merge_wave14.py), [`scripts/merge_wave13.py`](scripts/merge_wave13.py), [`scripts/merge_wave11.py`](scripts/merge_wave11.py), [`scripts/merge_wave10.py`](scripts/merge_wave10.py), [`scripts/merge_wave9.py`](scripts/merge_wave9.py) and [`scripts/merge_wave8.py`](scripts/merge_wave8.py); the evidence trails are in [`data/wave14-discovery-log.md`](data/wave14-discovery-log.md), [`data/wave13-discovery-log.md`](data/wave13-discovery-log.md), [`data/wave11-discovery-log.md`](data/wave11-discovery-log.md), [`data/wave10-discovery-log.md`](data/wave10-discovery-log.md), [`data/wave9-discovery-log.md`](data/wave9-discovery-log.md) and [`data/wave8-discovery-log.md`](data/wave8-discovery-log.md).
 
 ## Review evidence and access limits
 
@@ -209,7 +228,7 @@ Ratings are not blended across platforms. Inaccessible text remains incomplete r
 
 - **Admonishment letter on an active license.** San Francisco Remodel (1017991) is active with B only, and its CSLB page points to complaint disclosure: Complaint # N A 2025 2297, dated 06/23/2026, status **LETTER OF ADMONISHMENT ISSUED**. CSLB states a listed complaint is only an allegation of a probable violation and does not affect license status, so it is recorded as an allegation — and the firm’s completed 94122 permit includes plumbing repair it holds no C-36 for.
 - **Plumbing-scope permits without C-36.** Three licenses appear on City plumbing or plumbing-scope permits while CSLB shows no C-36: Euro Plumbing Inc dba General Contractor (1028917, B only, expired 2021), San Francisco Remodel (1017991, B only), and KNB Remodeling (1120735, B-2 and B, on a tub-replacement permit). Wave 8 had rejected 1028917 for a name mismatch; wave 9 opened the page and resolved it, so it is stored as a documented hold rather than dropped.
-- **One address and phone, two license numbers.** CSLB reads CT Plumbing & Fire Protection (1112261) at 1847 48th Ave, 94122 with (415) 203-7178 — the same address and phone the City registry stores for “C T Construction & Plumb” under license **533324**, which has never been read on CSLB. Re-licensing, shared office, and registry error all remain open. This is the wave’s only permitted phone overlap, and the merge gate accepts it **only** if the record publishes it.
+- **One address and phone, two license numbers.** CSLB reads CT Plumbing & Fire Protection (1112261) at 1847 48th Ave, 94122 with (415) 203-7178 — the same address the City registry stores for “C T Construction & Plumb” under licence **533324**. Wave 13 later read 533324 directly as active B-only CT CONSTRUCTION at the same address with a different phone. Re-licensing, shared office, and registry error remain open; the records stay separate because the regulator identities, numbers and classes differ.
 - **Six registry spellings of one licensee, and a 2006 reissue.** Lam Pui (373337) appears under six firm-name variants in the 94122 registry rows; CSLB shows the license expired 2010 and “LICENSE REISSUED TO ANOTHER ENTITY” on 04/06/2006, so the number no longer identifies the original contractor.
 - **Registry name does not match the regulator.** License 342141 is stored in the registry as “L & L Plumbing Inc.” with a 94122 address, but the CSLB licensee is LEE’S PLUMBING CO at 94118, expired 1997, with “no workers comp information found for this license”.
 - **Registry phone versus regulator phone (four conflicts).** 786183, 1097098, 1140843 and 1028917 each print a different phone in the City registry than on their CSLB page. The CSLB reading is stored; the registry reading is flagged.
@@ -285,19 +304,18 @@ npm run test:monitor
 npm run test:browser
 ```
 
-Rebuild and validate wave 13 from the saved pre-wave-13 dataset. Never re-run the generator against the live merged file:
+Rebuild and validate wave 14 from the ignored pre-wave-14 snapshot. Never re-run the generator against the live merged file:
 
 ```sh
-cp reports/research_before_wave13.json data/research.json
-python3 scripts/gen_wave13.py
-python3 scripts/merge_wave13.py
-python3 scripts/patch_wave13_normalise.py
-python3 scripts/patch_wave13_closed_gaps.py
+cp reports/research_before_wave14.json data/research.json
+python3 scripts/gen_wave14.py
+python3 scripts/merge_wave14.py
 npm test
+npm run test:monitor
 npm run test:browser
 ```
 
-The wave-13 merge verifies source links, identity and licence collisions, registry/platform tier boundaries, classification coverage, review attribution, privacy, non-active holds and upgrade targets before writing the merged dataset. It does not promote records to the master list.
+The wave-14 generator and merge verify source links, exact and stripped-core identities, licence and phone collisions, regulator/registry/platform tier boundaries, classification vocabulary, review attribution, privacy and non-active holds before writing the merged dataset. They do not promote records to the master list.
 
 
 ## Read-only source monitoring
@@ -320,9 +338,9 @@ Reports are written under `reports/` and are ignored by Git. The `Public source 
 - `assets/mark.svg`
 - `data/research.json`
 
-Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-13 pushes are validated; deployment remains `main`-only.
+Actions deployment occurs from `main` when the repository uses the Actions Pages build type. Session-branch runs validate and build but intentionally do not alter repository Pages settings. Both workflows now trigger on `main` and on this session branch, so wave-14 pushes are validated; deployment remains `main`-only.
 
-This workspace is fixed to branch `arena/01a0a734-bathtuboverflowsf`; no other branch is used.
+This workspace is fixed to branch `arena/01a0ab53-bathtuboverflowsf`; no other branch is used.
 
 ## Key files
 

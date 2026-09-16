@@ -111,6 +111,10 @@ export const ALLOWED_CLASSES = [
   "C33",
   "C38",
   "C43",
+  // C51 structural steel first appears in Wave 14 on an expired B-class
+  // record. It is retained as the regulator prints it and does not, by itself,
+  // cover either project trade.
+  "C51",
   "C-7",
   "C15",
   "D34",
@@ -149,7 +153,7 @@ export const TRADE_CLASSES = {
   // Wave 11 preserves real CSLB classifications that do not cover the
   // project's required plumbing-plus-drywall combination. These labels are
   // intentionally non-promotable scope exclusions, not guessed trades.
-  "scope-exclusion": [["A"], ["B"], ["C12"], ["C20"], ["C27"], ["C39"], ["C43"], ["C45"]],
+  "scope-exclusion": [["A"], ["B"], ["C10"], ["C12"], ["C20"], ["C27"], ["C39"], ["C43"], ["C45"], ["C51"]],
   // A registry-only lead asserts no classification at all, so no class set can
   // satisfy it and such a record can never reach the promotion gate.
   "registry-lead": [],

@@ -129,7 +129,7 @@ test("app boots, wires the hashchange router and renders the summary", async () 
   const html = await render("#summary");
   assert.match(html, /Find the right expertise\./);
   assert.equal(el(".nav-count").textContent, data.businesses.length);
-  assert.match(el("#snapshot-date").textContent, /Sep 15, 2026/);
+  assert.match(el("#snapshot-date").textContent, /Sep 16, 2026/);
   assert.equal(el("#snapshot-date").dateTime, data.researchedAt);
   const cards = html.match(/data-detail="[^"]+"/g) || [];
   assert.equal(cards.length, data.businesses.filter((b) => b.priority).length + 20);
@@ -177,7 +177,7 @@ for (const view of ["directory", "reviews", "audit", "method"])
         "expected a name button and a view button per record",
       );
       assert.match(html, /Active license checked only/);
-      assert.match(html, /Snapshot · Sep 10–15, 2026/);
+      assert.match(html, /Snapshot · Sep 10–16, 2026/);
     }
     if (view === "audit") {
       const numbers = [
@@ -200,15 +200,17 @@ for (const view of ["directory", "reviews", "audit", "method"])
       assert.match(html, /Wave 9 cross-check/);
       assert.match(html, /fifteen discrepancy flags/);
       assert.match(html, /one address and phone shared by two different licence numbers/);
+      assert.match(html, /Wave 14 cross-check/);
+      assert.match(html, /Twenty-five further licence pages were read directly/);
       // a registry-only record must never render a licence fact
       assert.match(html, /Registry lead · classification not read/);
       assert.match(html, /No CSLB page read for this record/);
     }
     if (view === "method") {
-      assert.match(html, /261 distinct CSLB license detail pages/);
-      assert.match(html, /13 waves/);
-      assert.match(html, /643 businesses discovered/);
-      assert.match(html, /179 records show an active license/);
+      assert.match(html, /286 distinct CSLB license detail pages/);
+      assert.match(html, /14 waves/);
+      assert.match(html, /693 businesses discovered/);
+      assert.match(html, /189 records show an active license/);
       assert.match(html, /Wave 10 \(Sep 12, 2026\)/);
       assert.match(html, /Wave 11 \(Sep 12, 2026\)/);
       // the live totals must not be attributed to a single wave's bullet
@@ -216,12 +218,13 @@ for (const view of ["directory", "reviews", "audit", "method"])
       // wave 12 wrote its own day and wave 13 folded wave 12's duplicate rows
       assert.match(html, /Wave 12 \(Sep 14, 2026\)/);
       assert.match(html, /Wave 13 \(Sep 15, 2026\)/);
+      assert.match(html, /Wave 14 \(Sep 16, 2026\)/);
       // This live total is computed from the dataset, not hard-coded in app.js: it
       // counts records with an active licence whose recorded evidence includes a
       // 94122 address, and it moves with every wave that adds one.
-      assert.match(html, /60 records directory-wide now combine an active license/);
+      assert.match(html, /64 records directory-wide now combine an active license/);
       assert.match(html, /Forty licenses were active and 10 non-active/);
-      assert.match(html, /Waves 8, 9, 10 and 11 each received three additional passes/);
+      assert.match(html, /Waves 8, 9, 10, 11, 13 and 14 each received three additional passes/);
       // the live totals stay out of any single wave's bullet
       assert.match(html, /Wave 9 \(Sep 12, 2026\)/);
       assert.match(html, /17 active, 5 non-active and held/);

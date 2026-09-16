@@ -385,6 +385,27 @@ test("wave 10 leads render their trade and licence reality, not a badge", async 
   await page.keyboard.press("Escape");
 });
 
+test("wave 14 renders its three evidence tiers without promoting a lead", async ({ page }) => {
+  await page.goto("/#directory");
+  await page.getByRole("searchbox", { name: "Search businesses" }).fill("J N Pacific Construction");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody")).toContainText("#749693 · B, C36");
+  await page.locator('[data-detail="w14-749693"]').first().click();
+  await expect(page.getByRole("dialog")).toContainText("Not admitted to the qualified master list");
+  await expect(page.getByRole("dialog")).toContainText("CSLB now records 768 Brannan St");
+  await page.keyboard.press("Escape");
+
+  await page.getByRole("searchbox", { name: "Search businesses" }).fill("Christopher Gate Construction");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody")).toContainText("Registry lead · classification not read");
+  await expect(page.locator("tbody")).toContainText("No CSLB page read for this record");
+
+  await page.getByRole("searchbox", { name: "Search businesses" }).fill("Ever Plumbing Underground");
+  await expect(page.locator("tbody tr")).toHaveCount(1);
+  await expect(page.locator("tbody")).toContainText("Platform listing · no licence published");
+  await expect(page.locator("tbody")).toContainText("1 review excerpt");
+});
+
 test("preview exposes public assets, not repository internals", async ({
   request,
 }) => {
