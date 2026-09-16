@@ -378,6 +378,10 @@ Actions deployment occurs from `main` when the repository uses the Actions Pages
 
 This workspace is fixed to branch `arena/01a0ac7b-bathtuboverflowsf`; no other branch is used.
 
+## Remaining work and limitations
+
+The handover document for the next session is [`docs/remaining-work.md`](docs/remaining-work.md). It lists the ~53 licence numbers already seen in the City registry but not yet opened at CSLB, the trade-evidence gap (163 C36 and 3 C-9 licences, only one firm holding both), the two promotion gates that cannot be passed by public research alone (project insurance and a written non-destructive-first scope), the review-corpus limits (Yelp 403, no original Google corpus) and the permit-join pass worth running next.
+
 ## Key files
 
 ```text
@@ -386,6 +390,7 @@ lib.js                           Filters, exports, counts, allowed classes, and 
 data/research.json               Merged schema-v2 dataset (793 records, 16 waves)
 data/wave2.json … wave16.json    Reproducible per-wave artifacts
 data/wave*-discovery-log.md      Source, rejection, and irregularity trails
+docs/remaining-work.md           Handover: next waves, queued licence numbers, blockers
 scripts/gen_wave16.py            Wave-16 generator (25 CSLB reads, 10 registry, 15 platform, all held)
 scripts/merge_wave16.py          Wave-16 collision-, privacy- and tier-gated fail-closed merge
 scripts/gen_wave15.py            Wave-15 generator (0 CSLB reads, 35 registry, 15 platform, all held)
