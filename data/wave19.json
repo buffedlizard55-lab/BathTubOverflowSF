@@ -1,0 +1,2856 @@
+{
+ "schemaVersion": 1,
+ "wave": 19,
+ "checkedAt": "2026-09-17",
+ "stage": "discovery-only",
+ "baselineSha256": "da0abdf76d405826c8df3e7ba6efb23ae345c8e8822e99638209ce581f6962e0",
+ "note": "50 new discovery records, not 50 verified businesses or qualified matches: 27 City plumbing-registry records (registry values only, all double-read) and 16 permit-join records with direct CSLB reads (14 active, 1 suspended, 1 inactive) plus 7 Thumbtack platform listings. Six review excerpts and one business self-description were retained with source links. Two folds: one into the stored corpus record for Caledonia Plastering & Stucco (new plaster-ceiling review excerpts plus third-party licence-number and Outer Sunset locality confirmation), and one within this wave (D.C.K. Construction 553166 folded into Dck Construction 531666). The standout new licence is Detail Drywall & Stucco Inc (1032948), active with B + C36 + C-9 + C35 on one licence - the second such multi-trade licence in the corpus. The 793-record research corpus and the empty qualified master are unchanged.",
+ "dedupeFolds": [
+  {
+   "name": "Caledonia Plastering & Stucco",
+   "storedAs": "w6-caledonia-plastering-stucco-inc",
+   "reason": "The Thumbtack plastering category page read today shows five interior plaster/ceiling repair accounts from San Francisco customers (Joe M., Brian D., Eric S., Vipada W., Jennifer H. - the last describes re-plastering all surfaces of a 110-year-old home after water-damaged plaster removal), and the Yelp stucco search extract places the business at 1551 Judah St with an Outer Sunset locality tag, 5.0 (36) and a Verified License badge. BBB's profile records CSLB licence 1057063 with expiration 8/31/2027 and BuildZoom shows an active Lathing And Plastering licence with 91 permits. All of this is folded into the stored record; no parallel entry was created.",
+   "evidence": "New plaster-ceiling repair review excerpts plus third-party licence-number and Outer Sunset locality confirmation for a stored C35-side candidate. The stored record remains unqualified pending the same gates.",
+   "sources": [
+    "thumbtack-plastering",
+    "yelp-stucco-sf-search",
+    "bbb-caledonia-profile",
+    "buildzoom-caledonia-profile"
+   ]
+  },
+  {
+   "name": "D.C.K. Construction",
+   "storedAs": "w19-531666",
+   "reason": "The registry lists 'D.C.K. Construction' and 'D C K Electric' under a different licence number 553166 at the same 1570 42nd Avenue address as Dck Construction 531666, and the cross-check also lists 'Dck Construction' itself under 553166. The two numbers are not reconcilable from the city data. One record (531666) is retained and the 553166 variant is folded into it; no parallel entry was created and no CSLB read was performed for either number.",
+   "evidence": "Registry name/number variants: 'D.C.K. Construction' 553166, 'D C K Electric' 553166, 'Dck Construction' under both 531666 and 553166, all at 1570 42nd Avenue, 94122.",
+   "sources": [
+    "city-plumbing-registry",
+    "city-plumbing-registry-500",
+    "city-crosscheck-registry",
+    "city-crosscheck-registry-500"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "city-building-permits",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/i98e-djp9.json?$select=permit_number,description,issued_date,completed_date&$where=zipcode='94122' AND status='complete' AND (description like '%drywall%' OR description like '%plaster%' OR description like '%ceiling%' OR description like '%sheetrock%' OR description like '%lath%')&$order=issued_date DESC&$limit=60",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Building permits dataset (data_as_of 2025-10-25 as displayed). 60 most recent completed 94122 permits in the drywall/plaster/ceiling/sheetrock/lath keyword scope; the full matching count returned by the dataset is 1,419. 3 chunks read in full.",
+   "note": "Building permits dataset (data_as_of 2025-10-25 as displayed). 60 most recent completed 94122 permits in the drywall/plaster/ceiling/sheetrock/lath keyword scope; the full matching count returned by the dataset is 1,419. 3 chunks read in full."
+  },
+  {
+   "id": "city-building-contacts",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/3pee-9qhc.json?$select=permit_number,firm_name,license1&$where=permit_number in (the 60 permit numbers from city-building-permits)&$limit=300",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Building-permit contacts dataset join. permit_number in (<60 permit numbers from city-building-permits; enumerated in data/wave19-discovery-log.md>) with $limit=300, 3 chunks read in full. Contractor rows carry firm_name + license1; owner-builder rows were not usable as business leads. The URL shows the where-clause structure; the full number list is in the discovery log.",
+   "note": "Building-permit contacts dataset join. permit_number in (<60 permit numbers from city-building-permits; enumerated in data/wave19-discovery-log.md>) with $limit=300, 3 chunks read in full. Contractor rows carry firm_name + license1; owner-builder rows were not usable as business leads. The URL shows the where-clause structure; the full number list is in the discovery log."
+  },
+  {
+   "id": "city-plumbing-permits",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/a6aw-rudh.json?$select=permit_number,description,completed_date&$where=zipcode='94122' AND status='complete' AND (description like '%stack% in wall%' OR description like '%in wall%' OR description like '%drain stack%' OR description like '%wall repair%' OR description like '%overflow%' OR description like '%tub drain%' OR description like '%trap%')&$order=completed_date DESC&$limit=40",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Plumbing permits dataset (data_as_of 2026-09-17 as displayed). 40 most recent completed 94122 plumbing permits in the in-wall/trap/overflow/tub-drain keyword scope; 1 chunk read in full.",
+   "note": "Plumbing permits dataset (data_as_of 2026-09-17 as displayed). 40 most recent completed 94122 plumbing permits in the in-wall/trap/overflow/tub-drain keyword scope; 1 chunk read in full."
+  },
+  {
+   "id": "city-plumbing-contacts",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=permit_number,firm_name,license_number,address,zipcode,phone&$where=permit_number in ('PW20260403844','PP20250514222','PP20251211352','PW20250924280','PP20260608453','PP20260813825','PW20260530289','PP20201013427','PW20250826629','PP20250609753','PP20250307955','PW20260303050','PP20260529301','PW20260907864','PW20260802933','PP20250225755','PW20260119975')&$limit=200",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Plumbing-permit contacts dataset join on 17 selected in-wall plumbing permit numbers; 1 chunk read in full.",
+   "note": "Plumbing-permit contacts dataset join on 17 selected in-wall plumbing permit numbers; 1 chunk read in full."
+  },
+  {
+   "id": "city-plumbing-registry",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=firm_name,license_number,address,zipcode,phone,count(*)&$group=firm_name,license_number,address,zipcode,phone&$where=zipcode like '94122%'&$order=license_number&$limit=200&$offset=300",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Grouped 94122 plumbing-permit contact rows, offset 300-499; 4 chunks read in full. Offsets 0-299 were already consumed by waves 16-18.",
+   "note": "Grouped 94122 plumbing-permit contact rows, offset 300-499; 4 chunks read in full. Offsets 0-299 were already consumed by waves 16-18."
+  },
+  {
+   "id": "city-plumbing-registry-500",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=firm_name,license_number,address,zipcode,phone,count(*)&$group=firm_name,license_number,address,zipcode,phone&$where=zipcode like '94122%'&$order=license_number&$limit=200&$offset=500",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Grouped 94122 plumbing-permit contact rows, offset 500-699; 2 of 4 chunks read (the read window covers every licence number retained from this offset).",
+   "note": "Grouped 94122 plumbing-permit contact rows, offset 500-699; 2 of 4 chunks read (the read window covers every licence number retained from this offset)."
+  },
+  {
+   "id": "city-crosscheck-building",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/3pee-9qhc.json?$select=distinct firm_name,license1,permit_number&$where=license1 in ('1087358','1013908','1074837','394146','1032948','1042086')",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Targeted cross-check re-read of the six building-permit-join licence numbers.",
+   "note": "Targeted cross-check re-read of the six building-permit-join licence numbers."
+  },
+  {
+   "id": "city-crosscheck-plumbing",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=distinct firm_name,license_number,permit_number&$where=license_number in ('430548','443682','933593','915382','1050217','937080','1003568','1045949','732885','832458')",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Targeted cross-check re-read of the ten plumbing-permit-join licence numbers (chunk 1 read; 937080 and 1003568 confirmed separately below).",
+   "note": "Targeted cross-check re-read of the ten plumbing-permit-join licence numbers (chunk 1 read; 937080 and 1003568 confirmed separately below)."
+  },
+  {
+   "id": "city-crosscheck-plumbing-2",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=distinct firm_name,license_number,permit_number&$where=license_number in ('937080','1003568')&$limit=20",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Targeted cross-check re-read for the two licence numbers not visible in chunk 1 of city-crosscheck-plumbing.",
+   "note": "Targeted cross-check re-read for the two licence numbers not visible in chunk 1 of city-crosscheck-plumbing."
+  },
+  {
+   "id": "city-crosscheck-registry",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=distinct firm_name,license_number&$where=license_number in ('466126','475180','482113','483283','488129','489719','501000','509073','510198','521722','523824','525528','531666','534925','536542','538254','543983')",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Targeted cross-check re-read of the seventeen registry licence numbers from offset 300-499.",
+   "note": "Targeted cross-check re-read of the seventeen registry licence numbers from offset 300-499."
+  },
+  {
+   "id": "city-crosscheck-registry-500",
+   "kind": "government",
+   "access": "page",
+   "url": "https://data.sf.gov/resource/k6kv-9kix.json?$select=distinct firm_name,license_number&$where=license_number in ('547069','553166','555978','565779','568057','569794','573143','579830','580391','580756','588779')",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Targeted cross-check re-read of the eleven registry licence numbers from offset 500+ (includes the 553166 variant folded into w19-531666).",
+   "note": "Targeted cross-check re-read of the eleven registry licence numbers from offset 500+ (includes the 553166 variant folded into w19-531666)."
+  },
+  {
+   "id": "cslb-1032948",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1032948",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1087358",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1087358",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1013908",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1013908",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1074837",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1074837",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-394146",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=394146",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1042086",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1042086",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-430548",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=430548",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-443682",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=443682",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-933593",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=933593",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-915382",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=915382",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1050217",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1050217",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-937080",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=937080",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1003568",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1003568",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-1045949",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1045949",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-732885",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=732885",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "cslb-832458",
+   "kind": "government",
+   "access": "page",
+   "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=832458",
+   "retrievedAt": "2026-09-17",
+   "coverage": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry.",
+   "note": "CSLB Contractor's License Detail page read in full (single chunk); data-current-as-of stamp transcribed into the entry."
+  },
+  {
+   "id": "thumbtack-drywall",
+   "kind": "platform",
+   "access": "page",
+   "url": "https://www.thumbtack.com/ca/san-francisco/drywall-contractors",
+   "retrievedAt": "2026-09-17",
+   "coverage": "San Francisco drywall-contractor category page; 8 pros displayed, 2 chunks read.",
+   "note": "San Francisco drywall-contractor category page; 8 pros displayed, 2 chunks read."
+  },
+  {
+   "id": "thumbtack-plastering",
+   "kind": "platform",
+   "access": "page",
+   "url": "https://www.thumbtack.com/ca/san-francisco/plastering",
+   "retrievedAt": "2026-09-17",
+   "coverage": "San Francisco plastering category page (5 pros displayed) plus its 'Reviews for San Francisco plastering professionals' section; 2 chunks read.",
+   "note": "San Francisco plastering category page (5 pros displayed) plus its 'Reviews for San Francisco plastering professionals' section; 2 chunks read."
+  },
+  {
+   "id": "thumbtack-ceiling",
+   "kind": "platform",
+   "access": "page",
+   "url": "https://www.thumbtack.com/ca/san-francisco/ceiling-repair-companies",
+   "retrievedAt": "2026-09-17",
+   "coverage": "San Francisco ceiling-repair category page (8 pros displayed); 1 chunk read. All displayed pros were already stored in the corpus except those carried on the other category pages.",
+   "note": "San Francisco ceiling-repair category page (8 pros displayed); 1 chunk read. All displayed pros were already stored in the corpus except those carried on the other category pages."
+  },
+  {
+   "id": "thumbtack-plumbers",
+   "kind": "platform",
+   "access": "page",
+   "url": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+   "retrievedAt": "2026-09-17",
+   "coverage": "San Francisco plumber category page (97 pros displayed); 1 chunk read.",
+   "note": "San Francisco plumber category page (97 pros displayed); 1 chunk read."
+  },
+  {
+   "id": "yelp-drywall-sf-search",
+   "kind": "platform",
+   "access": "search-extract",
+   "url": "https://www.yelp.com/search?find_desc=drywall+repair&find_loc=San+Francisco,+CA",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus.",
+   "note": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus."
+  },
+  {
+   "id": "yelp-drywall-outer-sunset-search",
+   "kind": "platform",
+   "access": "search-extract",
+   "url": "https://www.yelp.com/search?find_desc=Drywall+Installation&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus.",
+   "note": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus."
+  },
+  {
+   "id": "yelp-drywall-repair-outer-sunset-search",
+   "kind": "platform",
+   "access": "search-extract",
+   "url": "https://www.yelp.com/search?find_desc=Dry+Wall+Repair&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus.",
+   "note": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus."
+  },
+  {
+   "id": "yelp-handyman-outer-sunset-search",
+   "kind": "platform",
+   "access": "search-extract",
+   "url": "https://www.yelp.com/search?find_desc=Handyman&find_loc=Outer+Sunset%2C+San+Francisco%2C+CA",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus.",
+   "note": "Yelp search page read through a search-engine extract; direct Yelp fetch is blocked in this environment. Every business displayed was already stored in the corpus."
+  },
+  {
+   "id": "yelp-stucco-sf-search",
+   "kind": "platform",
+   "access": "search-extract",
+   "url": "https://www.yelp.com/search?cflt=stucco&find_loc=San+Francisco,+CA",
+   "retrievedAt": "2026-09-17",
+   "coverage": "Yelp stucco-category search page read through a search-engine extract; used for the Caledonia Plastering & Stucco fold (Outer Sunset locality tag, 5.0 (36), Verified License badge, 1551 Judah St).",
+   "note": "Yelp stucco-category search page read through a search-engine extract; used for the Caledonia Plastering & Stucco fold (Outer Sunset locality tag, 5.0 (36), Verified License badge, 1551 Judah St)."
+  },
+  {
+   "id": "reddit-asksf-drywall-thread",
+   "kind": "community",
+   "access": "search-extract",
+   "url": "https://www.reddit.com/r/AskSF/comments/171irdh/looking_for_a_contractor_in_or_near_sf_who_does/",
+   "retrievedAt": "2026-09-17",
+   "coverage": "r/AskSF 'Looking for a contractor in or near SF who does good DRYWALL repair' thread read through a search-engine extract; direct Reddit fetch returns HTTP 403 in this environment. Names mentioned (J.A. Emmanuel Construction, Sederap, Paul Woodford Services) were all already stored.",
+   "note": "r/AskSF 'Looking for a contractor in or near SF who does good DRYWALL repair' thread read through a search-engine extract; direct Reddit fetch returns HTTP 403 in this environment. Names mentioned (J.A. Emmanuel Construction, Sederap, Paul Woodford Services) were all already stored."
+  },
+  {
+   "id": "reddit-bayarea-drywall-thread",
+   "kind": "community",
+   "access": "search-extract",
+   "url": "https://www.reddit.com/r/bayarea/comments/171itjh/looking_for_a_contractor_in_or_near_sf_who_does/",
+   "retrievedAt": "2026-09-17",
+   "coverage": "r/bayarea cross-post of the same question, read through a search-engine extract. One pointer named no attributable business ('a man and a van handyman based in SF, check them out on Yelp') and was not retained as a record.",
+   "note": "r/bayarea cross-post of the same question, read through a search-engine extract. One pointer named no attributable business ('a man and a van handyman based in SF, check them out on Yelp') and was not retained as a record."
+  },
+  {
+   "id": "bbb-caledonia-profile",
+   "kind": "context",
+   "access": "search-extract",
+   "url": "https://www.bbb.org/us/ca/san-francisco/profile/insulation-contractors/caledonia-plastering-stucco-inc-1116-946248",
+   "retrievedAt": "2026-09-17",
+   "coverage": "BBB profile for Caledonia Plastering & Stucco Inc. (not BBB accredited); records CSLB licence 1057063 with expiration 8/31/2027 and 1551 Judah St, 94122. Used for the fold, not as a stored record.",
+   "note": "BBB profile for Caledonia Plastering & Stucco Inc. (not BBB accredited); records CSLB licence 1057063 with expiration 8/31/2027 and 1551 Judah St, 94122. Used for the fold, not as a stored record."
+  },
+  {
+   "id": "buildzoom-caledonia-profile",
+   "kind": "context",
+   "access": "search-extract",
+   "url": "https://www.buildzoom.com/contractor/caledonia-plastering-and-stucco",
+   "retrievedAt": "2026-09-17",
+   "coverage": "BuildZoom profile showing licence 1057063 (Lathing And Plastering) as active with 91 SF permits ($1,342,800). Context only; the corpus record is the stored identity.",
+   "note": "BuildZoom profile showing licence 1057063 (Lathing And Plastering) as active with 91 SF permits ($1,342,800). Context only; the corpus record is the stored identity."
+  }
+ ],
+ "sourceTranscription": [
+  {
+   "firm_name": "Tom Mc Donald",
+   "license": "466126",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "April Electrical & Constructor",
+   "license": "475180",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Rosemount Construction",
+   "license": "482113",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Coordinated Services",
+   "license": "483283",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Lindele Construction Co",
+   "license": "488129",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Toyo General Construction",
+   "license": "489719",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Edison C. Cayabyab",
+   "license": "501000",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Quinlan Construction",
+   "license": "509073",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Sunset Electric & Constructi",
+   "license": "510198",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Bay Concrete Construction",
+   "license": "521722",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "W B Construction Company",
+   "license": "523824",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "L W T Contruction Co",
+   "license": "525528",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Dck Construction",
+   "license": "531666",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Collier-Ostrom Enterprise",
+   "license": "534925",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Chiang's Construction",
+   "license": "536542",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Rogne Construction Inc",
+   "license": "538254",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Lynda Cence",
+   "license": "543983",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Go Sung Construction",
+   "license": "547069",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Harold Teitler",
+   "license": "555978",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Wing's General Const Co",
+   "license": "565779",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "C & J Construction",
+   "license": "568057",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Trippco",
+   "license": "569794",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Stephen Donnelly",
+   "license": "573143",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Kong Lai Construction",
+   "license": "579830",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "N & T Construction",
+   "license": "580391",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Smart Remodeling And Design Inc",
+   "license": "580756",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Jimmy Tam/Tam's Const",
+   "license": "588779",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Detail Drywall & Stucco Inc",
+   "license": "1032948",
+   "dataset": "3pee-9qhc"
+  },
+  {
+   "firm_name": "Kwan Chok Kee Inc",
+   "license": "1087358",
+   "dataset": "3pee-9qhc"
+  },
+  {
+   "firm_name": "Casman Construction Inc",
+   "license": "1013908",
+   "dataset": "3pee-9qhc"
+  },
+  {
+   "firm_name": "Werner's General Contractor Inc",
+   "license": "1074837",
+   "dataset": "3pee-9qhc"
+  },
+  {
+   "firm_name": "Quick Connect Electric Co",
+   "license": "394146",
+   "dataset": "3pee-9qhc"
+  },
+  {
+   "firm_name": "Bay Home Remodeling",
+   "license": "1042086",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Steven Harris Glorit Plumb Con.",
+   "license": "430548",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Reborn Bath Solutions, H.D. Bath Soluti",
+   "license": "443682",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Alansi's Rooter & Plumbing",
+   "license": "933593",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Schicker Inc Dba Schicker Luxury Bath",
+   "license": "915382",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Erwyns Incorporated Dba Erwyns Plumbing",
+   "license": "1050217",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Burton's Construction",
+   "license": "937080",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Desired Plumbing Inc.",
+   "license": "1003568",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Deleon Plumbing",
+   "license": "1045949",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "D.K.M. Plumbing",
+   "license": "732885",
+   "dataset": "k6kv-9kix"
+  },
+  {
+   "firm_name": "Ariel's Plumbing",
+   "license": "832458",
+   "dataset": "k6kv-9kix"
+  }
+ ],
+ "entries": [
+  {
+   "id": "w19-1032948",
+   "name": "Detail Drywall & Stucco Inc",
+   "registryLicenseNumber": "1032948",
+   "source": "city-building-contacts",
+   "crosscheckSource": "city-crosscheck-building",
+   "observedFields": {
+    "firm_name": "Detail Drywall & Stucco Inc",
+    "license1": "1032948",
+    "permit_number": "202601123651"
+   },
+   "discoveryContext": "Contractor row in the permit join for completed 94122 building permit 202601123651 (lath and stucco patch scope; issued 2026-01-12). The firm-to-license mapping was read on city-building-contacts and re-read on city-crosscheck-building. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B + C36 + C-9 + C35 classifications on one licence: the only new licence this wave carrying the plumbing and drywall/plaster side of the required trades on a single licence (the corpus already stores one comparable multi-trade licence).",
+    "CSLB business address is Hayward, CA 94545 with a 415 business phone; Outer Sunset dispatch is not established by the CSLB page or the permit contact row.",
+    "Completed 94122 permit 202601123651 is lath-and-stucco patch scope; it is permit evidence of plaster-side work, not evidence of the specific repair task.",
+    "Workers' compensation codes 5447 (Wallboard Installation-high wage), 5485 (Plastering/Stucco Work-high wage) and 5446 (Wallboard Installation-low wage) are displayed; classification codes are not verified by the board.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "DETAIL DRYWALL & STUCCO INC",
+    "number": "1032948",
+    "status": "active",
+    "classes": [
+     "B",
+     "C35",
+     "C-9",
+     "C36"
+    ],
+    "entity": "Corporation",
+    "issued": "2017-11-15",
+    "expires": "2027-11-30",
+    "address": "23000 CONNECTICUT ST 4, HAYWARD, CA 94545",
+    "phone": "(415) 810-4902",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:36:56 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1032948",
+    "bond": "Contractor's Bond filed with WESTERN SURETY COMPANY, bond 67412034, $25,000, effective 07/07/2025 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with EVEREST PREMIER INSURANCE COMPANY, policy 7600023550261, effective 08/18/2026, expire 08/18/2027; classification codes 5447 - Wallboard Installation-high wage, 5485 - Plastering/Stucco Work-high wage, 5446 - Wallboard Installation-low wage.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual SHELDON WADE DOTY certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 11/18/2019).",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-1087358",
+   "name": "Kwan Chok Kee Inc",
+   "registryLicenseNumber": "1087358",
+   "source": "city-building-contacts",
+   "crosscheckSource": "city-crosscheck-building",
+   "observedFields": {
+    "firm_name": "Kwan Chok Kee Inc",
+    "license1": "1087358",
+    "permit_number": "202502059715"
+   },
+   "discoveryContext": "Contractor row in the permit join for completed 94122 building permits 202502059715 and 202507070245 (drywall-scope keyword filter; second permit number appears on the same licence in the cross-check). Re-read on city-crosscheck-building. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B + C36 multi-trade licence (plus C10 and C16) with a San Francisco business address (1460 Monterey Blvd, 94127).",
+    "Workers' compensation is exempt: the licence certified no employees at the time of the displayed exemption (effective 01/04/2026); a sole-licence crew question is left for direct inquiry.",
+    "The two permit numbers are permit evidence of completed 94122 work within the drywall-scope keyword filter; neither proves the specific repair task.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "KWAN CHOK KEE INC",
+    "number": "1087358",
+    "status": "active",
+    "classes": [
+     "B",
+     "C10",
+     "C36",
+     "C16"
+    ],
+    "entity": "Corporation",
+    "issued": "2022-02-15",
+    "expires": "2028-02-29",
+    "address": "1460 MONTEREY BLVD, SAN FRANCISCO, CA 94127",
+    "phone": "(650) 245-1912",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:36:56 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1087358",
+    "bond": "Contractor's Bond filed with AMERICAN CONTRACTORS INDEMNITY COMPANY, bond 100630046, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "Exempt from workers compensation; certified no employees at this time (effective 01/04/2026, no expiration displayed).",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual RICKY K KWAN certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 01/16/2023).",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-1013908",
+   "name": "Casman Construction Inc",
+   "registryLicenseNumber": "1013908",
+   "source": "city-building-contacts",
+   "crosscheckSource": "city-crosscheck-building",
+   "observedFields": {
+    "firm_name": "Casman Construction Inc",
+    "license1": "1013908",
+    "permit_number": "202502110086"
+   },
+   "discoveryContext": "Contractor row in the permit join for completed 94122 building permit 202502110086 (strip interior finishes, new insulation and drywall, new heating scope). The licence carries a large completed-permit history in the cross-check, including 2026 permits. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B-only licence; plumbing-side work would be out of the displayed classifications.",
+    "Pacifica business address; Outer Sunset dispatch is not established.",
+    "Workers' compensation classification code 543200 is displayed as 'Description Unavailable'; the code cannot be interpreted from the page.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "CASMAN CONSTRUCTION INC",
+    "number": "1013908",
+    "status": "active",
+    "classes": [
+     "B"
+    ],
+    "entity": "Corporation",
+    "issued": "2016-05-06",
+    "expires": "2028-06-30",
+    "address": "328 FIRECREST AVE, PACIFICA, CA 94044",
+    "phone": "(650) 787-6471",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:40:07 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1013908",
+    "bond": "Contractor's Bond filed with MERCHANTS BONDING COMPANY (MUTUAL), bond 100245274, $25,000, effective 10/12/2023 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with OMAHA NATIONAL CASUALTY COMPANY, policy ONCC1101306, effective 03/18/2026, expire 03/18/2027; classification code 543200 - Description Unavailable.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual FELIPE ANTONIO DE J CASTILLO TORRES certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 06/06/2018).",
+    "miscellaneous": [
+     "06/06/2018 - LICENSE REISSUED TO ANOTHER ENTITY"
+    ]
+   }
+  },
+  {
+   "id": "w19-1074837",
+   "name": "Werner's General Contractor Inc",
+   "registryLicenseNumber": "1074837",
+   "source": "city-building-contacts",
+   "crosscheckSource": "city-crosscheck-building",
+   "observedFields": {
+    "firm_name": "Werner's General Contractor Inc",
+    "license1": "1074837",
+    "permit_number": "202504235031"
+   },
+   "discoveryContext": "Contractor row in the permit join for completed 94122 building permit 202504235031 (drywall-scope keyword filter); the cross-check shows additional permits under the licence, including 2022 and 2025-11 work. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B-only licence; plumbing-side work would be out of the displayed classifications.",
+    "Novato business address with a 415 business phone; Outer Sunset dispatch is not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "WERNER'S GENERAL CONTRACTOR INC",
+    "number": "1074837",
+    "status": "active",
+    "classes": [
+     "B"
+    ],
+    "entity": "Corporation",
+    "issued": "2021-04-16",
+    "expires": "2028-02-29",
+    "address": "4 PASTEL COURT, NOVATO, CA 94947",
+    "phone": "(415) 760-0074",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:40:07 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1074837",
+    "bond": "Contractor's Bond filed with BUSINESS ALLIANCE INSURANCE COMPANY, bond G120203237449, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with SECURITY NATIONAL INSURANCE COMPANY, policy SWC1609140, effective 01/07/2026, expire 01/07/2027; classification code 5432 - Carpentry-high wage.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual WERNER FRISLY DE LEON GRAMAJO certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 02/23/2022).",
+    "miscellaneous": [
+     "02/23/2022 - LICENSE REISSUED TO ANOTHER ENTITY"
+    ]
+   }
+  },
+  {
+   "id": "w19-394146",
+   "name": "Quick Connect Electric Co",
+   "registryLicenseNumber": "394146",
+   "source": "city-building-contacts",
+   "crosscheckSource": "city-crosscheck-building",
+   "observedFields": {
+    "firm_name": "Quick Connect Electric Co",
+    "license1": "394146",
+    "permit_number": "202505025665"
+   },
+   "discoveryContext": "Contractor row in the permit join for completed 94122 building permit 202505025665 (window replacement with insulation and sheetrock scope; drywall-scope keyword filter). The cross-check shows a long permit history back to 2004. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Electrical-first firm: C10 + B classifications; no C36 or C-9 is displayed, so the plumbing side of the required trades is out of the displayed classifications.",
+    "CSLB expire date 09/30/2026 is near the date of this read; renewal is not confirmed.",
+    "Corte Madera business address with a 415 business phone; Outer Sunset dispatch is not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "QUICK CONNECT ELECTRIC CO",
+    "number": "394146",
+    "status": "active",
+    "classes": [
+     "C10",
+     "B"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "1980-09-29",
+    "expires": "2026-09-30",
+    "address": "145 CM TOWN CTR 527, CORTE MADERA, CA 94925",
+    "phone": "(415) 699-7297",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:42:57 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=394146",
+    "bond": "Contractor's Bond filed with JET INSURANCE COMPANY, bond BX0079290, $25,000, effective 01/16/2026 (no cancellation date displayed).",
+    "workersComp": "Exempt from workers compensation; certified no employees at this time (effective 09/24/2024, no expiration displayed).",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed."
+   }
+  },
+  {
+   "id": "w19-1042086",
+   "name": "Bay Home Remodeling",
+   "registryLicenseNumber": "1042086",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Bay Home Remodeling",
+    "license_number": "1042086",
+    "permit_number": "PP20201013427"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20201013427 (kitchen and bath remodel scope). Re-read on city-crosscheck-plumbing; the cross-check also shows 2026 permits under the licence. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B-only licence; the displayed classifications do not include C36.",
+    "Orinda business address with a 415 business phone; Outer Sunset dispatch is not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "BAY HOME REMODELING INC",
+    "number": "1042086",
+    "status": "active",
+    "classes": [
+     "B"
+    ],
+    "entity": "Corporation",
+    "issued": "2018-07-20",
+    "expires": "2028-07-31",
+    "address": "77 MORAGA WAY STE H, ORINDA, CA 94563",
+    "phone": "(415) 583-5060",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:42:58 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1042086",
+    "bond": "Contractor's Bond filed with BUSINESS ALLIANCE INSURANCE COMPANY, bond G80626380396, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with STATE COMPENSATION INSURANCE FUND, policy 9297882, effective 05/07/2021, expire 05/07/2027; classification code 5403 - Carpentry-low wage.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual TAMIR EDI certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 09/19/2023).",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-430548",
+   "name": "Steven Harris Glorit Plumb Con.",
+   "registryLicenseNumber": "430548",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Steven Harris Glorit Plumb Con.",
+    "license_number": "430548",
+    "permit_number": "PP20250225755"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20250225755 (in-wall drain scope). The cross-check shows a permit history from 2008 onward, with registry name-spelling variants. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 licence; South San Francisco business address, Outer Sunset dispatch not established.",
+    "Registry rows spell the name several ways, including 'Steven Harries Glorit Piumbi'; the CSLB legal name is STEVEN HARRIS GLORIT PLUMBING CONTRACTOR.",
+    "Workers' compensation policy expire date 12/04/2026 is in the renewal window at the date of this read.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "STEVEN HARRIS GLORIT PLUMBING CONTRACTOR",
+    "number": "430548",
+    "status": "active",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "1982-10-25",
+    "expires": "2026-10-31",
+    "address": "220 CYPRESS AVE #247, SOUTH SAN FRANCISCO, CA 94080",
+    "phone": "(650) 271-3244",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:46:07 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=430548",
+    "bond": "Contractor's Bond filed with PHILADELPHIA INDEMNITY INSURANCE COMPANY, bond PB10163411657, $25,000, effective 07/05/2026 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with SOUTHERN INSURANCE COMPANY, policy MWC005870913, effective 12/04/2025, expire 12/04/2026; classification code 51831 - Plumbing-low wage.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed."
+   }
+  },
+  {
+   "id": "w19-443682",
+   "name": "Reborn Bath Solutions, H.D. Bath Soluti",
+   "registryLicenseNumber": "443682",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Reborn Bath Solutions, H.D. Bath Soluti",
+    "license_number": "443682",
+    "permit_number": "PP20250307955"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20250307955 (tub-to-shower conversion scope). The registry firm_name is truncated in the source ('Soluti'); the CSLB page carries the full dba. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "CSLB reports the licence under suspension for four reasons: Liability Insurance Suspension, workers-compensation noncompliance suspension, Lack of Qualifier, and Contractors Bond Suspension. The licence cannot currently contract.",
+    "Complaint disclosure information exists for this licence; the disclosure itself was not read in this session.",
+    "Displayed classifications B + C-6 (CABINET, MILLWORK AND FINISH CARPENTRY); no C36 displayed.",
+    "Bond cancellation date 04/30/2026 and workers-comp and liability expire dates 11/01/2025 are all before the date of this read.",
+    "Anaheim business address; Outer Sunset dispatch is not established.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "REBORN CABINETS LLC dba REBORN BATH SOLUTIONS",
+    "number": "443682",
+    "status": "suspended",
+    "classes": [
+     "B",
+     "C-6"
+    ],
+    "entity": "Ltd Liability",
+    "issued": "1983-08-02",
+    "expires": "2026-11-30",
+    "address": "5515 E LA PALMA AVE, SUITE 250, ANAHEIM, CA 92807",
+    "phone": "(714) 630-2220",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:46:08 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=443682",
+    "bond": "Contractor's Bond filed with WESTERN SURETY COMPANY, bond 67656676, $25,000, effective 11/16/2025, cancellation 04/30/2026; LLC Employee/Worker Bond GSI4500128, $100,000, effective 11/21/2023.",
+    "workersComp": "Workers compensation with STARR SPECIALTY INSURANCE COMPANY, policy 1000005655, effective 12/23/2023, expire 11/01/2025; classification codes 5606 - Contractors-executive level supervisors, 5437 - Description Unavailable.",
+    "additional": [],
+    "statusExcerpt": "License is under suspension for the following reasons: License is under Liability Insurance Suspension. License is under suspension for failure to comply with Workers Comp. License is under suspension for Lack of Qualifier. License is under Contractors Bond Suspension.",
+    "miscellaneous": [
+     "11/21/2022 - LICENSE REISSUED TO ANOTHER ENTITY",
+     "Complaint Disclosure information exists for this license (link displayed; not read)."
+    ]
+   }
+  },
+  {
+   "id": "w19-933593",
+   "name": "Alansi's Rooter & Plumbing",
+   "registryLicenseNumber": "933593",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Alansi's Rooter & Plumbing",
+    "license_number": "933593",
+    "permit_number": "PP20250514222"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20250514222 (drain stack inside a first-floor wall scope - the closest in-wall plumbing permit of the wave). CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "CSLB reports the licence inactive and not able to contract at the time of the read; reactivation requires meeting workers-compensation requirements.",
+    "The permit contact row is evidence the licence was used on a 94122 in-wall plumbing permit; the current CSLB status means the licence cannot currently contract.",
+    "Richmond business address with a 415 business phone; Outer Sunset dispatch is not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "ALANSI'S ROOTER & PLUMBING",
+    "number": "933593",
+    "status": "inactive",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "2009-06-08",
+    "expires": "2029-12-31",
+    "address": "1126 CUTTING BLVD, RICHMOND, CA 94804",
+    "phone": "(415) 497-8700",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:48:40 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=933593",
+    "bond": "Contractor's Bond filed with HUDSON INSURANCE COMPANY, bond 30037183, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with HARTFORD FIRE INSURANCE COMPANY, policy 34WECAK7NT1, effective 03/03/2024, expire 03/03/2025.",
+    "additional": [],
+    "statusExcerpt": "This license is inactive and not able to contract at this time. The license will need to meet the workers compensation requirements to renew active or reactivate.",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-915382",
+   "name": "Schicker Inc Dba Schicker Luxury Bath",
+   "registryLicenseNumber": "915382",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Schicker Inc Dba Schicker Luxury Bath",
+    "license_number": "915382",
+    "permit_number": "PP20250609753"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20250609753 (tub-to-shower conversion with wet-wall valve scope). Registry history also shows the earlier dba 'Re-Bath By Schicker' under the same number. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B-only licence; the displayed classifications do not include C36, so plumbing-side work under this licence rests on the B classification only.",
+    "Workers' compensation codes 5146, 8742 and 8810 are displayed; none is a readable plumbing classification code.",
+    "Concord business address; Outer Sunset dispatch is not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "SCHICKER INC dba SCHICKER LUXURY BATH",
+    "number": "915382",
+    "status": "active",
+    "classes": [
+     "B"
+    ],
+    "entity": "Corporation",
+    "issued": "2008-05-08",
+    "expires": "2028-05-31",
+    "address": "1059 DETROIT AVE, CONCORD, CA 94518",
+    "phone": "(925) 676-8422",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:48:40 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=915382",
+    "bond": "Contractor's Bond filed with AMERICAN CONTRACTORS INDEMNITY COMPANY, bond SC5004485, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "An employee service group holds the workers compensation insurance, policy C73890482, effective 04/01/2026, expire 04/01/2027; classification codes 5146 - Description Unavailable, 8742 - Salespersons-Outside, 8810 - Clerical Office Employees.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "Bond of Qualifying Individual number 101011248 for CHAD JESSE CONLEY, $25,000, AMERICAN CONTRACTORS INDEMNITY COMPANY, effective 11/18/2025.",
+    "miscellaneous": [
+     "12/14/2015 - CONTRACTOR HIS LETTER SENT"
+    ]
+   }
+  },
+  {
+   "id": "w19-1050217",
+   "name": "Erwyns Incorporated Dba Erwyns Plumbing",
+   "registryLicenseNumber": "1050217",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Erwyns Incorporated Dba Erwyns Plumbing",
+    "license_number": "1050217",
+    "permit_number": "PP20260529301"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20260529301 (amend: new sewer lateral, new water line scope). CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 + C42 licence; Richmond business address with a 510 business phone, Outer Sunset dispatch not established.",
+    "Workers' compensation classification code 5183 is displayed as 'Description Unavailable'; the code cannot be interpreted from the page.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "ERWYN'S INCORPORATED dba ERWYN'S PLUMBING",
+    "number": "1050217",
+    "status": "active",
+    "classes": [
+     "C36",
+     "C42"
+    ],
+    "entity": "Corporation",
+    "issued": "2019-02-14",
+    "expires": "2027-02-28",
+    "address": "747 9TH ST, RICHMOND, CA 94801",
+    "phone": "(510) 860-0802",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:50:30 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1050217",
+    "bond": "Contractor's Bond filed with WESTERN SURETY COMPANY, bond 65358262, $25,000, effective 01/01/2023 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with AMTRUST INSURANCE COMPANY, policy KWP1406027, effective 09/06/2025, expire 09/06/2026; classification code 5183 - Description Unavailable.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual ISRAEL RAMIREZ LOPEZ certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 02/09/2026).",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-937080",
+   "name": "Burton's Construction",
+   "registryLicenseNumber": "937080",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing-2",
+   "observedFields": {
+    "firm_name": "Burton's Construction",
+    "license_number": "937080",
+    "permit_number": "PP20260608453"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PP20260608453 (vanity and P-trap scope). Re-read on city-crosscheck-plumbing-2, which shows a long 94122-area permit history. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active B + C36 + C54 multi-trade licence on a San Francisco business address (137 Palm Avenue #4, 94118, inner Richmond).",
+    "Workers' compensation is exempt: certified no employees at the time of the displayed exemption (effective 07/21/2025).",
+    "Outer Sunset dispatch is not established by the CSLB page; the business address is a different neighbourhood.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "BURTON'S CONSTRUCTION",
+    "number": "937080",
+    "status": "active",
+    "classes": [
+     "B",
+     "C36",
+     "C54"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "2009-08-27",
+    "expires": "2027-08-31",
+    "address": "137 PALM AVENUE #4, SAN FRANCISCO, CA 94118",
+    "phone": "(415) 205-0920",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:50:30 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=937080",
+    "bond": "Contractor's Bond filed with WESTERN SURETY COMPANY, bond 67235624, $25,000, effective 02/01/2025 (no cancellation date displayed).",
+    "workersComp": "Exempt from workers compensation; certified no employees at this time (effective 07/21/2025, no expiration displayed).",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "miscellaneous": [
+     "Personnel listed on this license (current or disassociated) are listed on other licenses."
+    ]
+   }
+  },
+  {
+   "id": "w19-1003568",
+   "name": "Desired Plumbing Inc.",
+   "registryLicenseNumber": "1003568",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing-2",
+   "observedFields": {
+    "firm_name": "Desired Plumbing Inc.",
+    "license_number": "1003568",
+    "permit_number": "PW20250826629"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PW20250826629 (tub-to-shower replacement scope). Re-read on city-crosscheck-plumbing-2, which shows 2026 permits under the licence. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 licence; Petaluma business address with a 415 business phone, Outer Sunset dispatch not established.",
+    "Workers' compensation codes 5183, 518764 and 881001 are all displayed as 'Description Unavailable'.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "DESIRED PLUMBING INC",
+    "number": "1003568",
+    "status": "active",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Corporation",
+    "issued": "2015-05-13",
+    "expires": "2027-05-31",
+    "address": "2012 GILRIX STREET, PETALUMA, CA 94954",
+    "phone": "(415) 870-5615",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:52:35 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1003568",
+    "bond": "Contractor's Bond filed with JET INSURANCE COMPANY, bond BX0084642, $25,000, effective 05/08/2026 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with EMPLOYERS PREFERRED INSURANCE COMPANY, policy EIG567116501, effective 09/14/2025, expire 09/14/2026; classification codes 5183, 518764 and 881001 - all displayed as Description Unavailable.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual NEIL CHRISTOPHER THORPE certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 05/13/2015)."
+   }
+  },
+  {
+   "id": "w19-1045949",
+   "name": "Deleon Plumbing",
+   "registryLicenseNumber": "1045949",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Deleon Plumbing",
+    "license_number": "1045949",
+    "permit_number": "PW20260119975"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PW20260119975 (underground plumbing plus full bathroom and second-floor bathroom remodel scope). Re-read on city-crosscheck-plumbing. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 licence; Daly City business address with a 415 business phone, Outer Sunset dispatch not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "DELEON PLUMBING",
+    "number": "1045949",
+    "status": "active",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "2018-10-22",
+    "expires": "2026-10-31",
+    "address": "95 EATON AVE, DALY CITY, CA 94015",
+    "phone": "(415) 613-4664",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:52:35 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1045949",
+    "bond": "Contractor's Bond filed with MERCHANTS BONDING COMPANY (MUTUAL), bond 101180209, $25,000, effective 06/04/2024 (no cancellation date displayed).",
+    "workersComp": "Workers compensation with GREAT AMERICAN ALLIANCE INSURANCE COMPANY, policy F358593, effective 07/02/2026, expire 07/02/2027; classification code 51871 - Plumbing-high wage.",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed."
+   }
+  },
+  {
+   "id": "w19-732885",
+   "name": "D.K.M. Plumbing",
+   "registryLicenseNumber": "732885",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "D.K.M. Plumbing",
+    "license_number": "732885",
+    "permit_number": "PW20260403844"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PW20260403844 (remove and relocate main cold water supply line for wall repair - the closest plumbing permit of the wave to the repair task). Registry history also shows the variants 'Dkm Plumbing' and older short permit numbers. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 sole-ownership licence; San Bruno business address with a 415 business phone, Outer Sunset dispatch not established.",
+    "The permit scope (relocating a main supply line for wall access) is the closest in-scope plumbing permit evidence gathered this wave, but it is not evidence of the specific repair task.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "D K M PLUMBING",
+    "number": "732885",
+    "status": "active",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Sole Ownership",
+    "issued": "1997-02-26",
+    "expires": "2027-02-28",
+    "address": "404 POPLAR AVENUE, SAN BRUNO, CA 94066",
+    "phone": "(415) 309-7514",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:54:17 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=732885",
+    "bond": "Contractor's Bond filed with NATIONWIDE MUTUAL INSURANCE COMPANY, bond 7901232015, $25,000, effective 01/27/2025 (no cancellation date displayed).",
+    "workersComp": "Exempt from workers compensation; certified no employees at this time (effective 02/21/2025, no expiration displayed).",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed."
+   }
+  },
+  {
+   "id": "w19-832458",
+   "name": "Ariel's Plumbing",
+   "registryLicenseNumber": "832458",
+   "source": "city-plumbing-contacts",
+   "crosscheckSource": "city-crosscheck-plumbing",
+   "observedFields": {
+    "firm_name": "Ariel's Plumbing",
+    "license_number": "832458",
+    "permit_number": "PW20260907864"
+   },
+   "discoveryContext": "Plumbing-permit contact row for completed 94122 plumbing permit PW20260907864 (air chambers, cast-iron drain tailpiece and P-trap, galvanized iron replacement scope). Re-read on city-crosscheck-plumbing, which shows a history back to 2007. CSLB detail page read 2026-09-17.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Active C36 corporation licence (ISIP FAMILY CORPORATION); San Bruno business address, Outer Sunset dispatch not established.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "Both required services, Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ],
+   "licenseCheck": {
+    "legalName": "ISIP FAMILY CORPORATION DBA ARIEL'S PLUMBING",
+    "number": "832458",
+    "status": "active",
+    "classes": [
+     "C36"
+    ],
+    "entity": "Corporation",
+    "issued": "2004-02-19",
+    "expires": "2027-11-30",
+    "address": "3900 MOULTON DR, SAN BRUNO, CA 94066",
+    "phone": "(650) 296-7542",
+    "checkedAt": "2026-09-17",
+    "sourceAsOf": "9/17/2026 11:54:17 AM (as displayed; timezone not supplied)",
+    "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=832458",
+    "bond": "Contractor's Bond filed with AMERICAN CONTRACTORS INDEMNITY COMPANY, bond 100804267, $25,000, effective 11/06/2023 (no cancellation date displayed).",
+    "workersComp": "Exempt from workers compensation; certified no employees at this time (effective 11/26/2025, no expiration displayed).",
+    "additional": [],
+    "statusExcerpt": "This license is current and active. All information below should be reviewed.",
+    "bondOfQualifyingIndividual": "The qualifying individual ARIEL TUBIG ISIP certified that he/she owns 10 percent or more of the voting stock; Bond of Qualifying Individual is not required (effective 11/06/2023).",
+    "miscellaneous": [
+     "11/06/2023 - LICENSE REISSUED TO ANOTHER ENTITY"
+    ]
+   }
+  },
+  {
+   "id": "w19-466126",
+   "name": "Tom Mc Donald",
+   "registryLicenseNumber": "466126",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Tom Mc Donald",
+    "license_number": "466126",
+    "address": "1212 7th Av",
+    "zipcode": "94122",
+    "phone": "415-608-5547",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Individual-name registry row (no firm name); the count is a single permit contact row.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-475180",
+   "name": "April Electrical & Constructor",
+   "registryLicenseNumber": "475180",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "April Electrical & Constructor",
+    "license_number": "475180",
+    "address": "1788 19th Av",
+    "zipcode": "94122-0000",
+    "phone": "4152428131",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Electrical-named firm on the plumbing-permit contact registry; classification unknown without a CSLB read.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-482113",
+   "name": "Rosemount Construction",
+   "registryLicenseNumber": "482113",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Rosemount Construction",
+    "license_number": "482113",
+    "address": "1310 - 29th Avenue",
+    "zipcode": "94122",
+    "phone": "415-759-5850",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Single permit contact row; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-483283",
+   "name": "Coordinated Services",
+   "registryLicenseNumber": "483283",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Coordinated Services",
+    "license_number": "483283",
+    "address": "1272 2nd Avenue",
+    "zipcode": "94122",
+    "phone": "415-753-6858",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Registry also shows 'Coordinated Services Dba Wol' and 'Coordinated Services Dba Wolf Ind. Servi' under the same number at 45 Hugo St, 94122 (4155636107); the dba trail is recorded, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-488129",
+   "name": "Lindele Construction Co",
+   "registryLicenseNumber": "488129",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Lindele Construction Co",
+    "license_number": "488129",
+    "address": "Po Box 225148",
+    "zipcode": "94122-0000",
+    "phone": "4156813214",
+    "count": "4"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Street-free PO Box contact address; physical location is not established from the registry row.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-489719",
+   "name": "Toyo General Construction",
+   "registryLicenseNumber": "489719",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Toyo General Construction",
+    "license_number": "489719",
+    "address": "1482 - 31st Avenue",
+    "zipcode": "94122",
+    "phone": "415-665-1890",
+    "count": "5"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Cross-check shows the same number also under 'Clement Yen Dba Toyo General Constr'; the qualifier name is recorded, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-501000",
+   "name": "Edison C. Cayabyab",
+   "registryLicenseNumber": "501000",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Edison C. Cayabyab",
+    "license_number": "501000",
+    "address": "3821 Ortega St.",
+    "zipcode": "94122",
+    "phone": "415-759-7346",
+    "count": "2"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Individual-name registry row (no firm name); two permit contact rows.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-509073",
+   "name": "Quinlan Construction",
+   "registryLicenseNumber": "509073",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Quinlan Construction",
+    "license_number": "509073",
+    "address": "1750 32nd Ave *",
+    "zipcode": "94122",
+    "phone": "415-387-4441",
+    "count": "4"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "One registry row carried an abbreviated phone (3874441) with no area code; the displayed main row phone is transcribed.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-510198",
+   "name": "Sunset Electric & Constructi",
+   "registryLicenseNumber": "510198",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Sunset Electric & Constructi",
+    "license_number": "510198",
+    "address": "1547 26th Avenue",
+    "zipcode": "94122",
+    "phone": null,
+    "count": "2"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Electric-named firm on the plumbing-permit contact registry; the displayed rows carry no phone value.",
+    "The registry firm_name is truncated in the source ('Constructi').",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-521722",
+   "name": "Bay Concrete Construction",
+   "registryLicenseNumber": "521722",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Bay Concrete Construction",
+    "license_number": "521722",
+    "address": "1234 11th Ave *",
+    "zipcode": "94122",
+    "phone": "415-731-2800",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Concrete-named firm on the plumbing-permit contact registry; classification unknown without a CSLB read.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-523824",
+   "name": "W B Construction Company",
+   "registryLicenseNumber": "523824",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "W B Construction Company",
+    "license_number": "523824",
+    "address": "1483 29th Av",
+    "zipcode": "94122-0000",
+    "phone": "415-816-2128",
+    "count": "2"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Two permit contact rows; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-525528",
+   "name": "L W T Contruction Co",
+   "registryLicenseNumber": "525528",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "L W T Contruction Co",
+    "license_number": "525528",
+    "address": "1859 20th Avenue",
+    "zipcode": "94122",
+    "phone": "415-230-0682",
+    "count": "5"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "The registry firm_name spelling 'Contruction' is transcribed as displayed; it is a source typo, not corrected.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-531666",
+   "name": "Dck Construction",
+   "registryLicenseNumber": "531666",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Dck Construction",
+    "license_number": "531666",
+    "address": "1570 42nd Avenue",
+    "zipcode": "94122",
+    "phone": "415-581-6038",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Identity question: the registry also shows 'D.C.K. Construction' and 'D C K Electric' under a different licence number 553166 at the same 1570 42nd Avenue address, and the cross-check also lists 'Dck Construction' under 553166. Only 531666 is retained as a record; the 553166 variant is folded into this record (see dedupeFolds), not stored as a parallel entry.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-534925",
+   "name": "Collier-Ostrom Enterprise",
+   "registryLicenseNumber": "534925",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Collier-Ostrom Enterprise",
+    "license_number": "534925",
+    "address": "1458 34th Avenue *",
+    "zipcode": "94122",
+    "phone": "415-759-5390",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Single permit contact row; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-536542",
+   "name": "Chiang's Construction",
+   "registryLicenseNumber": "536542",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Chiang's Construction",
+    "license_number": "536542",
+    "address": "1432 38th Avenue",
+    "zipcode": "94122",
+    "phone": "515-681-0362",
+    "count": "5"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Displayed phone is a 515 (Iowa) area code on a 94122 contact row; the mismatch is published, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-538254",
+   "name": "Rogne Construction Inc",
+   "registryLicenseNumber": "538254",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Rogne Construction Inc",
+    "license_number": "538254",
+    "address": "1590 47th Avenue",
+    "zipcode": "94122",
+    "phone": "415-665-4110",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Single permit contact row; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-543983",
+   "name": "Lynda Cence",
+   "registryLicenseNumber": "543983",
+   "source": "city-plumbing-registry",
+   "crosscheckSource": "city-crosscheck-registry",
+   "observedFields": {
+    "firm_name": "Lynda Cence",
+    "license_number": "543983",
+    "address": "1878 - 18th Avenue",
+    "zipcode": "94122",
+    "phone": "415-759-1335",
+    "count": "11"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 300-499, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Individual-name registry row (no firm name) with eleven permit contact rows.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-547069",
+   "name": "Go Sung Construction",
+   "registryLicenseNumber": "547069",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Go Sung Construction",
+    "license_number": "547069",
+    "address": "1812 24th Av",
+    "zipcode": "94122-0000",
+    "phone": "415-531-3552",
+    "count": "6"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Cross-check shows the same number also under 'Young Kim Builders Inc'; the alternate name is recorded, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-555978",
+   "name": "Harold Teitler",
+   "registryLicenseNumber": "555978",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Harold Teitler",
+    "license_number": "555978",
+    "address": "1343 43rd Ave",
+    "zipcode": "94122",
+    "phone": "415-664-1876",
+    "count": "7"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Individual-name registry row (no firm name) with seven permit contact rows.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-565779",
+   "name": "Wing's General Const Co",
+   "registryLicenseNumber": "565779",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Wing's General Const Co",
+    "license_number": "565779",
+    "address": "1439 5th Ave",
+    "zipcode": "94122",
+    "phone": "415-661-5051",
+    "count": "10"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Ten permit contact rows across address-variant spellings; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-568057",
+   "name": "C & J Construction",
+   "registryLicenseNumber": "568057",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "C & J Construction",
+    "license_number": "568057",
+    "address": "434 31st Ave.",
+    "zipcode": "94122",
+    "phone": "415-387-3883",
+    "count": "10"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "The same number also appears as 'Cbj Design' and 'Kar Tung See Dba: Cbj Design' in the cross-check; the qualifier name is recorded, not reconciled. (A C-BJ design firm is stored in the corpus under a different licence; this registry number is not one of the stored numbers.)",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-569794",
+   "name": "Trippco",
+   "registryLicenseNumber": "569794",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Trippco",
+    "license_number": "569794",
+    "address": "1560 - 8th Ave #8",
+    "zipcode": "94122",
+    "phone": "415-759-7810",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Single permit contact row; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-573143",
+   "name": "Stephen Donnelly",
+   "registryLicenseNumber": "573143",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Stephen Donnelly",
+    "license_number": "573143",
+    "address": "638 17thav",
+    "zipcode": "94122",
+    "phone": "415-661-2188",
+    "count": "1"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Individual-name registry row (no firm name); single permit contact row.",
+    "Cross-check shows the same number also under 'House To Home Remodeling'; the alternate name is recorded, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-579830",
+   "name": "Kong Lai Construction",
+   "registryLicenseNumber": "579830",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Kong Lai Construction",
+    "license_number": "579830",
+    "address": "1659 10th Ave",
+    "zipcode": "94122",
+    "phone": "415-564-7296",
+    "count": "2"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Two permit contact rows; the permit scope was not read for this record.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-580391",
+   "name": "N & T Construction",
+   "registryLicenseNumber": "580391",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "N & T Construction",
+    "license_number": "580391",
+    "address": "1846 Orchard Ave",
+    "zipcode": "94122",
+    "phone": "510-895-8462",
+    "count": "2"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Displayed phone is a 510 (Contra Costa) area code on a 94122 contact row; the mismatch is published, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-580756",
+   "name": "Smart Remodeling And Design Inc",
+   "registryLicenseNumber": "580756",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Smart Remodeling And Design Inc",
+    "license_number": "580756",
+    "address": "1501 19th Av",
+    "zipcode": "94122-0000",
+    "phone": "4086135441",
+    "count": "30"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "Thirty permit contact rows; the registry also flags '-See Note' rows under the same number with a second phone (8558997255).",
+    "Cross-check shows the same number also under 'Rhino Builders Inc'; the alternate name is recorded, not reconciled.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-588779",
+   "name": "Jimmy Tam/Tam's Const",
+   "registryLicenseNumber": "588779",
+   "source": "city-plumbing-registry-500",
+   "crosscheckSource": "city-crosscheck-registry-500",
+   "observedFields": {
+    "firm_name": "Jimmy Tam/Tam's Const",
+    "license_number": "588779",
+    "address": "1547 - 39th Ave",
+    "zipcode": "94122",
+    "phone": "415-661-8683",
+    "count": "3"
+   },
+   "discoveryContext": "Grouped plumbing-permit contact query filtered to firm ZIP prefix 94122 (offset 500+, ordered by license_number); the ZIP is the firm contact ZIP, not a work location. Confirmed again in the targeted cross-check query.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [],
+   "flags": [
+    "The registry firm_name is an individual name fused with a dba ('Tam's Const'); transcribed as displayed.",
+    "Historical City plumbing-permit contact lead only. The registry row proves a recorded name/number with a 94122 contact address; it does not prove a licence status, that either required trade is offered, or that the firm still operates.",
+    "No attributable business review was read for this record in this session. Missing reviews are neither positive nor negative evidence.",
+    "No CSLB read was performed for this record in this session; licence status is unknown here and must be checked before any contact.",
+    "Both required services (plumbing and drywall/ceiling restoration), Outer Sunset dispatch, a seized-overflow outcome, project insurance and a written repair-first scope remain unconfirmed."
+   ]
+  },
+  {
+   "id": "w19-enox-construction",
+   "name": "Enox construction",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-drywall",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/drywall-contractors",
+    "profileUrl": "https://www.thumbtack.com/ca/hayward/handyman/enox-construction/service/435511061374861320",
+    "rating": "4.6",
+    "reviewCount": "94",
+    "hires": "122 hires on Thumbtack",
+    "services": "Drywall Installation and Hanging",
+    "serves": "Serves San Francisco, CA (as displayed)",
+    "badges": "No Top Pro or Licensed pro badge was displayed on the read category card; absence of a badge is recorded, not interpreted."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r01"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. No 'Licensed pro' badge was displayed on the read card.",
+    "Card shows 'Serves San Francisco, CA'; the profile city is Hayward and Outer Sunset dispatch is not established.",
+    "No attributable licence, trade or exact-task evidence exists for this record."
+   ]
+  },
+  {
+   "id": "w19-dave-tipton-design",
+   "name": "Dave Tipton Design",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plastering",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plastering",
+    "profileUrl": "https://www.thumbtack.com/ca/windsor/handyman/dave-tipton-design/service/308911650040987730",
+    "rating": null,
+    "reviewCount": null,
+    "hires": null,
+    "services": "Plastering (review-section card; service rating block not displayed in the read fragment)",
+    "serves": "San Francisco plastering review section (as displayed)",
+    "badges": "No Top Pro or Licensed pro badge was displayed on the read card; absence of a badge is recorded, not interpreted."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r02"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. No 'Licensed pro' badge was displayed on the read card.",
+    "The card appears in the 'Reviews for San Francisco plastering professionals' section; the profile city is Windsor and Outer Sunset dispatch is not established.",
+    "No attributable licence, trade or exact-task evidence exists for this record."
+   ]
+  },
+  {
+   "id": "w19-plaster-effect",
+   "name": "PLASTER EFFECT",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plastering",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plastering",
+    "profileUrl": "https://www.thumbtack.com/ca/richmond/stucco-contractors/plaster-effect/service/304995342571667526",
+    "rating": null,
+    "reviewCount": null,
+    "hires": null,
+    "services": "Plastering / stucco (review-section card; service rating block not displayed in the read fragment)",
+    "serves": "San Francisco plastering review section (as displayed)",
+    "badges": "No Top Pro or Licensed pro badge was displayed on the read card; absence of a badge is recorded, not interpreted."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r03"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. No 'Licensed pro' badge was displayed on the read card.",
+    "The card appears in the 'Reviews for San Francisco plastering professionals' section; the profile city is Richmond and Outer Sunset dispatch is not established.",
+    "The retained review describes patching a ceiling hole left by a plumber - the closest match to this project's restoration track of any platform excerpt read this wave, but it is one customer account, not capability verification."
+   ]
+  },
+  {
+   "id": "w19-best-builder",
+   "name": "Best builder",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plastering",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plastering",
+    "profileUrl": "https://www.thumbtack.com/ca/watsonville/drywall-repair/best-builder/service/407280339103186953",
+    "rating": null,
+    "reviewCount": null,
+    "hires": null,
+    "services": "Plastering (review-section card under drywall-repair profile; service rating block not displayed in the read fragment)",
+    "serves": "San Francisco plastering review section (as displayed)",
+    "badges": "No Top Pro or Licensed pro badge was displayed on the read card; absence of a badge is recorded, not interpreted."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r04"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. No 'Licensed pro' badge was displayed on the read card.",
+    "The card appears in the 'Reviews for San Francisco plastering professionals' section; the profile city is Watsonville and Outer Sunset dispatch is not established.",
+    "Generic business name; identity beyond the platform profile is not established."
+   ]
+  },
+  {
+   "id": "w19-ghp-plumbing-solutions",
+   "name": "GHP PLUMBING SOLUTIONS INC",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plumbers",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+    "profileUrl": "https://www.thumbtack.com/ca/pacifica/affordable-plumbing-services/ghp-plumbing-solutions-inc/service/565644730300039172",
+    "rating": null,
+    "reviewCount": null,
+    "hires": "1 hire on Thumbtack",
+    "services": "Plumbing Drain Repair, Plumbing Pipe Repair, Plumbing Pipe Installation or Replacement, Toilet Repair, Sink or Faucet Repair, Toilet Installation or Replacement, Water Heater Installation or Replacement, Sink or Faucet Installation or Replacement",
+    "serves": "Serves San Francisco, CA (as displayed); profile city Pacifica",
+    "badges": "New on Thumbtack; no Top Pro or Licensed pro badge displayed on the read card."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r05"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact.",
+    "'Licensed pro' badge was not displayed; the card is marked 'New on Thumbtack' with one hire.",
+    "The retained business self-description claims an active C-36 Plumbing Contractor licence in California; a self-description is a claim, not verification, and no CSLB number was displayed."
+   ]
+  },
+  {
+   "id": "w19-3a-plumbing",
+   "name": "3A plumbing",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plumbers",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+    "profileUrl": "https://www.thumbtack.com/ca/burlingame/architects/3a-plumbing/service/410990410333601805",
+    "rating": "4.9",
+    "reviewCount": "36",
+    "hires": "61 hires on Thumbtack",
+    "services": "Plumbing Drain Repair, Plumbing Pipe Repair, Plumbing Pipe Installation or Replacement, Sink or Faucet Repair, Toilet Repair, Water Heater Installation or Replacement",
+    "serves": "Serves San Francisco, CA (as displayed)",
+    "badges": "Licensed pro badge displayed; In high demand; Online now."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r06"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. The 'Licensed pro' badge displayed on the card is a platform badge, not a CSLB read.",
+    "Card shows 'Serves San Francisco, CA'; the profile city is Burlingame and Outer Sunset dispatch is not established.",
+    "No attributable CSLB licence number exists for this record."
+   ]
+  },
+  {
+   "id": "w19-mr-jimmy-plumbing-rooter",
+   "name": "Mr Jimmy Plumbing & Rooter *Serious Inquiries*",
+   "trade": "platform-lead",
+   "license": null,
+   "source": "thumbtack-plumbers",
+   "crosscheckSource": null,
+   "platformEvidence": {
+    "platform": "Thumbtack",
+    "categoryUrl": "https://www.thumbtack.com/ca/san-francisco/plumbers",
+    "profileUrl": null,
+    "rating": "5.0",
+    "reviewCount": "30",
+    "hires": "41 hires on Thumbtack",
+    "services": "Plumbing Drain Repair, Plumbing Pipe Repair, Plumbing Pipe Installation or Replacement, Sink or Faucet Repair, Sink or Faucet Installation or Replacement, Toilet Installation or Replacement, Toilet Repair",
+    "serves": "Serves San Francisco, CA (as displayed)",
+    "badges": "Top Pro; Licensed pro badge displayed; Online now."
+   },
+   "discoveryContext": "Platform listing read on 2026-09-17 from an opened Thumbtack category page for the San Francisco market. Platform presence, badges and ratings are not licence verification and not capability verification.",
+   "status": "hold",
+   "master": false,
+   "requirements": {
+    "plumbing": "unconfirmed",
+    "drywall": "unconfirmed",
+    "ceilingRestoration": "unconfirmed",
+    "accessHatch": "unconfirmed",
+    "outerSunsetDispatch": "unconfirmed",
+    "seizedOverflowOutcome": "unconfirmed",
+    "projectInsurance": "unconfirmed",
+    "writtenRepairFirstScope": "unconfirmed"
+   },
+   "reviews": [
+    "w19-r07"
+   ],
+   "flags": [
+    "Platform listing only: no CSLB read, no licence fact. The 'Licensed pro' badge displayed on the card is a platform badge, not a CSLB read.",
+    "Card shows 'Serves San Francisco, CA'; the profile city is San Bruno and Outer Sunset dispatch is not established.",
+    "The business name as displayed includes the qualifier '*Serious Inquiries*'; transcribed as displayed."
+   ]
+  }
+ ],
+ "reviews": [
+  {
+   "id": "w19-r01",
+   "entry": "w19-enox-construction",
+   "platform": "Thumbtack",
+   "attribution": "Maria C. (as displayed on the category card)",
+   "source": "thumbtack-drywall",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "The contractor responded quickly and completed the job.",
+   "note": "Very short displayed excerpt; it contains no scope detail, so it is neither plumbing nor drywall evidence."
+  },
+  {
+   "id": "w19-r02",
+   "entry": "w19-dave-tipton-design",
+   "platform": "Thumbtack",
+   "attribution": "Lynn F. (as displayed in the review section)",
+   "source": "thumbtack-plastering",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "Dave is an all around pro who completed a plaster/ painting project in budget, on time, and professionally. Highly recommended!",
+   "note": "Plaster work account; no exact-task, area or licence detail. Spacing 'plaster/ painting' transcribed as displayed."
+  },
+  {
+   "id": "w19-r03",
+   "entry": "w19-plaster-effect",
+   "platform": "Thumbtack",
+   "attribution": "Ray V. (as displayed in the review section)",
+   "source": "thumbtack-plastering",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "The crew did an excellent job patching a sizable hole in the ceiling left by the plumber who was investigating a water leak. The patch runs perfectly smooth with its surrounding surface. Once painted, the ceiling will look like new. We'll have more work in the future and I won't hesitate to call Plaster Effect when the time comes.",
+   "note": "Plaster ceiling-patch account from a leak investigation - the closest platform excerpt to this project's restoration track. One customer account; not capability verification."
+  },
+  {
+   "id": "w19-r04",
+   "entry": "w19-best-builder",
+   "platform": "Thumbtack",
+   "attribution": "Mia E. (as displayed in the review section)",
+   "source": "thumbtack-plastering",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "Ed and his team are awesome!!! They helped transform our storage unit into a usable space for an at home gym. The floor in the storage unit was completely uneven and Ed's team came in and leveled out the floor. They also ensured the floor was properly reinforced to support heavy gym equipment such as a thread mill and heavy weights. In addition, Ed's team plastered several walls in our apartment to smooth out textured walls. Lastly, Ed has helped transform a few antiquated rooms in our Noe Valley apartment. For example, he helped remove old tile and an ugly mantle on our fireplace. His team then plastered the fireplace wall and made the wall completely smooth. His team helped transform our living room and made it more modern. We are very happy with Ed and his work. Highly recommend Ed for any contracting work.",
+   "note": "Apartment plastering account (Noe Valley); no exact-task, Outer Sunset or licence detail."
+  },
+  {
+   "id": "w19-r05",
+   "entry": "w19-ghp-plumbing-solutions",
+   "platform": "Thumbtack",
+   "attribution": "Business self-description (as displayed on the category card)",
+   "source": "thumbtack-plumbers",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "business-description",
+   "excerpt": "At GHP Plumbing Solutions Inc., we're more than just plumbers - we're licensed problem-solvers (active C-36 Plumbing Contractor in California) dedicated to quality, integrity, and efficiency. What sets us apart is our customer-first approach, transparent pricing, and skilled workmanship backed by years of hands-on experience. From small repairs to full-scale installations, we provide reliable solutions tailored to each client's needs. Our team takes pride in being prompt, professional, and passionate about delivering lasting results. At GHP, we don't just fix problems - we build trust.",
+   "note": "Self-description, not a customer review. The active C-36 claim is unverified; no CSLB number was displayed. The dash spacing is transcribed from the page rendering."
+  },
+  {
+   "id": "w19-r06",
+   "entry": "w19-3a-plumbing",
+   "platform": "Thumbtack",
+   "attribution": "Nayanika G. (as displayed on the category card)",
+   "source": "thumbtack-plumbers",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "The plumber from 3A had the knowledge and skills to to identify the mystery leak and repaired it within a day.",
+   "note": "Leak-repair account; 'to to' transcribed as displayed. No exact-task, area or licence detail."
+  },
+  {
+   "id": "w19-r07",
+   "entry": "w19-mr-jimmy-plumbing-rooter",
+   "platform": "Thumbtack",
+   "attribution": "Kevin M. (as displayed on the category card)",
+   "source": "thumbtack-plumbers",
+   "access": "page",
+   "checkedAt": "2026-09-17",
+   "kind": "review",
+   "excerpt": "Jimmy's a great, honest plumber and gave me a very reasonable deal. I would highly recommend him to anyone looking for emergency plumbing.",
+   "note": "Emergency-plumbing account; no exact-task, area or licence detail."
+  }
+ ],
+ "passes": {
+  "pass1": "Transcribed every retained registry row from the opened City responses (all chunks of each discovery query) and every licence field from the 16 CSLB detail pages read on 2026-09-17; unread fields were left absent. Review excerpts were transcribed verbatim from the opened Thumbtack category pages, including displayed typos and spacing.",
+  "pass2": "Compared every candidate name, stripped name core, id and licence number against the 793-record corpus, the wave-17 and wave-18 queues, and every 5-7 digit number stored in corpus prose before writing any record; every known collision was excluded. Each retained registry number was then re-read in a targeted cross-check query of the same dataset.",
+  "pass3": "Fail-closed audit: all 50 records held, every requirement gate unconfirmed, master false for all, no promotion, no private project context in any field. These are three checks by one agent, not three independent reviewers."
+ }
+}

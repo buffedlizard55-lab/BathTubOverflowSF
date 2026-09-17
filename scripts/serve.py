@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = {'/', '/index.html', '/styles.css', '/app.js', '/lib.js', '/assets/mark.svg', '/data/research.json', '/discovery.html', '/discovery.css', '/discovery.js', '/data/wave17.json', '/discovery18.html', '/discovery18.js', '/data/wave18.json'}
+PUBLIC = {'/', '/index.html', '/styles.css', '/app.js', '/lib.js', '/assets/mark.svg', '/data/research.json', '/discovery.html', '/discovery.css', '/discovery.js', '/data/wave17.json', '/discovery18.html', '/discovery18.js', '/data/wave18.json', '/discovery19.html', '/discovery19.js', '/data/wave19.json', '/data/wave19-discovery-log.md'}
 
 
 class PublicHandler(SimpleHTTPRequestHandler):

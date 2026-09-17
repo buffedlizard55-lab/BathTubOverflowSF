@@ -1,7 +1,7 @@
 name: Test and deploy Pages
 on:
   push:
-    branches: [main, arena/01a0acc2-bathtuboverflowsf]
+    branches: [main, arena/01a0acc2-bathtuboverflowsf, arena/01a0b046-bathtuboverflowsf]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -69,9 +69,9 @@ jobs:
       - name: Stage public files only
         run: |
           mkdir -p _site/data _site/assets
-          cp index.html styles.css app.js lib.js discovery.html discovery.css discovery.js discovery18.html discovery18.js _site/
+          cp index.html styles.css app.js lib.js discovery.html discovery.css discovery.js discovery18.html discovery18.js discovery19.html discovery19.js _site/
           cp assets/mark.svg _site/assets/
-          cp data/research.json data/wave17.json data/wave18.json _site/data/
+          cp data/research.json data/wave17.json data/wave18.json data/wave19.json data/wave19-discovery-log.md _site/data/
           touch _site/.nojekyll
       - name: Check deployment readiness without changing repository settings
         id: readiness

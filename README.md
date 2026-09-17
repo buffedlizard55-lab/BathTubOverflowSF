@@ -1,29 +1,36 @@
-## Latest update — September 17, 2026 (Wave 18)
+## Latest update — September 17, 2026 (Wave 19)
 
-[Open the wave 18 discovery queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery18.html) · [Wave 17 queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery.html) · [Research site](https://buffedlizard55-lab.github.io/BathTubOverflowSF/) · [Next-session priorities](docs/remaining-work.md)
+[Open the wave 19 discovery queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery19.html) · [Wave 18 queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery18.html) · [Wave 17 queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery.html) · [Research site](https://buffedlizard55-lab.github.io/BathTubOverflowSF/) · [Next-session priorities](docs/remaining-work.md)
 
 Added **50 more source-linked discovery leads in a separate queue**, not 50 qualified
 businesses: **43 City registry records** (each name/number pair read in two official City
-queries) of which **12 had their CSLB licence page opened** (2 active, 2 suspended, 2
-inactive, 6 expired — every non-active record held), plus **7 platform/community listings**
-from live Thumbtack category pages and Yelp search-extracts. Six review excerpts (5 customer
-reviews + 1 business self-description, each marked where truncated) were retained with source
-links. One Thumbtack business already stored by wave 10 (Repipe Specialists) was folded into
-the existing record instead of being duplicated.
+queries) of which **16 had their CSLB licence page opened** (14 active, 1 suspended, 1
+inactive — every non-active record held), plus **7 Thumbtack platform listings** (6 review
+excerpts + 1 business self-description, each with source links). Two folds: Caledonia
+Plastering & Stucco (stored since wave 6) gained five new plaster-ceiling review excerpts and
+third-party licence confirmation, and the unreconciled second number 553166 at the Dck
+Construction address was folded into that record instead of being duplicated.
+
+The wave's standout is **Detail Drywall & Stucco Inc (1032948)**, active with **B + C36 +
+C-9 + C35 on one licence** — both required trades on a single licence, and a completed 94122
+lath-and-stucco permit. Burton's Construction (937080, active B + C36 + C54, San Francisco
+address) and Kwan Chok Kee (1087358, active B + C36 + C10 + C16, San Francisco address) are
+the other multi-trade reads. The plumbing side produced 10 active C36 leads with completed
+94122 in-wall/tub/trap permit evidence, the closest single permit being D K M Plumbing's main
+cold water supply line moved for wall repair.
 
 **Both plumbing and drywall remain unconfirmed for every new lead. Zero qualified
-approvals.** The two C35 plastering licence reads are non-active; the single C36 plumbing
-read is suspended with an unresolved name; the two active reads are C33 painting (adjacent
-only) and a B general builder with a Madera address. No seized-overflow outcome was
-attributable to any new lead.
+approvals.** The suspended read (Reborn Bath Solutions, four suspension reasons plus a
+complaint-disclosure link) and the inactive read (Alansi's Rooter & Plumbing) are held, not
+hidden. No seized-overflow outcome was attributable to any new lead.
 
-The existing corpus stays at 793 records / 673 sources / 172 retained review excerpts and the
-wave-17 queue stays at 50 leads; their earlier source dates are unchanged. The wave-18 queue
-has search, evidence-stage filters, flags, source links and CSV export. See the
-[three-pass, line-by-line audit](data/wave18-discovery-log.md) and
-[field-level evidence](data/wave18.json). Next session should prioritize depth — identity
-resolution, attributable reviews and both-trade evidence on the existing shortlists — over
-another generic discovery wave.
+The existing corpus stays at 793 records / 673 sources / 172 retained review excerpts; the
+wave-17 and wave-18 queues stay at 50 leads each; earlier source dates are unchanged. The
+wave-19 queue has search, evidence-stage filters, flags, source links and CSV export. See the
+[three-pass, line-by-line audit](data/wave19-discovery-log.md) and
+[field-level evidence](data/wave19.json). Next session should prioritize depth — CSLB reads
+of the 27 new registry-only numbers and the standing unread lists, identity resolution and
+both-trade evidence on the existing shortlists — over another generic discovery wave.
 
 ---
 
