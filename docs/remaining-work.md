@@ -1,138 +1,98 @@
-# Remaining work and limitations
+# Next-session handover
 
-Status at the end of wave 16 (2026-09-16): **793 research records across 16 waves, 673 evidence
-references, 172 review excerpts, 311 direct CSLB licence reads, 0 qualified master entries.**
-This document is the handover: what still has to happen, what is blocking it, and the exact
-next actions. It is written to be executed autonomously in this or the next session.
+Updated 2026-09-17. This replaces the wave-16 next-session instructions; historical
+wave evidence remains in `data/` and the README.
 
-## 1. What still needs doing
+## Current state
 
-### 1.1 Continue the wave programme (waves 17+)
+- Existing corpus: **793 records, 673 sources, 172 retained review excerpts**.
+  These inherited claims were not all re-read this session; their original dates remain.
+- Separate wave-17 queue: **50 new name/registry-number records**, 4 CSLB detail
+  checks (3 active B, 1 suspended B), no new retained business reviews.
+- **Zero qualified master entries.** Do not call the combined records 843 verified businesses.
+- `data/research.json` is unchanged. `data/wave17.json` records the baseline SHA-256,
+  field transcriptions, two City query URLs, licence observations and unresolved gates.
+- Pages already existed. `discovery.html` adds a searchable, responsive, exportable
+  queue linked from the existing site. The queue is intentionally not merged into the corpus.
+- Three audit passes are documented in `data/wave17-discovery-log.md` and regression-tested.
 
-Wave 16 was pass block 37–39. The programme's repeating unit is one 50-record discovery wave
-followed by three verification passes, and the same fail-closed shape should continue.
+## Highest-value next work — prioritize depth, not another generic 50
 
-Queued, already-diffed licence numbers that were seen in the SF DBI 94122 building-contact
-registry but **not yet opened at CSLB** (do not assert anything about them before reading the
-page):
+1. **Prove both services.** Use the existing diagnostic shortlist as the plumbing track
+   and existing drywall candidates as the restoration track. Obtain firm-specific public
+   evidence for small repair work, ceiling restoration and access-hatch installation.
+   Keep a coordinated two-business option distinct from a single-business option.
+   Neither a name nor a B classification demonstrates either service for this project.
+2. **Resolve current identity and service area.** Read current CSLB details for the 46
+   unchecked registry numbers before treating them as contractors. Resolve aliases,
+   address changes and other licence numbers, then locate each firm's own current service
+   page. ZIP 94122 in the City query is the **firm contact ZIP**, not a project ZIP and not
+   proof of Outer Sunset dispatch. Deprioritize unrelated trades instead of inflating a list.
+3. **Review attribution before aggregation.** Find original business profiles on Yelp,
+   Thumbtack and Google; retain permitted excerpts with author, date when visible,
+   profile identity, URL, read date and access mode. Keep platform ratings separate;
+   do not average incompatible or duplicated corpora. Reddit is anecdotal context unless
+   a named firm and outcome can actually be attributed. Never invent missing dates.
+4. **Exact-task outcome.** Seek accounts of a seized bathtub-overflow mechanism being
+   freed without pipe replacement, and note unsuccessful attempts or necessary replacement.
+   This session found no attributable outcome for its new leads. That is **not** proof
+   that no public evidence exists anywhere. Avoid guaranteeing a non-destructive result.
+5. **Resolve the flags.** Ho Pronamic's observed bond suspension; Doc Painting's differing
+   addresses and complaint-disclosure link (underlying details unread); Gee Construction's
+   multiple registry numbers; Doc and Tadashi name aliases. A displayed complaint link is
+   not an adjudication or a basis to invent allegations.
+6. **Obtain project-specific confirmation only with outreach authorization.** Insurance,
+   availability, actual dispatch, the assigned technician, subcontractor coordination and
+   a written repair-first scope are not established here. No messages or forms were sent.
+   Keep the master empty until the relevant evidence and scope requirements are satisfied.
+7. **Check applicable City requirements before work.** General research is not a site
+   assessment, permit determination, hazardous-material assessment or guarantee of safe
+   access. Use the existing official-source compliance panel and qualified professionals.
 
-```text
-1074796 Stephen Mc Elroy   1079861 K&H                 1081032 Doc Painting
-1082812 Shelter Cove       1084921 Bay Cities          1090839 Nelson Zheng
-1094431 Zhiwing Builders   1096962 CCF Construction    1098145 Cota Glass
-1098696 Doherty            1098726 Alwyn               1100947 Tadashi Wood
-1106072 Tailwind           1114561 TWC Design          1115136 De Barra
-1116597/1148830 RF Fire Alarm                      1118121 Cal Builder
-1121578 ZM Builders        1124434 Ho Pronamic        1124454 Shiny Home
-1125334 Module             1126048 BJY                1128513 Bz and Bz
-1131714 Lin Wang           1138590 Faultline           1146766 Pro Design Build
-1536 Lang Engineering      20189/403201 Gee Construction
-297604 D G Construction    299971 Lea Electric         306841 Shek's Plumbing
-319513 Quality Construction 324708 Hawk N Lee          328973 Delao Electric
-343837 Frank J Obrien      359453 Jim Wong Electric    362047 Jack Yim
-362539 Stewart Cheung      36260 Peters Design-Build    369697 The Magic Christian
-375350 North Beach Construction                       377316 Alexander Construction
-389511 Patterson Frank P   407271 Keane Construction    410660 Sun Sun Construction
-415669 Kyin Way Ngoon      424435 Guntren Builders      425741 Aaron Electric
-427779 J & L Construction  431622 Sunset Glass         433839 Best Waterproofing
-440780 Bill Bragg Plumbing 442727 Chin Pang Construction
-```
+## Access and verification limitations
 
-Each wave must keep the three tiers separate, re-diff every number against the whole corpus
-(ids, normalized names, stripped cores, licence numbers, ten-digit phones), open each claimed
-licence page live, and end with three passes: regulator transcription, collision/attribution,
-fail-closed qualification.
+- Shell HTTPS retrieval of the City dataset failed TLS in this sandbox. The page-reader
+  tool succeeded. Evidence is explicitly a field transcription, not a raw-byte download.
+- The initial City response was only partly read. The second targeted query returned 52
+  name/number pairs and was read completely. Two aliases were counted once. This establishes
+  the retained pairs, not the completeness of the City's registry or 50 distinct legal entities.
+- Search excerpts and live Thumbtack category pages differed during this session. Do not
+  silently promote indexed listings, ratings or snippets into a verified live profile.
+- No complete Google review corpus was retrieved, and no claim of reading all reviews is made.
+- Tests check consistency, source references, escaping, privacy markers and conservative
+  gates. They cannot independently prove source truth or review authenticity. The three
+  passes are audits by one agent, not three independent reviewers.
+- The existing privacy digest test is a regression safeguard, not a comprehensive privacy
+  scanner. Review all new public artifacts before publishing. Keep nonpublic context out
+  of data, logs, issue text, commit messages, pull requests and outreach.
 
-### 1.2 Close the trade-evidence gap (the real blocker)
-
-- 163 records hold a C36 (plumbing) licence and **3** hold a C-9 (drywall) licence; only
-  **Sederap's Drywall Inc** holds both on one licence — and it is held, because its registry
-  address does not match the regulator's and no review was attributable to it.
-- No record yet publishes a readable account of a **seized bathtub-overflow trip lever** being
-  freed, whether from above, from behind the wall, or via a below-floor access hatch. The
-  closest evidence remains the Reddit/forum material already stored, which is general rather
-  than firm-specific.
-- Highest-value next searches:
-  1. CSLB licence search by classification (C36, and C-9) filtered to San Francisco, then read
-     each hit's detail page; add only firms whose printed address or registry history touches
-     94122.
-  2. SF DBI **permit detail** dataset filtered to work-location ZIP 94122 with descriptions
-     mentioning tub, overflow, trip lever, access panel, sheetrock, drywall repair or ceiling,
-     then join the permit numbers back to the contact datasets to recover firm identities.
-  3. The building/plumbing contact datasets at **firm ZIP 94122 excluding licences already
-     stored** (the wave-16 method) — the remaining low-count rows and `license1 is null` rows
-     are still unmined; re-query with `$offset` paging because the 60-row limit was reached.
-
-### 1.3 Review corpus
-
-- Yelp pages return HTTP 403 to this workspace; Yelp material is search-extract only.
-- The original Google review corpus is not retrievable; three Google-attributed rows were read
-  through Birdeye and labelled as such.
-- Reddit threads are readable and were used, but no thread has yet named a firm together with
-  an overflow/trip-lever outcome.
-- Next: try Thumbtack pro pages for the C36 firms already stored (some publish dated reviews
-  with photos), and re-check the Yelp search extract for the exact phrases already used; never
-  reconstruct a blocked corpus from memory.
-
-### 1.4 The two gates that no record can currently pass by research alone
-
-1. **Applicable insurance.** CSLB prints a liability line on only a minority of pages (CMAC
-   1053452 in wave 16 was the only one); project-specific certificates of insurance are not
-   public.
-2. **Written non-destructive-first scope.** This exists only in a conversation with the firm.
-
-Both require contacting businesses — which this workspace deliberately does not do (no forms
-submitted, no messages sent, no appointments booked). Until that changes, the qualified master
-must stay empty. The correct output remains the evidence-linked shortlist and the call order.
-
-### 1.5 Call order
-
-The 9-entry diagnostic call order is unchanged and no wave-16 record was admitted. New City
-Construction Company (1023648, active B + C10 + C36 at a 94122 address) is the strongest new
-candidate for eventual admission, but it stays out until area dispatch, an attributable
-review, or written scope evidence is attached.
-
-## 2. Limitations blocking a successful outcome
-
-- **No exact-task evidence exists publicly for this problem.** "Stuck overflow trip lever
-  behind a 1940s wall" is unlikely to appear in a dated, attributable public review for any
-  specific firm. The research can prove identity, classification, status, local permit history
-  and platform conduct; it cannot prove the one thing the project most wants to know.
-- **Address ≠ dispatch.** CSLB addresses and registry rows are mailing or historical permit
-  contacts. Nothing in the public record proves a firm currently dispatches to Outer Sunset on
-  the day of the job.
-- **Platform badges are not credentials.** "Licensed pro" and "Verified License" are platform
-  statements; the corpus only ever treats a CSLB read as a licence fact.
-- **Single-trade licences.** C36 (plumbing) and C-9/B (drywall/ceiling) are separate
-  classifications; the fallback path (opening a ceiling from the unit below and installing an
-  access hatch) may need two contractors plus coordination on the inspection before covering.
-- **Permit and inspection reality.** Any work that cuts into or removes piping needs a City
-  permit and inspection before the ceiling is closed; the governing exemption in SF Plumbing
-  Code §104.2 is narrow and condition-dependent, and no site visit is possible from here.
-- **Privacy.** Nonpublic project details are excluded from every artifact by policy and by a
-  digest test in the test suite. Nothing from the private context may be written into records,
-  sources, commit messages, issues or outreach; only the generalized repair objective below is
-  ever published.
-- **Tenancy context.** Landlord consent, who signs the permit, and restoration expectations
-  are open questions that no public source can answer; the corpus stores only the generalized
-  repair objective.
-
-## 3. Next-session checklist
+## Reproducible validation
 
 ```sh
-cp reports/research_before_wave16.json /tmp/verify_wave16_snapshot.json   # keep for diffs
-# wave 17 candidates: re-query both SF DBI datasets with $offset paging, read new licence
-# numbers live at CSLB, then follow the wave-16 scripts as templates:
-#   scripts/gen_wave17.py  →  data/wave17.json  →  scripts/merge_wave17.py
-npm test && npm run test:monitor
-gh pr create --base main --head arena/01a0ac7b-bathtuboverflowsf
+npm ci
+npm test
+npm run test:monitor
+npx playwright install --with-deps chromium
+npm run test:browser
+npm start
 ```
 
-Also worth doing next session:
+Local unit and monitor tests passed. Local browser launch was initially blocked because
+Chromium was absent and its download failed TLS; use the GitHub Actions browser result as
+the deployment gate, not that failed local launch. `CHROMIUM_PATH` can select an already
+installed browser. The preview binds to `0.0.0.0:4173` and serves only allowlisted files.
 
-- Add a permit-join pass that searches SF DBI permit descriptions for tub/overflow/ceiling
-  keywords at 94122 and joins the hits to contractor contacts.
-- Grow the review corpus where a platform permits it, and mark every unread panel as a gap —
-  never as a neutral finding.
-- Keep the 60-row registry limit in mind: page with `$offset` so a capped query is never
-  mistaken for a complete pool.
+Future corpus edits must deliberately update the wave-17 baseline guard after an audited
+merge, not remove it just to make a test pass. Existing wave-specific tests intentionally
+retain historical counts. The source monitor currently covers the main research corpus,
+not the separate wave-17 queue; extend it without confusing availability with verification.
+
+## Pages configuration limitation
+
+The existing Pages site is public and uses legacy publication from `main` at `/`.
+The API refused changing it to Actions publication with HTTP 403 (integration permission
+limit), so that setting was left unchanged. The workflow stages an explicit public-file
+allowlist for a future Actions deployment, but **legacy publication does not use that
+allowlist**. Treat every tracked file as public. An authorized repository administrator
+can select GitHub Actions as the Pages source later; no credential should be stored in
+this project. The existing legacy site can still publish the merged change.
