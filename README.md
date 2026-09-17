@@ -1,3 +1,21 @@
+## Latest update — September 17, 2026
+
+[Open the new discovery queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery.html) · [Research site](https://buffedlizard55-lab.github.io/BathTubOverflowSF/) · [Next-session priorities](docs/remaining-work.md)
+
+Added **50 source-linked discovery leads in a separate queue**, not 50 qualified businesses.
+All name/registry-number pairs were checked in two official City queries; four CSLB pages
+were read (three active B, one suspended B). **Both plumbing and drywall remain unconfirmed
+for every new lead. Zero new business reviews and zero qualified approvals.**
+
+The existing corpus stays at 793 records / 673 sources / 172 retained review excerpts.
+Its earlier source dates are unchanged; this session did not re-read all inherited evidence.
+The new queue has search, evidence-stage filters, flags, source links and CSV export.
+See the [three-pass, line-by-line audit](data/wave17-discovery-log.md) and
+[field-level evidence](data/wave17.json). Prioritize deeper verification of the existing
+plumbing and restoration tracks next, rather than another generic discovery wave.
+
+---
+
 # Sunset Repair · BathTubOverflowSF
 
 A static, source-linked research workspace for a repair-first bathtub overflow problem in San Francisco’s Outer Sunset. It covers both sides of a possible job:

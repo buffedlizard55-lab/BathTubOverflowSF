@@ -1,0 +1,1819 @@
+{
+  "schemaVersion": 1,
+  "wave": 17,
+  "checkedAt": "2026-09-17",
+  "stage": "discovery-only",
+  "baselineSha256": "da0abdf76d405826c8df3e7ba6efb23ae345c8e8822e99638209ce581f6962e0",
+  "note": "50 new discovery records, not 50 verified businesses or qualified matches. This queue is separate from the 793-record research corpus and the empty qualified master. Four licence detail pages were read; 46 licence numbers are registry values only. No new business reviews retained.",
+  "sources": [
+    {
+      "id": "city-94122",
+      "url": "https://data.sf.gov/resource/3pee-9qhc.json?%24select=firm_name%2Clicense1%2Cfirm_address%2Cfirm_zipcode%2Ccount%28%2A%29&%24group=firm_name%2Clicense1%2Cfirm_address%2Cfirm_zipcode&%24where=firm_zipcode+like+%2794122%25%27+AND+license1+is+not+null&%24order=license1&%24limit=200&%24offset=60",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-17",
+      "coverage": "Only chunks 0 and 1 of a four-chunk response read; retained fields limited to firm_name and license1. Not a complete registry export.",
+      "note": "Small field-level transcription from the public City response, not a raw downloaded snapshot. Shell retrieval failed TLS; page-reader retrieval succeeded."
+    },
+    {
+      "id": "city-crosscheck",
+      "url": "https://data.sf.gov/resource/3pee-9qhc.json?%24select=distinct+firm_name%2Clicense1&%24where=firm_zipcode+like+%2794122%25%27+AND+license1+in%28%271074796%27%2C%271081032%27%2C%271084921%27%2C%271094431%27%2C%271096962%27%2C%271098696%27%2C%271098726%27%2C%271100947%27%2C%271114561%27%2C%271115136%27%2C%271118121%27%2C%271121578%27%2C%271124434%27%2C%271124454%27%2C%271125334%27%2C%271126048%27%2C%271128513%27%2C%271131714%27%2C%271138590%27%2C%271146766%27%2C%27297604%27%2C%27319513%27%2C%27362047%27%2C%27369697%27%2C%27375350%27%2C%27389511%27%2C%27403201%27%2C%27407271%27%2C%27415669%27%2C%27424435%27%2C%27433839%27%2C%27461090%27%2C%27464662%27%2C%27474526%27%2C%27482691%27%2C%27496378%27%2C%27508694%27%2C%27511843%27%2C%27521996%27%2C%27522799%27%2C%27526298%27%2C%27530261%27%2C%27537565%27%2C%27545704%27%2C%27548472%27%2C%27572384%27%2C%27582513%27%2C%27595286%27%2C%27611177%27%2C%27615049%27%29&%24order=license1%2Cfirm_name&%24limit=200",
+      "kind": "government",
+      "access": "page",
+      "checkedAt": "2026-09-17",
+      "coverage": "Entire targeted response read: 52 name/number pairs for 50 registry numbers. Two alias rows consolidated; not an export of all firms.",
+      "note": "Independent second query read through the page reader; field-level transcription, not a raw byte snapshot."
+    }
+  ],
+  "entries": [
+    {
+      "id": "w17-1074796",
+      "name": "Stephen Mc Elroy Construction Llc",
+      "registryLicenseNumber": "1074796",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Stephen Mc Elroy Construction Llc",
+        "license1": "1074796"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": {
+        "legalName": "STEPHEN MC ELROY CONSTRUCTION LLC",
+        "number": "1074796",
+        "status": "active",
+        "classes": [
+          "B"
+        ],
+        "expires": "2027-04-30",
+        "address": "1253 7TH AVENUE, SAN FRANCISCO, CA 94122",
+        "checkedAt": "2026-09-17",
+        "sourceAsOf": "9/16/2026 5:29:24 PM (as displayed; timezone not supplied)",
+        "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1074796",
+        "statusExcerpt": "This license is current and active."
+      },
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "B classification is not evidence of a completed plumbing-and-drywall repair or successful seized-overflow extraction."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1081032",
+      "name": "Doc Painting & Maintenance Inc",
+      "registryLicenseNumber": "1081032",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Doc Painting & Maintenance Inc",
+        "license1": "1081032"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": {
+        "legalName": "DOC PAINTING & MAINTENANCE INC DBA DOC CONSTRUCTION",
+        "number": "1081032",
+        "status": "active",
+        "classes": [
+          "B"
+        ],
+        "expires": "2027-09-30",
+        "address": "3214 IRVING STREET, SAN FRANCISCO, CA 94122-1313",
+        "checkedAt": "2026-09-17",
+        "sourceAsOf": "9/16/2026 5:29:24 PM (as displayed; timezone not supplied)",
+        "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1081032",
+        "statusExcerpt": "This license is current and active."
+      },
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "CSLB displays a complaint-disclosure link; underlying complaint details were not opened. This is not a finding about the merits.",
+        "Registry address 1275 48th Avenue differs from CSLB address 3214 Irving Street; resolve identity/address history before outreach.",
+        "B classification is not evidence of a completed plumbing-and-drywall repair or successful seized-overflow extraction.",
+        "The City response contains a second DBA-style name under the same number; counted once."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1084921",
+      "name": "Bay Cities General Construction",
+      "registryLicenseNumber": "1084921",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Bay Cities General Construction",
+        "license1": "1084921"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1094431",
+      "name": "Zhiwing Builders Inc",
+      "registryLicenseNumber": "1094431",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Zhiwing Builders Inc",
+        "license1": "1094431"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1096962",
+      "name": "Ccf Construction, Llc",
+      "registryLicenseNumber": "1096962",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Ccf Construction, Llc",
+        "license1": "1096962"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1098696",
+      "name": "Doherty Construction",
+      "registryLicenseNumber": "1098696",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Doherty Construction",
+        "license1": "1098696"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1098726",
+      "name": "Alwyn Construction Inc",
+      "registryLicenseNumber": "1098726",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Alwyn Construction Inc",
+        "license1": "1098726"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1100947",
+      "name": "Tadashi Wood Construction Company",
+      "registryLicenseNumber": "1100947",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Tadashi Wood Construction Company",
+        "license1": "1100947"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "Two City name variants share this registry number; counted once, not as two businesses."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1114561",
+      "name": "Twc Design & Construction Inc",
+      "registryLicenseNumber": "1114561",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Twc Design & Construction Inc",
+        "license1": "1114561"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1115136",
+      "name": "De Barra Builders",
+      "registryLicenseNumber": "1115136",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "De Barra Builders",
+        "license1": "1115136"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1118121",
+      "name": "Cal Builder Inc",
+      "registryLicenseNumber": "1118121",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Cal Builder Inc",
+        "license1": "1118121"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1121578",
+      "name": "Zm Builders Inc",
+      "registryLicenseNumber": "1121578",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Zm Builders Inc",
+        "license1": "1121578"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1124434",
+      "name": "Ho Pronamic Construction Inc",
+      "registryLicenseNumber": "1124434",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Ho Pronamic Construction Inc",
+        "license1": "1124434"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": {
+        "legalName": "HO PRONAMIC CONSTRUCTION INC",
+        "number": "1124434",
+        "status": "suspended",
+        "classes": [
+          "B"
+        ],
+        "expires": "2028-07-31",
+        "address": "1401 26TH AVE, SAN FRANCISCO, CA 94122",
+        "checkedAt": "2026-09-17",
+        "sourceAsOf": "9/16/2026 5:29:24 PM (as displayed; timezone not supplied)",
+        "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1124434",
+        "statusExcerpt": "License is under suspension for the following reasons:"
+      },
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "CSLB reports Contractors Bond Suspension. Future expiry does not mean the licence is active.",
+        "B classification is not evidence of a completed plumbing-and-drywall repair or successful seized-overflow extraction."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1124454",
+      "name": "Shiny Home Builders & Development Inc",
+      "registryLicenseNumber": "1124454",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Shiny Home Builders & Development Inc",
+        "license1": "1124454"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": {
+        "legalName": "SHINY HOME BUILDERS & DEVELOPMENT INC",
+        "number": "1124454",
+        "status": "active",
+        "classes": [
+          "B"
+        ],
+        "expires": "2028-07-31",
+        "address": "3238 NORIEGA ST, SAN FRANCISCO, CA 94122",
+        "checkedAt": "2026-09-17",
+        "sourceAsOf": "9/16/2026 5:29:24 PM (as displayed; timezone not supplied)",
+        "url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1124454",
+        "statusExcerpt": "This license is current and active."
+      },
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "B classification is not evidence of a completed plumbing-and-drywall repair or successful seized-overflow extraction."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1125334",
+      "name": "Module Construction",
+      "registryLicenseNumber": "1125334",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Module Construction",
+        "license1": "1125334"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1126048",
+      "name": "Bjy Construction Inc",
+      "registryLicenseNumber": "1126048",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Bjy Construction Inc",
+        "license1": "1126048"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1128513",
+      "name": "Bz And Bz Corporation Inc",
+      "registryLicenseNumber": "1128513",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Bz And Bz Corporation Inc",
+        "license1": "1128513"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1131714",
+      "name": "Lin Wang Construction",
+      "registryLicenseNumber": "1131714",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Lin Wang Construction",
+        "license1": "1131714"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1138590",
+      "name": "Faultline Construction Inc",
+      "registryLicenseNumber": "1138590",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Faultline Construction Inc",
+        "license1": "1138590"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-1146766",
+      "name": "Pro Design Build And Construction Inc",
+      "registryLicenseNumber": "1146766",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Pro Design Build And Construction Inc",
+        "license1": "1146766"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-297604",
+      "name": "D G Construction Co.",
+      "registryLicenseNumber": "297604",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "D G Construction Co.",
+        "license1": "297604"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-319513",
+      "name": "Quality Construction Co",
+      "registryLicenseNumber": "319513",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Quality Construction Co",
+        "license1": "319513"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-362047",
+      "name": "Jack Yim",
+      "registryLicenseNumber": "362047",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Jack Yim",
+        "license1": "362047"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-369697",
+      "name": "The Magic Christian",
+      "registryLicenseNumber": "369697",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "The Magic Christian",
+        "license1": "369697"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-375350",
+      "name": "North Beach Construction",
+      "registryLicenseNumber": "375350",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "North Beach Construction",
+        "license1": "375350"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-389511",
+      "name": "Patterson Frank P",
+      "registryLicenseNumber": "389511",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Patterson Frank P",
+        "license1": "389511"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-403201",
+      "name": "Gee Construction",
+      "registryLicenseNumber": "403201",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Gee Construction",
+        "license1": "403201"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established.",
+        "The same City response also lists Gee Construction under 20189. Only one lead retained; identity relationship unresolved."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-407271",
+      "name": "Keane Construction",
+      "registryLicenseNumber": "407271",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Keane Construction",
+        "license1": "407271"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-415669",
+      "name": "Kyin Way Ngoon",
+      "registryLicenseNumber": "415669",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Kyin Way Ngoon",
+        "license1": "415669"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-424435",
+      "name": "Guntren Builders Construction",
+      "registryLicenseNumber": "424435",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Guntren Builders Construction",
+        "license1": "424435"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-433839",
+      "name": "Best Waterproofing Co.",
+      "registryLicenseNumber": "433839",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Best Waterproofing Co.",
+        "license1": "433839"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-461090",
+      "name": "Gerard Keightley Construction Inc",
+      "registryLicenseNumber": "461090",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Gerard Keightley Construction Inc",
+        "license1": "461090"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-464662",
+      "name": "Superior Construction Co",
+      "registryLicenseNumber": "464662",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Superior Construction Co",
+        "license1": "464662"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-474526",
+      "name": "Jacuzzi Properties, Inc",
+      "registryLicenseNumber": "474526",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Jacuzzi Properties, Inc",
+        "license1": "474526"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-482691",
+      "name": "Peletz & Company",
+      "registryLicenseNumber": "482691",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Peletz & Company",
+        "license1": "482691"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-496378",
+      "name": "Nutek Construction Inc.",
+      "registryLicenseNumber": "496378",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Nutek Construction Inc.",
+        "license1": "496378"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-508694",
+      "name": "Mac Kenzie Construction",
+      "registryLicenseNumber": "508694",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Mac Kenzie Construction",
+        "license1": "508694"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-511843",
+      "name": "Benkee Construction Co",
+      "registryLicenseNumber": "511843",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Benkee Construction Co",
+        "license1": "511843"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-521996",
+      "name": "Szeto Construction",
+      "registryLicenseNumber": "521996",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Szeto Construction",
+        "license1": "521996"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-522799",
+      "name": "Wey Cheng Construction Co",
+      "registryLicenseNumber": "522799",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Wey Cheng Construction Co",
+        "license1": "522799"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-526298",
+      "name": "Jan Weith General Contractor",
+      "registryLicenseNumber": "526298",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Jan Weith General Contractor",
+        "license1": "526298"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-530261",
+      "name": "Don Bauer & Co",
+      "registryLicenseNumber": "530261",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Don Bauer & Co",
+        "license1": "530261"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-537565",
+      "name": "Benjamin Gilmore Bolles",
+      "registryLicenseNumber": "537565",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Benjamin Gilmore Bolles",
+        "license1": "537565"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-545704",
+      "name": "C D Construction Co",
+      "registryLicenseNumber": "545704",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "C D Construction Co",
+        "license1": "545704"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-548472",
+      "name": "Margason Construction",
+      "registryLicenseNumber": "548472",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Margason Construction",
+        "license1": "548472"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-572384",
+      "name": "Guan Han Jie Construction",
+      "registryLicenseNumber": "572384",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Guan Han Jie Construction",
+        "license1": "572384"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-582513",
+      "name": "Gill Construction",
+      "registryLicenseNumber": "582513",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Gill Construction",
+        "license1": "582513"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-595286",
+      "name": "Steven Lau Construction",
+      "registryLicenseNumber": "595286",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Steven Lau Construction",
+        "license1": "595286"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-611177",
+      "name": "Wei Suen",
+      "registryLicenseNumber": "611177",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Wei Suen",
+        "license1": "611177"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    },
+    {
+      "id": "w17-615049",
+      "name": "Yee Lau Construction Co",
+      "registryLicenseNumber": "615049",
+      "source": "city-94122",
+      "observedFields": {
+        "firm_name": "Yee Lau Construction Co",
+        "license1": "615049"
+      },
+      "discoveryContext": "Building-permit contact query filtered to firm ZIP prefix 94122. This is not a work-location or dispatch check.",
+      "status": "hold",
+      "master": false,
+      "licenseCheck": null,
+      "requirements": {
+        "plumbing": "unconfirmed",
+        "drywall": "unconfirmed",
+        "ceilingRestoration": "unconfirmed",
+        "accessHatch": "unconfirmed",
+        "outerSunsetDispatch": "unconfirmed",
+        "seizedOverflowOutcome": "unconfirmed",
+        "projectInsurance": "unconfirmed",
+        "writtenRepairFirstScope": "unconfirmed"
+      },
+      "reviews": [],
+      "flags": [
+        "Historical registry lead only. Current business identity, both required services and availability remain unconfirmed.",
+        "No attributable business review was retained for this lead in this session. No exact-task capability is established."
+      ],
+      "crosscheckSource": "city-crosscheck"
+    }
+  ],
+  "auditPasses": [
+    {
+      "pass": 1,
+      "name": "Source transcription",
+      "result": "50 name/registry-number pairs transcribed from the opened City response; four CSLB name/status/class/expiry/address checks. Unread fields not inferred. All 50 pairs re-read in a second, targeted query; its complete response contains 52 rows including two aliases."
+    },
+    {
+      "pass": 2,
+      "name": "Collision and attribution",
+      "result": "Compared all 50 names, stripped name cores and registry numbers against the existing corpus; known collisions excluded. Alias ambiguity still flagged, not treated as proof of distinct legal entities."
+    },
+    {
+      "pass": 3,
+      "name": "Qualification and privacy",
+      "result": "All 50 held outside the research corpus and qualified master. Eight requirement gates remain unconfirmed; no outreach, no fabricated reviews, no private project details."
+    }
+  ],
+  "sourceTranscription": [
+    {
+      "firm_name": "Stephen Mc Elroy Construction Llc",
+      "license1": "1074796"
+    },
+    {
+      "firm_name": "Doc Painting & Maintenance Inc",
+      "license1": "1081032"
+    },
+    {
+      "firm_name": "Bay Cities General Construction",
+      "license1": "1084921"
+    },
+    {
+      "firm_name": "Zhiwing Builders Inc",
+      "license1": "1094431"
+    },
+    {
+      "firm_name": "Ccf Construction, Llc",
+      "license1": "1096962"
+    },
+    {
+      "firm_name": "Doherty Construction",
+      "license1": "1098696"
+    },
+    {
+      "firm_name": "Alwyn Construction Inc",
+      "license1": "1098726"
+    },
+    {
+      "firm_name": "Tadashi Wood Construction Company",
+      "license1": "1100947"
+    },
+    {
+      "firm_name": "Twc Design & Construction Inc",
+      "license1": "1114561"
+    },
+    {
+      "firm_name": "De Barra Builders",
+      "license1": "1115136"
+    },
+    {
+      "firm_name": "Cal Builder Inc",
+      "license1": "1118121"
+    },
+    {
+      "firm_name": "Zm Builders Inc",
+      "license1": "1121578"
+    },
+    {
+      "firm_name": "Ho Pronamic Construction Inc",
+      "license1": "1124434"
+    },
+    {
+      "firm_name": "Shiny Home Builders & Development Inc",
+      "license1": "1124454"
+    },
+    {
+      "firm_name": "Module Construction",
+      "license1": "1125334"
+    },
+    {
+      "firm_name": "Bjy Construction Inc",
+      "license1": "1126048"
+    },
+    {
+      "firm_name": "Bz And Bz Corporation Inc",
+      "license1": "1128513"
+    },
+    {
+      "firm_name": "Lin Wang Construction",
+      "license1": "1131714"
+    },
+    {
+      "firm_name": "Faultline Construction Inc",
+      "license1": "1138590"
+    },
+    {
+      "firm_name": "Pro Design Build And Construction Inc",
+      "license1": "1146766"
+    },
+    {
+      "firm_name": "D G Construction Co.",
+      "license1": "297604"
+    },
+    {
+      "firm_name": "Quality Construction Co",
+      "license1": "319513"
+    },
+    {
+      "firm_name": "Jack Yim",
+      "license1": "362047"
+    },
+    {
+      "firm_name": "The Magic Christian",
+      "license1": "369697"
+    },
+    {
+      "firm_name": "North Beach Construction",
+      "license1": "375350"
+    },
+    {
+      "firm_name": "Patterson Frank P",
+      "license1": "389511"
+    },
+    {
+      "firm_name": "Gee Construction",
+      "license1": "403201"
+    },
+    {
+      "firm_name": "Keane Construction",
+      "license1": "407271"
+    },
+    {
+      "firm_name": "Kyin Way Ngoon",
+      "license1": "415669"
+    },
+    {
+      "firm_name": "Guntren Builders Construction",
+      "license1": "424435"
+    },
+    {
+      "firm_name": "Best Waterproofing Co.",
+      "license1": "433839"
+    },
+    {
+      "firm_name": "Gerard Keightley Construction Inc",
+      "license1": "461090"
+    },
+    {
+      "firm_name": "Superior Construction Co",
+      "license1": "464662"
+    },
+    {
+      "firm_name": "Jacuzzi Properties, Inc",
+      "license1": "474526"
+    },
+    {
+      "firm_name": "Peletz & Company",
+      "license1": "482691"
+    },
+    {
+      "firm_name": "Nutek Construction Inc.",
+      "license1": "496378"
+    },
+    {
+      "firm_name": "Mac Kenzie Construction",
+      "license1": "508694"
+    },
+    {
+      "firm_name": "Benkee Construction Co",
+      "license1": "511843"
+    },
+    {
+      "firm_name": "Szeto Construction",
+      "license1": "521996"
+    },
+    {
+      "firm_name": "Wey Cheng Construction Co",
+      "license1": "522799"
+    },
+    {
+      "firm_name": "Jan Weith General Contractor",
+      "license1": "526298"
+    },
+    {
+      "firm_name": "Don Bauer & Co",
+      "license1": "530261"
+    },
+    {
+      "firm_name": "Benjamin Gilmore Bolles",
+      "license1": "537565"
+    },
+    {
+      "firm_name": "C D Construction Co",
+      "license1": "545704"
+    },
+    {
+      "firm_name": "Margason Construction",
+      "license1": "548472"
+    },
+    {
+      "firm_name": "Guan Han Jie Construction",
+      "license1": "572384"
+    },
+    {
+      "firm_name": "Gill Construction",
+      "license1": "582513"
+    },
+    {
+      "firm_name": "Steven Lau Construction",
+      "license1": "595286"
+    },
+    {
+      "firm_name": "Wei Suen",
+      "license1": "611177"
+    },
+    {
+      "firm_name": "Yee Lau Construction Co",
+      "license1": "615049"
+    },
+    {
+      "firm_name": "Doc Painting & Maintenance Inc Dba Doc C",
+      "license1": "1081032"
+    },
+    {
+      "firm_name": "Tadashi Wood Construction Co",
+      "license1": "1100947"
+    }
+  ]
+}
