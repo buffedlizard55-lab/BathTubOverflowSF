@@ -1,18 +1,29 @@
-## Latest update — September 17, 2026
+## Latest update — September 17, 2026 (Wave 18)
 
-[Open the new discovery queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery.html) · [Research site](https://buffedlizard55-lab.github.io/BathTubOverflowSF/) · [Next-session priorities](docs/remaining-work.md)
+[Open the wave 18 discovery queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery18.html) · [Wave 17 queue](https://buffedlizard55-lab.github.io/BathTubOverflowSF/discovery.html) · [Research site](https://buffedlizard55-lab.github.io/BathTubOverflowSF/) · [Next-session priorities](docs/remaining-work.md)
 
-Added **50 source-linked discovery leads in a separate queue**, not 50 qualified businesses.
-All name/registry-number pairs were checked in two official City queries; four CSLB pages
-were read (three active B, one suspended B). **Both plumbing and drywall remain unconfirmed
-for every new lead. Zero new business reviews and zero qualified approvals.**
+Added **50 more source-linked discovery leads in a separate queue**, not 50 qualified
+businesses: **43 City registry records** (each name/number pair read in two official City
+queries) of which **12 had their CSLB licence page opened** (2 active, 2 suspended, 2
+inactive, 6 expired — every non-active record held), plus **7 platform/community listings**
+from live Thumbtack category pages and Yelp search-extracts. Six review excerpts (5 customer
+reviews + 1 business self-description, each marked where truncated) were retained with source
+links. One Thumbtack business already stored by wave 10 (Repipe Specialists) was folded into
+the existing record instead of being duplicated.
 
-The existing corpus stays at 793 records / 673 sources / 172 retained review excerpts.
-Its earlier source dates are unchanged; this session did not re-read all inherited evidence.
-The new queue has search, evidence-stage filters, flags, source links and CSV export.
-See the [three-pass, line-by-line audit](data/wave17-discovery-log.md) and
-[field-level evidence](data/wave17.json). Prioritize deeper verification of the existing
-plumbing and restoration tracks next, rather than another generic discovery wave.
+**Both plumbing and drywall remain unconfirmed for every new lead. Zero qualified
+approvals.** The two C35 plastering licence reads are non-active; the single C36 plumbing
+read is suspended with an unresolved name; the two active reads are C33 painting (adjacent
+only) and a B general builder with a Madera address. No seized-overflow outcome was
+attributable to any new lead.
+
+The existing corpus stays at 793 records / 673 sources / 172 retained review excerpts and the
+wave-17 queue stays at 50 leads; their earlier source dates are unchanged. The wave-18 queue
+has search, evidence-stage filters, flags, source links and CSV export. See the
+[three-pass, line-by-line audit](data/wave18-discovery-log.md) and
+[field-level evidence](data/wave18.json). Next session should prioritize depth — identity
+resolution, attributable reviews and both-trade evidence on the existing shortlists — over
+another generic discovery wave.
 
 ---
 
