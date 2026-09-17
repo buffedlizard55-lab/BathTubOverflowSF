@@ -1,0 +1,44 @@
+import { test, expect } from '@playwright/test';
+test('wave 19 queue searches, filters, resets and exports with no qualification inflation', async ({page}) => {
+  const errors = []; page.on('pageerror', e => errors.push(e.message));
+  await page.goto('/discovery19.html');
+  await expect(page.locator('.lead')).toHaveCount(50);
+  await page.locator('#query').fill('Detail Drywall & Stucco');
+  await expect(page.locator('.lead')).toHaveCount(1);
+  await expect(page.locator('.lead')).toContainText('Active licence read');
+  await page.getByRole('button',{name:'Reset',exact:true}).click();
+  await page.locator('#stage').selectOption('checked');
+  await expect(page.locator('.lead')).toHaveCount(16);
+  await page.locator('#stage').selectOption('active');
+  await expect(page.locator('.lead')).toHaveCount(14);
+  await page.locator('#stage').selectOption('nonactive');
+  await expect(page.locator('.lead')).toHaveCount(2);
+  await page.locator('#stage').selectOption('registry');
+  await expect(page.locator('.lead')).toHaveCount(27);
+  await page.locator('#stage').selectOption('platform');
+  await expect(page.locator('.lead')).toHaveCount(7);
+  const dl = page.waitForEvent('download');
+  await page.getByRole('button',{name:'Export visible CSV'}).click();
+  expect((await dl).suggestedFilename()).toBe('sunset-discovery-wave19.csv');
+  await page.locator('#query').fill('not-a-real-lead');
+  await expect(page.locator('#queue')).toContainText('No leads match');
+  expect(errors).toEqual([]);
+});
+test('wave 19 works on mobile and opens regulator evidence', async ({page}) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('/discovery19.html');
+  await expect(page.locator('.lead')).toHaveCount(50);
+  await page.locator('#query').fill('Reborn Bath Solutions');
+  await expect(page.locator('.lead')).toHaveCount(1);
+  await page.locator('.lead summary').click();
+  await expect(page.locator('.lead')).toContainText('Liability Insurance Suspension');
+  const width = await page.evaluate(() => document.documentElement.scrollWidth);
+  expect(width).toBeLessThanOrEqual(390);
+  await expect(page.locator('.lead-links a').first()).toHaveAttribute('href', /data.sf.gov/);
+});
+test('wave 19 handles unavailable evidence without claiming an empty successful search', async ({page}) => {
+  await page.route('**/data/wave19.json', route => route.fulfill({status:503,body:'unavailable'}));
+  await page.goto('/discovery19.html');
+  await expect(page.locator('#result-count')).toHaveText('Discovery could not load.');
+  await expect(page.locator('#export')).toBeDisabled();
+});
